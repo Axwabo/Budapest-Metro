@@ -4,7 +4,7 @@ namespace Metro.Rail
 {
 
     [ExecuteInEditMode]
-    public sealed class StraightTrack : TrackSegment
+    public class StraightTrack : TrackSegment
     {
 
         private Vector3 _center;
@@ -15,9 +15,9 @@ namespace Metro.Rail
 
         private Quaternion _rotation;
 
-        public override float Length => _length;
+        public sealed override float Length => _length;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             var t = transform;
             _length = t.lossyScale.z;
@@ -30,7 +30,7 @@ namespace Metro.Rail
         private void OnValidate() => Awake();
 #endif
 
-        public override Pose Sample(float distance)
+        public sealed override Pose Sample(float distance)
         {
             var position = _center + _rotation * new Vector3(0, 0, distance - _halfLength);
             return new Pose(position, _rotation);
