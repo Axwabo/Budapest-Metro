@@ -71,6 +71,8 @@ namespace SplineMesh
             }
         }
 
+        private void OnDisable() => _snapPoints.Clear();
+
         void OnSceneGUI()
         {
             // disable game object transform gyzmo
