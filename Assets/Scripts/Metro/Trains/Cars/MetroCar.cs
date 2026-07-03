@@ -8,6 +8,17 @@ namespace Metro.Trains.Cars
 
         private readonly List<CarComponent> _components = new();
 
+        public bool CanDepart
+        {
+            get
+            {
+                foreach (var component in _components)
+                    if (component is IDepartureBlocker {CanDepart: true})
+                        return false;
+                return true;
+            }
+        }
+
         protected override void OnInitialized() => this.GetAndInitializeComponents(_components);
 
         public override void OnStateChanged()

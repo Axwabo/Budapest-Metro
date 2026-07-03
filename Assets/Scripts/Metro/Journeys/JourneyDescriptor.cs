@@ -15,6 +15,9 @@ namespace Metro.Journeys
         [SerializeField]
         private TextAsset source;
 
+        [field: SerializeField]
+        public bool Reverse { get; private set; }
+
         public Stop Origin { get; private set; }
 
         public List<Stop> IntermediateStops { get; } = new();

@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 8957598004594227194}
   - component: {fileID: 8921545013366236275}
   - component: {fileID: 2267057538019963242}
+  - component: {fileID: 7532615988812098702}
   m_Layer: 0
   m_Name: M4 Assembly
   m_TagString: Untagged
@@ -121,7 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.MetroAssembly
   startingTrack: {fileID: 0}
-  <Speed>k__BackingField: 0
+  speed: 0
+  <Reverse>k__BackingField: 0
 --- !u!114 &2267057538019963242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +137,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Routes.JourneyManager
   <Current>k__BackingField: {fileID: 0}
+--- !u!114 &7532615988812098702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7152591590989094364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d36454c16864477baa9ec619d4a4aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Driving.AutomaticDriver
 --- !u!1001 &3468562115422004817
 PrefabInstance:
   m_ObjectHideFlags: 0

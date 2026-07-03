@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Metro.Rail;
+using Metro.Trains.Cars;
 using Metro.Trains.Driving;
 using Metro.Trains.Routes;
 using UnityEngine;
@@ -23,7 +25,14 @@ namespace Metro.Trains
 
         private readonly List<AssemblyComponent> _components = new();
 
+        private MetroCar[] _cars;
+
         public float AbsoluteSpeed => Reverse ? -speed : speed;
+
+        public float RelativeSpeed
+        {
+            set => speed = Mathf.Clamp(value, 0, Constants.MaxMps);
+        }
 
         public JourneyManager JourneyManager { get; private set; }
 
@@ -31,9 +40,12 @@ namespace Metro.Trains
 
         public AutomaticDriver Driver { get; private set; }
 
+        public ReadOnlySpan<MetroCar> Cars => _cars;
+
         private void Start()
         {
             this.GetComponentsInImmediateChildren(_components);
+            _cars = _components.OfType<MetroCar>().ToArray();
             JourneyManager = _components.OfType<JourneyManager>().First();
             DisplayRenderer = _components.OfType<OnboardDisplayRenderer>().First();
             Driver = _components.OfType<AutomaticDriver>().First();
