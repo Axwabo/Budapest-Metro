@@ -17,16 +17,19 @@ namespace Metro
             var childCount = t.childCount;
             for (var i = 0; i < childCount; i++)
             {
-                t.GetChild(childCount).GetComponents(get);
+                t.GetChild(i).GetComponents(get);
                 target.AddRange(get);
             }
 
             ListPool<T>.Release(get);
         }
 
-        public static void InitializeComponents<TComponent, TParent>(this TParent parent, List<TComponent> target) where TComponent : Subcomponent<TParent> where TParent : Component
+        public static void InitializeComponents<TParent, TComponent>(this TParent parent, List<TComponent> target, bool directChildrenOnly) where TParent : Component where TComponent : Subcomponent<TParent>
         {
-            parent.GetComponentsInImmediateChildren(target);
+            if (directChildrenOnly)
+                parent.GetComponentsInImmediateChildren(target);
+            else
+                parent.GetComponentsInChildren(target);
             foreach (var component in target)
                 component.Initialize(parent);
         }

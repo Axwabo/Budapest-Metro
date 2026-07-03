@@ -253,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441886322972466006, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
       propertyPath: m_Name
-      value: Straight Track
+      value: Left Track
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -291,7 +291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441886322972466006, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
       propertyPath: m_Name
-      value: Straight Track
+      value: Right Track
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

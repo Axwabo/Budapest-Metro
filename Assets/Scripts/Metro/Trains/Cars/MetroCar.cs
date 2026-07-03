@@ -8,7 +8,7 @@ namespace Metro.Trains.Cars
 
         private readonly List<CarComponent> _components = new();
 
-        protected override void OnInitialized() => this.InitializeComponents(_components);
+        protected override void OnInitialized() => this.InitializeComponents(_components, false);
 
     }
 
