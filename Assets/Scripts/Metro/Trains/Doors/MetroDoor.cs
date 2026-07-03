@@ -22,7 +22,16 @@ namespace Metro.Trains.Doors
 
         private void Awake() => _animator = GetComponent<Animator>();
 
-        public bool CanDepart => !_animator.IsInTransition(0) && _animator.GetCurrentAnimatorStateInfo(0).IsName("Empty");
+        public bool CanDepart
+        {
+            get
+            {
+                if (_animator.IsInTransition(0))
+                    return false;
+                var info = _animator.GetCurrentAnimatorStateInfo(0);
+                return info.IsName("Close") && info.normalizedTime >= 1;
+            }
+        }
 
     }
 
