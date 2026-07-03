@@ -82,7 +82,7 @@ namespace Metro.Trains.Driving
             if (brakingDistance + StoppingHeadroom > distanceToStopPoint)
                 Motor.TargetSpeed = 0;
             else if (brakingDistance + BrakingHeadroom > distanceToStopPoint)
-                Motor.TargetSpeed = Constants.KmhToMps;
+                Motor.TargetSpeed = 0.5f;
         }
 
         private bool ShouldSlowDown(Axle axle, float brakingDistance) => Station.TryGetLoadad(JourneyManager.Stop.Name, out var station)
