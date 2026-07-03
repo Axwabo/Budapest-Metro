@@ -14,11 +14,11 @@ namespace Metro.Trains.Cars
 
         private TrackSegment _track;
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (Assembly.Speed == 0)
                 return;
-            _distance += Time.deltaTime * Assembly.Speed;
+            _distance += Time.fixedDeltaTime * Assembly.Speed;
             if (_distance > _track.Length)
             {
                 if (!_track.Next)
