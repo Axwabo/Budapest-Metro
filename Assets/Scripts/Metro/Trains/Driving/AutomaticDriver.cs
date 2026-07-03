@@ -28,7 +28,7 @@ namespace Metro.Trains.Driving
 
         private void Update()
         {
-            if (_departAt >= Clock.Now)
+            if (Clock.Now >= _departAt)
                 Depart();
             if (_previousState != State)
                 Parent.NotifyStateChanged();
