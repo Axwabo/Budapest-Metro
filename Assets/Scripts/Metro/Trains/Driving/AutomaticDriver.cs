@@ -15,6 +15,8 @@ namespace Metro.Trains.Driving
 
         private JourneyDescriptor Journey => JourneyManager.Current;
 
+        private Motor Motor => Parent.Motor;
+
         private bool CarsReady
         {
             get
@@ -28,7 +30,9 @@ namespace Metro.Trains.Driving
 
         private void Update()
         {
-            if (Clock.Now >= _departAt)
+            if (State == DriverState.Driving && Motor.AbsoluteSpeed == 0)
+                State = DriverState.Stopped;
+            else if (Clock.Now >= _departAt)
                 Depart();
             if (_previousState == State)
                 return;
@@ -49,8 +53,8 @@ namespace Metro.Trains.Driving
             if (State != DriverState.Driving)
                 return;
             if (Journey)
-                Parent.Reverse = Journey.Reverse;
-            Parent.RelativeSpeed = Constants.MaxMps;
+                Motor.Reverse = Journey.Reverse;
+            Motor.RelativeSpeed = Constants.MaxMps;
         }
 
     }

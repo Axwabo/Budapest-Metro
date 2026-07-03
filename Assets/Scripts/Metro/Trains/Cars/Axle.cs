@@ -16,9 +16,10 @@ namespace Metro.Trains.Cars
 
         private void FixedUpdate()
         {
-            if (Assembly.AbsoluteSpeed == 0)
+            var speed = Assembly.Motor.AbsoluteSpeed;
+            if (speed == 0)
                 return;
-            _distance += Time.fixedDeltaTime * Assembly.AbsoluteSpeed;
+            _distance += Time.fixedDeltaTime * speed;
             if (_distance > _track.Length)
             {
                 if (!_track.Next)

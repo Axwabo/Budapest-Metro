@@ -82,6 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8957598004594227194}
   - component: {fileID: 8921545013366236275}
+  - component: {fileID: 1737755341821763619}
   - component: {fileID: 2267057538019963242}
   - component: {fileID: 7532615988812098702}
   m_Layer: 0
@@ -122,6 +123,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.MetroAssembly
   startingTrack: {fileID: 0}
+--- !u!114 &1737755341821763619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7152591590989094364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d38785705c6642efb6511c518b322974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Motor
   speed: 0
   <Reverse>k__BackingField: 0
 --- !u!114 &2267057538019963242

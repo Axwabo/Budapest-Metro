@@ -16,23 +16,11 @@ namespace Metro.Trains
         [SerializeField]
         public TrackSegment startingTrack;
 
-        [SerializeField]
-        [Range(0, Constants.MaxMps)]
-        private float speed;
-
-        [field: SerializeField]
-        public bool Reverse { get; set; }
-
         private readonly List<AssemblyComponent> _components = new();
 
         private MetroCar[] _cars;
 
-        public float AbsoluteSpeed => Reverse ? -speed : speed;
-
-        public float RelativeSpeed
-        {
-            set => speed = Mathf.Clamp(value, 0, Constants.MaxMps);
-        }
+        public Motor Motor { get; private set; }
 
         public JourneyManager JourneyManager { get; private set; }
 
@@ -46,6 +34,7 @@ namespace Metro.Trains
         {
             this.GetComponentsInImmediateChildren(_components);
             _cars = _components.OfType<MetroCar>().ToArray();
+            Motor = _components.OfType<Motor>().First();
             JourneyManager = _components.OfType<JourneyManager>().First();
             DisplayRenderer = _components.OfType<OnboardDisplayRenderer>().First();
             Driver = _components.OfType<AutomaticDriver>().First();
