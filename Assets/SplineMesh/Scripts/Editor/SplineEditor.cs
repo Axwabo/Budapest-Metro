@@ -136,6 +136,12 @@ namespace SplineMesh
                     break;
                 case SelectionType.Direction:
                     var result = Handles.PositionHandle(spline.transform.TransformPoint(selection.Direction), Quaternion.LookRotation(selection.Direction - selection.Position));
+                    if (Event.current.alt)
+                    {
+                        var pose = _snapPoints.OrderBy(e => Vector3.Distance(e.position, selection.Position)).FirstOrDefault();
+                        result = pose.position + pose.forward;
+                    }
+
                     selection.Direction = spline.transform.InverseTransformPoint(result);
                     break;
                 case SelectionType.InverseDirection:

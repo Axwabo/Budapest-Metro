@@ -848,8 +848,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: -387.23975, y: 84.5, z: -308.51672}
-    direction: {x: -378.8, y: 84.5, z: -308.51672}
+  - position: {x: -372.54578, y: 84.5, z: -311.016}
+    direction: {x: -372.71347, y: 84.5, z: -312.00183}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
@@ -860,8 +860,8 @@ MonoBehaviour:
     roll: 0
   curves:
   - n1:
-      position: {x: -387.23975, y: 84.5, z: -308.51672}
-      direction: {x: -378.8, y: 84.5, z: -308.51672}
+      position: {x: -372.54578, y: 84.5, z: -311.016}
+      direction: {x: -372.71347, y: 84.5, z: -312.00183}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -874,7 +874,7 @@ MonoBehaviour:
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 510.1797
+  Length: 500.2498
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
