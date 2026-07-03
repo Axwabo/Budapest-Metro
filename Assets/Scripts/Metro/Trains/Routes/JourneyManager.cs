@@ -1,5 +1,4 @@
 using Metro.Journeys;
-using Metro.Stations;
 using UnityEngine;
 
 namespace Metro.Trains.Routes
@@ -14,11 +13,11 @@ namespace Metro.Trains.Routes
         // TODO
         private int _index = -1;
 
-        public StationId Station { get; private set; }
+        public Stop Stop { get; private set; }
 
         public void Begin()
         {
-            Station = Current.Origin.Station;
+            Stop = Current.Origin;
             Parent.NotifyStationChanged();
         }
 

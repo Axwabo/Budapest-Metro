@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -8,6 +9,8 @@ namespace Metro.Stations
 
     public sealed class Station : MonoBehaviour
     {
+
+        private static readonly Dictionary<string, Station> LoadedStations = new();
 
         [field: SerializeField]
         public StationId Id { get; private set; }
@@ -23,6 +26,12 @@ namespace Metro.Stations
 
         [SerializeField]
         private float usablePlatformArea = 800;
+
+        private void Awake() => LoadedStations.Add(Id.name, this);
+
+        private void OnDestroy() => LoadedStations.Remove(Id.name);
+
+        public static bool TryGetLoadad(string name, out Station station) => LoadedStations.TryGetValue(name, out station);
 
 #if UNITY_EDITOR
         private void OnValidate()

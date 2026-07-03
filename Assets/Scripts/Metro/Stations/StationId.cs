@@ -7,10 +7,6 @@ namespace Metro.Stations
     public sealed class StationId : ScriptableObject
     {
 
-        private static StationId[] _cached;
-
-        public static StationId[] All => _cached ??= Resources.LoadAll<StationId>("Stations");
-
     }
 
 }

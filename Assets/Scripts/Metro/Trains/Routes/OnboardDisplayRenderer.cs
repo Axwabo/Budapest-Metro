@@ -43,7 +43,7 @@ namespace Metro.Trains.Routes
 
         protected override void OnInitialized() => _label = document.rootVisualElement.Q<Label>();
 
-        public override void OnStationChanged() => _label.text = Parent.JourneyManager.Station.name;
+        public override void OnStationChanged() => _label.text = Parent.JourneyManager.Stop.Name;
 
     }
 

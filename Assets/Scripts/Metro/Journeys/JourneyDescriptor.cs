@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Metro.Stations;
 using UnityEngine;
 
 namespace Metro.Journeys
@@ -40,11 +39,7 @@ namespace Metro.Journeys
             var comma = line.IndexOf(',');
             var station = line[..comma];
             var time = line[(comma + 1)..];
-            foreach (var stationId in StationId.All)
-                // this allocates bc unity :DDDD
-                if (stationId.name == station)
-                    return new Stop(stationId, TimeSpan.ParseExact(time, "hh':'mm", CultureInfo.InvariantCulture));
-            throw new MissingReferenceException($"Station {station.ToString()} not found");
+            return new Stop(station.ToString(), TimeSpan.ParseExact(time, "hh':'mm", CultureInfo.InvariantCulture));
         }
 
     }
