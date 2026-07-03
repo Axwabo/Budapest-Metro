@@ -12,9 +12,6 @@ namespace Metro.Stations
 
         private static readonly Dictionary<string, Station> LoadedStations = new();
 
-        [field: SerializeField]
-        public StationId Id { get; private set; }
-
         [SerializeField]
         private Transform platform;
 
@@ -27,9 +24,9 @@ namespace Metro.Stations
         [SerializeField]
         private float usablePlatformArea = 800;
 
-        private void Awake() => LoadedStations.Add(Id.name, this);
+        private void Awake() => LoadedStations.Add(name, this);
 
-        private void OnDestroy() => LoadedStations.Remove(Id.name);
+        private void OnDestroy() => LoadedStations.Remove(name);
 
         public static bool TryGetLoadad(string name, out Station station) => LoadedStations.TryGetValue(name, out station);
 
