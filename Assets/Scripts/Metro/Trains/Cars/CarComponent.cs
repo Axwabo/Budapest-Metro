@@ -1,3 +1,5 @@
+using Metro.Trains.Driving;
+
 namespace Metro.Trains.Cars
 {
 
@@ -5,6 +7,16 @@ namespace Metro.Trains.Cars
     {
 
         public MetroAssembly Assembly => Parent.Parent;
+
+        public DriverState State => Parent.State;
+
+        public virtual void OnStateChanged()
+        {
+        }
+
+        public virtual void OnStationChanged()
+        {
+        }
 
     }
 

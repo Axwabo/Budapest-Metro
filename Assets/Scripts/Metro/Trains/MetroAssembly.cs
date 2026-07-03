@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Metro.Rail;
+using Metro.Trains.Driving;
 using Metro.Trains.Routes;
 using UnityEngine;
 
@@ -13,23 +14,37 @@ namespace Metro.Trains
         [SerializeField]
         public TrackSegment startingTrack;
 
+        [SerializeField]
+        [Range(0, Constants.MaxMps)]
+        private float speed;
+
         [field: SerializeField]
-        [field: Range(-Constants.MaxMps, Constants.MaxMps)]
-        public float Speed { get; set; }
+        public bool Reverse { get; set; }
 
         private readonly List<AssemblyComponent> _components = new();
+
+        public float AbsoluteSpeed => Reverse ? -speed : speed;
 
         public JourneyManager JourneyManager { get; private set; }
 
         public OnboardDisplayRenderer DisplayRenderer { get; private set; }
+
+        public AutomaticDriver Driver { get; private set; }
 
         private void Start()
         {
             this.GetComponentsInImmediateChildren(_components);
             JourneyManager = _components.OfType<JourneyManager>().First();
             DisplayRenderer = _components.OfType<OnboardDisplayRenderer>().First();
+            Driver = _components.OfType<AutomaticDriver>().First();
             this.InitializeComponents(_components);
             JourneyManager.Begin();
+        }
+
+        public void NotifyStateChanged()
+        {
+            foreach (var component in _components)
+                component.OnStateChanged();
         }
 
         public void NotifyStationChanged()

@@ -18,7 +18,7 @@ namespace Metro.Trains.Routes
 
         public void Begin()
         {
-            Station = Current.Origin;
+            Station = Current.Origin.Station;
             Parent.NotifyStationChanged();
         }
 
