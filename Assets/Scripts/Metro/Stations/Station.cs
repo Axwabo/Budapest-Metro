@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Metro.Rail;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -11,6 +12,12 @@ namespace Metro.Stations
     {
 
         private static readonly Dictionary<string, Station> LoadedStations = new();
+
+        [field: SerializeField]
+        public StationTrack Left { get; private set; }
+
+        [field: SerializeField]
+        public StationTrack Right { get; private set; }
 
         [SerializeField]
         private Transform platform;

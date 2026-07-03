@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Metro.Journeys;
 using Metro.Rail;
 using Metro.Rail.Controls;
+using Metro.Stations;
 using Metro.Trains.Cars;
 using UnityEngine;
 
@@ -11,6 +12,10 @@ namespace Metro.Trains.Driving
 
     public sealed class AutomaticDriver : AssemblyComponent
     {
+
+        private const float SlowingHeadroom = 10;
+        private const float BrakingHeadroom = 2;
+        private const float StoppingHeadroom = 0.01f;
 
         private readonly HashSet<ControlPoint> _passedPoints = new();
 
@@ -51,24 +56,39 @@ namespace Metro.Trains.Driving
 
         private void Drive()
         {
-            var axle = FrontAxle;
             // TODO: handle out-of-service stop points
-            if (JourneyManager.IsInService && axle.Track is StationTrack stationTrack && stationTrack.Station.name == JourneyManager.Stop.Name)
-            {
-                var distanceToStopPoint = Mathf.Abs(axle.Distance - stationTrack.StopPoint.Distance);
-                var brakingDistance = Motor.BrakingDistance;
-                if (brakingDistance > distanceToStopPoint - 0.01f)
-                    Motor.TargetSpeed = 0;
-                else if (brakingDistance > distanceToStopPoint - 2)
-                    Motor.TargetSpeed = 0.5f;
-            }
-
+            if (JourneyManager.IsInService)
+                AdjustSpeed();
             if (Motor.AbsoluteSpeed != 0)
                 return;
             State = DriverState.Stopped;
             _departAt = Clock.Now + TimeSpan.FromSeconds(Constants.MinStaySeconds);
             _passedPoints.Clear();
         }
+
+        private void AdjustSpeed()
+        {
+            var axle = FrontAxle;
+            var brakingDistance = Motor.BrakingDistance;
+            if (Motor.TargetSpeed > Constants.SlowMps && ShouldSlowDown(axle, brakingDistance))
+            {
+                Motor.TargetSpeed = Constants.SlowMps;
+                return;
+            }
+
+            if (axle.Track is not StationTrack stationTrack || stationTrack.Station.name != JourneyManager.Stop.Name)
+                return;
+            var distanceToStopPoint = Mathf.Abs(axle.Distance - stationTrack.StopPoint.Distance);
+            if (brakingDistance + StoppingHeadroom > distanceToStopPoint)
+                Motor.TargetSpeed = 0;
+            else if (brakingDistance + BrakingHeadroom > distanceToStopPoint)
+                Motor.TargetSpeed = Constants.KmhToMps;
+        }
+
+        private bool ShouldSlowDown(Axle axle, float brakingDistance) => Station.TryGetLoadad(JourneyManager.Stop.Name, out var station)
+                                                                         && brakingDistance + SlowingHeadroom > Vector3.Distance(axle.Transform.position, GetStopPoint(station));
+
+        private Vector3 GetStopPoint(Station station) => (Motor.Reverse ? station.Left : station.Right).StopPoint.Position;
 
         public override void OnStationChanged()
         {

@@ -8,7 +8,7 @@ namespace Metro.Trains.Cars
     public sealed class Axle : CarComponent
     {
 
-        private Transform _t;
+        public Transform Transform { get; private set; }
 
         public float Distance { get; private set; }
 
@@ -56,16 +56,16 @@ namespace Metro.Trains.Cars
 
         protected override void OnInitialized()
         {
-            _t = transform;
+            Transform = transform;
             Track = Assembly.startingTrack;
-            Distance = Assembly.transform.InverseTransformPoint(_t.position).z;
+            Distance = Assembly.transform.InverseTransformPoint(Transform.position).z;
             UpdateLocation();
         }
 
         private void UpdateLocation()
         {
             var pose = Track.Sample(Distance);
-            _t.SetPositionAndRotation(pose.position, pose.rotation);
+            Transform.SetPositionAndRotation(pose.position, pose.rotation);
         }
 
     }

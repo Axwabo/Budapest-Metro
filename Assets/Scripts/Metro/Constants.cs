@@ -18,6 +18,8 @@ namespace Metro
 
         public const float MaxMps = MaxKmh * KmhToMps;
 
+        public const float SlowMps = 10;
+
         public const double MinStaySeconds = 22;
 
     }
