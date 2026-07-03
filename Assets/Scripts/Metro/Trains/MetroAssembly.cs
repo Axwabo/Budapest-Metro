@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Metro.Rail;
 using Metro.Trains.Cars;
+using Metro.Trains.Doors;
 using Metro.Trains.Driving;
 using Metro.Trains.Routes;
 using UnityEngine;
@@ -27,6 +28,8 @@ namespace Metro.Trains
         public OnboardDisplayRenderer DisplayRenderer { get; private set; }
 
         public AutomaticDriver Driver { get; private set; }
+
+        public DoorController DoorController { get; private set; }
 
         public ReadOnlySpan<MetroCar> Cars => _cars;
 

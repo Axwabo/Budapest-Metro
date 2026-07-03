@@ -25,6 +25,8 @@ namespace Metro.Trains.Driving
 
         public new DriverState State { get; private set; }
 
+        public float SecondsToDeparture => (float) (_departAt - Clock.Now).TotalSeconds;
+
         private JourneyDescriptor Journey => JourneyManager.Current;
 
         private Motor Motor => Parent.Motor;

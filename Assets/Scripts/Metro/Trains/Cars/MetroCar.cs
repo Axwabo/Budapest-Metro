@@ -24,6 +24,8 @@ namespace Metro.Trains.Cars
             }
         }
 
+        public IEnumerable<T> Components<T>() => _components.OfType<T>();
+
         protected override void OnInitialized()
         {
             this.GetAndInitializeComponents(_components);
