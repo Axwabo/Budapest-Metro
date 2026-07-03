@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Metro.Trains.Doors
 {
 
-    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(Animator), typeof(AudioSource))]
     public sealed class MetroDoor : CarComponent, IDepartureBlocker
     {
 
@@ -13,14 +13,30 @@ namespace Metro.Trains.Doors
         [field: SerializeField]
         public bool Reverse { get; private set; }
 
+        [SerializeField]
+        private AudioClip open;
+
+        [SerializeField]
+        private AudioClip close;
+
         private Animator _animator;
+
+        private AudioSource _source;
 
         public bool Open
         {
-            set => _animator.SetBool(Hash, value);
+            set
+            {
+                _animator.SetBool(Hash, value);
+                _source.PlayOneShot(value ? open : close);
+            }
         }
 
-        private void Awake() => _animator = GetComponent<Animator>();
+        private void Awake()
+        {
+            _animator = GetComponent<Animator>();
+            _source = GetComponent<AudioSource>();
+        }
 
         public bool CanDepart
         {

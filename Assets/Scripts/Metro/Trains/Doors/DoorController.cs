@@ -30,6 +30,8 @@ namespace Metro.Trains.Doors
 
         private void SetDoors(bool open)
         {
+            if (_target == open)
+                return;
             _target = open;
             foreach (var door in _doors)
                 door.Open = _target && door.Reverse == Parent.Motor.Reverse; // TODO: use journey direction or track direction
