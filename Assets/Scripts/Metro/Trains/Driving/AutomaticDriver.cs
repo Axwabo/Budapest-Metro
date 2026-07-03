@@ -59,7 +59,7 @@ namespace Metro.Trains.Driving
             // TODO: handle out-of-service stop points
             if (JourneyManager.IsInService)
                 AdjustSpeed();
-            if (Motor.AbsoluteSpeed != 0)
+            if (Motor.AbsoluteSpeed != 0 || Motor.TargetSpeed != 0)
                 return;
             State = DriverState.Stopped;
             _departAt = Clock.Now + TimeSpan.FromSeconds(Constants.MinStaySeconds);
