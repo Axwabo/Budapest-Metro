@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Motor
   speed: 0
-  acceleration: 0
-  deceleration: 0
+  acceleration: 1
+  deceleration: 1
   <Reverse>k__BackingField: 0
 --- !u!114 &2267057538019963242
 MonoBehaviour:

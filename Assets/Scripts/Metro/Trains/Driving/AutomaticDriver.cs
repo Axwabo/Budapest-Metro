@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
 using Metro.Journeys;
+using Metro.Rail;
 using Metro.Rail.Controls;
+using Metro.Trains.Cars;
+using UnityEngine;
 
 namespace Metro.Trains.Driving
 {
@@ -20,6 +23,8 @@ namespace Metro.Trains.Driving
         private JourneyDescriptor Journey => JourneyManager.Current;
 
         private Motor Motor => Parent.Motor;
+
+        private Axle FrontAxle => Parent.PrimaryAxle;
 
         private bool CarsReady
         {
@@ -46,9 +51,22 @@ namespace Metro.Trains.Driving
 
         private void Drive()
         {
+            var axle = FrontAxle;
+            // TODO: handle out-of-service stop points
+            if (JourneyManager.IsInService && axle.Track is StationTrack stationTrack && stationTrack.Station.name == JourneyManager.Stop.Name)
+            {
+                var distanceToStopPoint = Mathf.Abs(axle.Distance - stationTrack.StopPoint.Distance);
+                var brakingDistance = Motor.BrakingDistance;
+                if (brakingDistance > distanceToStopPoint - 0.01f)
+                    Motor.TargetSpeed = 0;
+                else if (brakingDistance > distanceToStopPoint - 2)
+                    Motor.TargetSpeed = 0.5f;
+            }
+
             if (Motor.AbsoluteSpeed != 0)
                 return;
             State = DriverState.Stopped;
+            _departAt = Clock.Now + TimeSpan.FromSeconds(Constants.MinStaySeconds);
             _passedPoints.Clear();
         }
 
@@ -78,7 +96,7 @@ namespace Metro.Trains.Driving
                 return;
             if (Journey)
                 Motor.Reverse = Journey.Reverse;
-            Motor.RelativeSpeed = Constants.MaxMps;
+            Motor.TargetSpeed = Constants.MaxMps;
         }
 
         public void OnAxlePassed(ControlPoint point)
@@ -86,9 +104,11 @@ namespace Metro.Trains.Driving
             if (!_passedPoints.Add(point))
                 return;
             // TODO: stop earlier lol
-            if (point is StopPoint stop && (!JourneyManager.IsInService || stop.Station.name == JourneyManager.Stop.Name))
-                Motor.RelativeSpeed = 0;
+            if (point is StopPoint stop && IsTargetTrack(stop.Track))
+                Motor.TargetSpeed = 0;
         }
+
+        private bool IsTargetTrack(TrackSegment track) => !JourneyManager.IsInService || track is StationTrack stationTrack && stationTrack.Station.name == JourneyManager.Stop.Name;
 
     }
 

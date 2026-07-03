@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Metro.Trains.Cars
 {
@@ -7,6 +8,10 @@ namespace Metro.Trains.Cars
     {
 
         private readonly List<CarComponent> _components = new();
+
+        public Axle FrontAxle { get; private set; }
+
+        public Axle BackAxle { get; private set; }
 
         public bool CanDepart
         {
@@ -19,7 +24,13 @@ namespace Metro.Trains.Cars
             }
         }
 
-        protected override void OnInitialized() => this.GetAndInitializeComponents(_components);
+        protected override void OnInitialized()
+        {
+            this.GetAndInitializeComponents(_components);
+            var axles = _components.OfType<Axle>().OrderByDescending(e => e.Distance).ToArray();
+            FrontAxle = axles[0];
+            BackAxle = axles[^1];
+        }
 
         public override void OnStateChanged()
         {

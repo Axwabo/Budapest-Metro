@@ -23,9 +23,23 @@ namespace Metro.Trains
 
         public float AbsoluteSpeed => Reverse ? -speed : speed;
 
-        public float RelativeSpeed
+        public float TargetSpeed { get; set; }
+
+        public float BrakingDistance
         {
-            set => speed = Mathf.Clamp(value, 0, Constants.MaxMps);
+            get
+            {
+                var time = speed / acceleration;
+                return time * speed * 0.5f;
+            }
+        }
+
+        private void FixedUpdate()
+        {
+            if (TargetSpeed > speed)
+                speed = Mathf.Min(TargetSpeed, speed + acceleration * Time.fixedDeltaTime);
+            else if (TargetSpeed < speed)
+                speed = Mathf.Max(TargetSpeed, speed - deceleration * Time.fixedDeltaTime);
         }
 
     }

@@ -17,7 +17,7 @@ namespace Metro.Rail
 
         public abstract float Length { get; }
 
-        private void Start()
+        protected virtual void Start()
         {
             if (Next)
                 Next.Previous = this;

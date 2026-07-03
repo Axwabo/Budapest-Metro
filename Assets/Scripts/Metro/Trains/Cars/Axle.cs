@@ -8,36 +8,36 @@ namespace Metro.Trains.Cars
     public sealed class Axle : CarComponent
     {
 
-        private float _distance;
-
         private Transform _t;
 
-        private TrackSegment _track;
+        public float Distance { get; private set; }
+
+        public TrackSegment Track { get; private set; }
 
         private void FixedUpdate()
         {
             var speed = Assembly.Motor.AbsoluteSpeed;
             if (speed == 0)
                 return;
-            var previousDistance = _distance;
-            _distance += Time.fixedDeltaTime * speed;
-            if (_distance > _track.Length)
+            var previousDistance = Distance;
+            Distance += Time.fixedDeltaTime * speed;
+            if (Distance > Track.Length)
             {
                 PassPoints(previousDistance);
-                if (!_track.Next)
+                if (!Track.Next)
                     return;
-                _distance -= _track.Length;
-                _track = _track.Next;
+                Distance -= Track.Length;
+                Track = Track.Next;
                 PassPoints(0);
             }
-            else if (_distance < 0)
+            else if (Distance < 0)
             {
                 PassPoints(previousDistance);
-                if (!_track.Previous)
+                if (!Track.Previous)
                     return;
-                _track = _track.Previous;
-                _distance = _track.Length + _distance;
-                PassPoints(_track.Length);
+                Track = Track.Previous;
+                Distance = Track.Length + Distance;
+                PassPoints(Track.Length);
             }
 
             UpdateLocation();
@@ -47,24 +47,24 @@ namespace Metro.Trains.Cars
         private void PassPoints(float previousDistance)
         {
             var reverse = Assembly.Motor.Reverse;
-            foreach (var point in _track.ControlPoints)
+            foreach (var point in Track.ControlPoints)
                 if (reverse
-                        ? point.Distance > previousDistance && point.Distance >= _distance
-                        : point.Distance > previousDistance && point.Distance <= _distance)
+                        ? point.Distance > previousDistance && point.Distance >= Distance
+                        : point.Distance > previousDistance && point.Distance <= Distance)
                     Assembly.Driver.OnAxlePassed(point);
         }
 
         protected override void OnInitialized()
         {
             _t = transform;
-            _track = Assembly.startingTrack;
-            _distance = Assembly.transform.InverseTransformPoint(_t.position).z;
+            Track = Assembly.startingTrack;
+            Distance = Assembly.transform.InverseTransformPoint(_t.position).z;
             UpdateLocation();
         }
 
         private void UpdateLocation()
         {
-            var pose = _track.Sample(_distance);
+            var pose = Track.Sample(Distance);
             _t.SetPositionAndRotation(pose.position, pose.rotation);
         }
 

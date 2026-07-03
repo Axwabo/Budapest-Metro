@@ -30,6 +30,15 @@ namespace Metro.Trains
 
         public ReadOnlySpan<MetroCar> Cars => _cars;
 
+        public Axle PrimaryAxle
+        {
+            get
+            {
+                var car = _cars[Motor.Reverse ? ^1 : 0];
+                return Motor.Reverse ? car.BackAxle : car.FrontAxle;
+            }
+        }
+
         private void Start()
         {
             this.GetComponentsInImmediateChildren(_components);
