@@ -17,7 +17,18 @@ namespace Metro.Rail.Controls
 
         public Vector3 Position { get; private set; }
 
-        private void Awake() => Position = transform.position;
+        private void Awake()
+        {
+            Position = transform.position;
+            if (Track)
+                Track.ControlPoints.Add(this);
+        }
+
+        private void OnDestroy()
+        {
+            if (Track)
+                Track.ControlPoints.Remove(this);
+        }
 
 #if UNITY_EDITOR
         [ContextMenu("Recalculate")]

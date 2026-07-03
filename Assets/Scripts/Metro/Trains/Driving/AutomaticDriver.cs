@@ -1,11 +1,15 @@
 using System;
+using System.Collections.Generic;
 using Metro.Journeys;
+using Metro.Rail.Controls;
 
 namespace Metro.Trains.Driving
 {
 
     public sealed class AutomaticDriver : AssemblyComponent
     {
+
+        private readonly HashSet<ControlPoint> _passedPoints = new();
 
         private TimeSpan _departAt = TimeSpan.MaxValue;
 
@@ -42,8 +46,10 @@ namespace Metro.Trains.Driving
 
         private void Drive()
         {
-            if (Motor.AbsoluteSpeed == 0)
-                State = DriverState.Stopped;
+            if (Motor.AbsoluteSpeed != 0)
+                return;
+            State = DriverState.Stopped;
+            _passedPoints.Clear();
         }
 
         public override void OnStationChanged()
@@ -73,6 +79,15 @@ namespace Metro.Trains.Driving
             if (Journey)
                 Motor.Reverse = Journey.Reverse;
             Motor.RelativeSpeed = Constants.MaxMps;
+        }
+
+        public void OnAxlePassed(ControlPoint point)
+        {
+            if (!_passedPoints.Add(point))
+                return;
+            // TODO: stop earlier lol
+            if (point is StopPoint stop && (!JourneyManager.IsInService || stop.Station.name == JourneyManager.Stop.Name))
+                Motor.RelativeSpeed = 0;
         }
 
     }

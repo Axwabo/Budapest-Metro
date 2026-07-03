@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: usablePlatformArea
       value: 1100
       objectReference: {fileID: 0}
+    - target: {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 2.000039
+      objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.265
@@ -278,6 +282,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 13.75
       objectReference: {fileID: 0}
+    - target: {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 77.99998
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -302,6 +310,10 @@ PrefabInstance:
     - target: {fileID: 1353173126340682939, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: usablePlatformArea
       value: 775
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 1.9999888
       objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
@@ -351,6 +363,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 9.6875
       objectReference: {fileID: 0}
+    - target: {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 78.000015
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -375,6 +391,10 @@ PrefabInstance:
     - target: {fileID: 1353173126340682939, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: usablePlatformArea
       value: 820
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 1.9999915
       objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
@@ -423,6 +443,10 @@ PrefabInstance:
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 10.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 78.00003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -576,6 +600,10 @@ PrefabInstance:
       propertyPath: usablePlatformArea
       value: 820
       objectReference: {fileID: 0}
+    - target: {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 2.0000148
+      objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.515
@@ -624,6 +652,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 10.25
       objectReference: {fileID: 0}
+    - target: {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 77.999985
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -653,6 +685,10 @@ PrefabInstance:
       propertyPath: <Id>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 614a5c4a30ae3cb788279295e59c555e, type: 2}
+    - target: {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 2.0000455
+      objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.2025
@@ -701,6 +737,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 11.625
       objectReference: {fileID: 0}
+    - target: {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 77.99995
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -714,7 +754,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59bb90ec91214678a977fcd64ed6dae4, type: 3}
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
 --- !u!1001 &647900859
@@ -736,6 +776,10 @@ PrefabInstance:
     - target: {fileID: 1353173126340682939, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: usablePlatformArea
       value: 950
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 1.9999576
       objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
@@ -785,6 +829,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 11.875
       objectReference: {fileID: 0}
+    - target: {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 78.000046
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -819,6 +867,10 @@ PrefabInstance:
       propertyPath: <Id>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: df50e87da5e00d1689f77655158f8825, type: 2}
+    - target: {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 1.9999075
+      objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.265
@@ -871,6 +923,10 @@ PrefabInstance:
       propertyPath: <Next>k__BackingField
       value: 
       objectReference: {fileID: 1694136339}
+    - target: {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 78.00009
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -884,7 +940,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59bb90ec91214678a977fcd64ed6dae4, type: 3}
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
 --- !u!1 &832575517
@@ -956,6 +1012,10 @@ PrefabInstance:
       propertyPath: usablePlatformArea
       value: 925
       objectReference: {fileID: 0}
+    - target: {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 2.0000272
+      objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.17125
@@ -1004,6 +1064,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 11.5625
       objectReference: {fileID: 0}
+    - target: {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 77.999985
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1028,6 +1092,10 @@ PrefabInstance:
     - target: {fileID: 1353173126340682939, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: usablePlatformArea
       value: 1050
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 2.000003
       objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1076,6 +1144,10 @@ PrefabInstance:
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 13.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 78.00001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1391,7 +1463,7 @@ PrefabInstance:
       objectReference: {fileID: 796333033}
     - target: {fileID: 8957598004594227194, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2335.5527
+      value: 2366.0532
       objectReference: {fileID: 0}
     - target: {fileID: 8957598004594227194, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1399,7 +1471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8957598004594227194, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2426.8022
+      value: 2452.6814
       objectReference: {fileID: 0}
     - target: {fileID: 8957598004594227194, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1460,6 +1532,10 @@ PrefabInstance:
       propertyPath: usablePlatformArea
       value: 970
       objectReference: {fileID: 0}
+    - target: {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 2.0000217
+      objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.4525
@@ -1507,6 +1583,10 @@ PrefabInstance:
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 12.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: <Distance>k__BackingField
+      value: 77.99997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

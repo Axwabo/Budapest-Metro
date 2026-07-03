@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Metro.Rail.Controls;
 using UnityEngine;
 
 namespace Metro.Rail
@@ -10,6 +12,8 @@ namespace Metro.Rail
         public TrackSegment Next { get; private set; }
 
         public TrackSegment Previous { get; private set; }
+
+        public HashSet<ControlPoint> ControlPoints { get; } = new();
 
         public abstract float Length { get; }
 
