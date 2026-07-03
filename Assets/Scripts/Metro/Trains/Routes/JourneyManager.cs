@@ -1,4 +1,5 @@
 using Metro.Journeys;
+using Metro.Trains.Driving;
 using UnityEngine;
 
 namespace Metro.Trains.Routes
@@ -7,18 +8,36 @@ namespace Metro.Trains.Routes
     public sealed class JourneyManager : AssemblyComponent
     {
 
+        private const int OutOfService = int.MinValue;
+        private const int Origin = -1;
+        private const int Destination = int.MaxValue;
+
         [field: SerializeField]
         public JourneyDescriptor Current { get; private set; }
 
-        // TODO
-        private int _index = -1;
+        private int _index = OutOfService;
 
         public Stop Stop { get; private set; }
 
-        public void Begin()
+        public void Begin() => UpdateStop(Origin);
+
+        private void UpdateStop(int index)
         {
-            Stop = Current.Origin;
+            _index = index;
+            Stop = index switch
+            {
+                OutOfService => null,
+                Origin => Current.Origin,
+                Destination => Current.Destination,
+                _ => Current.IntermediateStops[index]
+            };
             Parent.NotifyStationChanged();
+        }
+
+        public override void OnStateChanged()
+        {
+            if (State == DriverState.Driving)
+                UpdateStop(_index == Current.IntermediateStops.Count - 1 ? Destination : _index + 1);
         }
 
     }

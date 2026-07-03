@@ -13,7 +13,7 @@ namespace Metro.Trains.Driving
 
         public new DriverState State { get; private set; }
 
-        private JourneyDescriptor Journey => Parent.JourneyManager.Current;
+        private JourneyDescriptor Journey => JourneyManager.Current;
 
         private bool CarsReady
         {
@@ -34,7 +34,7 @@ namespace Metro.Trains.Driving
                 Parent.NotifyStateChanged();
         }
 
-        public override void OnStationChanged() => _departAt = Parent.JourneyManager.Stop?.Time ?? TimeSpan.MaxValue;
+        public override void OnStationChanged() => _departAt = JourneyManager.Stop?.Time ?? TimeSpan.MaxValue;
 
         private void Depart()
         {
