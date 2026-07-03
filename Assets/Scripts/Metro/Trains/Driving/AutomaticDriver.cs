@@ -30,8 +30,10 @@ namespace Metro.Trains.Driving
         {
             if (Clock.Now >= _departAt)
                 Depart();
-            if (_previousState != State)
-                Parent.NotifyStateChanged();
+            if (_previousState == State)
+                return;
+            _previousState = State;
+            Parent.NotifyStateChanged();
         }
 
         public override void OnStationChanged() => _departAt = JourneyManager.Stop?.Time ?? TimeSpan.MaxValue;
