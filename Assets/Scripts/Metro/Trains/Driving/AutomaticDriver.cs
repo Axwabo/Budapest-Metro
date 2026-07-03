@@ -94,7 +94,7 @@ namespace Metro.Trains.Driving
 
         public override void OnStationChanged()
         {
-            if (JourneyManager.Stop is null)
+            if (JourneyManager.Stop is null || JourneyManager.IsDestination)
             {
                 _departAt = TimeSpan.MaxValue;
                 return;
