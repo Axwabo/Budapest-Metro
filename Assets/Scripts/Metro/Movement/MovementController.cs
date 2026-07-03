@@ -26,24 +26,28 @@ namespace Metro.Movement
 
         private Vector3 _desiredMove;
 
-        private float _pitch;
+        private bool _lockLook;
 
-        private Transform _t;
+        private float _pitch;
 
         private float _upwards;
 
         private bool _wantsToJump;
 
+        public Transform Transform { get; private set; }
+
+        public Transform Mount { get; set; }
+
         private void Awake()
         {
             _cc = GetComponent<CharacterController>();
-            _t = transform;
+            Transform = transform;
             _cam = GetComponentInChildren<Camera>().transform;
         }
 
         private void Update()
         {
-            var move = _t.TransformDirection(_desiredMove) * (speed * Time.deltaTime);
+            var move = Transform.TransformDirection(_desiredMove) * (speed * Time.deltaTime);
             if (_cc.isGrounded)
             {
                 if (_wantsToJump)
@@ -62,8 +66,10 @@ namespace Metro.Movement
 
         private void OnLook(InputValue look)
         {
+            if (_lockLook)
+                return;
             var vector = look.Get<Vector2>() * sensitivity;
-            _t.Rotate(Vector3.up, vector.x);
+            Transform.Rotate(Vector3.up, vector.x);
             _pitch = Mathf.Clamp(_pitch - vector.y, -90, 90);
             var eulerAngles = _cam.localEulerAngles;
             eulerAngles.x = _pitch;
@@ -78,6 +84,8 @@ namespace Metro.Movement
         }
 
         private void OnJump() => _wantsToJump = true;
+
+        private void OnAttack() => _lockLook = !_lockLook;
 
     }
 
