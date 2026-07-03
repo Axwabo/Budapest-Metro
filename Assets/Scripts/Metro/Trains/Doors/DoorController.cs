@@ -7,14 +7,18 @@ namespace Metro.Trains.Doors
     public sealed class DoorController : AssemblyComponent
     {
 
-        private const float CloseThreshold = 5;
+        private const float CloseThreshold = 4;
 
         private readonly List<MetroDoor> _doors = new();
+
+        private float _openDelay;
 
         private bool _target;
 
         private void Update()
         {
+            if (_openDelay > 0 && (_openDelay -= Clock.Delta) <= 0)
+                SetDoors(true);
             if (_target && Parent.Driver.SecondsToDeparture <= CloseThreshold)
                 SetDoors(false);
         }
@@ -26,7 +30,13 @@ namespace Metro.Trains.Doors
             OnStateChanged();
         }
 
-        public override void OnStateChanged() => SetDoors(State == DriverState.Stopped);
+        public override void OnStateChanged()
+        {
+            if (State == DriverState.Stopped)
+                _openDelay = 1;
+            else
+                SetDoors(false);
+        }
 
         private void SetDoors(bool open)
         {
