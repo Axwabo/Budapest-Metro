@@ -31,7 +31,7 @@ namespace Metro.Movement
             _cam = GetComponentInChildren<Camera>().transform;
         }
 
-        private void Update() => _cc.Move(_desiredMove * (speed * Time.deltaTime));
+        private void Update() => _cc.Move(_t.TransformDirection(_desiredMove) * (speed * Time.deltaTime));
 
         private void OnLook(InputValue look)
         {
