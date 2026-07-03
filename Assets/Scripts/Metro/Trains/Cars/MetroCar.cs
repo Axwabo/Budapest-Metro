@@ -18,7 +18,7 @@ namespace Metro.Trains.Cars
             get
             {
                 foreach (var component in _components)
-                    if (component is IDepartureBlocker {CanDepart: true})
+                    if (component is IDepartureBlocker {CanDepart: false})
                         return false;
                 return true;
             }
