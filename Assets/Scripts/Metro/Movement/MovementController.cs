@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 namespace Metro.Movement
 {
 
-    [RequireComponent(typeof(CharacterController))]
+    [RequireComponent(typeof(Rigidbody))]
     public sealed class MovementController : MonoBehaviour
     {
 
@@ -13,7 +13,7 @@ namespace Metro.Movement
 
         private Transform _cam;
 
-        private CharacterController _cc;
+        private Rigidbody _cc;
 
         private Vector3 _desiredMove;
 
@@ -21,12 +21,12 @@ namespace Metro.Movement
 
         private void Awake()
         {
-            _cc = GetComponent<CharacterController>();
+            _cc = GetComponent<Rigidbody>();
             _t = transform;
             _cam = GetComponentInChildren<Camera>().transform;
         }
 
-        private void Update() => _cc.Move(_desiredMove * (speed * Time.deltaTime));
+        private void FixedUpdate() => _cc.AddForce(_desiredMove * (speed * Time.fixedDeltaTime));
 
         // SendMessage sucks :heartbreaking:
         private void OnMove(InputValue movement)
