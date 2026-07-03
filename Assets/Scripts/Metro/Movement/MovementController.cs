@@ -14,6 +14,12 @@ namespace Metro.Movement
         [SerializeField]
         private float sensitivity = 0.5f;
 
+        [SerializeField]
+        private float jumpForce = 2;
+
+        [SerializeField]
+        private float gravity = -9.81f;
+
         private Transform _cam;
 
         private CharacterController _cc;
@@ -24,6 +30,10 @@ namespace Metro.Movement
 
         private Transform _t;
 
+        private float _upwards;
+
+        private bool _wantsToJump;
+
         private void Awake()
         {
             _cc = GetComponent<CharacterController>();
@@ -31,7 +41,24 @@ namespace Metro.Movement
             _cam = GetComponentInChildren<Camera>().transform;
         }
 
-        private void Update() => _cc.Move(_t.TransformDirection(_desiredMove) * (speed * Time.deltaTime));
+        private void Update()
+        {
+            var move = _t.TransformDirection(_desiredMove) * (speed * Time.deltaTime);
+            if (_cc.isGrounded)
+            {
+                if (_wantsToJump)
+                    _upwards = jumpForce;
+            }
+            else
+                _upwards += gravity * Time.deltaTime;
+
+            _wantsToJump = false;
+            move.y = _upwards;
+            if (move == Vector3.zero)
+                return;
+            if ((_cc.Move(move) & CollisionFlags.Below) != 0)
+                _upwards = 0;
+        }
 
         private void OnLook(InputValue look)
         {
@@ -49,6 +76,8 @@ namespace Metro.Movement
             var vector = movement.Get<Vector2>();
             _desiredMove = new Vector3(vector.x, 0, vector.y);
         }
+
+        private void OnJump() => _wantsToJump = true;
 
     }
 
