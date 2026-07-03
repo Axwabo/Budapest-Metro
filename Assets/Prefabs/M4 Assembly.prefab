@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9a781d5d8b461ba8d0502065bd0e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Routes.OnboardDisplayRenderer
-  width: 200
-  height: 50
-  theme: {fileID: -4733365628477956816, guid: c92932b97d6ad83eda85a092bb38d34a, type: 3}
+  width: 800
+  height: 200
+  settingsReference: {fileID: 11400000, guid: 6ddc7b53d95a2d1a39c9d760fdeeb104, type: 2}
   document: {fileID: 8487047778774462085}
 --- !u!114 &8487047778774462085
 MonoBehaviour:

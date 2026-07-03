@@ -15,28 +15,30 @@ namespace Metro.Trains.Routes
         private int height;
 
         [SerializeField]
-        private ThemeStyleSheet theme;
+        private PanelSettings settingsReference;
 
         [SerializeField]
         private UIDocument document;
 
         private Label _label;
 
+        private PanelSettings _settings;
+
         public RenderTexture Texture { get; private set; }
 
         private void Awake()
         {
             Texture = new RenderTexture(width, height, GraphicsFormat.R8G8B8A8_SNorm, GraphicsFormat.None);
-            var settings = ScriptableObject.CreateInstance<PanelSettings>();
-            settings.themeStyleSheet = theme;
-            settings.targetTexture = Texture;
-            document.panelSettings = settings;
+            _settings = Instantiate(settingsReference);
+            _settings.targetTexture = Texture;
+            document.panelSettings = _settings;
         }
 
         private void OnDestroy()
         {
             Texture.Release();
             Destroy(Texture);
+            Destroy(_settings);
         }
 
         protected override void OnInitialized() => _label = document.rootVisualElement.Q<Label>();
