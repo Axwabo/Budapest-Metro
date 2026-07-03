@@ -11,11 +11,16 @@ namespace Metro.Movement
         [SerializeField]
         private float speed = 5;
 
+        [SerializeField]
+        private float sensitivity = 0.5f;
+
         private Transform _cam;
 
         private CharacterController _cc;
 
         private Vector3 _desiredMove;
+
+        private float _pitch;
 
         private Transform _t;
 
@@ -27,6 +32,16 @@ namespace Metro.Movement
         }
 
         private void Update() => _cc.Move(_desiredMove * (speed * Time.deltaTime));
+
+        private void OnLook(InputValue look)
+        {
+            var vector = look.Get<Vector2>() * sensitivity;
+            _t.Rotate(Vector3.up, vector.x);
+            _pitch = Mathf.Clamp(_pitch - vector.y, -90, 90);
+            var eulerAngles = _cam.localEulerAngles;
+            eulerAngles.x = _pitch;
+            _cam.localEulerAngles = eulerAngles;
+        }
 
         // SendMessage sucks :heartbreaking:
         private void OnMove(InputValue movement)
