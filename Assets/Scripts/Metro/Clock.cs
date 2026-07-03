@@ -11,6 +11,8 @@ namespace Metro
 
         public static TimeSpan Now => Start + TimeSpan.FromSeconds(Time.timeSinceLevelLoadAsDouble);
 
+        public static float Delta => Time.unscaledDeltaTime * Time.timeScale;
+
     }
 
 }

@@ -40,7 +40,7 @@ namespace Metro.Trains.Routes
 
         private void Update()
         {
-            if ((_time -= Time.deltaTime) > 0)
+            if ((_time -= Clock.Delta) > 0)
                 return;
             _station = !_station;
             _time = 5;

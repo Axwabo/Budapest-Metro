@@ -47,14 +47,14 @@ namespace Metro.Movement
 
         private void Update()
         {
-            var move = Transform.TransformDirection(_desiredMove) * (speed * Time.deltaTime);
+            var move = Transform.TransformDirection(_desiredMove) * (speed * Clock.Delta);
             if (_cc.isGrounded)
             {
                 if (_wantsToJump)
                     _upwards = jumpForce;
             }
             else
-                _upwards += gravity * Time.deltaTime;
+                _upwards += gravity * Clock.Delta;
 
             _wantsToJump = false;
             move.y = _upwards;

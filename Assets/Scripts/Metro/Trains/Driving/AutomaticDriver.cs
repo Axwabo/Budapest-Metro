@@ -68,6 +68,8 @@ namespace Metro.Trains.Driving
 
         private void AdjustSpeed()
         {
+            if (Motor.TargetSpeed == 0)
+                return;
             var axle = FrontAxle;
             var brakingDistance = Motor.BrakingDistance;
             if (Motor.TargetSpeed > Constants.SlowMps && ShouldSlowDown(axle, brakingDistance))
