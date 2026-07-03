@@ -24,7 +24,7 @@ namespace Metro.Journeys
 
         public Stop Destination { get; private set; }
 
-        private void OnValidate()
+        private void Awake()
         {
             if (!source)
                 return;
@@ -36,6 +36,8 @@ namespace Metro.Journeys
                 IntermediateStops.Add(Parse(lines[i]));
             Destination = Parse(lines[^1]);
         }
+
+        private void OnValidate() => Awake();
 
         private static Stop Parse(ReadOnlySpan<char> line)
         {

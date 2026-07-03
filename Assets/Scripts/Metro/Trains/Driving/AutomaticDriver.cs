@@ -30,8 +30,8 @@ namespace Metro.Trains.Driving
 
         private void Update()
         {
-            if (State == DriverState.Driving && Motor.AbsoluteSpeed == 0)
-                State = DriverState.Stopped;
+            if (State == DriverState.Driving)
+                Drive();
             else if (Clock.Now >= _departAt)
                 Depart();
             if (_previousState == State)
@@ -40,7 +40,25 @@ namespace Metro.Trains.Driving
             Parent.NotifyStateChanged();
         }
 
-        public override void OnStationChanged() => _departAt = JourneyManager.Stop?.Time ?? TimeSpan.MaxValue;
+        private void Drive()
+        {
+            if (Motor.AbsoluteSpeed == 0)
+                State = DriverState.Stopped;
+        }
+
+        public override void OnStationChanged()
+        {
+            if (JourneyManager.Stop is null)
+            {
+                _departAt = TimeSpan.MaxValue;
+                return;
+            }
+
+            var departMinStay = Clock.Now + TimeSpan.FromSeconds(Constants.MinStaySeconds);
+            _departAt = JourneyManager.Stop.Time < departMinStay
+                ? departMinStay
+                : JourneyManager.Stop.Time;
+        }
 
         private void Depart()
         {

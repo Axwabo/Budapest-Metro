@@ -10,6 +10,14 @@ namespace Metro.Trains
         [Range(0, Constants.MaxMps)]
         private float speed;
 
+        [SerializeField]
+        [Min(0)]
+        private float acceleration;
+
+        [SerializeField]
+        [Min(0)]
+        private float deceleration;
+
         [field: SerializeField]
         public bool Reverse { get; set; }
 
