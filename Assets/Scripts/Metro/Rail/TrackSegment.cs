@@ -19,6 +19,14 @@ namespace Metro.Rail
                 Next.Previous = this;
         }
 
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(Sample(0).position, 0.01f);
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(Sample(Length).position, 0.01f);
+        }
+
         public void ConnectTo(TrackSegment segment)
         {
             Next = segment;
@@ -26,6 +34,8 @@ namespace Metro.Rail
         }
 
         public abstract Pose Sample(float distance);
+
+        public abstract float GetDistance(Vector3 position);
 
     }
 

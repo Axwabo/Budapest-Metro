@@ -4,6 +4,7 @@ using UnityEngine;
 namespace Metro.Rail
 {
 
+    [ExecuteInEditMode]
     public sealed class StationTrack : StraightTrack
     {
 
@@ -15,7 +16,8 @@ namespace Metro.Rail
         protected override void Awake()
         {
             base.Awake();
-            Station = GetComponentInParent<Station>();
+            if (Application.isPlaying)
+                Station = GetComponentInParent<Station>();
         }
 
     }

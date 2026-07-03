@@ -23,6 +23,13 @@ namespace Metro.Rail
             return new Pose(sample.location, sample.Rotation);
         }
 
+        public override float GetDistance(Vector3 position)
+        {
+            var sample = spline.GetProjectionSample(position);
+            var length = spline.Length;
+            return Mathf.Clamp(sample.timeInCurve * length, 0, length);
+        }
+
     }
 
 }

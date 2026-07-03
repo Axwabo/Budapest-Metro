@@ -39,7 +39,7 @@ namespace Metro.Trains.Routes
         public override void OnStateChanged()
         {
             if (State == DriverState.Driving)
-                UpdateStop(_index == Current.IntermediateStops.Count - 1 ? Destination : _index + 1);
+                UpdateStop(++_index >= Current.IntermediateStops.Count - 1 ? Destination : _index);
         }
 
     }
