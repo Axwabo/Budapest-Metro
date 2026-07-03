@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Metro
@@ -11,7 +12,14 @@ namespace Metro
         public void Initialize(T parent)
         {
             Parent = parent;
-            OnInitialized();
+            try
+            {
+                OnInitialized();
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e, this);
+            }
         }
 
         protected virtual void OnInitialized()

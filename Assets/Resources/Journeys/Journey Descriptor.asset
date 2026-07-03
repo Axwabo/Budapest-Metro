@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057833c128da4c78827a20db3d8c3851, type: 3}
+  m_Name: Journey Descriptor
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.JourneyDescriptor
+  <Origin>k__BackingField: {fileID: 11400000, guid: df50e87da5e00d1689f77655158f8825, type: 2}
+  intermediateStations: []
+  <Destination>k__BackingField: {fileID: 11400000, guid: 614a5c4a30ae3cb788279295e59c555e, type: 2}

@@ -24,14 +24,16 @@ namespace Metro
             ListPool<T>.Release(get);
         }
 
-        public static void InitializeComponents<TParent, TComponent>(this TParent parent, List<TComponent> target, bool directChildrenOnly) where TParent : Component where TComponent : Subcomponent<TParent>
+        public static void InitializeComponents<TParent, TComponent>(this TParent parent, List<TComponent> target) where TParent : Component where TComponent : Subcomponent<TParent>
         {
-            if (directChildrenOnly)
-                parent.GetComponentsInImmediateChildren(target);
-            else
-                parent.GetComponentsInChildren(target);
             foreach (var component in target)
                 component.Initialize(parent);
+        }
+
+        public static void GetAndInitializeComponents<TParent, TComponent>(this TParent parent, List<TComponent> target) where TParent : Component where TComponent : Subcomponent<TParent>
+        {
+            parent.GetComponentsInChildren(target);
+            parent.InitializeComponents(target);
         }
 
     }

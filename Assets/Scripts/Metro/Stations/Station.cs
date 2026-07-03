@@ -9,6 +9,9 @@ namespace Metro.Stations
     public sealed class Station : MonoBehaviour
     {
 
+        [field: SerializeField]
+        public StationId Id { get; private set; }
+
         [SerializeField]
         private Transform platform;
 

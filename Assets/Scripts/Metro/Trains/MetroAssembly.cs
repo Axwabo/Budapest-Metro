@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using Metro.Rail;
+using Metro.Trains.Routes;
 using UnityEngine;
 
 namespace Metro.Trains
@@ -17,7 +19,24 @@ namespace Metro.Trains
 
         private readonly List<AssemblyComponent> _components = new();
 
-        private void Start() => this.InitializeComponents(_components, true);
+        public JourneyManager JourneyManager { get; private set; }
+
+        public OnboardDisplayRenderer DisplayRenderer { get; private set; }
+
+        private void Start()
+        {
+            this.GetComponentsInImmediateChildren(_components);
+            JourneyManager = _components.OfType<JourneyManager>().First();
+            DisplayRenderer = _components.OfType<OnboardDisplayRenderer>().First();
+            this.InitializeComponents(_components);
+            JourneyManager.Begin();
+        }
+
+        public void NotifyStationChanged()
+        {
+            foreach (var component in _components)
+                component.OnStationChanged();
+        }
 
     }
 
