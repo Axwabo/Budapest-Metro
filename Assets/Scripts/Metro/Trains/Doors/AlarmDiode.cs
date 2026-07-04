@@ -3,7 +3,6 @@ using UnityEngine;
 namespace Metro.Trains.Doors
 {
 
-    [RequireComponent(typeof(MeshRenderer))]
     public sealed class AlarmDiode : MonoBehaviour
     {
 
@@ -13,9 +12,10 @@ namespace Metro.Trains.Doors
         [SerializeField]
         private Material off;
 
-        private bool _on;
+        [SerializeField]
+        private MeshRenderer[] renderers;
 
-        private MeshRenderer _renderer;
+        private bool _on;
 
         public bool On
         {
@@ -24,11 +24,10 @@ namespace Metro.Trains.Doors
                 if (_on == value)
                     return;
                 _on = value;
-                _renderer.sharedMaterial = value ? on : off;
+                foreach (var meshRenderer in renderers)
+                    meshRenderer.sharedMaterial = value ? on : off;
             }
         }
-
-        private void Awake() => _renderer = GetComponent<MeshRenderer>();
 
         public void Toggle() => On = !_on;
 
