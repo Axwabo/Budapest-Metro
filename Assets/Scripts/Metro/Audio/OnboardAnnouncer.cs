@@ -13,6 +13,12 @@ namespace Metro.Audio
         [SerializeField]
         private float departureDelay = 5;
 
+        [SerializeField]
+        private float arrivingSpeedThreshold = 7;
+
+        [SerializeField]
+        private float stoppedDelay = 4;
+
         private readonly List<Speaker> _speakers = new();
 
         private bool _arrivingPlayed;
@@ -23,16 +29,22 @@ namespace Metro.Audio
         {
             if (JourneyManager.Stop is not {Name: var station})
                 return;
-            // TODO: stopped state
-            AnnouncementType? type = _delay > 0 && (_delay -= Clock.Delta) <= 0
-                ? AnnouncementType.Next
-                : !_arrivingPlayed && Parent.Motor.AbsoluteSpeed < 7 && Parent.Driver.IsOnTargetTrack
-                    ? AnnouncementType.Arriving
-                    : null;
-            if (type == null || !CurrentJourney.Pack.TryGetClip(station, type.Value, out var clip))
+            if (_delay > 0 && (_delay -= Clock.Delta) <= 0)
+            {
+                Play(station, State == DriverState.Stopped ? AnnouncementType.Stopped : AnnouncementType.Next);
                 return;
-            if (type == AnnouncementType.Arriving)
-                _arrivingPlayed = true;
+            }
+
+            if (_arrivingPlayed || !JourneyManager.IsDestination && Parent.Motor.AbsoluteSpeed > arrivingSpeedThreshold || !Parent.Driver.IsOnTargetTrack)
+                return;
+            _arrivingPlayed = true;
+            Play(station, AnnouncementType.Arriving);
+        }
+
+        private void Play(string station, AnnouncementType arriving)
+        {
+            if (!CurrentJourney.Pack.TryGetClip(station, arriving, out var clip))
+                return;
             foreach (var speaker in _speakers)
                 speaker.Play(clip);
         }
@@ -48,6 +60,12 @@ namespace Metro.Audio
             _arrivingPlayed = false;
             if (JourneyManager.IsInService && State == DriverState.Driving)
                 _delay = departureDelay;
+        }
+
+        public override void OnStateChanged()
+        {
+            if (JourneyManager.IsInService && State == DriverState.Stopped)
+                _delay = stoppedDelay;
         }
 
     }
