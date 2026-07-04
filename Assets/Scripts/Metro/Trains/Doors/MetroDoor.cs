@@ -13,6 +13,9 @@ namespace Metro.Trains.Doors
         [field: SerializeField]
         public bool Reverse { get; private set; }
 
+        [field: SerializeField]
+        public AlarmDiode Diode { get; private set; }
+
         [SerializeField]
         private AudioClip open;
 

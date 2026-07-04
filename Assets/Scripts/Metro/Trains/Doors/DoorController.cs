@@ -42,6 +42,8 @@ namespace Metro.Trains.Doors
             foreach (var speaker in _speakers)
                 speaker.PlayOneShit(beep);
             _lastBeeped = at;
+            foreach (var door in _doors)
+                door.Diode.Toggle();
         }
 
         protected override void OnInitialized()
@@ -58,9 +60,16 @@ namespace Metro.Trains.Doors
         public override void OnStateChanged()
         {
             if (State == DriverState.Stopped)
+            {
                 _openDelay = 1;
-            else
-                SetDoors(false);
+                return;
+            }
+
+            SetDoors(false);
+            if (State != DriverState.Driving)
+                return;
+            foreach (var door in _doors)
+                door.Diode.On = false;
         }
 
         private void SetDoors(bool open)
