@@ -9,7 +9,7 @@ namespace Metro.Rail
     {
 
         [field: SerializeField]
-        public TrackSegment Next { get; private set; }
+        public TrackSegment Next { get; set; }
 
         public TrackSegment Previous { get; private set; }
 
