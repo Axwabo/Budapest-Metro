@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Journey Descriptor
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.JourneyDescriptor
   source: {fileID: 4900000, guid: f7589c42396e4f29bbf99cab8cc399d1, type: 3}
+  <Reverse>k__BackingField: 0
+  <Pack>k__BackingField: {fileID: 11400000, guid: c04d179da99d0f6e3a57d289c7864bb7, type: 2}

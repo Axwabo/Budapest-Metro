@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using Metro.Audio;
 using UnityEngine;
 
 namespace Metro.Journeys
@@ -17,6 +18,9 @@ namespace Metro.Journeys
 
         [field: SerializeField]
         public bool Reverse { get; private set; }
+
+        [field: SerializeField]
+        public AnnouncementPack Pack { get; private set; }
 
         public Stop Origin { get; private set; }
 

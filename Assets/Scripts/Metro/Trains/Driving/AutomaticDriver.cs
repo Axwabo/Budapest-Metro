@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Metro.Journeys;
 using Metro.Rail;
 using Metro.Rail.Controls;
 using Metro.Stations;
@@ -26,8 +25,6 @@ namespace Metro.Trains.Driving
         public new DriverState State { get; private set; }
 
         public float SecondsToDeparture => (float) (_departAt - Clock.Now).TotalSeconds;
-
-        private JourneyDescriptor Journey => JourneyManager.Current;
 
         private Motor Motor => Parent.Motor;
 
@@ -118,8 +115,8 @@ namespace Metro.Trains.Driving
             };
             if (State != DriverState.Driving)
                 return;
-            if (Journey)
-                Motor.Reverse = Journey.Reverse;
+            if (CurrentJourney)
+                Motor.Reverse = CurrentJourney.Reverse;
             Motor.TargetSpeed = Constants.MaxMps;
         }
 

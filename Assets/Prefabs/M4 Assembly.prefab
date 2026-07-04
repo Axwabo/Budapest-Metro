@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7653735747912062762}
   - component: {fileID: 8854589536953131960}
+  - component: {fileID: 41016802346417406}
   m_Layer: 0
-  m_Name: Door Controller
+  m_Name: Car Controllers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +46,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Doors.DoorController
   beep: {fileID: 8300000, guid: 485eee0686cb7b597a59e8c9d38c3828, type: 3}
+--- !u!114 &41016802346417406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2251190178717856706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d861c7799b443dfabea5233d285f316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Audio.OnboardAnnouncer
+  departureDelay: 5
 --- !u!1 &5250728963853106611
 GameObject:
   m_ObjectHideFlags: 0

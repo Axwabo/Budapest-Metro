@@ -13,6 +13,12 @@ namespace Metro.Trains.Cars
 
         public void PlayOneShit(AudioClip clip, float volumeScale = 1) => _source.PlayOneShot(clip, volumeScale);
 
+        public void Play(AudioClip clip)
+        {
+            _source.clip = clip;
+            _source.Play();
+        }
+
     }
 
 }
