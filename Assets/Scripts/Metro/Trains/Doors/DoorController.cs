@@ -43,7 +43,8 @@ namespace Metro.Trains.Doors
                 speaker.PlayOneShit(beep);
             _lastBeeped = at;
             foreach (var door in _doors)
-                door.Diode.Toggle();
+                if (door.Reverse == Parent.Motor.Reverse)
+                    door.Diode.Toggle();
         }
 
         protected override void OnInitialized()
@@ -78,7 +79,8 @@ namespace Metro.Trains.Doors
                 return;
             _target = open;
             foreach (var door in _doors)
-                door.Open = _target && door.Reverse == Parent.Motor.Reverse; // TODO: use journey direction or track direction
+                if (door.Reverse == Parent.Motor.Reverse)
+                    door.Open = _target; // TODO: use journey direction or track direction
         }
 
     }
