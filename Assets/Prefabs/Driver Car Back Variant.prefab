@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Driver Car Back Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5027327183486521036, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.901
+      objectReference: {fileID: 0}
     - target: {fileID: 7149425105553484872, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
       propertyPath: m_LocalPosition.z
       value: -10
