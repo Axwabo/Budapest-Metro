@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef9d4ea5d8f44da08b654919a092d229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Doors.DoorController
+  beep: {fileID: 8300000, guid: 485eee0686cb7b597a59e8c9d38c3828, type: 3}
 --- !u!1 &5250728963853106611
 GameObject:
   m_ObjectHideFlags: 0
