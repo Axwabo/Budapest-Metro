@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d861c7799b443dfabea5233d285f316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Audio.OnboardAnnouncer
-  departureDelay: 5
+  departureDelay: 6.5
 --- !u!1 &5250728963853106611
 GameObject:
   m_ObjectHideFlags: 0

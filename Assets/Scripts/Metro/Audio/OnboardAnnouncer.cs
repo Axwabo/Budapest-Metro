@@ -15,12 +15,26 @@ namespace Metro.Audio
 
         private readonly List<Speaker> _speakers = new();
 
+        private bool _arrivingPlayed;
+
         private float _delay;
 
         private void Update()
         {
-            if (_delay > 0 && (_delay -= Clock.Delta) <= 0 && JourneyManager.Stop is {Name: var station} && CurrentJourney.Pack.TryGetClip(station, false, out var clip))
-                Play(clip);
+            if (JourneyManager.Stop is not {Name: var station})
+                return;
+            // TODO: stopped state
+            AnnouncementType? type = _delay > 0 && (_delay -= Clock.Delta) <= 0
+                ? AnnouncementType.Next
+                : !_arrivingPlayed && Parent.Motor.AbsoluteSpeed < 7 && Parent.Driver.IsOnTargetTrack
+                    ? AnnouncementType.Arriving
+                    : null;
+            if (type == null || !CurrentJourney.Pack.TryGetClip(station, type.Value, out var clip))
+                return;
+            if (type == AnnouncementType.Arriving)
+                _arrivingPlayed = true;
+            foreach (var speaker in _speakers)
+                speaker.Play(clip);
         }
 
         protected override void OnInitialized()
@@ -31,14 +45,9 @@ namespace Metro.Audio
 
         public override void OnStationChanged()
         {
+            _arrivingPlayed = false;
             if (JourneyManager.IsInService && State == DriverState.Driving)
                 _delay = departureDelay;
-        }
-
-        private void Play(AudioClip clip)
-        {
-            foreach (var speaker in _speakers)
-                speaker.Play(clip);
         }
 
     }

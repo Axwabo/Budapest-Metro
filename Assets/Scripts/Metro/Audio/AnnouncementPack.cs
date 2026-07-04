@@ -15,23 +15,35 @@ namespace Metro.Audio
         [SerializeField]
         private AudioClip[] arriving;
 
+        [SerializeField]
+        private AudioClip[] stopped;
+
         private readonly Dictionary<string, AudioClip> _arriving = new(StringComparer.OrdinalIgnoreCase);
 
         private readonly Dictionary<string, AudioClip> _next = new(StringComparer.OrdinalIgnoreCase);
+
+        private readonly Dictionary<string, AudioClip> _stopped = new(StringComparer.OrdinalIgnoreCase);
 
         private void Awake()
         {
             Rebuild(next, _next);
             Rebuild(arriving, _arriving);
+            Rebuild(stopped, _stopped);
         }
 
 #if UNITY_EDITOR
         private void OnValidate() => Awake();
 #endif
 
-        public bool TryGetClip(string station, bool stopping, out AudioClip clip)
+        public bool TryGetClip(string station, AnnouncementType type, out AudioClip clip)
         {
-            var source = stopping ? _arriving : _next;
+            var source = type switch
+            {
+                AnnouncementType.Next => _next,
+                AnnouncementType.Arriving => _arriving,
+                AnnouncementType.Stopped => _stopped,
+                _ => throw new ArgumentOutOfRangeException(nameof(type), type, "Unknown announcement type")
+            };
             return source.TryGetValue(station, out clip);
         }
 
@@ -40,7 +52,8 @@ namespace Metro.Audio
             if (clips == null)
                 return;
             foreach (var clip in clips)
-                dictionary[clip.name] = clip;
+                if (clip)
+                    dictionary[clip.name] = clip;
         }
 
     }

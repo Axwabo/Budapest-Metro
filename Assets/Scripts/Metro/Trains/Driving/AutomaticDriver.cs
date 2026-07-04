@@ -26,6 +26,8 @@ namespace Metro.Trains.Driving
 
         public float SecondsToDeparture => (float) (_departAt - Clock.Now).TotalSeconds;
 
+        public bool IsOnTargetTrack => IsTargetTrack(FrontAxle.Track);
+
         private Motor Motor => Parent.Motor;
 
         private Axle FrontAxle => Parent.PrimaryAxle;
