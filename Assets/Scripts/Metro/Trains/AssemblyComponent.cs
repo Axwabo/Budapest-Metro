@@ -18,6 +18,10 @@ namespace Metro.Trains
         {
         }
 
+        public virtual void OnJourneyChanged()
+        {
+        }
+
         public virtual void OnStationChanged()
         {
         }

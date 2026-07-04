@@ -17,6 +17,9 @@ namespace Metro.Journeys
         private TextAsset source;
 
         [field: SerializeField]
+        public string Relation { get; private set; }
+
+        [field: SerializeField]
         public bool Reverse { get; private set; }
 
         [field: SerializeField]

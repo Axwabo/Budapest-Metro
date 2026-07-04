@@ -19,13 +19,21 @@ namespace Metro.Trains.Routes
 
         public Stop Stop { get; private set; }
 
-        public bool IsInService => _index != OutOfService;
+        public bool IsInService { get; private set; }
 
         public bool IsOrigin => _index == Origin;
 
         public bool IsDestination => _index == Destination;
 
-        public void Begin() => UpdateStop(Origin);
+        public void Begin() => Begin(Current);
+
+        private void Begin(JourneyDescriptor journey)
+        {
+            Current = journey;
+            IsInService = journey;
+            Parent.NotifyJourneyChanged();
+            UpdateStop(IsInService ? Origin : OutOfService);
+        }
 
         private void UpdateStop(int index)
         {

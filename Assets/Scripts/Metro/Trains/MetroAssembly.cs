@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Metro.Rail;
 using Metro.Trains.Cars;
-using Metro.Trains.Doors;
 using Metro.Trains.Driving;
 using Metro.Trains.Routes;
 using UnityEngine;
@@ -25,11 +24,7 @@ namespace Metro.Trains
 
         public JourneyManager JourneyManager { get; private set; }
 
-        public OnboardDisplayRenderer DisplayRenderer { get; private set; }
-
         public AutomaticDriver Driver { get; private set; }
-
-        public DoorController DoorController { get; private set; }
 
         public ReadOnlySpan<MetroCar> Cars => _cars;
 
@@ -46,18 +41,25 @@ namespace Metro.Trains
         {
             this.GetComponentsInImmediateChildren(_components);
             _cars = _components.OfType<MetroCar>().ToArray();
-            Motor = _components.OfType<Motor>().First();
-            JourneyManager = _components.OfType<JourneyManager>().First();
-            DisplayRenderer = _components.OfType<OnboardDisplayRenderer>().First();
-            Driver = _components.OfType<AutomaticDriver>().First();
+            Motor = RequireComponent<Motor>();
+            JourneyManager = RequireComponent<JourneyManager>();
+            Driver = RequireComponent<AutomaticDriver>();
             this.InitializeComponents(_components);
             JourneyManager.Begin();
         }
+
+        public T RequireComponent<T>() => _components.OfType<T>().First();
 
         public void NotifyStateChanged()
         {
             foreach (var component in _components)
                 component.OnStateChanged();
+        }
+
+        public void NotifyJourneyChanged()
+        {
+            foreach (var component in _components)
+                component.OnJourneyChanged();
         }
 
         public void NotifyStationChanged()

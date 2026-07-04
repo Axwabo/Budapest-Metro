@@ -1,16 +1,10 @@
-using UnityEngine;
-using UnityEngine.UIElements;
+using Metro.Trains.Routes;
 
 namespace Metro.Trains.Cars
 {
 
-    public sealed class OnboardDisplay : CarComponent
+    public sealed class OnboardDisplay : DisplayBase<OnboardDisplayRenderer>
     {
-
-        [SerializeField]
-        private UIDocument document;
-
-        protected override void OnInitialized() => document.rootVisualElement.style.backgroundImage = Background.FromRenderTexture(Assembly.DisplayRenderer.Texture);
 
     }
 
