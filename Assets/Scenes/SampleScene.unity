@@ -626,6 +626,54 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &78751416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 78751417}
+  - component: {fileID: 78751418}
+  m_Layer: 0
+  m_Name: "M\xF3ricz"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &78751417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78751416}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.0757408, z: -0, w: 0.9971276}
+  m_LocalPosition: {x: -398.9785, y: 85.15986, z: -478.85464}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 100024243}
+  m_LocalEulerAnglesHint: {x: 0, y: 8.688, z: 0}
+--- !u!114 &78751418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78751416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1de862c80242869cb867f840023889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 93541585}
+  <Distance>k__BackingField: 342.4016
+  <Reverse>k__BackingField: 0
+  station: {fileID: 1527458140}
 --- !u!1 &93541582
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +899,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &100024242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 100024243}
+  m_Layer: 0
+  m_Name: '> Keleti'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &100024243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100024242}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1016036160}
+  - {fileID: 1505668907}
+  - {fileID: 1402049027}
+  - {fileID: 1511816096}
+  - {fileID: 726254506}
+  - {fileID: 817320521}
+  - {fileID: 78751417}
+  - {fileID: 610970055}
+  - {fileID: 825575958}
+  m_Father: {fileID: 1862706370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &122948394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4044997385528384409, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
@@ -3936,6 +4024,54 @@ MonoBehaviour:
   <Distance>k__BackingField: 0
   <Reverse>k__BackingField: 1
   station: {fileID: 8639451569834059019}
+--- !u!1 &610970054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 610970055}
+  - component: {fileID: 610970056}
+  m_Layer: 0
+  m_Name: "\xDAjbuda"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &610970055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610970054}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.12711704, z: -0, w: 0.9918878}
+  m_LocalPosition: {x: -539.1684, y: 89.0395, z: -1021.7787}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 100024243}
+  m_LocalEulerAnglesHint: {x: 0, y: 14.606, z: 0}
+--- !u!114 &610970056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610970054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1de862c80242869cb867f840023889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 300232810}
+  <Distance>k__BackingField: 324.26227
+  <Reverse>k__BackingField: 0
+  station: {fileID: 228167102}
 --- !u!1 &635414242
 GameObject:
   m_ObjectHideFlags: 0
@@ -4569,6 +4705,54 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &726254505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 726254506}
+  - component: {fileID: 726254507}
+  m_Layer: 0
+  m_Name: "F\u0151v\xE1m"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &726254506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726254505}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.16396056, z: -0, w: 0.9864669}
+  m_LocalPosition: {x: 393.18304, y: 75.150375, z: 624.4479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 100024243}
+  m_LocalEulerAnglesHint: {x: 0, y: 18.874, z: 0}
+--- !u!114 &726254507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726254505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1de862c80242869cb867f840023889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 508509625}
+  <Distance>k__BackingField: 243.56538
+  <Reverse>k__BackingField: 0
+  station: {fileID: 475460705}
 --- !u!1 &762549517
 GameObject:
   m_ObjectHideFlags: 0
@@ -4861,6 +5045,102 @@ MonoBehaviour:
   <Distance>k__BackingField: 1.9999075
   <Reverse>k__BackingField: 1
   <Area>k__BackingField: {fileID: 635414244}
+--- !u!1 &817320520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 817320521}
+  - component: {fileID: 817320522}
+  m_Layer: 0
+  m_Name: Szent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &817320521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817320520}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.35434988, z: -0, w: 0.93511295}
+  m_LocalPosition: {x: 75.27228, y: 76.07545, z: 248.88287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 100024243}
+  m_LocalEulerAnglesHint: {x: 0, y: 41.507, z: 0}
+--- !u!114 &817320522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817320520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1de862c80242869cb867f840023889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 163953035}
+  <Distance>k__BackingField: 187.52463
+  <Reverse>k__BackingField: 0
+  station: {fileID: 333323288}
+--- !u!1 &825575957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 825575958}
+  - component: {fileID: 825575959}
+  m_Layer: 0
+  m_Name: "Bik\xE1s"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &825575958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825575957}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.56854975, z: -0, w: 0.82264894}
+  m_LocalPosition: {x: -1682.8777, y: 88.87049, z: -1816.6384}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 100024243}
+  m_LocalEulerAnglesHint: {x: 0, y: 69.298, z: 0}
+--- !u!114 &825575959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825575957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1de862c80242869cb867f840023889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 690274262}
+  <Distance>k__BackingField: 481.23434
+  <Reverse>k__BackingField: 0
+  station: {fileID: 224085834}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -5476,6 +5756,54 @@ MonoBehaviour:
   <Distance>k__BackingField: 81.63406
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 646608024}
+--- !u!1 &1016036159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1016036160}
+  - component: {fileID: 1016036161}
+  m_Layer: 0
+  m_Name: Keleti
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1016036160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016036159}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.4103337, z: -0, w: 0.9119355}
+  m_LocalPosition: {x: 2242.875, y: 90.28511, z: 2319.9165}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 100024243}
+  m_LocalEulerAnglesHint: {x: 0, y: 48.452, z: 0}
+--- !u!114 &1016036161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016036159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1de862c80242869cb867f840023889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 2052300538}
+  <Distance>k__BackingField: 696.12976
+  <Reverse>k__BackingField: 0
+  station: {fileID: 8639451569834059019}
 --- !u!1 &1032130897
 GameObject:
   m_ObjectHideFlags: 0
@@ -6281,6 +6609,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1952295028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1402049026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402049027}
+  - component: {fileID: 1402049028}
+  m_Layer: 0
+  m_Name: "R\xE1k\xF3czi"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1402049027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402049026}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.5712334, z: -0, w: 0.8207877}
+  m_LocalPosition: {x: 1447.7, y: 81.74001, z: 1480.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 100024243}
+  m_LocalEulerAnglesHint: {x: 0, y: 69.673, z: 0}
+--- !u!114 &1402049028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402049026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1de862c80242869cb867f840023889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 960185659}
+  <Distance>k__BackingField: 196.92392
+  <Reverse>k__BackingField: 0
+  station: {fileID: 647900862}
 --- !u!1 &1404374181
 GameObject:
   m_ObjectHideFlags: 0
@@ -6673,6 +7049,54 @@ MonoBehaviour:
   in: {fileID: 209518227}
   out: {fileID: 587832800}
   <StopPoint>k__BackingField: {fileID: 1447225337}
+--- !u!1 &1505668906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1505668907}
+  - component: {fileID: 1505668908}
+  m_Layer: 0
+  m_Name: II.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1505668907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505668906}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.19821252, z: -0, w: 0.98015916}
+  m_LocalPosition: {x: 1995.3, y: 90.76, z: 1781.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 100024243}
+  m_LocalEulerAnglesHint: {x: 0, y: 22.865, z: 0}
+--- !u!114 &1505668908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505668906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1de862c80242869cb867f840023889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 488022641}
+  <Distance>k__BackingField: 270.1294
+  <Reverse>k__BackingField: 0
+  station: {fileID: 527658587}
 --- !u!1001 &1511502332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6784,6 +7208,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a30ed456c6149abbc9d1d36b190bc04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.Station
+--- !u!1 &1511816095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1511816096}
+  - component: {fileID: 1511816097}
+  m_Layer: 0
+  m_Name: "K\xE1lvin"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1511816096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511816095}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.4030723, z: -0, w: 0.9151682}
+  m_LocalPosition: {x: 610.1, y: 81.31333, z: 977.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 100024243}
+  m_LocalEulerAnglesHint: {x: 0, y: 47.541, z: 0}
+--- !u!114 &1511816097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511816095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1de862c80242869cb867f840023889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 638664723}
+  <Distance>k__BackingField: 391.21082
+  <Reverse>k__BackingField: 0
+  station: {fileID: 1511502334}
 --- !u!1 &1514382595
 GameObject:
   m_ObjectHideFlags: 0
@@ -8272,6 +8744,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 127102906}
+  - {fileID: 100024243}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1883526873
