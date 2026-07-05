@@ -57,7 +57,7 @@ namespace Metro.Audio
 
         public override void OnStationChanged()
         {
-            _arrivingPlayed = false;
+            _arrivingPlayed = JourneyManager.IsOrigin;
             if (JourneyManager.IsInService && State == DriverState.Driving)
                 _delay = departureDelay;
         }
@@ -67,8 +67,6 @@ namespace Metro.Audio
             if (JourneyManager.IsInService && State == DriverState.Stopped)
                 _delay = stoppedDelay;
         }
-
-        public override void OnJourneyChanged() => _arrivingPlayed = true;
 
     }
 

@@ -24,7 +24,7 @@ namespace Metro.Trains.Routes
 
         public bool IsInService { get; private set; }
 
-        public bool IsOrigin => _index == Origin;
+        public bool IsOrigin => _index == initialStopIndex;
 
         public bool IsDestination => _index == Destination;
 

@@ -54,8 +54,6 @@ namespace Metro.Trains.Doors
                 _doors.AddRange(car.Components<MetroDoor>());
                 _speakers.AddRange(car.Components<Speaker>());
             }
-
-            OnStateChanged();
         }
 
         public override void OnStateChanged()
@@ -72,6 +70,8 @@ namespace Metro.Trains.Doors
             foreach (var door in _doors)
                 door.Diode.On = false;
         }
+
+        public override void OnJourneyChanged() => OnStateChanged();
 
         private void SetDoors(bool open)
         {
