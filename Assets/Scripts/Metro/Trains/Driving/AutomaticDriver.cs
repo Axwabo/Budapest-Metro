@@ -166,8 +166,8 @@ namespace Metro.Trains.Driving
                 case PassedOutMarker {Area: var area}:
                     area.PassingThrough.Remove(Parent);
                     break;
-                case WarningLightTrigger {Light: var warningLight}:
-                    warningLight.State = LightState.Blinking;
+                case WarningLightTrigger trigger:
+                    trigger.Trigger();
                     break;
             }
         }

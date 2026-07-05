@@ -7,9 +7,11 @@ namespace Metro.Rail.Controls
     public sealed class WarningLightTrigger : ControlPoint
     {
 
-        [field: SerializeField]
-        public WarningLight Light { get; private set; }
-        
+        [SerializeField]
+        private Station station;
+
+        public void Trigger() => (Reverse ? station.Left : station.Right).Light.State = LightState.Blinking;
+
     }
 
 }
