@@ -15,10 +15,12 @@ namespace Metro.Trains
 
         public JourneyManager JourneyManager => Parent.JourneyManager;
 
-        [MemberNotNullWhen(true, nameof(CurrentJourney), nameof(Stop))]
+        public IJourney Journey => JourneyManager.Current;
+
+        [MemberNotNullWhen(true, nameof(Route), nameof(Stop))]
         public bool IsInService => JourneyManager.IsInService;
 
-        public JourneyDescriptor? CurrentJourney => JourneyManager.Current;
+        public RouteDescriptor? Route => JourneyManager.Route;
 
         public Stop? Stop => JourneyManager.Stop;
 

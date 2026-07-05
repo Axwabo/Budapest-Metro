@@ -8,6 +8,8 @@ namespace Metro.Journeys
 
         public static Afk Instance { get; } = new();
 
+        public bool Reverse => false;
+
         public (StopPoint Target, Stop Stop) GetTarget(int stopIndex) => (null, null);
 
     }

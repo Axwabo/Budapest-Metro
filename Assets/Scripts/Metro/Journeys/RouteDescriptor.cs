@@ -10,7 +10,7 @@ namespace Metro.Journeys
 {
 
     [CreateAssetMenu(fileName = "Journey Descriptor", menuName = "Metro/Journey Descriptor")]
-    public sealed class JourneyDescriptor : ScriptableObject, IJourney
+    public sealed class RouteDescriptor : ScriptableObject, IJourney
     {
 
         private static readonly char[] NewLineChars = {'\n', '\r'};
@@ -20,9 +20,6 @@ namespace Metro.Journeys
 
         [field: SerializeField]
         public string Relation { get; private set; }
-
-        [field: SerializeField]
-        public bool Reverse { get; private set; }
 
         [field: SerializeField]
         public AnnouncementPack Pack { get; private set; }
@@ -47,6 +44,9 @@ namespace Metro.Journeys
         }
 
         private void OnValidate() => Awake();
+
+        [field: SerializeField]
+        public bool Reverse { get; private set; }
 
 #nullable enable
         public (StopPoint Target, Stop? Stop) GetTarget(int stopIndex)

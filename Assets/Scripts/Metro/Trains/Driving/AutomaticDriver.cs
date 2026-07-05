@@ -113,16 +113,14 @@ namespace Metro.Trains.Driving
             };
             if (State != DriverState.Driving)
                 return;
-            if (CurrentJourney)
-                Motor.Reverse = CurrentJourney.Reverse;
-            Motor.TargetSpeed = Constants.MaxMps;
+            Motor.Reverse = Journey.Reverse;
+            Motor.TargetSpeed = IsInService ? Constants.MaxMps : Constants.SlowMps;
         }
 
         public void OnAxlePassed(ControlPoint point)
         {
             if (!_passedPoints.Add(point))
                 return;
-            // TODO: stop earlier lol
             if (point is StopPoint stop && stop == Target)
                 Motor.TargetSpeed = 0;
         }

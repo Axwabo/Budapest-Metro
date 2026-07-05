@@ -3,6 +3,7 @@ using Metro.Journeys;
 using Metro.Rail.Controls;
 using Metro.Trains.Driving;
 using UnityEngine;
+using UnityEngine.Serialization;
 using static Metro.Journeys.IJourney;
 
 #nullable enable
@@ -13,8 +14,9 @@ namespace Metro.Trains.Routes
     public sealed class JourneyManager : AssemblyComponent
     {
 
+        [field: FormerlySerializedAs("<Current>k__BackingField")]
         [field: SerializeField]
-        public JourneyDescriptor? Current { get; private set; }
+        public new RouteDescriptor? Route { get; private set; }
 
         [SerializeField]
         [Min(Origin)]
@@ -22,13 +24,13 @@ namespace Metro.Trains.Routes
 
         private int _index = OutOfService;
 
-        private IJourney _journey = null!;
+        public IJourney Current { get; private set; } = null!;
 
         public new Stop? Stop { get; private set; }
 
         public StopPoint Target { get; private set; } = null!;
 
-        [MemberNotNullWhen(true, nameof(Current), nameof(Stop))]
+        [MemberNotNullWhen(true, nameof(Route), nameof(Stop))]
         public new bool IsInService => _index != OutOfService;
 
         public bool IsOrigin => _index == initialStopIndex;
@@ -37,8 +39,8 @@ namespace Metro.Trains.Routes
 
         public void Begin()
         {
-            if (Current)
-                Begin(Current, initialStopIndex);
+            if (Route)
+                Begin(Route, initialStopIndex);
             else
                 ExitService();
         }
@@ -49,8 +51,8 @@ namespace Metro.Trains.Routes
         private void Begin(IJourney journey, int index)
         {
             _index = index;
-            _journey = journey;
-            Current = journey as JourneyDescriptor;
+            Current = journey;
+            Route = journey as RouteDescriptor;
             Parent.NotifyJourneyChanged();
             UpdateTarget(index);
         }
@@ -59,7 +61,7 @@ namespace Metro.Trains.Routes
         {
             var current = Stop;
             _index = index;
-            (Target, Stop) = _journey.GetTarget(index);
+            (Target, Stop) = Current.GetTarget(index);
             Parent.NotifyTargetChanged();
             if (current != Stop)
                 Parent.NotifyStopChanged();
@@ -68,7 +70,7 @@ namespace Metro.Trains.Routes
         public override void OnStateChanged()
         {
             if (State == DriverState.Driving && IsInService)
-                UpdateTarget(++_index >= Current.IntermediateStops.Count ? Destination : _index);
+                UpdateTarget(++_index >= Route.IntermediateStops.Count ? Destination : _index);
         }
 
     }

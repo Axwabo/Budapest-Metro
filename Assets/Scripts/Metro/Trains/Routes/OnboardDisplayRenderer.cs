@@ -30,7 +30,7 @@ namespace Metro.Trains.Routes
             };
             _label.text = _section switch
             {
-                DisplaySection.Destination => $"{CurrentJourney.Relation} ► {CurrentJourney.Destination.Name}",
+                DisplaySection.Destination => $"{Route.Relation} ► {Route.Destination.Name}",
                 DisplaySection.Time => Clock.Now.ToString("hh':'mm"),
                 DisplaySection.Stop => Stop.Name,
                 DisplaySection.ServiceArea => Service,

@@ -43,7 +43,7 @@ namespace Metro.Audio
 
         private void Play(string station, AnnouncementType arriving)
         {
-            if (!CurrentJourney.Pack.TryGetClip(station, arriving, out var clip))
+            if (!Route.Pack.TryGetClip(station, arriving, out var clip))
                 return;
             foreach (var speaker in _speakers)
                 speaker.Play(clip);

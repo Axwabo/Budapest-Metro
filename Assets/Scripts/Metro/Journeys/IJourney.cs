@@ -12,6 +12,8 @@ namespace Metro.Journeys
         public const int Origin = -1;
         public const int Destination = int.MaxValue;
 
+        bool Reverse { get; }
+
         (StopPoint Target, Stop? Stop) GetTarget(int stopIndex);
 
     }
