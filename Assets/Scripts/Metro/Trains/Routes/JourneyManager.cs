@@ -38,7 +38,7 @@ namespace Metro.Trains.Routes
         public void Begin()
         {
             if (Current)
-                Begin(Current, initialStopIndex == Current.IntermediateStops.Count ? Destination : initialStopIndex);
+                Begin(Current, initialStopIndex);
             else
                 ExitService();
         }
@@ -59,6 +59,7 @@ namespace Metro.Trains.Routes
             var current = Stop;
             _index = index;
             (Target, Stop) = _journey.GetTarget(index);
+            Parent.NotifyTargetChanged();
             if (current != Stop)
                 Parent.NotifyStopChanged();
         }
