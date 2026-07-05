@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using Metro.Journeys;
 using Metro.Rail;
 using UnityEditor;
@@ -48,7 +47,14 @@ public sealed class ReversingSidingJourneyEditor : Editor
     {
         _handles.Clear();
         foreach (var @switch in FindObjectsByType<Switch>())
-            _handles.Add(new SwitchHandle(@switch, switches.Select(e => e.@switch == @switch ? e.isLeft : (bool?) null).FirstOrDefault()));
+        {
+            bool? isLeft = null;
+            foreach (var state in switches)
+                if (state.@switch == @switch)
+                    isLeft = state.isLeft;
+            _handles.Add(new SwitchHandle(@switch, isLeft));
+        }
+
         _previousCount = switches.Length;
     }
 
