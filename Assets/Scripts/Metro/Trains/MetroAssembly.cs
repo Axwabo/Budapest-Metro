@@ -45,7 +45,10 @@ namespace Metro.Trains
             JourneyManager = RequireComponent<JourneyManager>();
             Driver = RequireComponent<AutomaticDriver>();
             this.InitializeComponents(_components);
-            JourneyManager.Begin();
+            if (JourneyManager.Route)
+                JourneyManager.Begin(JourneyManager.Route);
+            else
+                JourneyManager.Idle();
         }
 
         public T RequireComponent<T>() => _components.OfType<T>().First();

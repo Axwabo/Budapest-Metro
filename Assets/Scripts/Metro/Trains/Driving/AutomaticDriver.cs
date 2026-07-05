@@ -91,7 +91,9 @@ namespace Metro.Trains.Driving
 
         public override void OnTargetChanged()
         {
-            if (!IsInService || JourneyManager.IsDestination)
+            if (!IsInService)
+                return;
+            if (JourneyManager.IsDestination)
             {
                 _departAt = TimeSpan.MaxValue;
                 return;
@@ -105,10 +107,12 @@ namespace Metro.Trains.Driving
 
         private void Depart()
         {
+            if (!CarsReady)
+                return;
             State = State switch
             {
-                DriverState.Stopped or DriverState.WaitingForDeparture when CarsReady => DriverState.Driving,
                 DriverState.Stopped => DriverState.WaitingForDeparture,
+                DriverState.WaitingForDeparture => DriverState.Driving,
                 _ => State
             };
             if (State != DriverState.Driving)

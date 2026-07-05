@@ -22,6 +22,10 @@ namespace Metro.Trains.Routes
         [Min(Origin)]
         private int initialStopIndex = Origin;
 
+        // TODO: put somewhere else
+        [SerializeField]
+        private ReversingSidingJourney? next;
+
         private int _index = OutOfService;
 
         public IJourney Current { get; private set; } = null!;
@@ -37,16 +41,10 @@ namespace Metro.Trains.Routes
 
         public bool IsDestination => _index == Destination;
 
-        public void Begin()
-        {
-            if (Route)
-                Begin(Route, initialStopIndex);
-            else
-                ExitService();
-        }
+        public void Begin(IJourney journey) => Begin(journey, journey is RouteDescriptor route && route == Route ? initialStopIndex : OutOfService);
 
-        [ContextMenu("Exit Service")]
-        public void ExitService() => Begin(Afk.Instance, OutOfService);
+        [ContextMenu("Idle")]
+        public void Idle() => Begin(Afk.Instance);
 
         private void Begin(IJourney journey, int index)
         {
@@ -69,6 +67,8 @@ namespace Metro.Trains.Routes
 
         public override void OnStateChanged()
         {
+            if (State == DriverState.WaitingForDeparture && IsDestination && next)
+                Begin(next);
             if (State == DriverState.Driving && IsInService)
                 UpdateTarget(++_index >= Route.IntermediateStops.Count ? Destination : _index);
         }
