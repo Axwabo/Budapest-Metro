@@ -558,6 +558,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &129106591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 129106593}
+  - component: {fileID: 129106592}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &129106592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129106591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87957185587a4105a30d8c16c07c0798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
+  <Next>k__BackingField: {fileID: 1927253218}
+  <Original>k__BackingField: {fileID: 576719773}
+  <Beginning>k__BackingField: 75
+  <End>k__BackingField: 95
+--- !u!4 &129106593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129106591}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2671.2078, y: 95.21, z: -1847.3617}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 205992943}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &163953032
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,9 +810,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 492696270}
-  - {fileID: 1084822460}
-  - {fileID: 276224493}
+  - {fileID: 967269834}
+  - {fileID: 773194864}
+  - {fileID: 538979343}
   m_Father: {fileID: 646608023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &181202787
@@ -813,9 +861,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 552957428}
-  - {fileID: 468240436}
-  - {fileID: 1773610767}
+  - {fileID: 655224968}
+  - {fileID: 129106593}
+  - {fileID: 1927253219}
   m_Father: {fileID: 646608023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &205992944
@@ -1056,66 +1104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
---- !u!1 &276224492
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 276224493}
-  - component: {fileID: 276224494}
-  m_Layer: 0
-  m_Name: 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &276224493
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276224492}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 181202786}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &276224494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276224492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 299286751}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitTrack/SplitSegment
-  <Next>k__BackingField: {fileID: 0}
---- !u!115 &299286751
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: SplitTrack/SplitSegment
-  m_Namespace: Metro.Rail
-  m_AssemblyName: Assembly-CSharp
 --- !u!1 &300232807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,51 +1516,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &468240435
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 468240436}
-  - component: {fileID: 468240437}
-  m_Layer: 0
-  m_Name: 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &468240436
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468240435}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 205992943}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &468240437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468240435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 299286751}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitTrack/SplitSegment
-  <Next>k__BackingField: {fileID: 1773610768}
 --- !u!1001 &475460702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1818,51 +1761,6 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &492696269
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 492696270}
-  - component: {fileID: 492696271}
-  m_Layer: 0
-  m_Name: 0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &492696270
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492696269}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 181202786}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &492696271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492696269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 299286751}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitTrack/SplitSegment
-  <Next>k__BackingField: {fileID: 1084822461}
 --- !u!1 &508509622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
---- !u!1 &552957427
+--- !u!1 &538979342
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2254,43 +2152,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 552957428}
-  - component: {fileID: 552957429}
+  - component: {fileID: 538979343}
+  - component: {fileID: 538979344}
   m_Layer: 0
-  m_Name: 0
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &552957428
+--- !u!4 &538979343
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552957427}
+  m_GameObject: {fileID: 538979342}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2689.7705, y: 95.21, z: -1830.8586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 205992943}
+  m_Father: {fileID: 181202786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &552957429
+--- !u!114 &538979344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552957427}
+  m_GameObject: {fileID: 538979342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 299286751}
+  m_Script: {fileID: 11500000, guid: 87957185587a4105a30d8c16c07c0798, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitTrack/SplitSegment
-  <Next>k__BackingField: {fileID: 468240437}
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
+  <Next>k__BackingField: {fileID: 0}
+  <Original>k__BackingField: {fileID: 1906872358}
+  <Beginning>k__BackingField: 95
+  <End>k__BackingField: 181.01843
 --- !u!1 &576719770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,6 +2600,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
+--- !u!1 &655224966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 655224968}
+  - component: {fileID: 655224967}
+  m_Layer: 0
+  m_Name: 0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &655224967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655224966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87957185587a4105a30d8c16c07c0798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
+  <Next>k__BackingField: {fileID: 129106592}
+  <Original>k__BackingField: {fileID: 576719773}
+  <Beginning>k__BackingField: 0
+  <End>k__BackingField: 75
+--- !u!4 &655224968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655224966}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2596.5154, y: 95.21, z: -1854.1478}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 205992943}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &690274259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2913,6 +2862,54 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &773194863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773194864}
+  - component: {fileID: 773194865}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773194864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773194863}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2669.8474, y: 95.20999, z: -1832.6133}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 181202786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &773194865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773194863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87957185587a4105a30d8c16c07c0798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
+  <Next>k__BackingField: {fileID: 538979344}
+  <Original>k__BackingField: {fileID: 1906872358}
+  <Beginning>k__BackingField: 75
+  <End>k__BackingField: 95
 --- !u!1001 &796333032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3281,6 +3278,54 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &967269832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 967269834}
+  - component: {fileID: 967269833}
+  m_Layer: 0
+  m_Name: 0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &967269833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967269832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87957185587a4105a30d8c16c07c0798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
+  <Next>k__BackingField: {fileID: 773194865}
+  <Original>k__BackingField: {fileID: 1906872358}
+  <Beginning>k__BackingField: 0
+  <End>k__BackingField: 75
+--- !u!4 &967269834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967269832}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2595.1467, y: 95.21, z: -1839.3058}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 181202786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &967951071 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5451736466235538789, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
@@ -3292,51 +3337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
---- !u!1 &1084822459
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1084822460}
-  - component: {fileID: 1084822461}
-  m_Layer: 0
-  m_Name: 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1084822460
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084822459}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 181202786}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1084822461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084822459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 299286751}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitTrack/SplitSegment
-  <Next>k__BackingField: {fileID: 276224494}
 --- !u!1 &1148459169
 GameObject:
   m_ObjectHideFlags: 0
@@ -4362,51 +4362,6 @@ MonoBehaviour:
   updateInPlayMode: 1
   curveSpace: 0
   mode: 1
---- !u!1 &1773610766
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1773610767}
-  - component: {fileID: 1773610768}
-  m_Layer: 0
-  m_Name: 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1773610767
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773610766}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 205992943}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1773610768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773610766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 299286751}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitTrack/SplitSegment
-  <Next>k__BackingField: {fileID: 0}
 --- !u!1 &1821383469
 GameObject:
   m_ObjectHideFlags: 0
@@ -4863,6 +4818,54 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1927253217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1927253219}
+  - component: {fileID: 1927253218}
+  m_Layer: 0
+  m_Name: 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1927253218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927253217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87957185587a4105a30d8c16c07c0798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
+  <Next>k__BackingField: {fileID: 0}
+  <Original>k__BackingField: {fileID: 576719773}
+  <Beginning>k__BackingField: 95
+  <End>k__BackingField: 180.95459
+--- !u!4 &1927253219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927253217}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2691.1003, y: 95.21001, z: -1845.2966}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 205992943}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1983405008
 GameObject:
   m_ObjectHideFlags: 0
@@ -5504,7 +5507,7 @@ PrefabInstance:
     - target: {fileID: 3403368601219536001, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Next>k__BackingField
       value: 
-      objectReference: {fileID: 552957429}
+      objectReference: {fileID: 655224967}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.4525
@@ -5556,7 +5559,7 @@ PrefabInstance:
     - target: {fileID: 5451736466235538789, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Next>k__BackingField
       value: 
-      objectReference: {fileID: 492696271}
+      objectReference: {fileID: 967269833}
     - target: {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
       value: 77.99997
