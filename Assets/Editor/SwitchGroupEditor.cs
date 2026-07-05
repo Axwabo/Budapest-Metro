@@ -54,7 +54,7 @@ public sealed class SwitchGroupEditor : Editor
             _handles.Add(new SwitchHandle(@switch, isLeft));
         }
 
-        _previousCount = switches.Length;
+        _previousCount = switches?.Length ?? 0;
     }
 
     private static bool? ExistingState(SwitchState[] switches, Switch @switch)
