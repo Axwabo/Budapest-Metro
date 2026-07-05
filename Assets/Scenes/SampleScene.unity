@@ -1733,8 +1733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 463911c95d1e4607869e319254c66f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.ReversingSiding
-  in: {fileID: 209518227}
-  out: {fileID: 587832800}
+  in: {fileID: 1556876117}
+  out: {fileID: 1481446894}
   <StopPoint>k__BackingField: {fileID: 379783695}
 --- !u!4 &239346001 stripped
 Transform:
@@ -7146,7 +7146,7 @@ Transform:
   m_GameObject: {fileID: 1773062062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 38}
+  m_LocalPosition: {x: 0, y: 0, z: 37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7164,10 +7164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6be05915821494391ff2997baf72dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
-  <Track>k__BackingField: {fileID: 0}
-  <Distance>k__BackingField: 0
+  <Track>k__BackingField: {fileID: 796333033}
+  <Distance>k__BackingField: 76.999954
   <Reverse>k__BackingField: 0
-  <Area>k__BackingField: {fileID: 0}
+  <Area>k__BackingField: {fileID: 635414244}
 --- !u!1 &1812508130
 GameObject:
   m_ObjectHideFlags: 0
