@@ -45,7 +45,7 @@ namespace Metro.Journeys.Routes
             var times = lines[1].Split(',');
             Origin = Create(0, stations, times);
             Destination = Create(^1, stations, times);
-            for (var i = 1; i < lines.Length - 1; i++)
+            for (var i = 1; i < stations.Length - 1; i++)
                 IntermediateStops.Add(Create(i, stations, times));
         }
 
