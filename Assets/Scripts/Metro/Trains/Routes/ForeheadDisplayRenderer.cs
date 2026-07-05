@@ -1,3 +1,4 @@
+using Metro.Journeys;
 using Metro.Trains.Driving;
 using UnityEngine.UIElements;
 
@@ -15,7 +16,7 @@ namespace Metro.Trains.Routes
 
         public override void OnStateChanged()
         {
-            if (State == DriverState.Driving && !IsInService)
+            if (State == DriverState.Driving && !IsInService && Journey is not Afk)
                 _label.text = "-";
         }
 

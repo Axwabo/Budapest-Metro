@@ -17,7 +17,7 @@ namespace Metro.Trains.Doors
         private readonly List<MetroDoor> _doors = new();
         private readonly List<Speaker> _speakers = new();
 
-        private float _lastBeeped;
+        private float _lastBeeped = float.MinValue;
 
         private float _openDelay;
 
@@ -70,6 +70,7 @@ namespace Metro.Trains.Doors
         {
             if (State == DriverState.Stopped && JourneyManager.IsInService)
             {
+                _lastBeeped = float.MinValue;
                 _openDelay = 1;
                 return;
             }

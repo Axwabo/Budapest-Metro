@@ -21,12 +21,19 @@ namespace Metro.Journeys
 
         public bool TryEnter(MetroAssembly assembly, out ReversingSidingJourney siding)
         {
+            if (PassingThrough.Count != 0)
+            {
+                siding = null;
+                return false;
+            }
+
             foreach (var journey in journeys)
             {
                 if (journey.UsedBy.Count != 0)
                     continue;
                 PassingThrough.Add(assembly);
                 journey.UsedBy.Add(assembly);
+                journey.Switches.Activate();
                 siding = journey;
                 return true;
             }
