@@ -22,6 +22,10 @@ namespace Metro.Trains.Routes
 
         private PanelSettings _settings;
 
+        private VisualElement _root;
+
+        private float _showIn;
+
         public RenderTexture Texture { get; private set; }
 
         private void Awake()
@@ -32,6 +36,12 @@ namespace Metro.Trains.Routes
             document.panelSettings = _settings;
         }
 
+        protected virtual void Update()
+        {
+            if (_showIn > 0 && (_showIn -= Clock.Delta) <= 0)
+                _root.visible = true;
+        }
+
         private void OnDestroy()
         {
             Texture.Release();
@@ -39,7 +49,17 @@ namespace Metro.Trains.Routes
             Destroy(_settings);
         }
 
-        protected override void OnInitialized() => Initialize(document.rootVisualElement);
+        protected override void OnInitialized()
+        {
+            _root = document.rootVisualElement;
+            Initialize(_root);
+        }
+
+        protected void Blink(float seconds)
+        {
+            _root.visible = false;
+            _showIn = seconds;
+        }
 
         protected abstract void Initialize(VisualElement root);
 

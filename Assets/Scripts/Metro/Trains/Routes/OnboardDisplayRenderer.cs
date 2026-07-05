@@ -15,12 +15,14 @@ namespace Metro.Trains.Routes
 
         private float _time;
 
-        private void Update()
+        protected override void Update()
         {
+            base.Update();
             if (!IsInService || (_time -= Clock.Delta) > 0)
                 return;
             _time = 5;
-            _section = _section switch
+            var previousSection = _section;
+            _section = previousSection switch
             {
                 DisplaySection.Destination => DisplaySection.Stop,
                 DisplaySection.Stop => DisplaySection.Time,
@@ -36,6 +38,8 @@ namespace Metro.Trains.Routes
                 DisplaySection.ServiceArea => Service,
                 _ => throw new InvalidOperationException()
             };
+            if (_section != previousSection)
+                Blink(0.2f);
         }
 
         protected override void Initialize(VisualElement root) => _label = root.Q<Label>();
