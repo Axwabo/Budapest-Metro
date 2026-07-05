@@ -22,9 +22,9 @@ namespace Metro.Rail
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawSphere(Sample(0).position, 0.01f);
+            Gizmos.DrawSphere(Sample(0).position, 0.5f);
             Gizmos.color = Color.green;
-            Gizmos.DrawSphere(Sample(Length).position, 0.01f);
+            Gizmos.DrawSphere(Sample(Length).position, 0.5f);
         }
 
         public void SetNext(TrackSegment next)

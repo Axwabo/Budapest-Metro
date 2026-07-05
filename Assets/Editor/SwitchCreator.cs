@@ -23,17 +23,17 @@ public static class SwitchCreator
             return;
         }
 
-        var points = new List<(TrackSegment Track, Pose Pose, bool End)>();
+        var points = new List<Point>();
         foreach (var segment in segments)
         {
-            points.Add((segment, segment.Sample(0), false));
-            points.Add((segment, segment.Sample(segment.Length), true));
+            points.Add(new Point(segment, segment.Sample(0), false));
+            points.Add(new Point(segment, segment.Sample(segment.Length), true));
         }
 
         foreach (var point in points)
         {
             var current = point.Pose.position;
-            var matching = new List<(TrackSegment Track, Pose Pose, bool End)>();
+            var matching = new List<Point>();
             foreach (var other in points)
                 if (Vector3.Distance(other.Pose.position, current) < 0.1f)
                     matching.Add(other);
@@ -44,26 +44,46 @@ public static class SwitchCreator
         DisplayError();
     }
 
-    private static bool Connect(List<(TrackSegment Track, Pose Pose, bool End)> points)
+    private static bool Connect(List<Point> points)
     {
         var start = points.Where(e => !e.End).ToArray();
         var end = points.Where(e => e.End).ToArray();
         return (start.Length, end.Length) switch
         {
-            (2, 1) => ConnectBranching(start, end),
+            (2, 1) => ConnectBranching(start[0], start[1], end[0]),
             (1, 2) => ConnectJoining(start, end),
             _ => false
         };
     }
 
-    private static bool ConnectBranching((TrackSegment Track, Pose Pose, bool End)[] start, (TrackSegment Track, Pose Pose, bool End)[] end)
+    private static bool ConnectBranching(Point start1, Point start2, Point end)
+    {
+        var (left, right) = OrderLeftRight(start1, start2);
+        Debug.Log("left", left.Track);
+        Debug.Log("right", right.Track);
+        /*var go = new GameObject("Branching Switch")
+        {
+            transform =
+            {
+                position = end.Pose.position
+            }
+        };
+        var @switch = go.AddComponent<Switch>();
+        @switch.fromLeft*/
+        return true;
+    }
+
+    private static bool ConnectJoining(Point[] start, Point[] end)
     {
         throw new NotImplementedException();
     }
 
-    private static bool ConnectJoining((TrackSegment Track, Pose Pose, bool End)[] start, (TrackSegment Track, Pose Pose, bool End)[] end)
+    private static (Point, Point) OrderLeftRight(Point one, Point two)
     {
-        throw new NotImplementedException();
+        var oneToTwo = two.Pose.position - one.Pose.position;
+        return Vector3.Dot(oneToTwo.normalized, one.Pose.right) < 0 ? (one, two) : (two, one);
     }
 
 }
+
+public sealed record Point(TrackSegment Track, Pose Pose, bool End);
