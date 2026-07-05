@@ -5454,7 +5454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.StopPoint
   <Track>k__BackingField: {fileID: 1927253218}
-  <Distance>k__BackingField: NaN
+  <Distance>k__BackingField: 79.434616
   <Reverse>k__BackingField: 0
 --- !u!1 &1983405008
 GameObject:
