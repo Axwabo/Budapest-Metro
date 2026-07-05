@@ -4,24 +4,26 @@ using Metro.Rail;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(ReversingSidingJourney))]
-public sealed class ReversingSidingJourneyEditor : Editor
+[CustomEditor(typeof(SwitchGroup))]
+public sealed class SwitchGroupEditor : Editor
 {
 
     private readonly List<SwitchHandle> _handles = new();
 
     private int _previousCount;
 
-    private void OnEnable() => RefreshHandles(((ReversingSidingJourney) target).Switches);
+    private void OnEnable() => RefreshHandles(((SwitchGroup) target).switches);
 
     private void OnDisable() => _handles.Clear();
 
     private void OnSceneGUI()
     {
-        var journey = (ReversingSidingJourney) target;
-        var list = new List<SwitchState>(journey.Switches);
+        var group = (SwitchGroup) target;
+        var list = group.switches == null
+            ? new List<SwitchState>()
+            : new List<SwitchState>(group.switches);
         if (list.Count != _previousCount)
-            RefreshHandles(journey.Switches);
+            RefreshHandles(group.switches);
         var modified = false;
         Handles.color = Color.green;
         foreach (var handle in _handles)
@@ -39,8 +41,8 @@ public sealed class ReversingSidingJourneyEditor : Editor
         if (!modified)
             return;
         _previousCount = list.Count;
-        journey.Switches = list.ToArray();
-        EditorUtility.SetDirty(journey);
+        group.switches = list.ToArray();
+        EditorUtility.SetDirty(group);
     }
 
     private void RefreshHandles(SwitchState[] switches)
@@ -48,14 +50,22 @@ public sealed class ReversingSidingJourneyEditor : Editor
         _handles.Clear();
         foreach (var @switch in FindObjectsByType<Switch>())
         {
-            bool? isLeft = null;
-            foreach (var state in switches)
-                if (state.@switch == @switch)
-                    isLeft = state.isLeft;
+            var isLeft = ExistingState(switches, @switch);
             _handles.Add(new SwitchHandle(@switch, isLeft));
         }
 
         _previousCount = switches.Length;
+    }
+
+    private static bool? ExistingState(SwitchState[] switches, Switch @switch)
+    {
+        if (switches == null)
+            return null;
+        bool? isLeft = null;
+        foreach (var state in switches)
+            if (state.@switch == @switch)
+                isLeft = state.isLeft;
+        return isLeft;
     }
 
     private static bool Attach(List<SwitchState> list, SwitchHandle handle, bool left)

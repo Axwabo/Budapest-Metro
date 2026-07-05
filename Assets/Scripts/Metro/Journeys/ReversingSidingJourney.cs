@@ -11,7 +11,7 @@ namespace Metro.Journeys
         private StopPoint target;
 
         [field: SerializeField]
-        public SwitchState[] Switches { get; set; }
+        public SwitchGroup Switches { get; private set; }
 
         [field: SerializeField]
         public bool Reverse { get; private set; }

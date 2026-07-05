@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Metro.Journeys;
 using Metro.Rail;
 using Metro.Rail.Controls;
 using Metro.Trains.Cars;
@@ -117,6 +118,8 @@ namespace Metro.Trains.Driving
             };
             if (State != DriverState.Driving)
                 return;
+            if (Journey is ReversingSidingJourney {Switches: var group})
+                group.Activate();
             Motor.Reverse = Journey.Reverse;
             Motor.TargetSpeed = IsInService ? Constants.MaxMps : Constants.SlowMps;
         }
