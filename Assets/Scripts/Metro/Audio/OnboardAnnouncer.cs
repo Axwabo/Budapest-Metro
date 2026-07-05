@@ -68,6 +68,8 @@ namespace Metro.Audio
                 _delay = stoppedDelay;
         }
 
+        public override void OnJourneyChanged() => _arrivingPlayed = true;
+
     }
 
 }

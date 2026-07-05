@@ -15,6 +15,9 @@ namespace Metro.Trains.Routes
         [field: SerializeField]
         public JourneyDescriptor Current { get; private set; }
 
+        [SerializeField]
+        private int initialStopIndex = Origin;
+
         private int _index = OutOfService;
 
         public Stop Stop { get; private set; }
@@ -25,17 +28,17 @@ namespace Metro.Trains.Routes
 
         public bool IsDestination => _index == Destination;
 
-        public void Begin() => Begin(Current);
+        public void Begin() => Begin(Current, initialStopIndex);
 
         [ContextMenu("Exit Service")]
-        public void ExitService() => Begin(null);
+        public void ExitService() => Begin(null, OutOfService);
 
-        private void Begin(JourneyDescriptor journey)
+        private void Begin(JourneyDescriptor journey, int index)
         {
             Current = journey;
             IsInService = journey;
             Parent.NotifyJourneyChanged();
-            UpdateStop(IsInService ? Origin : OutOfService);
+            UpdateStop(index);
         }
 
         private void UpdateStop(int index)
