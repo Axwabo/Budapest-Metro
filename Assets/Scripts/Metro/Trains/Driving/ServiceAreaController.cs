@@ -1,4 +1,5 @@
 using Metro.Journeys;
+using Metro.Rail.Controls;
 
 namespace Metro.Trains.Driving
 {
@@ -28,10 +29,7 @@ namespace Metro.Trains.Driving
                 return;
             }
 
-            if (State != DriverState.WaitingForDeparture || !JourneyManager.IsDestination)
-                return;
-            var area = JourneyManager.Target.SidingAreaAhead;
-            if (!area)
+            if (State != DriverState.WaitingForDeparture || !JourneyManager.IsDestination || JourneyManager.Target is not ServiceAreaStopPoint {Area: var area})
                 return;
             if (area.TryEnter(Parent, out var siding))
             {

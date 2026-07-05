@@ -94,11 +94,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 816398792046598348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e83e2d200894fe9a4549df9f42da344, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e2d178f59a64a6cb0376eeee748cd21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.StopPoint
   <Track>k__BackingField: {fileID: 5451736466235538789}
-  <Distance>k__BackingField: 78
+  <Distance>k__BackingField: 78.00007
   <Reverse>k__BackingField: 0
 --- !u!1 &858100951750014973
 GameObject:
@@ -334,11 +334,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7325097011460064881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e83e2d200894fe9a4549df9f42da344, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e2d178f59a64a6cb0376eeee748cd21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.StopPoint
   <Track>k__BackingField: {fileID: 3403368601219536001}
-  <Distance>k__BackingField: 2.0000005
+  <Distance>k__BackingField: 1.9999337
   <Reverse>k__BackingField: 1
 --- !u!1 &8161380490943532378
 GameObject:

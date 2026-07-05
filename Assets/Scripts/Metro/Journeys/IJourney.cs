@@ -1,7 +1,6 @@
 #nullable enable
 
 using Metro.Rail.Controls;
-using Metro.Trains;
 
 namespace Metro.Journeys
 {
@@ -14,8 +13,6 @@ namespace Metro.Journeys
         public const int Destination = int.MaxValue;
 
         bool Reverse { get; }
-
-        bool CanBegin(MetroAssembly parent) => true;
 
         (StopPoint Target, Stop? Stop) GetTarget(int stopIndex);
 

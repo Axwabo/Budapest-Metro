@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Metro.Rail;
 using Metro.Trains;
 using UnityEngine;
 
@@ -9,36 +10,32 @@ namespace Metro.Journeys
     {
 
         [SerializeField]
-        private ReversingSidingJourney[] journeys;
+        private ReversingSiding[] sidings;
 
         public HashSet<MetroAssembly> PassingThrough { get; } = new();
 
         private void Start()
         {
-            foreach (var journey in journeys)
-                journey.Area = this;
+            foreach (var siding in sidings)
+                siding.Area = this;
         }
 
-        public bool TryEnter(MetroAssembly assembly, out ReversingSidingJourney siding)
+        public bool TryEnter(MetroAssembly assembly, out ReversingSidingJourney journey)
         {
             if (PassingThrough.Count != 0)
             {
-                siding = null;
+                journey = null;
                 return false;
             }
 
-            foreach (var journey in journeys)
+            foreach (var siding in sidings)
             {
-                if (journey.UsedBy.Count != 0)
-                    continue;
-                PassingThrough.Add(assembly);
-                journey.UsedBy.Add(assembly);
-                journey.Switches.Activate();
-                siding = journey;
-                return true;
+                journey = siding.Enter(assembly);
+                if (journey != null)
+                    return true;
             }
 
-            siding = null;
+            journey = null;
             return false;
         }
 

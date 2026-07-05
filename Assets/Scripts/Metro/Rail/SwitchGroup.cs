@@ -1,6 +1,7 @@
+using Metro.Journeys;
 using UnityEngine;
 
-namespace Metro.Journeys
+namespace Metro.Rail
 {
 
     public sealed class SwitchGroup : MonoBehaviour

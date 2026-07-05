@@ -60,6 +60,13 @@ namespace Metro.Trains.Driving
 
         protected override void OnInitialized() => _departureBlockers.AddRange(Parent.Components<IDepartureBlocker>());
 
+        [ContextMenu("Mark Ready")]
+        public void MarkReady()
+        {
+            if (State == DriverState.Stopped)
+                _departAt = TimeSpan.MinValue;
+        }
+
         private void Drive()
         {
             AdjustSpeed();

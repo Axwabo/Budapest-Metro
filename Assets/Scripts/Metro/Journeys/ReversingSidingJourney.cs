@@ -1,28 +1,21 @@
-using System.Collections.Generic;
+using Metro.Rail;
 using Metro.Rail.Controls;
-using Metro.Trains;
-using UnityEngine;
 
 namespace Metro.Journeys
 {
 
-    public sealed class ReversingSidingJourney : MonoBehaviour, IJourney
+    public sealed class ReversingSidingJourney : IJourney
     {
 
-        [SerializeField]
-        private StopPoint target;
+        public ReversingSidingJourney(ReversingSiding siding) => Siding = siding;
 
-        [field: SerializeField]
-        public SwitchGroup Switches { get; private set; }
+        public ReversingSiding Siding { get; }
 
-        public ReversingSidingArea Area { get; set; }
+        public ReversingSidingArea Area => Siding.Area;
 
-        public HashSet<MetroAssembly> UsedBy { get; } = new();
+        public bool Reverse => Siding.Reverse;
 
-        [field: SerializeField]
-        public bool Reverse { get; private set; }
-
-        public (StopPoint Target, Stop Stop) GetTarget(int stopIndex) => (target, null);
+        public (StopPoint Target, Stop Stop) GetTarget(int stopIndex) => (Siding.StopPoint, null);
 
     }
 
