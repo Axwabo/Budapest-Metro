@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 796333034}
+  <Next>k__BackingField: {fileID: 0}
   spline: {fileID: 16684325}
 --- !u!114 &16684325
 MonoBehaviour:
@@ -5614,7 +5614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 796333033}
+  <Next>k__BackingField: {fileID: 0}
   spline: {fileID: 1373718059}
 --- !u!114 &1373718059
 MonoBehaviour:
