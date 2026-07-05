@@ -22,7 +22,7 @@ namespace Metro.Trains.Routes
 
         private PanelSettings _settings;
 
-        private VisualElement _root;
+        private VisualElement _content;
 
         private float _showIn;
 
@@ -39,7 +39,7 @@ namespace Metro.Trains.Routes
         protected virtual void Update()
         {
             if (_showIn > 0 && (_showIn -= Clock.Delta) <= 0)
-                _root.visible = true;
+                _content?.Display();
         }
 
         private void OnDestroy()
@@ -51,13 +51,14 @@ namespace Metro.Trains.Routes
 
         protected override void OnInitialized()
         {
-            _root = document.rootVisualElement;
-            Initialize(_root);
+            var root = document.rootVisualElement;
+            _content = root.Q("Content");
+            Initialize(root);
         }
 
         protected void Blink(float seconds)
         {
-            _root.visible = false;
+            _content?.Display(false);
             _showIn = seconds;
         }
 
