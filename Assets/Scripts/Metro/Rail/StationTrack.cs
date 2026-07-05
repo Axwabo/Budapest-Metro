@@ -10,6 +10,9 @@ namespace Metro.Rail
 
         [field: SerializeField]
         public bool Reverse { get; private set; }
+        
+        [field: SerializeField]
+        public WarningLight Light { get; private set; }
 
         public Station Station { get; private set; }
 

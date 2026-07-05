@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Metro.Rail;
 using Metro.Rail.Controls;
+using Metro.Stations;
 using Metro.Trains.Cars;
 using UnityEngine;
 
@@ -58,7 +59,12 @@ namespace Metro.Trains.Driving
             Parent.NotifyStateChanged();
         }
 
-        protected override void OnInitialized() => _departureBlockers.AddRange(Parent.Components<IDepartureBlocker>());
+        protected override void OnInitialized()
+        {
+            _departureBlockers.AddRange(Parent.Components<IDepartureBlocker>());
+            if (Parent.startingTrack is StationTrack track)
+                track.Light.State = LightState.Off;
+        }
 
         [ContextMenu("Mark Ready Now")]
         private void MarkReadyNow()
@@ -142,6 +148,8 @@ namespace Metro.Trains.Driving
                 return;
             Motor.Reverse = Journey.Reverse;
             _departureDelay = 1;
+            if (Stop is {Name: var stationName} && Station.TryGetLoadad(stationName, out var station))
+                (Motor.Reverse ? station.Left : station.Right).Light.State = LightState.On;
         }
 
         public void OnAxlePassed(ControlPoint point)
@@ -155,6 +163,9 @@ namespace Metro.Trains.Driving
                     break;
                 case PassedOutMarker {Area: var area}:
                     area.PassingThrough.Remove(Parent);
+                    break;
+                case WarningLightTrigger {Light: var warningLight}:
+                    warningLight.State = LightState.Blinking;
                     break;
             }
         }
