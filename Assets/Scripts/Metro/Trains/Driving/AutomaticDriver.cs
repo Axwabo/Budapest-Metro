@@ -77,7 +77,7 @@ namespace Metro.Trains.Driving
             if (Motor.AbsoluteSpeed != 0 || Motor.TargetSpeed != 0)
                 return;
             State = DriverState.Stopped;
-            _departAt = Clock.Now + TimeSpan.FromSeconds(Constants.MinStaySeconds);
+            _departAt = Clock.Now + TimeSpan.FromSeconds(JourneyManager.IsDestination ? Constants.DestinationStaySeconds : Constants.MinStaySeconds);
             _passedPoints.Clear();
         }
 

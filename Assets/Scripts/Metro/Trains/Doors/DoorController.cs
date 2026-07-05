@@ -71,10 +71,10 @@ namespace Metro.Trains.Doors
             switch (State)
             {
                 case DriverState.Stopped when JourneyManager.IsInService:
-                    _openDelay = 1;
+                    _openDelay = JourneyManager.IsDestination ? 3 : 1;
                     return;
                 case DriverState.WaitingForDeparture when _target || JourneyManager.IsInService:
-                    _closeDelay = 4;
+                    _closeDelay = 3;
                     break;
                 case DriverState.Driving:
                     foreach (var door in _doors)
