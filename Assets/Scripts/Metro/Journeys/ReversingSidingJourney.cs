@@ -13,7 +13,7 @@ namespace Metro.Journeys
 
         public ReversingSidingArea Area => _siding.Area;
 
-        public bool Reverse => _siding.Reverse;
+        public bool Reverse => Area.Reverse;
 
         public (StopPoint Target, Stop Stop) GetTarget(int stopIndex) => (_siding.StopPoint, null);
 

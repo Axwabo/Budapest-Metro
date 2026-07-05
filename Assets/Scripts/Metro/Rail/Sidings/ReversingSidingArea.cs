@@ -14,6 +14,9 @@ namespace Metro.Rail.Sidings
         private ReversingSiding[] sidings;
 
         [field: SerializeField]
+        public bool Reverse { get; private set; }
+
+        [field: SerializeField]
         public RouteDescriptor Route { get; private set; }
 
         public HashSet<MetroAssembly> PassingThrough { get; } = new();

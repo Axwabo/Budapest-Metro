@@ -19,9 +19,6 @@ namespace Metro.Rail.Sidings
         [field: SerializeField]
         public ServiceAreaExitPoint StopPoint { get; private set; }
 
-        [field: SerializeField]
-        public bool Reverse { get; private set; }
-
         private ReversingSidingJourney _journey;
 
         public ReversingSidingArea Area { get; set; }
@@ -48,7 +45,7 @@ namespace Metro.Rail.Sidings
                 return null;
             @out.Activate();
             Area.PassingThrough.Add(assembly);
-            return new EnteringJourney(Area.Route);
+            return new EnteringJourney(!Area.Reverse, Area.Route);
         }
 
     }
