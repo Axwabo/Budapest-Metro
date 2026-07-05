@@ -60,7 +60,7 @@ namespace Metro.Trains.Doors
 
         public override void OnStateChanged()
         {
-            if (State == DriverState.Stopped)
+            if (State == DriverState.Stopped && JourneyManager.IsInService)
             {
                 _openDelay = 1;
                 return;

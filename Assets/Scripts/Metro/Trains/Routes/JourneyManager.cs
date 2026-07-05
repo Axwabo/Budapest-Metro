@@ -27,6 +27,9 @@ namespace Metro.Trains.Routes
 
         public void Begin() => Begin(Current);
 
+        [ContextMenu("Exit Service")]
+        public void ExitService() => Begin(null);
+
         private void Begin(JourneyDescriptor journey)
         {
             Current = journey;
@@ -50,7 +53,7 @@ namespace Metro.Trains.Routes
 
         public override void OnStateChanged()
         {
-            if (State == DriverState.Driving)
+            if (State == DriverState.Driving && IsInService)
                 UpdateStop(++_index >= Current.IntermediateStops.Count ? Destination : _index);
         }
 
