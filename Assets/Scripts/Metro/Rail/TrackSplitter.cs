@@ -30,8 +30,8 @@ namespace Metro.Rail
 
             list.Add(Create(points.Length, start, track.Length));
             for (var i = 0; i < list.Count - 1; i++)
-                list[i].Next = list[i + 1];
-            list[^1].Next = track.Next;
+                list[i].SetNext(list[i + 1]);
+            list[^1].SetNext(track.Next);
         }
 
         private SplitSegment Create(int i, float start, float end)

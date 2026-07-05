@@ -9,7 +9,7 @@ namespace Metro.Rail
     {
 
         [field: SerializeField]
-        public TrackSegment Next { get; set; }
+        public TrackSegment Next { get; private set; }
 
         public TrackSegment Previous { get; private set; }
 
@@ -17,11 +17,7 @@ namespace Metro.Rail
 
         public abstract float Length { get; }
 
-        protected virtual void Start()
-        {
-            if (Next)
-                Next.Previous = this;
-        }
+        protected virtual void Start() => RefreshNext();
 
         private void OnDrawGizmos()
         {
@@ -29,6 +25,18 @@ namespace Metro.Rail
             Gizmos.DrawSphere(Sample(0).position, 0.01f);
             Gizmos.color = Color.green;
             Gizmos.DrawSphere(Sample(Length).position, 0.01f);
+        }
+
+        public void SetNext(TrackSegment next)
+        {
+            Next = next;
+            RefreshNext();
+        }
+
+        private void RefreshNext()
+        {
+            if (Next)
+                Next.Previous = this;
         }
 
         public void ConnectTo(TrackSegment segment)
