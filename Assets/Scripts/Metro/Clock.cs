@@ -7,7 +7,7 @@ namespace Metro
     public static class Clock
     {
 
-        private static readonly TimeSpan Start = new(12, 04, 35);
+        private static readonly TimeSpan Start = new(12, 04, 42);
 
         public static TimeSpan Now => Start + TimeSpan.FromSeconds(Time.timeSinceLevelLoadAsDouble);
 
