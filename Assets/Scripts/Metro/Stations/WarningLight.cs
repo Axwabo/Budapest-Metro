@@ -51,7 +51,7 @@ namespace Metro.Stations
             if (_onAssigned == on)
                 return;
             _onAssigned = on;
-            _renderer.material = on ? _on : off;
+            _renderer.sharedMaterial = on ? _on : off;
         }
 
     }
