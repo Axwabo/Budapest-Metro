@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using Metro.Audio;
+using Metro.Rail.Controls;
+using Metro.Stations;
 using UnityEngine;
 
 namespace Metro.Journeys
@@ -46,12 +48,20 @@ namespace Metro.Journeys
 
         private void OnValidate() => Awake();
 
-        public ITarget GetTarget(int stopIndex) => new StopTarget(this, stopIndex switch
+#nullable enable
+        public (StopPoint Target, Stop? Stop) GetTarget(int stopIndex)
         {
-            IJourney.Origin => Origin,
-            IJourney.Destination => Destination,
-            _ => IntermediateStops[stopIndex]
-        });
+            var stop = stopIndex switch
+            {
+                IJourney.Origin => Origin,
+                IJourney.Destination => Destination,
+                _ => IntermediateStops[stopIndex]
+            };
+            return Station.TryGetLoadad(stop.Name, out var station)
+                ? ((Reverse ? station.Left : station.Right).StopPoint, stop)
+                : throw new MissingComponentException($"Station {stop.Name} not found");
+        }
+#nullable restore
 
         private static Stop Parse(ReadOnlySpan<char> line)
         {

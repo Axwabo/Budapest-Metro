@@ -22,7 +22,11 @@ namespace Metro.Trains
         {
         }
 
-        public virtual void OnStationChanged()
+        public virtual void OnTargetChanged()
+        {
+        }
+
+        public virtual void OnStopChanged()
         {
         }
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Metro.Rail.Controls;
 using UnityEngine;
 
@@ -15,9 +16,16 @@ namespace Metro.Rail
 
         public HashSet<ControlPoint> ControlPoints { get; } = new();
 
+        public StopPoint StopPoint { get; private set; }
+
         public abstract float Length { get; }
 
-        protected virtual void Start() => RefreshNext();
+        private void Start()
+        {
+            RefreshNext();
+            if (Application.isPlaying)
+                StopPoint = ControlPoints.OfType<StopPoint>().FirstOrDefault();
+        }
 
         private void OnDrawGizmos()
         {

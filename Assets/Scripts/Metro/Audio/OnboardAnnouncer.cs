@@ -55,7 +55,7 @@ namespace Metro.Audio
                 _speakers.AddRange(car.Components<Speaker>());
         }
 
-        public override void OnStationChanged()
+        public override void OnStopChanged()
         {
             _arrivingPlayed = JourneyManager.IsOrigin;
             if (JourneyManager.IsInService && State == DriverState.Driving)

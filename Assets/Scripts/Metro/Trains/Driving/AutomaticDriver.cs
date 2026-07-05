@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Metro.Rail;
 using Metro.Rail.Controls;
-using Metro.Stations;
 using Metro.Trains.Cars;
 using UnityEngine;
 
@@ -32,6 +31,8 @@ namespace Metro.Trains.Driving
 
         private Axle FrontAxle => Parent.PrimaryAxle;
 
+        private StopPoint Target => JourneyManager.Target;
+
         private bool CarsReady
         {
             get
@@ -57,9 +58,7 @@ namespace Metro.Trains.Driving
 
         private void Drive()
         {
-            // TODO: handle out-of-service stop points
-            if (JourneyManager.IsInService)
-                AdjustSpeed();
+            AdjustSpeed();
             if (Motor.AbsoluteSpeed != 0 || Motor.TargetSpeed != 0)
                 return;
             State = DriverState.Stopped;
@@ -79,23 +78,20 @@ namespace Metro.Trains.Driving
                 return;
             }
 
-            if (axle.Track is not StationTrack stationTrack || stationTrack.Station.name != JourneyManager.Stop.Name)
+            if (axle.Track.StopPoint != Target)
                 return;
-            var distanceToStopPoint = Mathf.Abs(axle.Distance - stationTrack.StopPoint.Distance);
+            var distanceToStopPoint = Mathf.Abs(axle.Distance - Target.Distance);
             if (brakingDistance + StoppingHeadroom > distanceToStopPoint)
                 Motor.TargetSpeed = 0;
             else if (brakingDistance + BrakingHeadroom > distanceToStopPoint)
                 Motor.TargetSpeed = 0.5f;
         }
 
-        private bool ShouldSlowDown(Axle axle, float brakingDistance) => Station.TryGetLoadad(JourneyManager.Stop.Name, out var station)
-                                                                         && brakingDistance + SlowingHeadroom > Vector3.Distance(axle.Transform.position, GetStopPoint(station));
+        private bool ShouldSlowDown(Axle axle, float brakingDistance) => brakingDistance + SlowingHeadroom > Vector3.Distance(axle.Transform.position, Target.Position);
 
-        private Vector3 GetStopPoint(Station station) => (Motor.Reverse ? station.Left : station.Right).StopPoint.Position;
-
-        public override void OnStationChanged()
+        public override void OnTargetChanged()
         {
-            if (JourneyManager.Stop is null || JourneyManager.IsDestination)
+            if (!JourneyManager.IsInService || JourneyManager.IsDestination)
             {
                 _departAt = TimeSpan.MaxValue;
                 return;
@@ -127,11 +123,11 @@ namespace Metro.Trains.Driving
             if (!_passedPoints.Add(point))
                 return;
             // TODO: stop earlier lol
-            if (point is StopPoint stop && IsTargetTrack(stop.Track))
+            if (point is StopPoint stop && stop == Target)
                 Motor.TargetSpeed = 0;
         }
 
-        private bool IsTargetTrack(TrackSegment track) => !JourneyManager.IsInService || track is StationTrack stationTrack && stationTrack.Station.name == JourneyManager.Stop.Name;
+        private bool IsTargetTrack(TrackSegment track) => track.StopPoint == Target;
 
     }
 

@@ -1,4 +1,6 @@
+using System.Diagnostics.CodeAnalysis;
 using Metro.Journeys;
+using Metro.Rail.Controls;
 using Metro.Trains.Driving;
 using UnityEngine;
 using static Metro.Journeys.IJourney;
@@ -17,11 +19,16 @@ namespace Metro.Trains.Routes
 
         private int _index = OutOfService;
 
-        public Stop Stop { get; private set; }
+        private IJourney _journey;
 
-        public ITarget Target { get; private set; }
+#nullable enable
+        public Stop? Stop { get; private set; }
+#nullable restore
 
-        public bool IsInService { get; private set; }
+        public StopPoint Target { get; private set; }
+
+        [MemberNotNullWhen(true, nameof(Stop))]
+        public bool IsInService => _index == OutOfService;
 
         public bool IsOrigin => _index == initialStopIndex;
 
@@ -32,31 +39,27 @@ namespace Metro.Trains.Routes
         [ContextMenu("Exit Service")]
         public void ExitService() => Begin(null, OutOfService);
 
-        private void Begin(JourneyDescriptor journey, int index)
+        private void Begin(IJourney journey, int index)
         {
-            Current = journey;
-            IsInService = journey;
+            _journey = journey;
+            Current = journey as JourneyDescriptor;
             Parent.NotifyJourneyChanged();
-            UpdateStop(index);
+            UpdateTarget(index);
         }
 
-        private void UpdateStop(int index)
+        private void UpdateTarget(int index)
         {
+            var current = Stop;
             _index = index;
-            Stop = index switch
-            {
-                OutOfService => null,
-                Origin => Current.Origin,
-                Destination => Current.Destination,
-                _ => Current.IntermediateStops[index]
-            };
-            Parent.NotifyStationChanged();
+            (Target, Stop) = _journey.GetTarget(index);
+            if (current != Stop)
+                Parent.NotifyStopChanged();
         }
 
         public override void OnStateChanged()
         {
             if (State == DriverState.Driving && IsInService)
-                UpdateStop(++_index >= Current.IntermediateStops.Count ? Destination : _index);
+                UpdateTarget(++_index >= Current.IntermediateStops.Count ? Destination : _index);
         }
 
     }

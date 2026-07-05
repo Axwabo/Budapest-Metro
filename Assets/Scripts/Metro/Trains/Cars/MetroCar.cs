@@ -40,7 +40,7 @@ namespace Metro.Trains.Cars
                 component.OnStateChanged();
         }
 
-        public override void OnStationChanged()
+        public override void OnStopChanged()
         {
             foreach (var component in _components)
                 component.OnStationChanged();

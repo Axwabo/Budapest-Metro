@@ -62,10 +62,16 @@ namespace Metro.Trains
                 component.OnJourneyChanged();
         }
 
-        public void NotifyStationChanged()
+        public void NotifyTargetChanged()
         {
             foreach (var component in _components)
-                component.OnStationChanged();
+                component.OnTargetChanged();
+        }
+
+        public void NotifyStopChanged()
+        {
+            foreach (var component in _components)
+                component.OnStopChanged();
         }
 
     }

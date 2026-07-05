@@ -40,7 +40,7 @@ namespace Metro.Trains.Routes
 
         protected override void Initialize(VisualElement root) => _label = root.Q<Label>();
 
-        public override void OnStationChanged()
+        public override void OnStopChanged()
         {
             _label.text = JourneyManager.Stop?.Name;
             _time = 5;
