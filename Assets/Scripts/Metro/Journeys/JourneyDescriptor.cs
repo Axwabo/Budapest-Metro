@@ -53,6 +53,7 @@ namespace Metro.Journeys
         {
             var stop = stopIndex switch
             {
+                IJourney.OutOfService => throw new ArgumentOutOfRangeException(nameof(stopIndex), "Cannot get out-of-service target for a route"),
                 IJourney.Origin => Origin,
                 IJourney.Destination => Destination,
                 _ => IntermediateStops[stopIndex]

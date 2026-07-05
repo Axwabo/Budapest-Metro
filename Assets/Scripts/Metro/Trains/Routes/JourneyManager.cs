@@ -5,6 +5,8 @@ using Metro.Trains.Driving;
 using UnityEngine;
 using static Metro.Journeys.IJourney;
 
+#nullable enable
+
 namespace Metro.Trains.Routes
 {
 
@@ -12,32 +14,37 @@ namespace Metro.Trains.Routes
     {
 
         [field: SerializeField]
-        public JourneyDescriptor Current { get; private set; }
+        public JourneyDescriptor? Current { get; private set; }
 
         [SerializeField]
+        [Min(Origin)]
         private int initialStopIndex = Origin;
 
         private int _index = OutOfService;
 
-        private IJourney _journey;
+        private IJourney _journey = null!;
 
-#nullable enable
-        public Stop? Stop { get; private set; }
-#nullable restore
+        public new Stop? Stop { get; private set; }
 
-        public StopPoint Target { get; private set; }
+        public StopPoint Target { get; private set; } = null!;
 
-        [MemberNotNullWhen(true, nameof(Stop))]
-        public bool IsInService => _index == OutOfService;
+        [MemberNotNullWhen(true, nameof(Current), nameof(Stop))]
+        public new bool IsInService => _index == OutOfService;
 
         public bool IsOrigin => _index == initialStopIndex;
 
         public bool IsDestination => _index == Destination;
 
-        public void Begin() => Begin(Current, initialStopIndex);
+        public void Begin()
+        {
+            if (Current)
+                Begin(Current, initialStopIndex == Current.IntermediateStops.Count ? Destination : initialStopIndex);
+            else
+                ExitService();
+        }
 
         [ContextMenu("Exit Service")]
-        public void ExitService() => Begin(null, OutOfService);
+        public void ExitService() => Begin(Afk.Instance, OutOfService);
 
         private void Begin(IJourney journey, int index)
         {

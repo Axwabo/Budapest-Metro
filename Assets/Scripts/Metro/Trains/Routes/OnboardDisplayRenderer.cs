@@ -17,7 +17,7 @@ namespace Metro.Trains.Routes
 
         private void Update()
         {
-            if (!JourneyManager.IsInService || (_time -= Clock.Delta) > 0)
+            if (!IsInService || (_time -= Clock.Delta) > 0)
                 return;
             _time = 5;
             _section = _section switch
@@ -32,7 +32,7 @@ namespace Metro.Trains.Routes
             {
                 DisplaySection.Destination => $"{CurrentJourney.Relation} ► {CurrentJourney.Destination.Name}",
                 DisplaySection.Time => Clock.Now.ToString("hh':'mm"),
-                DisplaySection.Stop => JourneyManager.Stop.Name,
+                DisplaySection.Stop => Stop.Name,
                 DisplaySection.ServiceArea => Service,
                 _ => throw new InvalidOperationException()
             };
@@ -42,14 +42,16 @@ namespace Metro.Trains.Routes
 
         public override void OnStopChanged()
         {
-            _label.text = JourneyManager.Stop?.Name;
+            if (_section == DisplaySection.ServiceArea)
+                return;
+            _label.text = Stop?.Name;
             _time = 5;
             _section = DisplaySection.Stop;
         }
 
         public override void OnJourneyChanged()
         {
-            if (JourneyManager.IsInService)
+            if (IsInService)
             {
                 _section = DisplaySection.Stop;
                 return;
