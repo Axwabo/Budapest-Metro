@@ -95,6 +95,8 @@ namespace Metro.Trains.Driving
             State = DriverState.Stopped;
             _departAt = Clock.Now + TimeSpan.FromSeconds(JourneyManager.IsDestination ? Constants.DestinationStaySeconds : Constants.MinStaySeconds);
             _passedPoints.Clear();
+            if (FrontAxle.Track is StationTrack track)
+                track.Light.State = LightState.Off;
         }
 
         private void AdjustSpeed()
@@ -148,8 +150,8 @@ namespace Metro.Trains.Driving
                 return;
             Motor.Reverse = Journey.Reverse;
             _departureDelay = 1;
-            if (Stop is {Name: var stationName} && Station.TryGetLoadad(stationName, out var station))
-                (Motor.Reverse ? station.Left : station.Right).Light.State = LightState.On;
+            if (FrontAxle.Track is StationTrack track)
+                track.Light.State = LightState.On;
         }
 
         public void OnAxlePassed(ControlPoint point)

@@ -32,7 +32,11 @@ namespace Metro.Stations
             }
         }
 
-        private void Awake() => _renderer = GetComponent<MeshRenderer>();
+        private void Awake()
+        {
+            _renderer = GetComponent<MeshRenderer>();
+            _on = _renderer.sharedMaterial;
+        }
 
         private void Update()
         {
