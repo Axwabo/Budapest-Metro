@@ -9,8 +9,6 @@ namespace Metro.Trains.Doors
     public sealed class DoorController : AssemblyComponent, IDepartureBlocker
     {
 
-        private const float CloseThreshold = 4;
-
         [SerializeField]
         private AudioClip beep;
 
@@ -75,7 +73,7 @@ namespace Metro.Trains.Doors
                 case DriverState.Stopped when JourneyManager.IsInService:
                     _openDelay = 1;
                     return;
-                case DriverState.WaitingForDeparture when JourneyManager.IsInService:
+                case DriverState.WaitingForDeparture when _target || JourneyManager.IsInService:
                     _closeDelay = 4;
                     break;
                 case DriverState.Driving:
