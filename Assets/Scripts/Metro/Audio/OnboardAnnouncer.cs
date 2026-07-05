@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Metro.Journeys.Routes;
 using Metro.Trains;
 using Metro.Trains.Cars;
 using Metro.Trains.Driving;
@@ -27,23 +28,23 @@ namespace Metro.Audio
 
         private void Update()
         {
-            if (JourneyManager.Stop is not {Name: var station})
+            if (!IsInService)
                 return;
             if (_delay > 0 && (_delay -= Clock.Delta) <= 0)
             {
-                Play(station, State == DriverState.Stopped ? AnnouncementType.Stopped : AnnouncementType.Next);
+                Play(Route, Stop.Name, State == DriverState.Stopped ? AnnouncementType.Stopped : AnnouncementType.Next);
                 return;
             }
 
             if (_arrivingPlayed || !JourneyManager.IsDestination && Parent.Motor.AbsoluteSpeed > arrivingSpeedThreshold || !Parent.Driver.IsOnTargetTrack)
                 return;
             _arrivingPlayed = true;
-            Play(station, AnnouncementType.Arriving);
+            Play(Route, Stop.Name, AnnouncementType.Arriving);
         }
 
-        private void Play(string station, AnnouncementType arriving)
+        private void Play(Route route, string station, AnnouncementType arriving)
         {
-            if (!Route.Pack.TryGetClip(station, arriving, out var clip))
+            if (!route.Descriptor.Pack.TryGetClip(station, arriving, out var clip))
                 return;
             foreach (var speaker in _speakers)
                 speaker.Play(clip);

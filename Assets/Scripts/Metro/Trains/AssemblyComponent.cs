@@ -2,6 +2,7 @@
 
 using System.Diagnostics.CodeAnalysis;
 using Metro.Journeys;
+using Metro.Journeys.Routes;
 using Metro.Trains.Driving;
 using Metro.Trains.Routes;
 
@@ -20,7 +21,7 @@ namespace Metro.Trains
         [MemberNotNullWhen(true, nameof(Route), nameof(Stop))]
         public bool IsInService => JourneyManager.IsInService;
 
-        public RouteDescriptor? Route => JourneyManager.Route;
+        public Route? Route => JourneyManager.Route;
 
         public Stop? Stop => JourneyManager.Stop;
 

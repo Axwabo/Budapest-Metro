@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using Metro.Journeys;
+using Metro.Journeys.Routes;
 using Metro.Rail.Controls;
 using Metro.Trains.Driving;
 using UnityEngine;
@@ -14,9 +15,10 @@ namespace Metro.Trains.Routes
     public sealed class JourneyManager : AssemblyComponent
     {
 
-        [field: FormerlySerializedAs("<Current>k__BackingField")]
-        [field: SerializeField]
-        public new RouteDescriptor? Route { get; private set; }
+        [FormerlySerializedAs("<Route>k__BackingField")]
+        [FormerlySerializedAs("<Current>k__BackingField")]
+        [SerializeField]
+        private RouteDescriptor? initialRoute;
 
         [SerializeField]
         [Min(Origin)]
@@ -25,6 +27,8 @@ namespace Metro.Trains.Routes
         private int _index = OutOfService;
 
         public IJourney Current { get; private set; } = null!;
+
+        public new Route? Route { get; private set; }
 
         public new Stop? Stop { get; private set; }
 
@@ -37,7 +41,15 @@ namespace Metro.Trains.Routes
 
         public bool IsDestination => _index == Destination;
 
-        public void Begin(IJourney journey) => Begin(journey, journey is RouteDescriptor route && route == Route ? initialStopIndex : OutOfService);
+        public void Begin()
+        {
+            if (initialRoute)
+                Begin(new Route(initialRoute), initialStopIndex);
+            else
+                Idle();
+        }
+
+        public void Begin(IJourney journey) => Begin(journey, journey is Route ? Origin : OutOfService);
 
         [ContextMenu("Idle")]
         public void Idle() => Begin(Afk.Instance);
@@ -46,7 +58,7 @@ namespace Metro.Trains.Routes
         {
             _index = index;
             Current = journey;
-            Route = journey as RouteDescriptor;
+            Route = journey as Route;
             Parent.NotifyJourneyChanged();
             UpdateTarget(index);
         }
@@ -64,7 +76,7 @@ namespace Metro.Trains.Routes
         public override void OnStateChanged()
         {
             if (State == DriverState.Driving && IsInService)
-                UpdateTarget(++_index >= Route.IntermediateStops.Count ? Destination : _index);
+                UpdateTarget(++_index >= Route.Descriptor.IntermediateStops.Count ? Destination : _index);
         }
 
     }

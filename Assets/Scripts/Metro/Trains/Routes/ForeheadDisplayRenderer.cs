@@ -12,7 +12,7 @@ namespace Metro.Trains.Routes
 
         protected override void Initialize(VisualElement root) => _label = root.Q<Label>();
 
-        public override void OnJourneyChanged() => _label.text = IsInService ? $"{Route.Relation} {Route.Destination.Name}" : "";
+        public override void OnJourneyChanged() => _label.text = IsInService ? $"{Route.Relation} {Route.Destination}" : "";
 
         public override void OnStateChanged()
         {

@@ -22,6 +22,8 @@ namespace Metro
 
         public const double MinStaySeconds = 15;
 
+        public const double DestinationStaySeconds = 40;
+
     }
 
 }
