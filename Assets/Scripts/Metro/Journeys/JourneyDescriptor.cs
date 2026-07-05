@@ -8,7 +8,7 @@ namespace Metro.Journeys
 {
 
     [CreateAssetMenu(fileName = "Journey Descriptor", menuName = "Metro/Journey Descriptor")]
-    public sealed class JourneyDescriptor : ScriptableObject
+    public sealed class JourneyDescriptor : ScriptableObject, IJourney
     {
 
         private static readonly char[] NewLineChars = {'\n', '\r'};
@@ -45,6 +45,13 @@ namespace Metro.Journeys
         }
 
         private void OnValidate() => Awake();
+
+        public ITarget GetTarget(int stopIndex) => new StopTarget(this, stopIndex switch
+        {
+            IJourney.Origin => Origin,
+            IJourney.Destination => Destination,
+            _ => IntermediateStops[stopIndex]
+        });
 
         private static Stop Parse(ReadOnlySpan<char> line)
         {

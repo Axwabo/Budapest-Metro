@@ -1,16 +1,13 @@
 using Metro.Journeys;
 using Metro.Trains.Driving;
 using UnityEngine;
+using static Metro.Journeys.IJourney;
 
 namespace Metro.Trains.Routes
 {
 
     public sealed class JourneyManager : AssemblyComponent
     {
-
-        private const int OutOfService = int.MinValue;
-        private const int Origin = -1;
-        private const int Destination = int.MaxValue;
 
         [field: SerializeField]
         public JourneyDescriptor Current { get; private set; }
@@ -21,6 +18,8 @@ namespace Metro.Trains.Routes
         private int _index = OutOfService;
 
         public Stop Stop { get; private set; }
+
+        public ITarget Target { get; private set; }
 
         public bool IsInService { get; private set; }
 
