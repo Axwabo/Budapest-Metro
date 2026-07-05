@@ -1921,8 +1921,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd0db93eaf342cc9c05bd0e3b338104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.ReversingSidingJourney
-  <Reverse>k__BackingField: 0
   target: {fileID: 1974421714}
+  <Reverse>k__BackingField: 0
+  <Switches>k__BackingField:
+  - switch: {fileID: 1812508131}
+    isLeft: 1
+  - switch: {fileID: 1383113257}
+    isLeft: 0
 --- !u!1 &508509622
 GameObject:
   m_ObjectHideFlags: 0
