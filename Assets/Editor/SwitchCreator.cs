@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Metro.Rail;
@@ -51,7 +50,7 @@ public static class SwitchCreator
         return (start.Length, end.Length) switch
         {
             (2, 1) => ConnectBranching(start[0], start[1], end[0]),
-            (1, 2) => ConnectJoining(start, end),
+            (1, 2) => ConnectJoining(start[0], end[0], end[1]),
             _ => false
         };
     }
@@ -59,31 +58,54 @@ public static class SwitchCreator
     private static bool ConnectBranching(Point start1, Point start2, Point end)
     {
         var (left, right) = OrderLeftRight(start1, start2);
-        Debug.Log("left", left.Track);
-        Debug.Log("right", right.Track);
-        /*var go = new GameObject("Branching Switch")
+        var go = new GameObject("Branching Switch")
         {
             transform =
             {
-                position = end.Pose.position
+                position = end.Pose.position,
+                rotation = end.Pose.rotation
             }
         };
         var @switch = go.AddComponent<Switch>();
-        @switch.fromLeft*/
+        @switch.fromLeft = end.Track;
+        @switch.toLeft = left.Track;
+        @switch.fromRight = end.Track;
+        @switch.toRight = right.Track;
         return true;
     }
 
-    private static bool ConnectJoining(Point[] start, Point[] end)
+    private static bool ConnectJoining(Point start, Point end1, Point end2)
     {
-        throw new NotImplementedException();
+        var (left, right) = OrderLeftRight(end1, end2);
+        var go = new GameObject("Joining Switch")
+        {
+            transform =
+            {
+                position = start.Pose.position,
+                rotation = start.Pose.rotation
+            }
+        };
+        var @switch = go.AddComponent<Switch>();
+        @switch.fromLeft = left.Track;
+        @switch.toLeft = start.Track;
+        @switch.fromRight = right.Track;
+        @switch.toRight = start.Track;
+        return true;
     }
 
     private static (Point, Point) OrderLeftRight(Point one, Point two)
     {
-        var oneToTwo = two.Pose.position - one.Pose.position;
-        return Vector3.Dot(oneToTwo.normalized, one.Pose.right) < 0 ? (one, two) : (two, one);
+        var onePose = one.SampleOther();
+        var twoPose = two.SampleOther();
+        var oneToTwo = twoPose.position - onePose.position;
+        return Vector3.Dot(oneToTwo.normalized, onePose.right) > 0 ? (one, two) : (two, one);
     }
 
 }
 
-public sealed record Point(TrackSegment Track, Pose Pose, bool End);
+public sealed record Point(TrackSegment Track, Pose Pose, bool End)
+{
+
+    public Pose SampleOther() => End ? Track.Sample(0) : Track.Sample(Track.Length);
+
+}
