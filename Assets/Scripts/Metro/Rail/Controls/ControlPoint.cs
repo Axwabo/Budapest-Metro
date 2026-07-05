@@ -34,8 +34,13 @@ namespace Metro.Rail.Controls
         [ContextMenu("Recalculate")]
         private void OnValidate()
         {
-            if (!Track || !Track.didAwake)
-                return;
+            if (Track && Track.didAwake)
+                Recalculate();
+        }
+
+        [ContextMenu("Recalculate")]
+        private void Recalculate()
+        {
             var t = transform;
             Distance = Track.GetDistance(t.position);
             Reverse = Vector3.Dot(t.forward, Track.Sample(Distance).forward) < 0;

@@ -247,7 +247,7 @@ namespace SplineMesh {
 
             var onCurve = Vector3.Project(pointToProject - previous.location, next.location - previous.location) + previous.location;
             var rate = (onCurve - previous.location).sqrMagnitude / (next.location - previous.location).sqrMagnitude;
-            rate = Mathf.Clamp(rate, 0, 1);
+            rate = float.IsNaN(rate) ? 0.5f : Mathf.Clamp(rate, 0, 1);
             var result = CurveSample.Lerp(previous, next, rate);
             return result;
         }
