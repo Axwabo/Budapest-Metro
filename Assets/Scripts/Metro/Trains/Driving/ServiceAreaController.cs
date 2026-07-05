@@ -7,40 +7,42 @@ namespace Metro.Trains.Driving
     public sealed class ServiceAreaController : AssemblyComponent, IDepartureBlocker
     {
 
-        private ReversingSidingArea _entryPending;
-
         private void Update()
         {
-            if (State != DriverState.WaitingForDeparture || !_entryPending || !_entryPending.TryEnter(Parent, out var siding))
-                return;
-            CanDepart = true;
-            JourneyManager.Begin(siding);
+            switch (State, JourneyManager.Target)
+            {
+                case (DriverState.Stopped, ServiceAreaExitPoint {Siding: var siding}) when siding.Exit(Parent) is { } journey:
+                    CanDepart = true;
+                    JourneyManager.Begin(journey);
+                    break;
+                case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area}) when area.Enter(Parent) is { } journey:
+                    CanDepart = true;
+                    JourneyManager.Begin(journey);
+                    break;
+            }
         }
 
         public bool CanDepart { get; private set; } = true;
-
-        public override void OnJourneyChanged() => _entryPending = null;
 
         public override void OnStateChanged()
         {
             if (State == DriverState.Stopped && Journey is ReversingSidingJourney reversing)
             {
+                // TODO: to stop point
                 reversing.Area.PassingThrough.Remove(Parent);
                 return;
             }
 
-            if (State != DriverState.WaitingForDeparture || !JourneyManager.IsDestination || JourneyManager.Target is not ServiceAreaStopPoint {Area: var area})
+            if (State != DriverState.WaitingForDeparture || !JourneyManager.IsDestination || JourneyManager.Target is not ServiceEntryStopPoint {Area: var area})
                 return;
-            if (area.TryEnter(Parent, out var siding))
+            if (area.Enter(Parent) is not { } journey)
             {
-                CanDepart = true;
-                JourneyManager.Begin(siding);
+                CanDepart = false;
                 return;
             }
 
-            CanDepart = false;
-            JourneyManager.Begin(Afk.Instance);
-            _entryPending = area;
+            CanDepart = true;
+            JourneyManager.Begin(journey);
         }
 
     }

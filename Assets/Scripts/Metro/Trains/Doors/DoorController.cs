@@ -17,6 +17,8 @@ namespace Metro.Trains.Doors
         private readonly List<MetroDoor> _doors = new();
         private readonly List<Speaker> _speakers = new();
 
+        private float _closeDelay;
+
         private float _lastBeeped = float.MinValue;
 
         private float _openDelay;
@@ -29,11 +31,11 @@ namespace Metro.Trains.Doors
                 SetDoors(true);
             if (State != DriverState.WaitingForDeparture)
                 return;
-            var seconds = Parent.Driver.SecondsSinceTargetDeparture;
-            if (!CanDepart && Mathf.Abs(_lastBeeped - seconds) >= 0.5f)
-                Beep(seconds);
-            if (seconds >= CloseThreshold)
+            if (!CanDepart && Mathf.Abs(_lastBeeped - _closeDelay) >= 0.5f)
+                Beep(_closeDelay);
+            if (_closeDelay <= 0)
                 SetDoors(false);
+            _closeDelay -= Clock.Delta;
         }
 
         public bool CanDepart
@@ -68,17 +70,19 @@ namespace Metro.Trains.Doors
 
         public override void OnStateChanged()
         {
-            if (State == DriverState.Stopped && JourneyManager.IsInService)
+            switch (State)
             {
-                _lastBeeped = float.MinValue;
-                _openDelay = 1;
-                return;
+                case DriverState.Stopped when JourneyManager.IsInService:
+                    _openDelay = 1;
+                    return;
+                case DriverState.WaitingForDeparture when JourneyManager.IsInService:
+                    _closeDelay = 4;
+                    break;
+                case DriverState.Driving:
+                    foreach (var door in _doors)
+                        door.Diode.On = false;
+                    break;
             }
-
-            if (State != DriverState.Driving)
-                return;
-            foreach (var door in _doors)
-                door.Diode.On = false;
         }
 
         public override void OnJourneyChanged() => OnStateChanged();

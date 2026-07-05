@@ -852,6 +852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.ReversingSidingJourney
   in: {fileID: 2119881297}
   out: {fileID: 560432681}
+  route: {fileID: 0}
   <StopPoint>k__BackingField: {fileID: 835570353}
   <Reverse>k__BackingField: 0
 --- !u!1 &205992942
@@ -921,6 +922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.ReversingSidingJourney
   in: {fileID: 506951160}
   out: {fileID: 1722355410}
+  route: {fileID: 0}
   <StopPoint>k__BackingField: {fileID: 1974421714}
   <Reverse>k__BackingField: 0
 --- !u!1 &215759187
@@ -3388,13 +3390,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 835570351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e83e2d200894fe9a4549df9f42da344, type: 3}
+  m_Script: {fileID: 11500000, guid: 71fc91abab104f449517dd3f9ebf514b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.StopPoint
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 538979344}
   <Distance>k__BackingField: 79.71936
   <Reverse>k__BackingField: 0
-  <Area>k__BackingField: {fileID: 0}
 --- !u!1 &873635393
 GameObject:
   m_ObjectHideFlags: 0
@@ -5748,13 +5749,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1974421712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e83e2d200894fe9a4549df9f42da344, type: 3}
+  m_Script: {fileID: 11500000, guid: 71fc91abab104f449517dd3f9ebf514b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.StopPoint
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 1927253218}
   <Distance>k__BackingField: 79.434616
   <Reverse>k__BackingField: 0
-  <Area>k__BackingField: {fileID: 0}
 --- !u!1 &1983405008
 GameObject:
   m_ObjectHideFlags: 0

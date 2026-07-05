@@ -25,8 +25,6 @@ namespace Metro.Trains.Driving
 
         public new DriverState State { get; private set; }
 
-        public float SecondsSinceTargetDeparture => (float) (Clock.Now - _departAt).TotalSeconds;
-
         public bool IsOnTargetTrack => IsTargetTrack(FrontAxle.Track);
 
         public bool CanDepart

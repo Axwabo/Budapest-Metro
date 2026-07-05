@@ -20,23 +20,16 @@ namespace Metro.Journeys
                 siding.Area = this;
         }
 
-        public bool TryEnter(MetroAssembly assembly, out ReversingSidingJourney journey)
+#nullable enable
+
+        public IJourney? Enter(MetroAssembly assembly)
         {
             if (PassingThrough.Count != 0)
-            {
-                journey = null;
-                return false;
-            }
-
+                return null;
             foreach (var siding in sidings)
-            {
-                journey = siding.Enter(assembly);
-                if (journey != null)
-                    return true;
-            }
-
-            journey = null;
-            return false;
+                if (siding.Enter(assembly) is { } journey)
+                    return journey;
+            return null;
         }
 
     }
