@@ -8,6 +8,7 @@ namespace Metro.Journeys
 
         public SwitchState[] switches;
 
+        [ContextMenu("Activate")]
         public void Activate()
         {
             foreach (var state in switches)
