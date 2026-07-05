@@ -132,8 +132,15 @@ namespace Metro.Trains.Driving
         {
             if (!_passedPoints.Add(point))
                 return;
-            if (point is StopPoint stop && stop == Target)
-                Motor.TargetSpeed = 0;
+            switch (point)
+            {
+                case StopPoint stop when stop == Target:
+                    Motor.TargetSpeed = 0;
+                    break;
+                case PassedOutMarker {Area: var area}:
+                    area.PassingThrough.Remove(Parent);
+                    break;
+            }
         }
 
         private bool IsTargetTrack(TrackSegment track) => track.StopPoint == Target;

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4baac183edcb43439bd2b5ab8ce6a086, type: 3}
+  m_Name: Keleti
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Audio.AnnouncementPack
+  next:
+  - {fileID: 8300000, guid: 72f5a790c996134d1bf84c5321a78564, type: 3}
+  - {fileID: 8300000, guid: 996900d9c217222ce91dc83d799a1865, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 092bcbd55c79194fe9f26016405c5a91, type: 3}
+  - {fileID: 8300000, guid: 29cd531aec85269d3a0ee498ba994feb, type: 3}
+  - {fileID: 8300000, guid: a7389accab20d5494a773d22db916846, type: 3}
+  - {fileID: 8300000, guid: ba31a21b869854a7bb336f48f4bd5de9, type: 3}
+  - {fileID: 8300000, guid: 574338f742cfbd92f89758c1336dabc2, type: 3}
+  - {fileID: 0}
+  arriving:
+  - {fileID: 8300000, guid: e905d54aec9ca8dc591b3363086634a4, type: 3}
+  - {fileID: 8300000, guid: 6f614d40b1b6b8f96aedf943319c9b56, type: 3}
+  - {fileID: 8300000, guid: 3d2fc02f977443dd59300d0f8066b880, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: b269dd55306d93b18b2849bacc630d56, type: 3}
+  - {fileID: 8300000, guid: 398950cded4c9590f8001d60f803352e, type: 3}
+  - {fileID: 8300000, guid: 0a7948d96e404f2e68d7a4291a2f2a1c, type: 3}
+  - {fileID: 8300000, guid: 65de26210f4aad5dcb1138b5b458f202, type: 3}
+  - {fileID: 8300000, guid: 544d22525390fd52380f09667c429ca3, type: 3}
+  stopped:
+  - {fileID: 0}
