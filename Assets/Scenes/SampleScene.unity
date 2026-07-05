@@ -3179,6 +3179,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &873635393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 873635395}
+  - component: {fileID: 873635394}
+  m_Layer: 0
+  m_Name: Out Left < Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &873635394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873635393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 167beeddeb4544ba8e8a4f9c9c0e96d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Switch
+  isLeft: 1
+  fromLeft: {fileID: 655224967}
+  toLeft: {fileID: 129106592}
+  fromRight: {fileID: 655224967}
+  toRight: {fileID: 215759190}
+--- !u!4 &873635395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873635393}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00000005284572, y: -0.67418146, z: 0.000000048238903, w: 0.7385658}
+  m_LocalPosition: {x: -2671.2078, y: 95.21, z: -1847.3617}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891280669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3772,7 +3821,7 @@ GameObject:
   - component: {fileID: 1383113258}
   - component: {fileID: 1383113257}
   m_Layer: 0
-  m_Name: Joining Switch
+  m_Name: In Left > Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3944,6 +3993,55 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1409320368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1409320370}
+  - component: {fileID: 1409320369}
+  m_Layer: 0
+  m_Name: Out Right < Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1409320369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409320368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 167beeddeb4544ba8e8a4f9c9c0e96d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Switch
+  isLeft: 1
+  fromLeft: {fileID: 215759190}
+  toLeft: {fileID: 538979344}
+  fromRight: {fileID: 773194865}
+  toRight: {fileID: 538979344}
+--- !u!4 &1409320370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409320368}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.6754492, z: -0, w: 0.7374066}
+  m_LocalPosition: {x: -2689.7705, y: 95.21, z: -1830.8586}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1450066029
 GameObject:
   m_ObjectHideFlags: 0
@@ -4652,7 +4750,7 @@ GameObject:
   - component: {fileID: 1812508132}
   - component: {fileID: 1812508131}
   m_Layer: 0
-  m_Name: Branching Switch
+  m_Name: In Right > Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4670,7 +4768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167beeddeb4544ba8e8a4f9c9c0e96d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Switch
-  isLeft: 0
+  isLeft: 1
   fromLeft: {fileID: 967269833}
   toLeft: {fileID: 1715054362}
   fromRight: {fileID: 967269833}
@@ -5941,3 +6039,5 @@ SceneRoots:
   - {fileID: 7660439605001550532}
   - {fileID: 1812508132}
   - {fileID: 1383113258}
+  - {fileID: 873635395}
+  - {fileID: 1409320370}

@@ -10,13 +10,17 @@ namespace Metro.Rail
         private bool isLeft;
 
         [Header("Left State")]
+        [InspectorName("From")]
         public TrackSegment fromLeft;
 
+        [InspectorName("To")]
         public TrackSegment toLeft;
 
         [Header("Right State")]
+        [InspectorName("From")]
         public TrackSegment fromRight;
 
+        [InspectorName("To")]
         public TrackSegment toRight;
 
         public bool IsLeft
