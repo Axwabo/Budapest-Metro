@@ -28,6 +28,9 @@ namespace SplineMesh
         private SplineNode selection;
         private SelectionType selectionType;
 
+        private static Vector3 _sparePosition;
+        private static Vector3 _spareDirection;
+
         private SerializedProperty nodesProp
         {
             get { return serializedObject.FindProperty("nodes"); }
@@ -303,6 +306,18 @@ namespace SplineMesh
                 Undo.RecordObject(spline, "delete spline node");
                 spline.RemoveNode(selection);
                 selection = null;
+                serializedObject.Update();
+            }
+
+            if (GUILayout.Button("Store Spare"))
+            {
+                _sparePosition = selection.Position;
+                _spareDirection = selection.Direction;
+            }
+
+            if (GUILayout.Button("Flip Spare"))
+            {
+                (selection.Position, selection.Direction) = (_sparePosition, _spareDirection);
                 serializedObject.Update();
             }
 

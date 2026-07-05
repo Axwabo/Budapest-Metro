@@ -208,17 +208,17 @@ MonoBehaviour:
     scale: {x: 1, y: 1}
     roll: 0
   - position: {x: 2396.809, y: 0, z: 2468.1394}
-    direction: {x: 2393.352, y: 0, z: 2462.958}
+    direction: {x: 2394.056, y: 0, z: 2462.7112}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 2379.035, y: 0, z: 2442.018}
-    direction: {x: 2373.1038, y: 0, z: 2436.9849}
+  - position: {x: 2383.644, y: 0, z: 2445.9294}
+    direction: {x: 2377.713, y: 0, z: 2440.8962}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 2370.9985, y: 0, z: 2435.1985}
-    direction: {x: 2370.4033, y: 0, z: 2434.6934}
+  - position: {x: 2376.7476, y: 0, z: 2440.077}
+    direction: {x: 2376.1523, y: 0, z: 2439.5718}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
       roll: 0
     n2:
       position: {x: 2396.809, y: 0, z: 2468.1394}
-      direction: {x: 2393.352, y: 0, z: 2462.958}
+      direction: {x: 2394.056, y: 0, z: 2462.7112}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -240,13 +240,13 @@ MonoBehaviour:
         m_Calls: []
   - n1:
       position: {x: 2396.809, y: 0, z: 2468.1394}
-      direction: {x: 2393.352, y: 0, z: 2462.958}
+      direction: {x: 2394.056, y: 0, z: 2462.7112}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 2379.035, y: 0, z: 2442.018}
-      direction: {x: 2373.1038, y: 0, z: 2436.9849}
+      position: {x: 2383.644, y: 0, z: 2445.9294}
+      direction: {x: 2377.713, y: 0, z: 2440.8962}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -254,21 +254,21 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 2379.035, y: 0, z: 2442.018}
-      direction: {x: 2373.1038, y: 0, z: 2436.9849}
+      position: {x: 2383.644, y: 0, z: 2445.9294}
+      direction: {x: 2377.713, y: 0, z: 2440.8962}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 2370.9985, y: 0, z: 2435.1985}
-      direction: {x: 2370.4033, y: 0, z: 2434.6934}
+      position: {x: 2376.7476, y: 0, z: 2440.077}
+      direction: {x: 2376.1523, y: 0, z: 2439.5718}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 57.0128
+  Length: 49.89811
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -483,6 +483,145 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   Length: 943.4931
+  isLoop: 0
+  CurveChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &30384232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 30384233}
+  - component: {fileID: 30384235}
+  - component: {fileID: 30384234}
+  m_Layer: 0
+  m_Name: Disused
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &30384233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30384232}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1122388342}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &30384234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30384232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
+  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
+  physicMaterial: {fileID: 0}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0}
+  scale: {x: 2, y: 0.159, z: 1.505}
+  generateCollider: 0
+  updateInPlayMode: 1
+  curveSpace: 0
+  mode: 1
+--- !u!114 &30384235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30384232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4a6b5a21acc984ea0a86d24ec6eeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
+  nodes:
+  - position: {x: 2492.685, y: 0, z: 2524.4473}
+    direction: {x: 2487.5283, y: 0, z: 2521.0054}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 2434.566, y: 0, z: 2486.6245}
+    direction: {x: 2429.4092, y: 0, z: 2483.1826}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 2412.1436, y: 0, z: 2470.1362}
+    direction: {x: 2404.8806, y: 0, z: 2463.969}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 2379.035, y: 0, z: 2442.018}
+    direction: {x: 2365.5261, y: 0, z: 2430.5544}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  curves:
+  - n1:
+      position: {x: 2492.685, y: 0, z: 2524.4473}
+      direction: {x: 2487.5283, y: 0, z: 2521.0054}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 2434.566, y: 0, z: 2486.6245}
+      direction: {x: 2429.4092, y: 0, z: 2483.1826}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 2434.566, y: 0, z: 2486.6245}
+      direction: {x: 2429.4092, y: 0, z: 2483.1826}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 2412.1436, y: 0, z: 2470.1362}
+      direction: {x: 2404.8806, y: 0, z: 2463.969}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 2412.1436, y: 0, z: 2470.1362}
+      direction: {x: 2404.8806, y: 0, z: 2463.969}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 2379.035, y: 0, z: 2442.018}
+      direction: {x: 2365.5261, y: 0, z: 2430.5544}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  Length: 140.62616
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -1916,32 +2055,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
   - position: {x: 2408.4539, y: 0, z: 2488.0715}
-    direction: {x: 2406.016, y: 0, z: 2486.131}
+    direction: {x: 2404.4788, y: 0, z: 2484.9072}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 2396.809, y: 0, z: 2468.1394}
-    direction: {x: 2393.477, y: 0, z: 2462.7786}
+  - position: {x: 2396.809, y: 0, z: 2468.139}
+    direction: {x: 2394.056, y: 0, z: 2462.711}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
       position: {x: 2408.4539, y: 0, z: 2488.0715}
-      direction: {x: 2406.016, y: 0, z: 2486.131}
+      direction: {x: 2404.4788, y: 0, z: 2484.9072}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 2396.809, y: 0, z: 2468.1394}
-      direction: {x: 2393.477, y: 0, z: 2462.7786}
+      position: {x: 2396.809, y: 0, z: 2468.139}
+      direction: {x: 2394.056, y: 0, z: 2462.711}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 23.132904
+  Length: 23.204958
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -4422,6 +4561,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 16684322}
+  - {fileID: 30384233}
   - {fileID: 1942180628}
   - {fileID: 1066036387}
   - {fileID: 1373718056}
