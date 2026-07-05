@@ -15,6 +15,8 @@ namespace Metro.Trains.Driving
         private const float BrakingHeadroom = 2;
         private const float StoppingHeadroom = 0.01f;
 
+        private readonly List<IDepartureBlocker> _departureBlockers = new();
+
         private readonly HashSet<ControlPoint> _passedPoints = new();
 
         private TimeSpan _departAt = TimeSpan.MaxValue;
@@ -23,26 +25,26 @@ namespace Metro.Trains.Driving
 
         public new DriverState State { get; private set; }
 
-        public float SecondsToDeparture => (float) (_departAt - Clock.Now).TotalSeconds;
+        public float SecondsSinceTargetDeparture => (float) (Clock.Now - _departAt).TotalSeconds;
 
         public bool IsOnTargetTrack => IsTargetTrack(FrontAxle.Track);
+
+        public bool CanDepart
+        {
+            get
+            {
+                foreach (var blocker in _departureBlockers)
+                    if (!blocker.CanDepart)
+                        return false;
+                return true;
+            }
+        }
 
         private Motor Motor => Parent.Motor;
 
         private Axle FrontAxle => Parent.PrimaryAxle;
 
         private StopPoint Target => JourneyManager.Target;
-
-        private bool CarsReady
-        {
-            get
-            {
-                foreach (var car in Parent.Cars)
-                    if (!car.CanDepart)
-                        return false;
-                return true;
-            }
-        }
 
         private void Update()
         {
@@ -55,6 +57,8 @@ namespace Metro.Trains.Driving
             _previousState = State;
             Parent.NotifyStateChanged();
         }
+
+        protected override void OnInitialized() => _departureBlockers.AddRange(Parent.Components<IDepartureBlocker>());
 
         private void Drive()
         {
@@ -107,12 +111,10 @@ namespace Metro.Trains.Driving
 
         private void Depart()
         {
-            if (!CarsReady || !JourneyManager.IsInService && !Journey.CanBegin(Parent))
-                return;
             State = State switch
             {
                 DriverState.Stopped => DriverState.WaitingForDeparture,
-                DriverState.WaitingForDeparture => DriverState.Driving,
+                DriverState.WaitingForDeparture when CanDepart => DriverState.Driving,
                 _ => State
             };
             if (State != DriverState.Driving)

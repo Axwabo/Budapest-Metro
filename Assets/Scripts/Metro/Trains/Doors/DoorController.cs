@@ -6,10 +6,9 @@ using UnityEngine;
 namespace Metro.Trains.Doors
 {
 
-    public sealed class DoorController : AssemblyComponent
+    public sealed class DoorController : AssemblyComponent, IDepartureBlocker
     {
 
-        private const float BeepThreshold = 7;
         private const float CloseThreshold = 4;
 
         [SerializeField]
@@ -28,13 +27,24 @@ namespace Metro.Trains.Doors
         {
             if (_openDelay > 0 && (_openDelay -= Clock.Delta) <= 0)
                 SetDoors(true);
-            if (State == DriverState.Driving)
+            if (State != DriverState.WaitingForDeparture)
                 return;
-            var seconds = Parent.Driver.SecondsToDeparture;
-            if (seconds is > 0 and < BeepThreshold && Mathf.Abs(_lastBeeped - seconds) >= 0.5f)
+            var seconds = Parent.Driver.SecondsSinceTargetDeparture;
+            if (!CanDepart && Mathf.Abs(_lastBeeped - seconds) >= 0.5f)
                 Beep(seconds);
-            if (seconds <= CloseThreshold)
+            if (seconds >= CloseThreshold)
                 SetDoors(false);
+        }
+
+        public bool CanDepart
+        {
+            get
+            {
+                foreach (var door in _doors)
+                    if (!door.CanDepart)
+                        return false;
+                return true;
+            }
         }
 
         private void Beep(float at)
@@ -64,7 +74,6 @@ namespace Metro.Trains.Doors
                 return;
             }
 
-            SetDoors(false);
             if (State != DriverState.Driving)
                 return;
             foreach (var door in _doors)

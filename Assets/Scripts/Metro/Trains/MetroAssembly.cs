@@ -40,7 +40,7 @@ namespace Metro.Trains
         private void Start()
         {
             this.GetComponentsInImmediateChildren(_components);
-            _cars = _components.OfType<MetroCar>().ToArray();
+            _cars = Components<MetroCar>().ToArray();
             Motor = RequireComponent<Motor>();
             JourneyManager = RequireComponent<JourneyManager>();
             Driver = RequireComponent<AutomaticDriver>();
@@ -52,6 +52,8 @@ namespace Metro.Trains
         }
 
         public T RequireComponent<T>() => _components.OfType<T>().First();
+
+        public IEnumerable<T> Components<T>() => _components.OfType<T>();
 
         public void NotifyStateChanged()
         {

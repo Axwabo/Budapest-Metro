@@ -1,4 +1,4 @@
-namespace Metro.Trains.Cars
+namespace Metro.Trains
 {
 
     public interface IDepartureBlocker

@@ -20,7 +20,7 @@ namespace Metro
 
         public const float SlowMps = 10;
 
-        public const double MinStaySeconds = 22;
+        public const double MinStaySeconds = 15;
 
     }
 

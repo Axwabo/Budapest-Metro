@@ -13,17 +13,6 @@ namespace Metro.Trains.Cars
 
         public Axle BackAxle { get; private set; }
 
-        public bool CanDepart
-        {
-            get
-            {
-                foreach (var component in _components)
-                    if (component is IDepartureBlocker {CanDepart: false})
-                        return false;
-                return true;
-            }
-        }
-
         public IEnumerable<T> Components<T>() => _components.OfType<T>();
 
         protected override void OnInitialized()
