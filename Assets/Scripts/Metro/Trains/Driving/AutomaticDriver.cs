@@ -23,6 +23,8 @@ namespace Metro.Trains.Driving
 
         private DriverState _previousState;
 
+        private float _departureDelay;
+
         public new DriverState State { get; private set; }
 
         public bool IsOnTargetTrack => IsTargetTrack(FrontAxle.Track);
@@ -73,6 +75,14 @@ namespace Metro.Trains.Driving
 
         private void Drive()
         {
+            if (_departureDelay > 0)
+            {
+                if ((_departureDelay -= Clock.Delta) > 0)
+                    return;
+                Motor.TargetSpeed = IsInService ? Constants.MaxMps : Constants.SlowMps;
+                return;
+            }
+
             AdjustSpeed();
             if (Motor.AbsoluteSpeed != 0 || Motor.TargetSpeed != 0)
                 return;
@@ -131,7 +141,7 @@ namespace Metro.Trains.Driving
             if (State != DriverState.Driving)
                 return;
             Motor.Reverse = Journey.Reverse;
-            Motor.TargetSpeed = IsInService ? Constants.MaxMps : Constants.SlowMps;
+            _departureDelay = 1;
         }
 
         public void OnAxlePassed(ControlPoint point)
