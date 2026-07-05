@@ -671,8 +671,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 93541585}
-  <Distance>k__BackingField: 342.4016
-  <Reverse>k__BackingField: 0
+  <Distance>k__BackingField: 26.50431
+  <Reverse>k__BackingField: 1
   station: {fileID: 1527458140}
 --- !u!1 &93541582
 GameObject:
@@ -4069,8 +4069,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 300232810}
-  <Distance>k__BackingField: 324.26227
-  <Reverse>k__BackingField: 0
+  <Distance>k__BackingField: 277.7621
+  <Reverse>k__BackingField: 1
   station: {fileID: 228167102}
 --- !u!1 &635414242
 GameObject:
@@ -4750,8 +4750,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 508509625}
-  <Distance>k__BackingField: 243.56538
-  <Reverse>k__BackingField: 0
+  <Distance>k__BackingField: 193.99829
+  <Reverse>k__BackingField: 1
   station: {fileID: 475460705}
 --- !u!1 &762549517
 GameObject:
@@ -5090,8 +5090,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 163953035}
-  <Distance>k__BackingField: 187.52463
-  <Reverse>k__BackingField: 0
+  <Distance>k__BackingField: 832.10095
+  <Reverse>k__BackingField: 1
   station: {fileID: 333323288}
 --- !u!1 &825575957
 GameObject:
@@ -5138,8 +5138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 690274262}
-  <Distance>k__BackingField: 481.23434
-  <Reverse>k__BackingField: 0
+  <Distance>k__BackingField: 383.75793
+  <Reverse>k__BackingField: 1
   station: {fileID: 224085834}
 --- !u!1 &832575517
 GameObject:
@@ -5801,9 +5801,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 2052300538}
-  <Distance>k__BackingField: 696.12976
-  <Reverse>k__BackingField: 0
-  station: {fileID: 8639451569834059019}
+  <Distance>k__BackingField: 352.4308
+  <Reverse>k__BackingField: 1
+  station: {fileID: 1074250629}
 --- !u!1 &1032130897
 GameObject:
   m_ObjectHideFlags: 0
@@ -6654,8 +6654,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 960185659}
-  <Distance>k__BackingField: 196.92392
-  <Reverse>k__BackingField: 0
+  <Distance>k__BackingField: 680.28326
+  <Reverse>k__BackingField: 1
   station: {fileID: 647900862}
 --- !u!1 &1404374181
 GameObject:
@@ -7094,8 +7094,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 488022641}
-  <Distance>k__BackingField: 270.1294
-  <Reverse>k__BackingField: 0
+  <Distance>k__BackingField: 207.60745
+  <Reverse>k__BackingField: 1
   station: {fileID: 527658587}
 --- !u!1001 &1511502332
 PrefabInstance:
@@ -7253,8 +7253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 638664723}
-  <Distance>k__BackingField: 391.21082
-  <Reverse>k__BackingField: 0
+  <Distance>k__BackingField: 297.6029
+  <Reverse>k__BackingField: 1
   station: {fileID: 1511502334}
 --- !u!1 &1514382595
 GameObject:
