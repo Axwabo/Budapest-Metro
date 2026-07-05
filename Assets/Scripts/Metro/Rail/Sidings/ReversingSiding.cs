@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using Metro.Journeys;
-using Metro.Journeys.Routes;
 using Metro.Rail.Controls;
 using Metro.Trains;
 using UnityEngine;
 
-namespace Metro.Rail
+namespace Metro.Rail.Sidings
 {
 
     public sealed class ReversingSiding : MonoBehaviour
@@ -16,10 +15,6 @@ namespace Metro.Rail
 
         [SerializeField]
         private SwitchGroup @out;
-
-        // TODO: move
-        [SerializeField]
-        private RouteDescriptor route;
 
         [field: SerializeField]
         public ServiceAreaExitPoint StopPoint { get; private set; }
@@ -33,11 +28,7 @@ namespace Metro.Rail
 
         public HashSet<MetroAssembly> UsedBy { get; } = new();
 
-        private void Start()
-        {
-            _journey = new ReversingSidingJourney(this);
-            StopPoint.Siding = this;
-        }
+        private void Start() => _journey = new ReversingSidingJourney(this);
 
 #nullable enable
 
@@ -53,11 +44,11 @@ namespace Metro.Rail
 
         public IJourney? Exit(MetroAssembly assembly)
         {
-            if (Area.PassingThrough.Count != 0 || !route || !UsedBy.Remove(assembly))
+            if (!UsedBy.Remove(assembly))
                 return null;
             @out.Activate();
             Area.PassingThrough.Add(assembly);
-            return new Route(route);
+            return new EnteringJourney(Area.Route);
         }
 
     }

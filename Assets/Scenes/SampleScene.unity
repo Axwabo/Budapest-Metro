@@ -853,7 +853,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.ReversingSidingJourney
   in: {fileID: 2119881297}
   out: {fileID: 560432681}
-  route: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
   <StopPoint>k__BackingField: {fileID: 835570353}
   <Reverse>k__BackingField: 0
 --- !u!1 &205992942
@@ -924,7 +923,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.ReversingSidingJourney
   in: {fileID: 506951160}
   out: {fileID: 1722355410}
-  route: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
   <StopPoint>k__BackingField: {fileID: 1974421714}
   <Reverse>k__BackingField: 0
 --- !u!1 &215759187
@@ -2789,6 +2787,7 @@ MonoBehaviour:
   sidings:
   - {fileID: 205992945}
   - {fileID: 181202788}
+  <Route>k__BackingField: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
 --- !u!1001 &647900859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3398,6 +3397,7 @@ MonoBehaviour:
   <Track>k__BackingField: {fileID: 538979344}
   <Distance>k__BackingField: 83.19681
   <Reverse>k__BackingField: 0
+  <Area>k__BackingField: {fileID: 646608024}
 --- !u!1 &873635393
 GameObject:
   m_ObjectHideFlags: 0
@@ -5906,6 +5906,7 @@ MonoBehaviour:
   <Track>k__BackingField: {fileID: 1927253218}
   <Distance>k__BackingField: 83.1604
   <Reverse>k__BackingField: 0
+  <Area>k__BackingField: {fileID: 646608024}
 --- !u!1 &1983405008
 GameObject:
   m_ObjectHideFlags: 0

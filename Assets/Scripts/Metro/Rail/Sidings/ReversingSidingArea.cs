@@ -1,9 +1,10 @@
 using System.Collections.Generic;
-using Metro.Rail;
+using Metro.Journeys;
+using Metro.Journeys.Routes;
 using Metro.Trains;
 using UnityEngine;
 
-namespace Metro.Journeys
+namespace Metro.Rail.Sidings
 {
 
     public sealed class ReversingSidingArea : MonoBehaviour
@@ -11,6 +12,9 @@ namespace Metro.Journeys
 
         [SerializeField]
         private ReversingSiding[] sidings;
+
+        [field: SerializeField]
+        public RouteDescriptor Route { get; private set; }
 
         public HashSet<MetroAssembly> PassingThrough { get; } = new();
 
@@ -28,6 +32,16 @@ namespace Metro.Journeys
                 return null;
             foreach (var siding in sidings)
                 if (siding.Enter(assembly) is { } journey)
+                    return journey;
+            return null;
+        }
+
+        public IJourney? Exit(MetroAssembly assembly)
+        {
+            if (PassingThrough.Count != 0 || !Route)
+                return null;
+            foreach (var siding in sidings)
+                if (siding.Exit(assembly) is { } journey)
                     return journey;
             return null;
         }

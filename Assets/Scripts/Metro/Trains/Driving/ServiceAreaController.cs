@@ -11,13 +11,17 @@ namespace Metro.Trains.Driving
         {
             switch (State, JourneyManager.Target)
             {
-                case (DriverState.Stopped, ServiceAreaExitPoint {Siding: var siding}) when siding.Exit(Parent) is { } journey:
+                case (DriverState.Stopped, ServiceAreaExitPoint {Area: var area}) when area.Exit(Parent) is { } journey:
                     CanDepart = true;
                     JourneyManager.Begin(journey);
+                    Parent.Driver.MarkReady();
                     break;
                 case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area}) when area.Enter(Parent) is { } journey:
                     CanDepart = true;
                     JourneyManager.Begin(journey);
+                    break;
+                case (DriverState.Driving, _) when Journey is EnteringJourney {Next: var next} && Parent.Driver.IsOnTargetTrack:
+                    JourneyManager.Begin(next);
                     break;
             }
         }
@@ -26,13 +30,6 @@ namespace Metro.Trains.Driving
 
         public override void OnStateChanged()
         {
-            if (State == DriverState.Stopped && Journey is ReversingSidingJourney reversing)
-            {
-                // TODO: to stop point
-                reversing.Area.PassingThrough.Remove(Parent);
-                return;
-            }
-
             if (State != DriverState.WaitingForDeparture || !JourneyManager.IsDestination || JourneyManager.Target is not ServiceEntryStopPoint {Area: var area})
                 return;
             if (area.Enter(Parent) is not { } journey)

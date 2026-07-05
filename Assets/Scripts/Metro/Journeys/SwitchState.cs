@@ -1,5 +1,5 @@
 using System;
-using Metro.Rail;
+using Metro.Rail.Sidings;
 
 namespace Metro.Journeys
 {

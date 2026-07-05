@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Metro.Rail.Controls
 {
 
-    public sealed class PassedOutMarker : ControlPoint
+    public abstract class ServiceAreaPointBase : StopPoint
     {
 
         [field: SerializeField]

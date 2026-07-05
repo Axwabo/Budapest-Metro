@@ -1,10 +1,8 @@
 namespace Metro.Rail.Controls
 {
 
-    public sealed class ServiceAreaExitPoint : StopPoint
+    public sealed class ServiceAreaExitPoint : ServiceAreaPointBase
     {
-
-        public ReversingSiding Siding { get; set; }
 
     }
 
