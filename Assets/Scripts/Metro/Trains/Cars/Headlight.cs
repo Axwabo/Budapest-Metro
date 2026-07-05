@@ -11,7 +11,6 @@ namespace Metro.Trains.Cars
         private bool isRear;
 
         [SerializeField]
-        [ColorUsage(false, true)]
         private Color rearColor;
 
         [SerializeField]
