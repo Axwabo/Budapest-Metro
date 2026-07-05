@@ -14,7 +14,7 @@ namespace Metro.Trains.Driving
                 case (DriverState.Stopped, ServiceAreaExitPoint {Area: var area}) when area.Exit(Parent) is { } journey:
                     CanDepart = true;
                     JourneyManager.Begin(journey);
-                    Parent.Driver.MarkReady();
+                    Parent.Driver.MarkReady(10);
                     break;
                 case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area}) when area.Enter(Parent) is { } journey:
                     CanDepart = true;
