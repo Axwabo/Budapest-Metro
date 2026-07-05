@@ -1,3 +1,5 @@
+using Metro.Rail.Controls;
+
 namespace Metro.Journeys
 {
 
@@ -8,7 +10,7 @@ namespace Metro.Journeys
         public const int Origin = -1;
         public const int Destination = int.MaxValue;
 
-        ITarget GetTarget(int stopIndex);
+        StopPoint GetTarget(int stopIndex);
 
     }
 
