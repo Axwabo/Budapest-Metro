@@ -29,7 +29,7 @@ namespace Metro.Trains.Routes
         public StopPoint Target { get; private set; } = null!;
 
         [MemberNotNullWhen(true, nameof(Current), nameof(Stop))]
-        public new bool IsInService => _index == OutOfService;
+        public new bool IsInService => _index != OutOfService;
 
         public bool IsOrigin => _index == initialStopIndex;
 

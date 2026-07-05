@@ -91,16 +91,16 @@ namespace Metro.Trains.Driving
 
         public override void OnTargetChanged()
         {
-            if (!JourneyManager.IsInService || JourneyManager.IsDestination)
+            if (!IsInService || JourneyManager.IsDestination)
             {
                 _departAt = TimeSpan.MaxValue;
                 return;
             }
 
             var departMinStay = Clock.Now + TimeSpan.FromSeconds(Constants.MinStaySeconds);
-            _departAt = JourneyManager.Stop.Time < departMinStay
+            _departAt = Stop.Time < departMinStay
                 ? departMinStay
-                : JourneyManager.Stop.Time;
+                : Stop.Time;
         }
 
         private void Depart()
