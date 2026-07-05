@@ -48,6 +48,7 @@ namespace Metro.Trains.Routes
 
         private void Begin(IJourney journey, int index)
         {
+            _index = index;
             _journey = journey;
             Current = journey as JourneyDescriptor;
             Parent.NotifyJourneyChanged();
