@@ -74,9 +74,9 @@ namespace Metro.Trains.Cars
         {
             var reverse = Assembly.Motor.Reverse;
             foreach (var point in Track.ControlPoints)
-                if (point.Reverse == reverse && reverse
+                if (point.Reverse == reverse && (reverse
                         ? point.Distance <= previousDistance && point.Distance >= Distance
-                        : point.Distance >= previousDistance && point.Distance <= Distance)
+                        : point.Distance >= previousDistance && point.Distance <= Distance))
                     Pass(point);
         }
 
