@@ -26,15 +26,18 @@ namespace Metro.Trains.Routes
 
         private float _showIn;
 
-        public RenderTexture Texture { get; private set; }
+        private RenderTexture _texture;
+
+        public Material Material { get; private set; }
 
         private void Awake()
         {
-            Texture = new RenderTexture(width, height, GraphicsFormat.R8G8B8A8_SNorm, GraphicsFormat.None);
+            _texture = new RenderTexture(width, height, GraphicsFormat.R8G8B8A8_SNorm, GraphicsFormat.None);
             _settings = Instantiate(settingsReference);
             _settings.name = name;
-            _settings.targetTexture = Texture;
+            _settings.targetTexture = _texture;
             document.panelSettings = _settings;
+            Material = new Material(Shader.Find("UI/Lit/Transparent")) {mainTexture = _texture};
         }
 
         protected virtual void Update()
@@ -45,8 +48,9 @@ namespace Metro.Trains.Routes
 
         private void OnDestroy()
         {
-            Texture.Release();
-            Destroy(Texture);
+            _texture.Release();
+            Destroy(Material);
+            Destroy(_texture);
             Destroy(_settings);
         }
 

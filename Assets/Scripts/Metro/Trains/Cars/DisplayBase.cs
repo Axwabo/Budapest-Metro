@@ -1,6 +1,5 @@
 using Metro.Trains.Routes;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace Metro.Trains.Cars
 {
@@ -9,9 +8,9 @@ namespace Metro.Trains.Cars
     {
 
         [SerializeField]
-        private UIDocument document;
+        private MeshRenderer meshRenderer;
 
-        protected override void OnInitialized() => document.rootVisualElement.style.backgroundImage = Background.FromRenderTexture(Assembly.RequireComponent<T>().Texture);
+        protected override void OnInitialized() => meshRenderer.sharedMaterial = Assembly.RequireComponent<T>().Material;
 
     }
 
