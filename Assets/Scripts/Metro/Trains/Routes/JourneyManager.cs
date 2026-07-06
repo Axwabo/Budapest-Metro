@@ -80,7 +80,7 @@ namespace Metro.Trains.Routes
         public override void OnStateChanged()
         {
             if (State == DriverState.Driving && IsInService)
-                UpdateTarget(++_index >= Route.Descriptor.IntermediateStops.Count ? Destination : _index);
+                UpdateTarget(++_index >= Route.IntermediateStops.Count ? Destination : _index);
         }
 
     }

@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Globalization;
 using Metro.Audio;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Metro.Journeys.Routes
 {
@@ -11,12 +9,12 @@ namespace Metro.Journeys.Routes
     public sealed class RouteDescriptor : ScriptableObject
     {
 
-        // TODO: multiple route support
+        [field: SerializeField]
+        [field: FormerlySerializedAs("source")]
+        public TextAsset Stops { get; private set; }
 
-        private static readonly char[] NewLineChars = {'\n', '\r'};
-
-        [SerializeField]
-        private TextAsset source;
+        [field: SerializeField]
+        public TextAsset Departures { get; private set; }
 
         [field: SerializeField]
         public string Relation { get; private set; }
@@ -27,31 +25,19 @@ namespace Metro.Journeys.Routes
         [field: SerializeField]
         public AnnouncementPack Pack { get; private set; }
 
-        public Stop Origin { get; private set; }
+        [field: SerializeField]
+        [field: HideInInspector]
+        public string Origin { get; private set; }
 
-        public List<Stop> IntermediateStops { get; } = new();
+        [field: SerializeField]
+        [field: HideInInspector]
+        public string Destination { get; private set; }
 
-        public Stop Destination { get; private set; }
-
-        private void Awake()
+#if UNITY_EDITOR
+        private void OnValidate()
         {
-            if (!source)
-                return;
-            // TODO: eliminate allocations (besides .text)
-            var lines = source.text.Split(NewLineChars, StringSplitOptions.RemoveEmptyEntries);
-            if (lines.Length < 2)
-                return;
-            var stations = lines[0].Split(',');
-            var times = lines[1].Split(',');
-            Origin = Create(0, stations, times);
-            Destination = Create(^1, stations, times);
-            for (var i = 1; i < stations.Length - 1; i++)
-                IntermediateStops.Add(Create(i, stations, times));
         }
-
-        private void OnValidate() => Awake();
-
-        private static Stop Create(Index index, string[] stations, string[] times) => new(stations[index], TimeSpan.ParseExact(times[index], "hh':'mm", CultureInfo.InvariantCulture));
+#endif
 
     }
 

@@ -45,7 +45,7 @@ namespace Metro.Rail.Sidings
 
         public IJourney? Exit(MetroAssembly assembly)
         {
-            if (PassingThrough.Count != 0 || !Route || !Station.TryGetLoadad(Route.Origin.Name, out var station) || (Reverse ? station.Right : station.Left).Light.State != LightState.On)
+            if (PassingThrough.Count != 0 || !Route || !Station.TryGetLoadad(Route.Origin, out var station) || (Reverse ? station.Right : station.Left).Light.State != LightState.On)
                 return null;
             foreach (var siding in sidings)
                 if (siding.Exit(assembly) is { } journey)
