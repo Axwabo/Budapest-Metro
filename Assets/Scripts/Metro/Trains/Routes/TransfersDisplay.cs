@@ -45,9 +45,19 @@ namespace Metro.Trains.Routes
 
         public void Display(string name)
         {
+            _size = 0;
             ResetPosition();
             if (!StationIdCache.TryGet(name, out var id))
-                return; // TODO: clear or something?
+            {
+                DisplayList(_metroIcon, _metroList, "");
+                _railways.Display(false);
+                _regionalBuses.Display(false);
+                DisplayList(_tramIcon, _tramList, "");
+                DisplayList(_trolleyIcon, _trolleyList, "");
+                DisplayList(_busIcon, _busList, "");
+                return;
+            }
+
             DisplayList(_metroIcon, _metroList, id.Metros);
             _railways.Display(id.Railways);
             _regionalBuses.Display(id.RegionalBuses);

@@ -27,7 +27,6 @@ namespace Metro.Trains.Cars
             FrontAxle = axles[0];
             BackAxle = axles[^1];
             var body = Components<CarBody>().First();
-            // TODO: probably shouldn't be absolute
             FrontAxleOffset = Mathf.Abs(body.Inverse(FrontAxle.Transform) - body.Inverse(body.Front));
             BackAxleOffset = Mathf.Abs(body.Inverse(BackAxle.Transform) - body.Inverse(body.Back));
         }

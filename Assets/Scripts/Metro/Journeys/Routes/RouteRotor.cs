@@ -40,7 +40,7 @@ namespace Metro.Journeys.Routes
                     var assembly = clone.GetComponentInParent<MetroAssembly>();
                     clone.InitialJourney = route;
                     clone.InitialStopIndex = i;
-                    assembly.startingTrack = route.Reverse ? station.Left : station.Right;
+                    assembly.startingTrack = station.Track(route.Reverse);
                     Spawned.Add(route);
                     SpawnedStations.Add(stop.Name);
                     break;

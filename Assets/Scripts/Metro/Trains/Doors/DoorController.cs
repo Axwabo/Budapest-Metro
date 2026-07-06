@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Metro.Stations;
 using Metro.Trains.Cars;
 using Metro.Trains.Driving;
 using UnityEngine;
@@ -20,6 +21,8 @@ namespace Metro.Trains.Doors
         private float _lastBeeped = float.MinValue;
 
         private float _openDelay;
+
+        private bool _reverse;
 
         private bool _target;
 
@@ -70,8 +73,11 @@ namespace Metro.Trains.Doors
         {
             switch (State)
             {
-                case DriverState.Stopped when JourneyManager.IsInService:
+                case DriverState.Stopped when IsInService:
                     _openDelay = JourneyManager.IsDestination ? 3 : 1;
+                    _reverse = Station.TryGetLoadad(Stop.Name, out var station)
+                        ? station.Track(Journey.Reverse).Reverse
+                        : Journey.Reverse;
                     return;
                 case DriverState.WaitingForDeparture when _target || JourneyManager.IsInService:
                     _closeDelay = 3;
@@ -91,8 +97,8 @@ namespace Metro.Trains.Doors
                 return;
             _target = open;
             foreach (var door in _doors)
-                if (door.Reverse == Parent.Motor.Reverse)
-                    door.Open = _target; // TODO: use journey direction or track direction
+                if (door.Reverse == _reverse)
+                    door.Open = _target;
         }
 
     }
