@@ -50,16 +50,6 @@ namespace Metro.Trains.Doors
             }
         }
 
-        private void Beep(float at)
-        {
-            foreach (var speaker in _speakers)
-                speaker.PlayOneShit(beep);
-            _lastBeeped = at;
-            foreach (var door in _doors)
-                if (door.Reverse == Parent.Motor.Reverse)
-                    door.Diode.Toggle();
-        }
-
         protected override void OnInitialized()
         {
             foreach (var car in Parent.Cars)
@@ -90,6 +80,16 @@ namespace Metro.Trains.Doors
         }
 
         public override void OnJourneyChanged() => OnStateChanged();
+
+        private void Beep(float at)
+        {
+            foreach (var speaker in _speakers)
+                speaker.PlayOneShit(beep);
+            _lastBeeped = at;
+            foreach (var door in _doors)
+                if (door.Reverse == _reverse)
+                    door.Diode.Toggle();
+        }
 
         private void SetDoors(bool open)
         {
