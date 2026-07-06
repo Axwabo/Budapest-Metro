@@ -9015,7 +9015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7cb22ab31a4746a69dbe8703efbe27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Clock
-  start: 00:00:46
+  start: 00:46:00
 --- !u!114 &1879075054
 MonoBehaviour:
   m_ObjectHideFlags: 0
