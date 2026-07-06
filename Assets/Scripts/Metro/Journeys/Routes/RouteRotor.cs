@@ -29,6 +29,8 @@ namespace Metro.Journeys.Routes
                 assembly.startingTrack = siding.StopPoint.Track;
                 siding.UsedBy.Add(assembly);
             }
+
+            Destroy(this);
         }
 
     }
