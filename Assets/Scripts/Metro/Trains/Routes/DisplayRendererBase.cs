@@ -37,7 +37,7 @@ namespace Metro.Trains.Routes
             _settings.name = name;
             _settings.targetTexture = _texture;
             document.panelSettings = _settings;
-            Material = new Material(Shader.Find("UI/Lit/Transparent")) {mainTexture = _texture};
+            Material = new Material(Shader.Find("Universal Render Pipeline/Lit")) {mainTexture = _texture};
         }
 
         protected virtual void Update()
