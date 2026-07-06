@@ -1,3 +1,7 @@
+:root {
+    -unity-text-generator: advanced;
+}
+
 .display-none {
     display: none;
 }

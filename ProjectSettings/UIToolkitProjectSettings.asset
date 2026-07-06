@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 15135, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.UIElements.UIToolkitProjectSettings
-  m_EnableAdvancedText: 0
+  m_EnableAdvancedText: 1
   m_DefaultRuntimeTheme: {fileID: -4733365628477956816, guid: c92932b97d6ad83eda85a092bb38d34a, type: 3}
   m_DefaultEditorTheme: {fileID: 0}
   m_DefaultRuntimeCanvasTheme: 4
