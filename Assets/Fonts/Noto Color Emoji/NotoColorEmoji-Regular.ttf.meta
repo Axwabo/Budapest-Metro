@@ -11,7 +11,7 @@ TrueTypeFontImporter:
   fontNames:
   - Noto Color Emoji
   fallbackFontReferences: []
-  customCharacters: 
+  customCharacters: "\U0001F687\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD"
   fontRenderingMode: 0
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
