@@ -47,7 +47,8 @@ namespace Metro.Rail.Controls
         private void Recalculate()
         {
             var t = transform;
-            Distance = Track.GetDistance(t.position);
+            var distance = Track.GetDistance(t.position);
+            Distance = Mathf.Approximately(0, distance) ? 0 : Mathf.Clamp(distance, 0, Track.Length);
             Reverse = Vector3.Dot(t.forward, Track.Sample(Distance).forward) < 0;
         }
 #endif

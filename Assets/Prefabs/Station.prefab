@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.TrackOccupationChanger
   <Track>k__BackingField: {fileID: 3403368601219536001}
-  <Distance>k__BackingField: 0.00003814697
+  <Distance>k__BackingField: 0.000038146973
   <Reverse>k__BackingField: 1
   free: 1
 --- !u!1 &5886890644582441746
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.TrackOccupationChanger
   <Track>k__BackingField: {fileID: 3403368601219536001}
-  <Distance>k__BackingField: 79.99993
+  <Distance>k__BackingField: 79.99994
   <Reverse>k__BackingField: 1
   free: 0
 --- !u!1 &7325097011460064881
