@@ -7,9 +7,23 @@ namespace Metro.Trains.Routes
     public sealed class OnboardDisplayRenderer : DisplayRendererBase
     {
 
-        private const string Service = "Üzemi terület";
+        private Label _stop;
 
-        private Label _label;
+        private VisualElement _destinationContainer;
+
+        private Label _destination;
+
+        private VisualElement _routeAndTime;
+
+        private Label _relation;
+
+        private Label _clock;
+
+        private VisualElement _serviceArea;
+
+        private VisualElement _previous;
+
+        private VisualElement _current;
 
         private DisplaySection _section;
 
@@ -22,6 +36,7 @@ namespace Metro.Trains.Routes
                 return;
             _time = 5;
             var previousSection = _section;
+            // TODO: more advanced state machine
             _section = previousSection switch
             {
                 DisplaySection.Destination => DisplaySection.Stop,
@@ -30,39 +45,45 @@ namespace Metro.Trains.Routes
                 DisplaySection.ServiceArea => DisplaySection.ServiceArea,
                 _ => throw new InvalidOperationException()
             };
-            _label.text = _section switch
+
+            if (_section != previousSection)
+                UpdateSection();
+        }
+
+        private void UpdateSection()
+        {
+            if (_section == DisplaySection.Time)
+                _clock.text = Clock.Now.ToString("hh':'mm");
+            _current = _section switch
             {
-                DisplaySection.Destination => $"► {Route.Destination}",
-                DisplaySection.Time => $"{Route.Relation}    {Clock.Now:hh':'mm}",
-                DisplaySection.Stop => Stop.Name,
-                DisplaySection.ServiceArea => Service,
+                DisplaySection.Destination => _destinationContainer,
+                DisplaySection.Time => _routeAndTime,
+                DisplaySection.Stop => _stop,
+                DisplaySection.ServiceArea => _serviceArea,
                 _ => throw new InvalidOperationException()
             };
-            if (_section != previousSection)
-                Blink(0.2f);
+            _previous?.Display(false);
+            _current.Display();
+            Blink(0.2f);
         }
 
-        protected override void Initialize(VisualElement root) => _label = root.Q<Label>();
-
-        public override void OnStopChanged()
+        protected override void Initialize(VisualElement root)
         {
-            if (_section == DisplaySection.ServiceArea)
-                return;
-            _label.text = Stop?.Name;
-            _time = 5;
-            _section = DisplaySection.Stop;
+            _stop = root.Q<Label>("Stop");
+            _destinationContainer = root.Q("Destination");
+            _destination = _destinationContainer.Q<Label>("Destination");
+            _routeAndTime = root.Q("RouteAndTime");
+            _relation = root.Q<Label>("Relation");
+            _clock = root.Q<Label>("Clock");
+            _serviceArea = root.Q("ServiceArea");
         }
+
+        public override void OnStopChanged() => _stop.text = Stop?.Name ?? "";
 
         public override void OnJourneyChanged()
         {
-            if (IsInService)
-            {
-                _section = DisplaySection.Stop;
-                return;
-            }
-
-            _section = DisplaySection.ServiceArea;
-            _label.text = Service;
+            _destination.text = Route?.Destination ?? "";
+            _relation.text = Route?.Relation ?? "";
         }
 
         private enum DisplaySection
