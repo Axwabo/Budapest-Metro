@@ -1,4 +1,5 @@
 using Metro.Rail;
+using Metro.Rail.Controls;
 using UnityEngine;
 
 namespace Metro.Trains.Cars
@@ -51,7 +52,13 @@ namespace Metro.Trains.Cars
                 if (point.Reverse == reverse && reverse
                         ? point.Distance <= previousDistance && point.Distance >= Distance
                         : point.Distance >= previousDistance && point.Distance <= Distance)
-                    Assembly.Driver.OnAxlePassed(point);
+                    Pass(point);
+        }
+
+        private void Pass(ControlPoint point)
+        {
+            point.OnPassed(this);
+            Assembly.Driver.OnAxlePassed(point);
         }
 
         protected override void OnInitialized()

@@ -1,4 +1,5 @@
 using Metro.Stations;
+using Metro.Trains.Cars;
 using UnityEngine;
 
 namespace Metro.Rail.Controls
@@ -10,7 +11,7 @@ namespace Metro.Rail.Controls
         [SerializeField]
         private Station station;
 
-        public void Trigger() => (Reverse ? station.Left : station.Right).Light.State = LightState.Blinking;
+        public override void OnPassed(Axle axle) => (Reverse ? station.Left : station.Right).Light.State = LightState.Blinking;
 
     }
 

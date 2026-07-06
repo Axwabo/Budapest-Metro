@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using Metro.Stations;
+using Metro.Trains.Cars;
 using UnityEngine;
 
 namespace Metro.Rail
@@ -10,11 +12,15 @@ namespace Metro.Rail
 
         [field: SerializeField]
         public bool Reverse { get; private set; }
-        
+
         [field: SerializeField]
         public WarningLight Light { get; private set; }
 
         public Station Station { get; private set; }
+
+        public HashSet<Axle> Occupants { get; } = new();
+
+        public bool IsOccupied => Occupants.Count != 0;
 
         protected override void Awake()
         {

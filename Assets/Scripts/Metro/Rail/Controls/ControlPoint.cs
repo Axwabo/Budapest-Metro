@@ -1,3 +1,4 @@
+using Metro.Trains.Cars;
 using UnityEngine;
 
 namespace Metro.Rail.Controls
@@ -28,6 +29,10 @@ namespace Metro.Rail.Controls
         {
             if (Track)
                 Track.ControlPoints.Remove(this);
+        }
+
+        public virtual void OnPassed(Axle axle)
+        {
         }
 
 #if UNITY_EDITOR

@@ -22,7 +22,6 @@ namespace Metro.Stations
 
         public LightState State
         {
-            get => _state;
             set
             {
                 _state = value;
