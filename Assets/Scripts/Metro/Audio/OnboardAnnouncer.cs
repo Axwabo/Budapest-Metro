@@ -88,11 +88,14 @@ namespace Metro.Audio
             var service = IsInService;
             if (_wasInService == service)
                 return;
+            var isNull = _wasInService == null;
+            _wasInService = service;
+            if (isNull)
+                return;
             if (service)
                 Play(trafficArea);
             else
-                _serviceAreaPlayed = _wasInService != null;
-            _wasInService = service;
+                _serviceAreaPlayed = false;
         }
 
         public override void OnStopChanged()
