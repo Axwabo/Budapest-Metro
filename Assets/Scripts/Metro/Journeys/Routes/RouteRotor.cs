@@ -25,6 +25,7 @@ namespace Metro.Journeys.Routes
                 var assembly = clone.GetComponentInParent<MetroAssembly>();
                 clone.InitialJourney = new Afk {Target = siding.StopPoint};
                 assembly.startingTrack = siding.StopPoint.Track;
+                siding.UsedBy.Add(assembly);
             }
         }
 
