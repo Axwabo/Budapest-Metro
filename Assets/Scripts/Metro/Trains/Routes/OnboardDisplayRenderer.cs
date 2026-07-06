@@ -40,7 +40,7 @@ namespace Metro.Trains.Routes
         protected override void Update()
         {
             base.Update();
-            if (!IsInService || (_time -= Clock.Delta) > 0)
+            if ((_time -= Clock.Delta) > 0)
                 return;
             _time = 5;
             var previousSection = _section;
