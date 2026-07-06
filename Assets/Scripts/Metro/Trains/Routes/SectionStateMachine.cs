@@ -10,16 +10,16 @@ namespace Metro.Trains.Routes
 
         public static SectionStateMachine Approaching { get; } = previous => previous switch
         {
-            DisplaySection.Stop => DisplaySection.RouteAndTime,
-            // TODO: transfers
+            DisplaySection.Stop => DisplaySection.Transfers,
+            DisplaySection.Transfers => DisplaySection.RouteAndTime,
             _ => DisplaySection.Stop
         };
 
         public static SectionStateMachine ApproachingDestination { get; } = previous => previous switch
         {
             DisplaySection.Stop => DisplaySection.Terminus,
-            DisplaySection.Terminus => DisplaySection.RouteAndTime,
-            // TODO: transfers
+            DisplaySection.Terminus => DisplaySection.Transfers,
+            DisplaySection.Transfers => DisplaySection.RouteAndTime,
             _ => DisplaySection.Stop
         };
 

@@ -12,7 +12,7 @@
                 <ui:Label text="14:00" name="Clock"/>
             </ui:VisualElement>
             <ui:Label text="végállomás" name="Terminus" class="display-none" style="-unity-text-align: middle-center;" />
-            <ui:VisualElement name="Transfers" style="flex-grow: 1;">
+            <ui:VisualElement name="Transfers" class="display-none" style="flex-grow: 1;">
                 <ui:Label text="🚇" name="MetroIcon" class="icon" />
                 <ui:Label text="M3" name="MetroList" />
                 <ui:Label text="🚆" name="Railways" class="icon" />

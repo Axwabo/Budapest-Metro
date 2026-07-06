@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Metro.Stations
 {
@@ -13,9 +14,10 @@ namespace Metro.Stations
         [field: SerializeField]
         public string Onboard { get; private set; }
 
+        [field: FormerlySerializedAs("<Metro>k__BackingField")]
         [field: SerializeField]
         [field: Header("Transfers")]
-        public string Metro { get; private set; }
+        public string Metros { get; private set; }
 
         [field: SerializeField]
         public bool Railways { get; private set; }

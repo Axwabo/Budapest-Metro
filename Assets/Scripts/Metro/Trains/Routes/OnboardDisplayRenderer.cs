@@ -38,6 +38,8 @@ namespace Metro.Trains.Routes
 
         private VisualElement _transfers;
 
+        private TransfersDisplay _transfersDisplay;
+
         private SectionStateMachine StoppedStateMachine => JourneyManager.IsDestination ? StoppedDestination : Stopped;
 
         protected override void Update()
@@ -82,6 +84,7 @@ namespace Metro.Trains.Routes
             _terminus = root.Q("Terminus");
             _transfers = root.Q("Transfers");
             _serviceArea = root.Q("ServiceArea");
+            _transfersDisplay = new TransfersDisplay(_transfers);
         }
 
         public override void OnStateChanged()
@@ -92,7 +95,12 @@ namespace Metro.Trains.Routes
 
         public override void OnStopChanged()
         {
-            _stop.text = Stop?.Name ?? "";
+            if (Stop is {Name: var stopName})
+            {
+                _stop.text = stopName;
+                _transfersDisplay.Display(stopName);
+            }
+
             if (State == DriverState.Stopped)
                 _stateMachine = StoppedStateMachine;
             else if (State == DriverState.Driving)
