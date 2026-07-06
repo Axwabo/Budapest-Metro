@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Metro.Journeys;
 using Metro.Journeys.Routes;
@@ -20,6 +21,8 @@ namespace Metro.Rail.Sidings
         public RouteDescriptor Route { get; private set; }
 
         public HashSet<MetroAssembly> PassingThrough { get; } = new();
+
+        public ReadOnlySpan<ReversingSiding> Sidings => sidings;
 
         private void Start()
         {

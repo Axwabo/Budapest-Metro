@@ -26,6 +26,8 @@ namespace Metro.Trains.Routes
 
         private int _index = OutOfService;
 
+        public IJourney? InitialJourney { get; set; }
+
         public IJourney Current { get; private set; } = null!;
 
         public new Route? Route { get; private set; }
@@ -43,7 +45,9 @@ namespace Metro.Trains.Routes
 
         public void Begin()
         {
-            if (initialRoute)
+            if (InitialJourney != null)
+                Begin(InitialJourney);
+            else if (initialRoute)
                 Begin(new Route(initialRoute), initialStopIndex);
             else
                 Idle();
