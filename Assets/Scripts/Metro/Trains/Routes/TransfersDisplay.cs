@@ -60,12 +60,14 @@ namespace Metro.Trains.Routes
         private void UpdateGeometry(GeometryChangedEvent ev)
         {
             // can't believe I have to do ts myself
-            _size = ev.newRect.width + _root.resolvedStyle.paddingLeft + _root.resolvedStyle.paddingRight;
+            _size = TotalWidth(_root);
             var hierarchy = _root.hierarchy;
             var count = hierarchy.childCount;
             for (var i = 0; i < count; i++)
-                _size += hierarchy[i].localBound.width;
+                _size += TotalWidth(hierarchy[i]);
         }
+
+        private static float TotalWidth(VisualElement element) => element.resolvedStyle.width + element.resolvedStyle.paddingLeft + element.resolvedStyle.paddingRight;
 
         private static void DisplayList(VisualElement icon, Label list, string text)
         {
