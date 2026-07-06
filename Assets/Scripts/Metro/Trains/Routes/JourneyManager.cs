@@ -48,7 +48,7 @@ namespace Metro.Trains.Routes
             if (InitialJourney != null)
                 Begin(InitialJourney);
             else if (initialRoute)
-                Begin(new Route(initialRoute), initialStopIndex);
+                Begin(initialRoute.Next(), initialStopIndex);
             else
                 Idle();
         }
