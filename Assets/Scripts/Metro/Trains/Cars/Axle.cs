@@ -9,11 +9,15 @@ namespace Metro.Trains.Cars
     public sealed class Axle : CarComponent
     {
 
+        private bool _locationUpdated;
+
         public Transform Transform { get; private set; }
 
         public float Distance { get; private set; }
 
         public TrackSegment Track { get; private set; }
+
+        private void Update() => _locationUpdated = false;
 
         private void FixedUpdate()
         {
@@ -41,7 +45,9 @@ namespace Metro.Trains.Cars
                 PassPoints(Track.Length);
             }
 
-            UpdateLocation();
+            if (!_locationUpdated)
+                UpdateLocation();
+            _locationUpdated = true;
             PassPoints(previousDistance);
         }
 
