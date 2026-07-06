@@ -19,7 +19,14 @@ namespace Metro
 
         public static TimeSpan Now => _start.AddSeconds(Time.timeSinceLevelLoadAsDouble).TimeOfDay;
 
-        public static float Delta => Time.unscaledDeltaTime * Time.timeScale;
+        public static float Delta
+        {
+            get
+            {
+                var scale = Time.timeScale;
+                return Mathf.Min(scale * 0.5f, Time.unscaledDeltaTime * scale);
+            }
+        }
 
         private void Awake()
         {
