@@ -54,7 +54,7 @@ namespace Metro.Journeys.Routes
             return routeArray;
         }
 
-        private static (string, string) ReadTwoLines(TextAsset asset)
+        public static (string, string) ReadTwoLines(TextAsset asset)
         {
             var array = asset.text.Split(NewLineChars, StringSplitOptions.RemoveEmptyEntries);
             return (array[0], array[1]);

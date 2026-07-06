@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057833c128da4c78827a20db3d8c3851, type: 3}
   m_Name: M4 Keleti
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.JourneyDescriptor
-  source: {fileID: 4900000, guid: 1bab76ad6537422597ba778b165fd2be, type: 3}
+  <Stops>k__BackingField: {fileID: 4900000, guid: 1bab76ad6537422597ba778b165fd2be, type: 3}
+  <Departures>k__BackingField: {fileID: 4900000, guid: f4d293239c4b4b18a915568707149534, type: 3}
   <Relation>k__BackingField: M4
   <Reverse>k__BackingField: 1
   <Pack>k__BackingField: {fileID: 11400000, guid: 42afb6ffa3a60665eab720f04d41cff8, type: 2}
+  <Origin>k__BackingField: "Kelenf\xF6ld vas\xFAt\xE1llom\xE1s"
+  <Destination>k__BackingField: "Keleti p\xE1lyaudvar"

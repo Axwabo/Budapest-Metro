@@ -36,6 +36,11 @@ namespace Metro.Journeys.Routes
 #if UNITY_EDITOR
         private void OnValidate()
         {
+            if (!Stops)
+                return;
+            var stops = RouteCache.ReadTwoLines(Stops).Item1.Split(',');
+            Origin = stops[0];
+            Destination = stops[^1];
         }
 #endif
 

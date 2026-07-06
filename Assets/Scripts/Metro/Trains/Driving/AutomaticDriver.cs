@@ -22,9 +22,9 @@ namespace Metro.Trains.Driving
 
         private TimeSpan _departAt = TimeSpan.MaxValue;
 
-        private DriverState _previousState;
-
         private float _departureDelay;
+
+        private DriverState _previousState;
 
         public new DriverState State { get; private set; }
 
@@ -93,7 +93,8 @@ namespace Metro.Trains.Driving
             if (Motor.AbsoluteSpeed != 0 || Motor.TargetSpeed != 0)
                 return;
             State = DriverState.Stopped;
-            _departAt = Clock.Now + TimeSpan.FromSeconds(JourneyManager.IsDestination ? Constants.DestinationStaySeconds : Constants.MinStaySeconds);
+            if (!JourneyManager.IsOrigin)
+                _departAt = Clock.Now + TimeSpan.FromSeconds(JourneyManager.IsDestination ? Constants.DestinationStaySeconds : Constants.MinStaySeconds);
             _passedPoints.Clear();
             if (FrontAxle.Track is StationTrack track)
                 track.Light.State = LightState.Off;
