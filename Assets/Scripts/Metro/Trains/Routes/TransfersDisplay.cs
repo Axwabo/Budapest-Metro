@@ -46,7 +46,6 @@ namespace Metro.Trains.Routes
         public void Display(string name)
         {
             ResetPosition();
-            _root.RegisterCallbackOnce<GeometryChangedEvent>(UpdateGeometry); // holy GD reference
             if (!StationIdCache.TryGet(name, out var id))
                 return; // TODO: clear or something?
             DisplayList(_metroIcon, _metroList, id.Metros);
@@ -55,19 +54,26 @@ namespace Metro.Trains.Routes
             DisplayList(_tramIcon, _tramList, id.Trams);
             DisplayList(_trolleyIcon, _trolleyList, id.Trolleys);
             DisplayList(_busIcon, _busList, id.LocalBuses);
+            _root.RegisterCallbackOnce<GeometryChangedEvent>(UpdateGeometry); // holy GD reference
         }
 
         private void UpdateGeometry(GeometryChangedEvent ev)
         {
             // can't believe I have to do ts myself
-            _size = TotalWidth(_root);
+            _size = 0;
             var hierarchy = _root.hierarchy;
             var count = hierarchy.childCount;
             for (var i = 0; i < count; i++)
                 _size += TotalWidth(hierarchy[i]);
         }
 
-        private static float TotalWidth(VisualElement element) => element.resolvedStyle.width + element.resolvedStyle.paddingLeft + element.resolvedStyle.paddingRight;
+        private static float TotalWidth(VisualElement element)
+        {
+            var textWidth = element is Label label
+                ? label.MeasureTextSize(label.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
+                : element.resolvedStyle.width;
+            return textWidth + element.resolvedStyle.paddingLeft + element.resolvedStyle.paddingRight;
+        }
 
         private static void DisplayList(VisualElement icon, Label list, string text)
         {
