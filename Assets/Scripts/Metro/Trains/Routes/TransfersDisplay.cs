@@ -38,7 +38,7 @@ namespace Metro.Trains.Routes
             _busList = root.Q<Label>("BusList");
         }
 
-        public bool TransitionCompleted => _translate >= _root.contentRect.width;
+        public bool TransitionCompleted => _translate >= _root.resolvedStyle.width;
 
         public void Display(string name)
         {
