@@ -1,5 +1,4 @@
 using Metro.Stations;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Metro.Trains.Routes
@@ -23,6 +22,8 @@ namespace Metro.Trains.Routes
         private readonly VisualElement _trolleyIcon;
         private readonly Label _trolleyList;
 
+        private float _size;
+
         private float _translate;
 
         public TransfersDisplay(VisualElement root)
@@ -38,18 +39,14 @@ namespace Metro.Trains.Routes
             _trolleyList = root.Q<Label>("TrolleyList");
             _busIcon = root.Q("BusIcon");
             _busList = root.Q<Label>("BusList");
-            root.RegisterCallback((GeometryChangedEvent ev) =>
-            {
-                Debug.Log(ev.oldRect);
-                Debug.Log(ev.newRect);
-            });
         }
 
-        public bool TransitionCompleted => _translate >= _root.resolvedStyle.width + _root.contentRect.width;
+        public bool TransitionCompleted => _translate >= _size;
 
         public void Display(string name)
         {
             ResetPosition();
+            _root.RegisterCallbackOnce<GeometryChangedEvent>(UpdateGeometry); // holy GD reference
             if (!StationIdCache.TryGet(name, out var id))
                 return; // TODO: clear or something?
             DisplayList(_metroIcon, _metroList, id.Metros);
@@ -58,6 +55,16 @@ namespace Metro.Trains.Routes
             DisplayList(_tramIcon, _tramList, id.Trams);
             DisplayList(_trolleyIcon, _trolleyList, id.Trolleys);
             DisplayList(_busIcon, _busList, id.LocalBuses);
+        }
+
+        private void UpdateGeometry(GeometryChangedEvent ev)
+        {
+            // can't believe I have to do ts myself
+            _size = ev.newRect.width + _root.resolvedStyle.paddingLeft + _root.resolvedStyle.paddingRight;
+            var hierarchy = _root.hierarchy;
+            var count = hierarchy.childCount;
+            for (var i = 0; i < count; i++)
+                _size += hierarchy[i].localBound.width;
         }
 
         private static void DisplayList(VisualElement icon, Label list, string text)

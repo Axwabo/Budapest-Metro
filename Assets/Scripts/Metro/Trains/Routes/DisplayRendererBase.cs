@@ -20,9 +20,9 @@ namespace Metro.Trains.Routes
         [SerializeField]
         private UIDocument document;
 
-        private PanelSettings _settings;
-
         private VisualElement _content;
+
+        private PanelSettings _settings;
 
         private float _showIn;
 
@@ -32,6 +32,7 @@ namespace Metro.Trains.Routes
         {
             Texture = new RenderTexture(width, height, GraphicsFormat.R8G8B8A8_SNorm, GraphicsFormat.None);
             _settings = Instantiate(settingsReference);
+            _settings.name = name;
             _settings.targetTexture = Texture;
             document.panelSettings = _settings;
         }
