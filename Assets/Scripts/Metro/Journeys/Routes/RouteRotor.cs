@@ -24,21 +24,28 @@ namespace Metro.Journeys.Routes
 
         private void Update()
         {
+            Spawned.Add(area.Route.Next(TimeSpan.FromSeconds(40)));
             var now = Clock.Now - StopTimeThreshold;
             foreach (var route in area.Route.GetRoutes())
+            {
+                if (Spawned.Contains(route))
+                    continue;
                 for (var i = 0; i < route.IntermediateStops.Count; i++)
                 {
                     var stop = route.IntermediateStops[i];
                     var previous = i == 0 ? route.Origin.Time : stop.Time;
-                    if (previous >= now || stop.Time < now || !Station.TryGetLoadad(stop.Name, out var station) || !Spawned.Add(route) || !SpawnedStations.Add(stop.Name))
+                    if (SpawnedStations.Contains(stop.Name) || previous < now || stop.Time >= now || !Station.TryGetLoadad(stop.Name, out var station))
                         continue;
                     var clone = Instantiate(prefab);
                     var assembly = clone.GetComponentInParent<MetroAssembly>();
                     clone.InitialJourney = route;
                     clone.InitialStopIndex = i;
                     assembly.startingTrack = route.Reverse ? station.Left : station.Right;
+                    Spawned.Add(route);
+                    SpawnedStations.Add(stop.Name);
                     break;
                 }
+            }
 
             foreach (var siding in area.Sidings)
             {
