@@ -20,11 +20,22 @@ namespace Metro.Audio
         [SerializeField]
         private float stoppedDelay = 4;
 
+        [Header("Traffic Area <-> Service Area")]
+        [SerializeField]
+        private AudioClip serviceArea;
+
+        [SerializeField]
+        private AudioClip trafficArea;
+
         private readonly List<Speaker> _speakers = new();
 
         private bool _arrivingPlayed;
 
         private float _delay;
+
+        private bool _serviceAreaPlayed;
+
+        private bool? _wasInService;
 
         private void Update()
         {
@@ -44,8 +55,12 @@ namespace Metro.Audio
 
         private void Play(Route route, string station, AnnouncementType arriving)
         {
-            if (!route.Descriptor.Pack.TryGetClip(station, arriving, out var clip))
-                return;
+            if (route.Descriptor.Pack.TryGetClip(station, arriving, out var clip))
+                Play(clip);
+        }
+
+        private void Play(AudioClip clip)
+        {
             foreach (var speaker in _speakers)
                 speaker.Play(clip);
         }
@@ -56,17 +71,35 @@ namespace Metro.Audio
                 _speakers.AddRange(car.Components<Speaker>());
         }
 
+        public override void OnStateChanged()
+        {
+            if (State == DriverState.Driving && !IsInService && !_serviceAreaPlayed)
+            {
+                _serviceAreaPlayed = true;
+                Play(serviceArea);
+            }
+
+            if (IsInService && State == DriverState.Stopped)
+                _delay = stoppedDelay;
+        }
+
+        public override void OnJourneyChanged()
+        {
+            var service = IsInService;
+            if (_wasInService == service)
+                return;
+            if (service)
+                Play(trafficArea);
+            else
+                _serviceAreaPlayed = _wasInService != null;
+            _wasInService = service;
+        }
+
         public override void OnStopChanged()
         {
             _arrivingPlayed = JourneyManager.IsOrigin;
-            if (JourneyManager.IsInService && State == DriverState.Driving)
+            if (IsInService && State == DriverState.Driving)
                 _delay = departureDelay;
-        }
-
-        public override void OnStateChanged()
-        {
-            if (JourneyManager.IsInService && State == DriverState.Stopped)
-                _delay = stoppedDelay;
         }
 
     }

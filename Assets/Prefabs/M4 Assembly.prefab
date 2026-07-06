@@ -61,6 +61,8 @@ MonoBehaviour:
   departureDelay: 6.5
   arrivingSpeedThreshold: 7
   stoppedDelay: 4
+  serviceArea: {fileID: 8300000, guid: b4234fd22f9586d358f29b22324d054f, type: 3}
+  trafficArea: {fileID: 8300000, guid: 886cab874a7a2670a856c4ceca54fce9, type: 3}
 --- !u!1 &4211974764333996586
 GameObject:
   m_ObjectHideFlags: 0
