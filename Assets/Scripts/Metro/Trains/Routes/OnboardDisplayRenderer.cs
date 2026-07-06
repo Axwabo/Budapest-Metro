@@ -42,10 +42,14 @@ namespace Metro.Trains.Routes
 
         private SectionStateMachine StoppedStateMachine => JourneyManager.IsDestination ? StoppedDestination : Stopped;
 
+        private bool TransitionCompleted => _time <= 0 || _section != DisplaySection.Transfers || _transfersDisplay.TransitionCompleted;
+
         protected override void Update()
         {
             base.Update();
-            if ((_time -= Clock.Delta) > 0)
+            if (_section == DisplaySection.Transfers)
+                _transfersDisplay.Update();
+            if (!TransitionCompleted || (_time -= Clock.Delta) > 0)
                 return;
             _time = 5;
             var previousSection = _section;
