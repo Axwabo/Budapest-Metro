@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6278ff3d2c5340b5b2f83ce82f40a32c, type: 3}
-  m_Name: "Kelenf\xF6ld vas\xFAt\xE1llom\xE1s"
+  m_Name: "\xDAjbuda-k\xF6zpont"
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.StationId
-  <Forehead>k__BackingField: "Kelenf\xF6ld v\xE1."
-  <Onboard>k__BackingField: "Kelenf\xF6ld vas\xFAt\xE1ll."
+  <Forehead>k__BackingField: 
+  <Onboard>k__BackingField: 
   <Metro>k__BackingField: 
-  <Railways>k__BackingField: 1
+  <Railways>k__BackingField: 0
   <RegionalBuses>k__BackingField: 1
-  <Trams>k__BackingField: 1 19 49
+  <Trams>k__BackingField: 17 41 47 56
   <Trolleys>k__BackingField: 
-  <LocalBuses>k__BackingField: 8E 40 40B 40E 87 87A 88 88A 188 188E 101B 101E 141
-    187 108E 150 150B 172 173 272 250 250B 251 251A 251E 908 922 987
+  <LocalBuses>k__BackingField: 33 53 58 150 150B 154 153 154 212 212A 212B 933 933A
+    941

@@ -8,6 +8,7 @@ namespace Metro.Trains.Routes
         RouteAndTime,
         Stop,
         Terminus,
+        Transfers,
         ServiceArea
 
     }

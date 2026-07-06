@@ -13,6 +13,25 @@ namespace Metro.Stations
         [field: SerializeField]
         public string Onboard { get; private set; }
 
+        [field: SerializeField]
+        [field: Header("Transfers")]
+        public string Metro { get; private set; }
+
+        [field: SerializeField]
+        public bool Railways { get; private set; }
+
+        [field: SerializeField]
+        public bool RegionalBuses { get; private set; }
+
+        [field: SerializeField]
+        public string Trams { get; private set; }
+
+        [field: SerializeField]
+        public string Trolleys { get; private set; }
+
+        [field: SerializeField]
+        public string LocalBuses { get; private set; }
+
     }
 
 }

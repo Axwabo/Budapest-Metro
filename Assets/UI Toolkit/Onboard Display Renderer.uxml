@@ -12,6 +12,18 @@
                 <ui:Label text="14:00" name="Clock"/>
             </ui:VisualElement>
             <ui:Label text="végállomás" name="Terminus" class="display-none" style="-unity-text-align: middle-center;" />
+            <ui:VisualElement name="Transfers" style="flex-grow: 1;">
+                <ui:Label text="🚇" name="MetroIcon" class="icon" />
+                <ui:Label text="M3" name="MetroList" />
+                <ui:Label text="🚆" name="Railways" class="icon" />
+                <ui:Label text="🚍" name="RegionalBuses" class="icon" />
+                <ui:Label text="🚊" name="TramIcon" class="icon" />
+                <ui:Label text="1 19 49" name="TramList" />
+                <ui:Label text="🚎" name="TrolleyIcon" class="icon" />
+                <ui:Label text="72 83" name="TrolleyList" />
+                <ui:Label text="🚌" name="BusIcon" class="icon" />
+                <ui:Label text="100E" name="BusList" />
+            </ui:VisualElement>
             <ui:Label text="Üzemi terület" name="ServiceArea" class="display-none" style="-unity-text-align: middle-center;"/>
         </ui:VisualElement>
     </ui:VisualElement>

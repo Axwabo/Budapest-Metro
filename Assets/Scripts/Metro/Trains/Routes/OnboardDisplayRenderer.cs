@@ -36,6 +36,8 @@ namespace Metro.Trains.Routes
 
         private float _time;
 
+        private VisualElement _transfers;
+
         private SectionStateMachine StoppedStateMachine => JourneyManager.IsDestination ? StoppedDestination : Stopped;
 
         protected override void Update()
@@ -60,8 +62,9 @@ namespace Metro.Trains.Routes
                 DisplaySection.Destination => _destinationContainer,
                 DisplaySection.RouteAndTime => _routeAndTime,
                 DisplaySection.Stop => _stop,
-                DisplaySection.ServiceArea => _serviceArea,
                 DisplaySection.Terminus => _terminus,
+                DisplaySection.Transfers => _transfers,
+                DisplaySection.ServiceArea => _serviceArea,
                 _ => throw new InvalidOperationException()
             };
             _current.Display();
@@ -77,6 +80,7 @@ namespace Metro.Trains.Routes
             _relation = root.Q<Label>("Relation");
             _clock = root.Q<Label>("Clock");
             _terminus = root.Q("Terminus");
+            _transfers = root.Q("Transfers");
             _serviceArea = root.Q("ServiceArea");
         }
 

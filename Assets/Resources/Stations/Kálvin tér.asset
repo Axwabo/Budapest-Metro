@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6278ff3d2c5340b5b2f83ce82f40a32c, type: 3}
+  m_Name: "K\xE1lvin t\xE9r"
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.StationId
+  <Forehead>k__BackingField: 
+  <Onboard>k__BackingField: 
+  <Metro>k__BackingField: M3
+  <Railways>k__BackingField: 0
+  <RegionalBuses>k__BackingField: 0
+  <Trams>k__BackingField: 47 49
+  <Trolleys>k__BackingField: 72 83
+  <LocalBuses>k__BackingField: 9 15 100E 223E 909 914 922 922B 923 934 950 950A 966
+    979 984 985 988

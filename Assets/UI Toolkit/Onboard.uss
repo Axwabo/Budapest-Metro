@@ -13,3 +13,12 @@ Label {
     padding-bottom: 0;
     padding-left: 0;
 }
+
+.icon {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+#Transfers Label {
+    word-spacing: 15px;
+}
