@@ -95,8 +95,10 @@ namespace Metro.Trains.Routes
 
         public override void OnStateChanged()
         {
-            if (State == DriverState.Stopped && IsInService)
-                _stateMachine = StoppedStateMachine;
+            if (State != DriverState.Stopped || !IsInService)
+                return;
+            _stateMachine = StoppedStateMachine;
+            _time = 0;
         }
 
         public override void OnStopChanged()
