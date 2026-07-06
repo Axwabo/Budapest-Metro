@@ -14,6 +14,7 @@ namespace Metro.Journeys.Routes
 
         private static readonly HashSet<Route> Spawned = new();
         private static readonly HashSet<string> SpawnedStations = new();
+        private static readonly TimeSpan StopTimeThreshold = TimeSpan.FromSeconds(22);
 
         [SerializeField]
         private JourneyManager prefab;
@@ -23,16 +24,13 @@ namespace Metro.Journeys.Routes
 
         private void Update()
         {
-            var start = Clock.Now - TimeSpan.FromSeconds(30);
-            var end = start + TimeSpan.FromMinutes(1);
+            var now = Clock.Now - StopTimeThreshold;
             foreach (var route in area.Route.GetRoutes())
-            {
-                if (!Spawned.Add(route))
-                    continue;
                 for (var i = 0; i < route.IntermediateStops.Count; i++)
                 {
                     var stop = route.IntermediateStops[i];
-                    if (stop.Time < start || stop.Time >= end || !Station.TryGetLoadad(stop.Name, out var station) || !SpawnedStations.Add(stop.Name))
+                    var previous = i == 0 ? route.Origin.Time : stop.Time;
+                    if (previous >= now || stop.Time < now || !Station.TryGetLoadad(stop.Name, out var station) || !Spawned.Add(route) || !SpawnedStations.Add(stop.Name))
                         continue;
                     var clone = Instantiate(prefab);
                     var assembly = clone.GetComponentInParent<MetroAssembly>();
@@ -41,7 +39,6 @@ namespace Metro.Journeys.Routes
                     assembly.startingTrack = route.Reverse ? station.Left : station.Right;
                     break;
                 }
-            }
 
             if (area.PassingThrough.Count != 0)
                 return;
