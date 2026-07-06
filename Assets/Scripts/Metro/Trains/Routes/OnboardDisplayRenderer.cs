@@ -1,5 +1,7 @@
 using System;
+using Metro.Trains.Driving;
 using UnityEngine.UIElements;
+using static Metro.Trains.Routes.SectionStateMachines;
 
 namespace Metro.Trains.Routes
 {
@@ -7,27 +9,33 @@ namespace Metro.Trains.Routes
     public sealed class OnboardDisplayRenderer : DisplayRendererBase
     {
 
-        private Label _stop;
-
-        private VisualElement _destinationContainer;
-
-        private Label _destination;
-
-        private VisualElement _routeAndTime;
-
-        private Label _relation;
-
         private Label _clock;
-
-        private VisualElement _serviceArea;
-
-        private VisualElement _previous;
 
         private VisualElement _current;
 
+        private Label _destination;
+
+        private VisualElement _destinationContainer;
+
+        private VisualElement _previous;
+
+        private Label _relation;
+
+        private VisualElement _routeAndTime;
+
         private DisplaySection _section;
 
+        private VisualElement _serviceArea;
+
+        private SectionStateMachine _stateMachine = ServiceArea;
+
+        private Label _stop;
+
+        private VisualElement _terminus;
+
         private float _time;
+
+        private SectionStateMachine StoppedStateMachine => JourneyManager.IsDestination ? StoppedDestination : Stopped;
 
         protected override void Update()
         {
@@ -36,31 +44,23 @@ namespace Metro.Trains.Routes
                 return;
             _time = 5;
             var previousSection = _section;
-            // TODO: more advanced state machine
-            _section = previousSection switch
-            {
-                DisplaySection.Destination => DisplaySection.Stop,
-                DisplaySection.Stop => DisplaySection.Time,
-                DisplaySection.Time => DisplaySection.Destination,
-                DisplaySection.ServiceArea => DisplaySection.ServiceArea,
-                _ => throw new InvalidOperationException()
-            };
-
+            _section = _stateMachine(previousSection);
             if (_section != previousSection)
                 UpdateSection();
         }
 
         private void UpdateSection()
         {
-            if (_section == DisplaySection.Time)
+            if (_section == DisplaySection.RouteAndTime)
                 _clock.text = Clock.Now.ToString("hh':'mm");
             _previous?.Display(false);
             _previous = _current = _section switch
             {
                 DisplaySection.Destination => _destinationContainer,
-                DisplaySection.Time => _routeAndTime,
+                DisplaySection.RouteAndTime => _routeAndTime,
                 DisplaySection.Stop => _stop,
                 DisplaySection.ServiceArea => _serviceArea,
+                DisplaySection.Terminus => _terminus,
                 _ => throw new InvalidOperationException()
             };
             _current.Display();
@@ -75,25 +75,31 @@ namespace Metro.Trains.Routes
             _routeAndTime = root.Q("RouteAndTime");
             _relation = root.Q<Label>("Relation");
             _clock = root.Q<Label>("Clock");
+            _terminus = root.Q("Terminus");
             _serviceArea = root.Q("ServiceArea");
         }
 
-        public override void OnStopChanged() => _stop.text = Stop?.Name ?? "";
+        public override void OnStateChanged()
+        {
+            if (State == DriverState.Stopped && IsInService)
+                _stateMachine = StoppedStateMachine;
+        }
+
+        public override void OnStopChanged()
+        {
+            _stop.text = Stop?.Name ?? "";
+            if (State == DriverState.Stopped)
+                _stateMachine = StoppedStateMachine;
+            else if (State == DriverState.Driving)
+                _stateMachine = JourneyManager.IsDestination ? ApproachingDestination : Approaching;
+        }
 
         public override void OnJourneyChanged()
         {
             _destination.text = Route?.Destination ?? "";
             _relation.text = Route?.Relation ?? "";
-        }
-
-        private enum DisplaySection
-        {
-
-            Destination,
-            Time,
-            Stop,
-            ServiceArea
-
+            if (!IsInService)
+                _stateMachine = ServiceArea;
         }
 
     }

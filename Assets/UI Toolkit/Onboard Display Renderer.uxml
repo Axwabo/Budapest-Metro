@@ -11,6 +11,7 @@
                 <ui:Label text="M4" name="Relation"/>
                 <ui:Label text="14:00" name="Clock"/>
             </ui:VisualElement>
+            <ui:Label text="végállomás" name="Terminus" class="display-none" style="-unity-text-align: middle-center;" />
             <ui:Label text="Üzemi terület" name="ServiceArea" class="display-none" style="-unity-text-align: middle-center;"/>
         </ui:VisualElement>
     </ui:VisualElement>
