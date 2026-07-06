@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Text Settings
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.PanelTextSettings
   m_Version: 
-  m_DefaultFontAsset: {fileID: 0}
+  m_DefaultFontAsset: {fileID: 11400000, guid: 7bca27bd409733f678d8d38e44fb971c, type: 2}
   m_DefaultFontAssetPath: Fonts & Materials/
-  m_FallbackFontAssets: []
+  m_FallbackFontAssets:
+  - {fileID: 11400000, guid: 7bca27bd409733f678d8d38e44fb971c, type: 2}
   m_FallbackOSFontAssets: []
   m_MatchMaterialPreset: 0
   m_MissingCharacterUnicode: 0
@@ -34,4 +35,6 @@ MonoBehaviour:
     m_FollowingCharacters: {fileID: 0}
     m_UseModernHangulLineBreakingRules: 0
   m_DisplayWarnings: 0
-  m_FontReferences: []
+  m_FontReferences:
+  - font: {fileID: 2230732570650464555, guid: c92932b97d6ad83eda85a092bb38d34a, type: 3}
+    fontAsset: {fileID: 0}
