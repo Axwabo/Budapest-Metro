@@ -10,18 +10,19 @@ namespace Metro.Stations
         [SerializeField]
         private Material off;
 
-        private MeshRenderer _renderer;
+        private float _delay;
 
         private Material _on;
 
-        private float _delay;
-
         private bool _onAssigned = true;
+
+        private MeshRenderer _renderer;
 
         private LightState _state;
 
         public LightState State
         {
+            get => _state;
             set
             {
                 _state = value;
