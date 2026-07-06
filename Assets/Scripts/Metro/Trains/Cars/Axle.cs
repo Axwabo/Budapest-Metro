@@ -5,11 +5,18 @@ using UnityEngine;
 namespace Metro.Trains.Cars
 {
 
-    // TODO: make it an assembly component maybe?
     public sealed class Axle : CarComponent
     {
 
+        [SerializeField]
+        private Transform rotor;
+
+        [SerializeField]
+        private float wheelDiameter;
+
         private bool _locationUpdated;
+
+        private float _traveled;
 
         public Transform Transform { get; private set; }
 
@@ -17,7 +24,17 @@ namespace Metro.Trains.Cars
 
         public TrackSegment Track { get; private set; }
 
-        private void Update() => _locationUpdated = false;
+        private void Update()
+        {
+            // i = alpha / 360 * r
+            // i / r = alpha / 360
+            // i / r * 360 = alpha
+            _locationUpdated = false;
+            if (Mathf.Approximately(0, _traveled))
+                return;
+            rotor.Rotate(Vector3.right, _traveled / wheelDiameter * Mathf.Rad2Deg, Space.Self);
+            _traveled = 0;
+        }
 
         private void FixedUpdate()
         {
@@ -25,7 +42,9 @@ namespace Metro.Trains.Cars
             if (speed == 0)
                 return;
             var previousDistance = Distance;
-            Distance += Time.fixedDeltaTime * speed;
+            var delta = Time.fixedDeltaTime * speed;
+            _traveled += delta;
+            Distance += delta;
             if (Distance > Track.Length)
             {
                 PassPoints(previousDistance);
