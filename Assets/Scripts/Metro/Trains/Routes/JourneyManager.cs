@@ -20,9 +20,10 @@ namespace Metro.Trains.Routes
         [SerializeField]
         private RouteDescriptor? initialRoute;
 
-        [SerializeField]
-        [Min(Origin)]
-        private int initialStopIndex = Origin;
+        [field: FormerlySerializedAs("initialStopIndex")]
+        [field: SerializeField]
+        [field: Min(Origin)]
+        public int InitialStopIndex { get; set; } = Origin;
 
         private int _index = OutOfService;
 
@@ -39,32 +40,32 @@ namespace Metro.Trains.Routes
         [MemberNotNullWhen(true, nameof(Route), nameof(Stop))]
         public new bool IsInService => _index != OutOfService;
 
-        public bool IsOrigin => _index == initialStopIndex;
+        public bool IsOrigin => _index == InitialStopIndex;
 
         public bool IsDestination => _index == Destination;
 
         public void Begin()
         {
             if (InitialJourney != null)
-                Begin(InitialJourney);
+                Begin(InitialJourney, InitialStopIndex);
             else if (initialRoute)
-                Begin(initialRoute.Next(), initialStopIndex);
+                Begin(initialRoute.Next(), InitialStopIndex);
             else
                 Idle();
         }
 
-        public void Begin(IJourney journey) => Begin(journey, journey is Route ? Origin : OutOfService);
+        public void Begin(IJourney journey) => Begin(journey, Origin);
 
         [ContextMenu("Idle")]
         public void Idle() => Begin(Afk.Instance);
 
         private void Begin(IJourney journey, int index)
         {
-            _index = index;
+            _index = journey is Route ? index : OutOfService;
             Current = journey;
             Route = journey as Route;
             Parent.NotifyJourneyChanged();
-            UpdateTarget(index);
+            UpdateTarget(_index);
         }
 
         private void UpdateTarget(int index)
