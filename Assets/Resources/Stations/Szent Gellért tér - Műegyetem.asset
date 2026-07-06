@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6278ff3d2c5340b5b2f83ce82f40a32c, type: 3}
-  m_Name: "Keleti p\xE1lyaudvar"
+  m_Name: "Szent Gell\xE9rt t\xE9r - M\u0171egyetem"
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.StationId
   <Forehead>k__BackingField: 
-  <Onboard>k__BackingField: Keleti pu.
-  <Metros>k__BackingField: M2
-  <Railways>k__BackingField: 1
+  <Onboard>k__BackingField: 
+  <Metros>k__BackingField: 
+  <Railways>k__BackingField: 0
   <RegionalBuses>k__BackingField: 0
-  <Trams>k__BackingField: 23 24
-  <Trolleys>k__BackingField: 73 76 79 80 980
-  <LocalBuses>k__BackingField: 5 7 7E 8E 20E 30 30A 107 108E 110 112 133E 230
+  <Trams>k__BackingField: 17 19 41 47 49 56 56A
+  <Trolleys>k__BackingField: 
+  <LocalBuses>k__BackingField: 7 107 133E 907 922 922B 933 941 988
