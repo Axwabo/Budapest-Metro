@@ -47,7 +47,7 @@ namespace Metro.Trains.Driving
 
         private StopPoint Target => JourneyManager.Target;
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (State == DriverState.Driving)
                 Drive();
@@ -83,7 +83,7 @@ namespace Metro.Trains.Driving
         {
             if (_departureDelay > 0)
             {
-                if ((_departureDelay -= Clock.Delta) > 0)
+                if ((_departureDelay -= Time.fixedDeltaTime) > 0)
                     return;
                 Motor.TargetSpeed = IsInService ? Constants.MaxMps : Constants.SlowMps;
                 return;
