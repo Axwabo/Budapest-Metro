@@ -13,6 +13,7 @@ namespace Metro.Journeys.Routes
     {
 
         private static readonly HashSet<Route> Spawned = new();
+        private static readonly HashSet<string> SpawnedStations = new();
 
         [SerializeField]
         private JourneyManager prefab;
@@ -31,7 +32,7 @@ namespace Metro.Journeys.Routes
                 for (var i = 0; i < route.IntermediateStops.Count; i++)
                 {
                     var stop = route.IntermediateStops[i];
-                    if (stop.Time < start || stop.Time >= end || !Station.TryGetLoadad(stop.Name, out var station))
+                    if (stop.Time < start || stop.Time >= end || !Station.TryGetLoadad(stop.Name, out var station) || !SpawnedStations.Add(stop.Name))
                         continue;
                     var clone = Instantiate(prefab);
                     var assembly = clone.GetComponentInParent<MetroAssembly>();
