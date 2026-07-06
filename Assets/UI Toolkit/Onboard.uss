@@ -15,8 +15,8 @@ Label {
 }
 
 .icon {
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
 }
 
 #Transfers Label {
