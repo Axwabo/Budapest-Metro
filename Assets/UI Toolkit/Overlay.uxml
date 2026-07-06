@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement style="flex-grow: 1;">
         <ui:Label text="00:00:00" style="color: rgb(255, 255, 255); font-size: 30px; -unity-font-style: normal; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px;" />
-        <ui:Label text="🚇🚆🚍🚊🚎🚌" style="font-size: 50px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Noto%20Color%20Emoji/NotoColorEmoji-Regular.ttf?fileID=12800000&amp;guid=afb78e2cc4a3592689ac54ddf0ba8350&amp;type=3#NotoColorEmoji-Regular&quot;);" />
+        <ui:Label text="🚇🚆🚍🚊🚎🚌" style="font-size: 50px;" />
     </ui:VisualElement>
 </ui:UXML>
