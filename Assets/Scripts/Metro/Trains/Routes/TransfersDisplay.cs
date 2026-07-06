@@ -1,4 +1,5 @@
 using Metro.Stations;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Metro.Trains.Routes
@@ -37,14 +38,18 @@ namespace Metro.Trains.Routes
             _trolleyList = root.Q<Label>("TrolleyList");
             _busIcon = root.Q("BusIcon");
             _busList = root.Q<Label>("BusList");
+            root.RegisterCallback((GeometryChangedEvent ev) =>
+            {
+                Debug.Log(ev.oldRect);
+                Debug.Log(ev.newRect);
+            });
         }
 
         public bool TransitionCompleted => _translate >= _root.resolvedStyle.width + _root.contentRect.width;
 
         public void Display(string name)
         {
-            _root.style.translate = StyleKeyword.Null;
-            _translate = 0;
+            ResetPosition();
             if (!StationIdCache.TryGet(name, out var id))
                 return; // TODO: clear or something?
             DisplayList(_metroIcon, _metroList, id.Metros);
@@ -59,6 +64,12 @@ namespace Metro.Trains.Routes
         {
             icon.Display(!string.IsNullOrEmpty(text));
             list.text = text;
+        }
+
+        public void ResetPosition()
+        {
+            _root.style.translate = StyleKeyword.None;
+            _translate = 0;
         }
 
         public void Update()

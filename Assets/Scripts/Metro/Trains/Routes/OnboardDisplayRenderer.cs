@@ -62,6 +62,8 @@ namespace Metro.Trains.Routes
         {
             if (_section == DisplaySection.RouteAndTime)
                 _clock.text = Clock.Now.ToString("hh':'mm");
+            else if (_section == DisplaySection.Transfers)
+                _transfersDisplay.ResetPosition();
             _previous?.Display(false);
             _previous = _current = _section switch
             {
