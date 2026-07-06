@@ -64,7 +64,7 @@ MonoBehaviour:
   m_SortingOrder: 0
   m_Position: 0
   m_WorldSpaceSizeMode: 1
-  m_WorldSpaceWidth: 160
+  m_WorldSpaceWidth: 200
   m_WorldSpaceHeight: 40
   m_PivotReferenceSize: 0
   m_Pivot: 0
