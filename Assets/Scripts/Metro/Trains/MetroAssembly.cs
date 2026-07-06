@@ -28,14 +28,9 @@ namespace Metro.Trains
 
         public ReadOnlySpan<MetroCar> Cars => _cars;
 
-        public Axle PrimaryAxle
-        {
-            get
-            {
-                var car = _cars[Motor.Reverse ? ^1 : 0];
-                return Motor.Reverse ? car.BackAxle : car.FrontAxle;
-            }
-        }
+        public MetroCar PrimaryCar => _cars[Motor.Reverse ? ^1 : 0];
+
+        public Axle PrimaryAxle => Motor.Reverse ? PrimaryCar.BackAxle : PrimaryCar.FrontAxle;
 
         private void Start()
         {

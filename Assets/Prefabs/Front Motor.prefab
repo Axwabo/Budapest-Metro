@@ -75,9 +75,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7715441990966297500}
   - {fileID: 7814220171501288021}
   - {fileID: 9136686200452447024}
-  - {fileID: 7715441990966297500}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &202817367792764095
@@ -92,6 +92,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3b3e6eb05147058df8bfde9156f3ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Cars.MetroCar
+--- !u!1 &1536563433495492500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9171454550248497950}
+  m_Layer: 0
+  m_Name: Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9171454550248497950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536563433495492500}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7715441990966297500}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1872178143544035305
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +156,37 @@ Transform:
   - {fileID: 2248198154310338713}
   - {fileID: 5217021120617947982}
   - {fileID: 663043343396694326}
+  m_Father: {fileID: 7715441990966297500}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3814945142688142559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7585560880006238003}
+  m_Layer: 0
+  m_Name: Front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7585560880006238003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3814945142688142559}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 7715441990966297500}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3908110437890437689
@@ -202,6 +264,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7585560880006238003}
+  - {fileID: 9171454550248497950}
   - {fileID: 1012700095572068427}
   - {fileID: 3301134190785777939}
   - {fileID: 3129755179891998672}
@@ -223,6 +287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f688ba9bbb40479abafd33364586d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Cars.CarBody
+  <Front>k__BackingField: {fileID: 7585560880006238003}
+  <Back>k__BackingField: {fileID: 9171454550248497950}
   frontPivot: {fileID: 7814220171501288021}
   backPivot: {fileID: 9136686200452447024}
 --- !u!1 &4430443239569490883

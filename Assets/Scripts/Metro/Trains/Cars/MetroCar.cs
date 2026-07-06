@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace Metro.Trains.Cars
 {
@@ -13,6 +14,10 @@ namespace Metro.Trains.Cars
 
         public Axle BackAxle { get; private set; }
 
+        public float FrontAxleOffset { get; private set; }
+
+        public float BackAxleOffset { get; private set; }
+
         public IEnumerable<T> Components<T>() => _components.OfType<T>();
 
         protected override void OnInitialized()
@@ -21,6 +26,10 @@ namespace Metro.Trains.Cars
             var axles = _components.OfType<Axle>().OrderByDescending(e => e.Distance).ToArray();
             FrontAxle = axles[0];
             BackAxle = axles[^1];
+            var body = Components<CarBody>().First();
+            // TODO: probably shouldn't be absolute
+            FrontAxleOffset = Mathf.Abs(body.Inverse(FrontAxle.Transform) - body.Inverse(body.Front));
+            BackAxleOffset = Mathf.Abs(body.Inverse(BackAxle.Transform) - body.Inverse(body.Back));
         }
 
         public override void OnStateChanged()
