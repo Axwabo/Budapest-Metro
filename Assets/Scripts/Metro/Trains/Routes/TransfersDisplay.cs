@@ -7,7 +7,8 @@ namespace Metro.Trains.Routes
     public sealed class TransfersDisplay
     {
 
-        private const float PixelsPerSecond = 200;
+        private const float PixelsPerSecond = 300;
+
         private readonly VisualElement _busIcon;
         private readonly Label _busList;
         private readonly VisualElement _metroIcon;
@@ -38,7 +39,7 @@ namespace Metro.Trains.Routes
             _busList = root.Q<Label>("BusList");
         }
 
-        public bool TransitionCompleted => _translate >= _root.resolvedStyle.width;
+        public bool TransitionCompleted => _translate >= _root.resolvedStyle.width + _root.contentRect.width;
 
         public void Display(string name)
         {
