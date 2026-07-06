@@ -39,8 +39,8 @@ namespace Metro.Trains.Routes
 
         protected virtual void Update()
         {
-            if (_showIn > 0 && (_showIn -= Clock.Delta) <= 0)
-                _content?.Display();
+            if (_showIn > 0 && (_showIn -= Clock.Delta) <= 0 && _content != null)
+                _content.visible = true;
         }
 
         private void OnDestroy()
@@ -59,7 +59,8 @@ namespace Metro.Trains.Routes
 
         protected void Blink(float seconds)
         {
-            _content?.Display(false);
+            if (_content != null)
+                _content.visible = false;
             _showIn = seconds;
         }
 
