@@ -60,7 +60,7 @@ namespace Metro.Trains.Routes
         private void UpdateGeometry(GeometryChangedEvent ev)
         {
             // can't believe I have to do ts myself
-            _size = 0;
+            _size = -ev.newRect.width;
             var hierarchy = _root.hierarchy;
             var count = hierarchy.childCount;
             for (var i = 0; i < count; i++)
