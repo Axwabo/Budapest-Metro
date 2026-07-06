@@ -17,6 +17,8 @@ namespace Metro.Journeys.Routes
 
         private void Update()
         {
+            if (area.PassingThrough.Count != 0)
+                return;
             foreach (var siding in area.Sidings)
             {
                 if (siding.UsedBy.Count != 0)

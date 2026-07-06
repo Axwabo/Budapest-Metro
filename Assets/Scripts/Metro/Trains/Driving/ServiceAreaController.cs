@@ -12,9 +12,10 @@ namespace Metro.Trains.Driving
             switch (State, JourneyManager.Target)
             {
                 case (DriverState.Stopped, ServiceAreaExitPoint {Area: var area}) when area.Exit(Parent) is { } journey:
+                    var isAfk = Journey is Afk;
                     CanDepart = true;
                     JourneyManager.Begin(journey);
-                    Parent.Driver.MarkReady(10);
+                    Parent.Driver.MarkReady(isAfk ? 0 : 10);
                     break;
                 case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area}) when area.Enter(Parent) is { } journey:
                     CanDepart = true;
