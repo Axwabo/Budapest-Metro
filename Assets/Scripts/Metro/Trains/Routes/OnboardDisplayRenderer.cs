@@ -47,15 +47,25 @@ namespace Metro.Trains.Routes
         protected override void Update()
         {
             base.Update();
-            if (_section == DisplaySection.Transfers)
+            var previousSection = _section;
+            if (Parent.Driver.IsOnTargetTrack && IsInService && State == DriverState.Driving)
+                UpdateStopping();
+            if (previousSection == DisplaySection.Transfers)
                 _transfersDisplay.Update();
             if (!TransitionCompleted || (_time -= Clock.Delta) > 0)
                 return;
             _time = 5;
-            var previousSection = _section;
             _section = _stateMachine(previousSection);
             if (_section != previousSection)
                 UpdateSection();
+        }
+
+        private void UpdateStopping()
+        {
+            var target = JourneyManager.IsDestination ? StoppingDestination : Stopping;
+            if (_stateMachine != target)
+                _time = 0;
+            _stateMachine = target;
         }
 
         private void UpdateSection()

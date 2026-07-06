@@ -1677,7 +1677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092167915097164209, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 79.99999
+      value: 79.90001
       objectReference: {fileID: 0}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
@@ -1693,7 +1693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7336609900697272932, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.000015
+      value: 79.899994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1863,7 +1863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092167915097164209, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 79.999985
+      value: 79.899994
       objectReference: {fileID: 0}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
@@ -1879,7 +1879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7336609900697272932, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80
+      value: 79.90001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2223,7 +2223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2301761229045101827, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: -0.000009536746
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3403368601219536001, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Next>k__BackingField
@@ -2231,7 +2231,7 @@ PrefabInstance:
       objectReference: {fileID: 163953035}
     - target: {fileID: 3710111928025692435, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: -0.000009536746
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2279,7 +2279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092167915097164209, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.00003
+      value: 79.90004
       objectReference: {fileID: 0}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
@@ -2295,7 +2295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7336609900697272932, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.00003
+      value: 79.90005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2892,7 +2892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2301761229045101827, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: -0.000019073486
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3403368601219536001, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Next>k__BackingField
@@ -2900,7 +2900,7 @@ PrefabInstance:
       objectReference: {fileID: 508509625}
     - target: {fileID: 3710111928025692435, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: -0.000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2948,7 +2948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092167915097164209, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.00002
+      value: 79.89999
       objectReference: {fileID: 0}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
@@ -2964,7 +2964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7336609900697272932, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.000015
+      value: 79.89998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3680,7 +3680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092167915097164209, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 79.99994
+      value: 79.899956
       objectReference: {fileID: 0}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
@@ -3696,7 +3696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7336609900697272932, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.00001
+      value: 79.89998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4428,7 +4428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2301761229045101827, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: -0.000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3403368601219536001, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Next>k__BackingField
@@ -4484,7 +4484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092167915097164209, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80
+      value: 79.89998
       objectReference: {fileID: 0}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
@@ -4500,7 +4500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7336609900697272932, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.00002
+      value: 79.90003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5079,7 +5079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092167915097164209, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 79.999916
+      value: 79.89998
       objectReference: {fileID: 0}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
@@ -5095,7 +5095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7336609900697272932, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80
+      value: 79.900055
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
@@ -7235,7 +7235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2301761229045101827, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: -0.0000524521
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3403368601219536001, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Next>k__BackingField
@@ -7291,7 +7291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092167915097164209, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.00001
+      value: 79.90002
       objectReference: {fileID: 0}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
@@ -7307,7 +7307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7336609900697272932, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.00007
+      value: 79.90001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7466,7 +7466,7 @@ PrefabInstance:
       objectReference: {fileID: 93541585}
     - target: {fileID: 3710111928025692435, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: -0.000014305117
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7514,7 +7514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092167915097164209, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.00002
+      value: 79.9
       objectReference: {fileID: 0}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
@@ -7530,7 +7530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7336609900697272932, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.00001
+      value: 79.90001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9015,7 +9015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7cb22ab31a4746a69dbe8703efbe27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Clock
-  start: 14:21:42
+  start: 00:00:46
 --- !u!114 &1879075054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10317,7 +10317,7 @@ PrefabInstance:
       objectReference: {fileID: 655224967}
     - target: {fileID: 3710111928025692435, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: -0.000033378597
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10365,7 +10365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092167915097164209, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 80.00002
+      value: 79.89998
       objectReference: {fileID: 0}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
@@ -10389,7 +10389,7 @@ PrefabInstance:
       objectReference: {fileID: 646608024}
     - target: {fileID: 7336609900697272932, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: <Distance>k__BackingField
-      value: 79.99986
+      value: 79.900085
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
