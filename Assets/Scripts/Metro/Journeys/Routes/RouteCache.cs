@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Metro.Journeys.Routes
@@ -15,6 +16,10 @@ namespace Metro.Journeys.Routes
         [RuntimeInitializeOnLoadMethod]
         private static void Init()
         {
+            foreach (var relation in Resources.LoadAll<RouteDescriptor>("Journeys").GroupBy(e => e.Relation))
+            {
+                Routes[relation.Key] = relation.GroupBy(e => e.Destination)
+            }
         }
 
         public static ReadOnlySpan<Route> GetRoutes(this RouteDescriptor descriptor)
