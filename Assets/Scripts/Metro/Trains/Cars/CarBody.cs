@@ -25,7 +25,7 @@ namespace Metro.Trains.Cars
         private void Awake()
         {
             _t = transform;
-            _lerp = Mathf.InverseLerp(Inverse(frontPivot), Inverse(backPivot), _t.localPosition.z);
+            _lerp = Mathf.InverseLerp(Inverse(frontPivot), Inverse(backPivot), 0);
         }
 
         private void FixedUpdate()
