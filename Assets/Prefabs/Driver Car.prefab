@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Driver Car
       objectReference: {fileID: 0}
+    - target: {fileID: 6394158920016047877, guid: 8431d839f457b89d58cd5a8eefa49c56, type: 3}
+      propertyPath: m_Name
+      value: Onboard Display
+      objectReference: {fileID: 0}
     - target: {fileID: 6877757374412686438, guid: 8431d839f457b89d58cd5a8eefa49c56, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
