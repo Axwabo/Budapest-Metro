@@ -40,8 +40,6 @@ namespace Metro.Journeys.Routes
                     break;
                 }
 
-            if (area.PassingThrough.Count != 0)
-                return;
             foreach (var siding in area.Sidings)
             {
                 if (siding.UsedBy.Count != 0)
@@ -54,6 +52,8 @@ namespace Metro.Journeys.Routes
             }
 
             Destroy(this);
+            Spawned.Clear();
+            SpawnedStations.Clear();
         }
 
     }
