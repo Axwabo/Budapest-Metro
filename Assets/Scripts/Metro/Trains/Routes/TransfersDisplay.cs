@@ -7,7 +7,7 @@ namespace Metro.Trains.Routes
     public sealed class TransfersDisplay
     {
 
-        private const float PixelsPerSecond = 300;
+        private const float PixelsPerSecond = 500;
 
         private readonly VisualElement _busIcon;
         private readonly Label _busList;
