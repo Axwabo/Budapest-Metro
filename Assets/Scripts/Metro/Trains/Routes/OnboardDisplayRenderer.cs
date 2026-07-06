@@ -1,4 +1,5 @@
 using System;
+using Metro.Stations;
 using Metro.Trains.Driving;
 using UnityEngine.UIElements;
 using static Metro.Trains.Routes.SectionStateMachines;
@@ -96,7 +97,7 @@ namespace Metro.Trains.Routes
 
         public override void OnJourneyChanged()
         {
-            _destination.text = Route?.Destination ?? "";
+            _destination.text = Route?.Destination.Onboard() ?? "";
             _relation.text = Route?.Relation ?? "";
             if (!IsInService)
                 _stateMachine = ServiceArea;

@@ -1,4 +1,5 @@
 using Metro.Journeys;
+using Metro.Stations;
 using Metro.Trains.Driving;
 using UnityEngine.UIElements;
 
@@ -14,7 +15,7 @@ namespace Metro.Trains.Routes
 
         public override void OnJourneyChanged()
         {
-            _label.text = IsInService ? $"{Route.Relation} {Route.Destination}" : "";
+            _label.text = IsInService ? $"{Route.Relation} {Route.Destination.Forehead()}" : "";
             Blink(4);
         }
 

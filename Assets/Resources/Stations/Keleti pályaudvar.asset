@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6278ff3d2c5340b5b2f83ce82f40a32c, type: 3}
+  m_Name: "Keleti p\xE1lyaudvar"
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.StationId
+  <Forehead>k__BackingField: 
+  <Onboard>k__BackingField: Keleti pu.

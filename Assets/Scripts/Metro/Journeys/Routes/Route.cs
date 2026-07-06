@@ -17,7 +17,7 @@ namespace Metro.Journeys.Routes
 
         public string Relation => Descriptor.Relation;
 
-        public string Destination => Descriptor.Destination.Name;
+        public Stop Destination => Descriptor.Destination;
 
         public bool Reverse => Descriptor.Reverse;
 
