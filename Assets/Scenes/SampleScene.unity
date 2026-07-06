@@ -8747,6 +8747,75 @@ Transform:
   - {fileID: 100024243}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1879075050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1879075052}
+  - component: {fileID: 1879075051}
+  - component: {fileID: 1879075053}
+  m_Layer: 5
+  m_Name: Clock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1879075051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879075050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: ee05e860855c25d7199c44c8a79f6b38, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 8804df18e85b5df8d857a7d1ae62d0c1, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!4 &1879075052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879075050}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1879075053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879075050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7cb22ab31a4746a69dbe8703efbe27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Clock
+  start: 14:19:42
 --- !u!1 &1883526873
 GameObject:
   m_ObjectHideFlags: 0
@@ -9984,16 +10053,52 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7538554588709292372, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 4173702777072112987, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7979914331801140876, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 3452948884311143668, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 8899510378623628459, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 6375593281189168236, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 652744501000706147, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 6798925757990269876, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 2238198362853554636, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 761815019089385997, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 6622307252855899650, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 914943216674401749, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 5613604423335651245, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 3517839412878797924, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 7035831719414149227, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 3959203889506737084, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 8621267979953803716, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 2580240096559731099, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
@@ -10149,3 +10254,4 @@ SceneRoots:
   - {fileID: 1821383470}
   - {fileID: 7660439605001550532}
   - {fileID: 1862706370}
+  - {fileID: 1879075052}
