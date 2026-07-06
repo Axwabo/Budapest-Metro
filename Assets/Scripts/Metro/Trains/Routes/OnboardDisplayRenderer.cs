@@ -54,7 +54,8 @@ namespace Metro.Trains.Routes
         {
             if (_section == DisplaySection.Time)
                 _clock.text = Clock.Now.ToString("hh':'mm");
-            _current = _section switch
+            _previous?.Display(false);
+            _previous = _current = _section switch
             {
                 DisplaySection.Destination => _destinationContainer,
                 DisplaySection.Time => _routeAndTime,
@@ -62,7 +63,6 @@ namespace Metro.Trains.Routes
                 DisplaySection.ServiceArea => _serviceArea,
                 _ => throw new InvalidOperationException()
             };
-            _previous?.Display(false);
             _current.Display();
             Blink(0.2f);
         }
