@@ -50,7 +50,7 @@ namespace Metro.Journeys.Routes
             if (_initiallySpawned)
             {
                 Rotate(_enteryMetros, entry);
-                Rotate(_reverseMetros, entry);
+                Rotate(_reverseMetros, reverse);
                 Dispatch();
                 Recall();
                 return;
