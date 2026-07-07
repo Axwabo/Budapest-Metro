@@ -29,22 +29,6 @@ PrefabInstance:
       value: Driver Car Back Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4438711199349080665, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438711199349080665, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438711199349080665, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438711199349080665, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438711199349080665, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
@@ -63,6 +47,22 @@ PrefabInstance:
     - target: {fileID: 7412362232775219064, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
       propertyPath: <Reverse>k__BackingField
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851839466532502739, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851839466532502739, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851839466532502739, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851839466532502739, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8188904318451960118, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -105,11 +105,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8953693205004743932, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
-      propertyPath: backPivot
+      propertyPath: <Back>k__BackingField
       value: 
       objectReference: {fileID: 6937452894321898940}
     - target: {fileID: 8953693205004743932, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
-      propertyPath: frontPivot
+      propertyPath: <Front>k__BackingField
       value: 
       objectReference: {fileID: 472003812168798958}
     m_RemovedComponents: []
