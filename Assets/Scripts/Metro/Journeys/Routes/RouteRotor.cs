@@ -95,7 +95,7 @@ namespace Metro.Journeys.Routes
             if (_housedMetros.Count == 0 || house.PassingThrough.Count != 0)
                 return;
             var next = entry.Route.Next(HouseToDeparture);
-            if (next == null || next == _lastDispatched || next.Origin.Time > Clock.Now + MaxEarlyDispatch)
+            if (next == null || next == _lastDispatched || next.Origin.Time < Clock.Now + MaxEarlyDispatch)
                 return;
             foreach (var manager in _housedMetros)
             {
