@@ -4146,6 +4146,7 @@ MonoBehaviour:
   - {fileID: 1486852090}
   <Reverse>k__BackingField: 1
   <Route>k__BackingField: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
+  <ServiceTarget>k__BackingField: {fileID: 0}
 --- !u!1 &638664720
 GameObject:
   m_ObjectHideFlags: 0
@@ -4339,6 +4340,7 @@ MonoBehaviour:
   - {fileID: 181202788}
   <Reverse>k__BackingField: 0
   <Route>k__BackingField: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
+  <ServiceTarget>k__BackingField: {fileID: 0}
 --- !u!1001 &647900859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5057,7 +5059,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 779698760297868956, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1773062063}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5352628247343271471, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1179289540}
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &796333033 stripped
 MonoBehaviour:
@@ -6414,6 +6419,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 891280670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1179289536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5352628247343271471, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+  m_PrefabInstance: {fileID: 796333032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1179289540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179289536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a0b8157c9c49c994e02e2d8469f20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceEntryStopPoint
+  <Track>k__BackingField: {fileID: 796333034}
+  <Distance>k__BackingField: 0
+  <Reverse>k__BackingField: 1
+  <Area>k__BackingField: {fileID: 635414244}
 --- !u!1 &1272704609
 GameObject:
   m_ObjectHideFlags: 0
@@ -6462,6 +6488,27 @@ MonoBehaviour:
   <Distance>k__BackingField: 391.21082
   <Reverse>k__BackingField: 0
   station: {fileID: 1511502334}
+--- !u!1 &1292886319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7333328333677013609, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+  m_PrefabInstance: {fileID: 8639451569834059016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1292886322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292886319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a0b8157c9c49c994e02e2d8469f20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceEntryStopPoint
+  <Track>k__BackingField: {fileID: 8639451569834059017}
+  <Distance>k__BackingField: 79.900085
+  <Reverse>k__BackingField: 0
+  <Area>k__BackingField: {fileID: 646608024}
 --- !u!4 &1368300137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
@@ -10349,12 +10396,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+    - {fileID: 1546240059519603492, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1861758783}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7333328333677013609, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1292886322}
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &8639451569834059017 stripped
 MonoBehaviour:

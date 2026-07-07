@@ -31,7 +31,13 @@ namespace Metro.Trains.Driving
 
         public override void OnStateChanged()
         {
-            if (State != DriverState.WaitingForDeparture || !JourneyManager.IsDestination || JourneyManager.Target is not ServiceEntryStopPoint {Area: var area})
+            var checkEntryPoint = State switch
+            {
+                DriverState.Stopped => !JourneyManager.IsInService,
+                DriverState.WaitingForDeparture => JourneyManager.IsDestination,
+                _ => false
+            };
+            if (!checkEntryPoint || JourneyManager.Target is not ServiceEntryStopPoint {Area: var area})
                 return;
             if (area.Enter(Parent) is not { } journey)
             {
@@ -41,6 +47,7 @@ namespace Metro.Trains.Driving
 
             CanDepart = true;
             JourneyManager.Begin(journey);
+            Parent.Driver.MarkReadyNow();
         }
 
     }

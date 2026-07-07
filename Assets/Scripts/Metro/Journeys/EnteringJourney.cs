@@ -1,4 +1,3 @@
-using System;
 using Metro.Journeys.Routes;
 using Metro.Rail.Controls;
 
@@ -8,9 +7,9 @@ namespace Metro.Journeys
     public sealed class EnteringJourney : IJourney
     {
 
-        public EnteringJourney(bool reverse, RouteDescriptor route)
+        public EnteringJourney(bool reverse, Route next)
         {
-            Next = route.Next(TimeSpan.FromSeconds(40));
+            Next = next;
             Reverse = reverse;
         }
 

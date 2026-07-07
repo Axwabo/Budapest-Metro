@@ -67,7 +67,7 @@ namespace Metro.Trains.Driving
         }
 
         [ContextMenu("Mark Ready Now")]
-        private void MarkReadyNow()
+        public void MarkReadyNow()
         {
             if (State == DriverState.Stopped)
                 _departAt = TimeSpan.MinValue;

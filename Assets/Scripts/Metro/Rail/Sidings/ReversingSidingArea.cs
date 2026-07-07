@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Metro.Journeys;
 using Metro.Journeys.Routes;
+using Metro.Rail.Controls;
 using Metro.Stations;
 using Metro.Trains;
 using UnityEngine;
@@ -20,6 +21,9 @@ namespace Metro.Rail.Sidings
 
         [field: SerializeField]
         public RouteDescriptor Route { get; private set; }
+
+        [field: SerializeField]
+        public ServiceEntryStopPoint ServiceTarget { get; private set; }
 
         public HashSet<MetroAssembly> PassingThrough { get; } = new();
 

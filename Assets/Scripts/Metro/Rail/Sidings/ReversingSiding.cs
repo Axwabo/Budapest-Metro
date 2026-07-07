@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using Metro.Journeys;
+using Metro.Journeys.Routes;
 using Metro.Rail.Controls;
 using Metro.Trains;
 using UnityEngine;
@@ -45,7 +47,10 @@ namespace Metro.Rail.Sidings
                 return null;
             @out.Activate();
             Area.PassingThrough.Add(assembly);
-            return new EnteringJourney(!Area.Reverse, Area.Route);
+            var next = Area.Route.Next(TimeSpan.FromSeconds(40));
+            return next.Origin.Time > Clock.Now + TimeSpan.FromMinutes(10) && Area.ServiceTarget
+                ? new Afk {Target = Area.ServiceTarget}
+                : new EnteringJourney(!Area.Reverse, next);
         }
 
     }
