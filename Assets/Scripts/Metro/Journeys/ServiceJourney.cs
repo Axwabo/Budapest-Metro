@@ -3,12 +3,12 @@ using Metro.Rail.Controls;
 namespace Metro.Journeys
 {
 
-    public sealed class ReversingEntryJourney : IJourney
+    public sealed class ServiceJourney : IJourney
     {
 
-        private readonly ServiceEntryStopPoint _target;
+        private readonly ServiceAreaPointBase _target;
 
-        public ReversingEntryJourney(ServiceEntryStopPoint target) => _target = target;
+        public ServiceJourney(ServiceAreaPointBase target) => _target = target;
 
         public bool Reverse => _target.Area.Reverse;
 

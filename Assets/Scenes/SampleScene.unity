@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 18150748}
   - component: {fileID: 18150747}
   m_Layer: 0
-  m_Name: "Bik\xE1s > Kelenf\xF6ld"
+  m_Name: "Bik\xE1s > Kelenf\xF6ld 1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,7 +305,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 891280670}
+  m_Father: {fileID: 1908899011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &18150747
 MonoBehaviour:
@@ -322,9 +322,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 8639451569834059017}
+  <Next>k__BackingField: {fileID: 2038675507}
   spline: {fileID: 18150749}
 --- !u!114 &18150749
 MonoBehaviour:
@@ -378,16 +378,6 @@ MonoBehaviour:
     roll: 0
   - position: {x: -2369.9553, y: 93, z: -1860.7485}
     direction: {x: -2393.9832, y: 93.81268, z: -1859.0834}
-    up: {x: 0, y: 1, z: 0}
-    scale: {x: 1, y: 1}
-    roll: 0
-  - position: {x: -2439.7427, y: 94.5, z: -1854.6548}
-    direction: {x: -2460.9302, y: 94.825356, z: -1852.4537}
-    up: {x: 0, y: 1, z: 0}
-    scale: {x: 1, y: 1}
-    roll: 0
-  - position: {x: -2515.4846, y: 95.21, z: -1846.6522}
-    direction: {x: -2539.7769, y: 95.21, z: -1844.4128}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
@@ -452,37 +442,7 @@ MonoBehaviour:
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  - n1:
-      position: {x: -2369.9553, y: 93, z: -1860.7485}
-      direction: {x: -2393.9832, y: 93.81268, z: -1859.0834}
-      up: {x: 0, y: 1, z: 0}
-      scale: {x: 1, y: 1}
-      roll: 0
-    n2:
-      position: {x: -2439.7427, y: 94.5, z: -1854.6548}
-      direction: {x: -2460.9302, y: 94.825356, z: -1852.4537}
-      up: {x: 0, y: 1, z: 0}
-      scale: {x: 1, y: 1}
-      roll: 0
-    Changed:
-      m_PersistentCalls:
-        m_Calls: []
-  - n1:
-      position: {x: -2439.7427, y: 94.5, z: -1854.6548}
-      direction: {x: -2460.9302, y: 94.825356, z: -1852.4537}
-      up: {x: 0, y: 1, z: 0}
-      scale: {x: 1, y: 1}
-      roll: 0
-    n2:
-      position: {x: -2515.4846, y: 95.21, z: -1846.6522}
-      direction: {x: -2539.7769, y: 95.21, z: -1844.4128}
-      up: {x: 0, y: 1, z: 0}
-      scale: {x: 1, y: 1}
-      roll: 0
-    Changed:
-      m_PersistentCalls:
-        m_Calls: []
-  Length: 943.4931
+  Length: 797.2514
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -674,6 +634,55 @@ MonoBehaviour:
   <Distance>k__BackingField: 26.50431
   <Reverse>k__BackingField: 1
   station: {fileID: 1527458140}
+--- !u!1 &85985446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 85985447}
+  - component: {fileID: 85985448}
+  m_Layer: 0
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &85985447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85985446}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1369747429}
+  - {fileID: 589144664}
+  m_Father: {fileID: 1440216692}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &85985448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85985446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b493306c3e0647a0af342bfcecb25074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.TrackSplitter
+  track: {fileID: 1305362380}
+  points:
+  - 30
 --- !u!1 &93541582
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,9 +732,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -1129,9 +1138,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -2047,9 +2056,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -2727,6 +2736,38 @@ MonoBehaviour:
   toLeft: {fileID: 1593878084}
   fromRight: {fileID: 1942180630}
   toRight: {fileID: 502220411}
+--- !u!1 &454486404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454486405}
+  m_Layer: 0
+  m_Name: Visual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454486405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454486404}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1305362383}
+  m_Father: {fileID: 1440216692}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &469485477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2974,9 +3015,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -3296,9 +3337,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -3430,9 +3471,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -4041,6 +4082,54 @@ MonoBehaviour:
   <Distance>k__BackingField: 0
   <Reverse>k__BackingField: 1
   station: {fileID: 8639451569834059019}
+--- !u!1 &589144663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589144664}
+  - component: {fileID: 589144665}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &589144664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589144663}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2400.9348, y: 93.80393, z: -1874.0962}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 85985447}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &589144665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589144663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87957185587a4105a30d8c16c07c0798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
+  <Next>k__BackingField: {fileID: 8639451569834059018}
+  <Original>k__BackingField: {fileID: 1305362380}
+  <Beginning>k__BackingField: 30
+  <End>k__BackingField: 146.61292
 --- !u!1 &610970054
 GameObject:
   m_ObjectHideFlags: 0
@@ -4196,9 +4285,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -4551,7 +4640,7 @@ GameObject:
   - component: {fileID: 690274262}
   - component: {fileID: 690274261}
   m_Layer: 0
-  m_Name: "Bik\xE1s > Kelenf\xF6ld"
+  m_Name: "Bik\xE1s > Kelenf\xF6ld 1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4570,7 +4659,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1450066030}
+  m_Father: {fileID: 1440216692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &690274261
 MonoBehaviour:
@@ -4587,9 +4676,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -4606,7 +4695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 8639451569834059018}
+  <Next>k__BackingField: {fileID: 1305362380}
   spline: {fileID: 690274263}
 --- !u!114 &690274263
 MonoBehaviour:
@@ -4643,16 +4732,6 @@ MonoBehaviour:
     roll: 0
   - position: {x: -2371.0613, y: 93, z: -1876.7102}
     direction: {x: -2395.089, y: 93.81268, z: -1875.045}
-    up: {x: 0, y: 1, z: 0}
-    scale: {x: 1, y: 1}
-    roll: 0
-  - position: {x: -2441.3135, y: 94.5, z: -1869.7755}
-    direction: {x: -2462.501, y: 94.825356, z: -1867.5745}
-    up: {x: 0, y: 1, z: 0}
-    scale: {x: 1, y: 1}
-    roll: 0
-  - position: {x: -2516.8533, y: 95.21, z: -1861.4943}
-    direction: {x: -2541.1455, y: 95.21, z: -1859.2549}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
@@ -4717,37 +4796,7 @@ MonoBehaviour:
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  - n1:
-      position: {x: -2371.0613, y: 93, z: -1876.7102}
-      direction: {x: -2395.089, y: 93.81268, z: -1875.045}
-      up: {x: 0, y: 1, z: 0}
-      scale: {x: 1, y: 1}
-      roll: 0
-    n2:
-      position: {x: -2441.3135, y: 94.5, z: -1869.7755}
-      direction: {x: -2462.501, y: 94.825356, z: -1867.5745}
-      up: {x: 0, y: 1, z: 0}
-      scale: {x: 1, y: 1}
-      roll: 0
-    Changed:
-      m_PersistentCalls:
-        m_Calls: []
-  - n1:
-      position: {x: -2441.3135, y: 94.5, z: -1869.7755}
-      direction: {x: -2462.501, y: 94.825356, z: -1867.5745}
-      up: {x: 0, y: 1, z: 0}
-      scale: {x: 1, y: 1}
-      roll: 0
-    n2:
-      position: {x: -2516.8533, y: 95.21, z: -1861.4943}
-      direction: {x: -2541.1455, y: 95.21, z: -1859.2549}
-      up: {x: 0, y: 1, z: 0}
-      scale: {x: 1, y: 1}
-      roll: 0
-    Changed:
-      m_PersistentCalls:
-        m_Calls: []
-  Length: 950.81433
+  Length: 804.2014
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -4896,6 +4945,37 @@ MonoBehaviour:
   <Original>k__BackingField: {fileID: 1906872358}
   <Beginning>k__BackingField: 75
   <End>k__BackingField: 95
+--- !u!1 &789900548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 789900549}
+  m_Layer: 0
+  m_Name: Carriage House
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &789900549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789900548}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1821383470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792171187
 GameObject:
   m_ObjectHideFlags: 0
@@ -4922,7 +5002,7 @@ Transform:
   m_GameObject: {fileID: 792171187}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.66963553, z: -0, w: 0.7426899}
-  m_LocalPosition: {x: -2422.4353, y: 94.1505, z: -1855.6265}
+  m_LocalPosition: {x: -2396.1, y: 94.1505, z: -1858.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4940,8 +5020,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1de862c80242869cb867f840023889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
-  <Track>k__BackingField: {fileID: 18150748}
-  <Distance>k__BackingField: 696.12976
+  <Track>k__BackingField: {fileID: 2038675507}
+  <Distance>k__BackingField: 53.005104
   <Reverse>k__BackingField: 0
   station: {fileID: 8639451569834059019}
 --- !u!1001 &796333032
@@ -5420,7 +5500,7 @@ Transform:
   - {fileID: 1883526877}
   - {fileID: 1845205853}
   - {fileID: 1404374182}
-  - {fileID: 18150746}
+  - {fileID: 1908899011}
   m_Father: {fileID: 1821383470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &921198449
@@ -5471,6 +5551,55 @@ MonoBehaviour:
   <Distance>k__BackingField: 11.977299
   <Reverse>k__BackingField: 1
   <Area>k__BackingField: {fileID: 635414244}
+--- !u!1 &923623907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 923623908}
+  - component: {fileID: 923623909}
+  m_Layer: 0
+  m_Name: Entry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &923623908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923623907}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1784282869}
+  - {fileID: 1866051214}
+  m_Father: {fileID: 1908899011}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &923623909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923623907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b493306c3e0647a0af342bfcecb25074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.TrackSplitter
+  track: {fileID: 2038675507}
+  points:
+  - 30
 --- !u!1 &955301421
 GameObject:
   m_ObjectHideFlags: 0
@@ -5561,9 +5690,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -6156,9 +6285,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -6398,9 +6527,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -6510,11 +6639,193 @@ MonoBehaviour:
   <Distance>k__BackingField: 79.900085
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 646608024}
+--- !u!1 &1305362379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1305362383}
+  - component: {fileID: 1305362381}
+  - component: {fileID: 1305362380}
+  - component: {fileID: 1305362382}
+  m_Layer: 0
+  m_Name: "Bik\xE1s > Kelenf\xF6ld 2"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1305362380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305362379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
+  <Next>k__BackingField: {fileID: 0}
+  spline: {fileID: 1305362381}
+--- !u!114 &1305362381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305362379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4a6b5a21acc984ea0a86d24ec6eeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
+  nodes:
+  - position: {x: -2371.0613, y: 93, z: -1876.7102}
+    direction: {x: -2395.089, y: 93.81268, z: -1875.045}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: -2441.3135, y: 94.5, z: -1869.7755}
+    direction: {x: -2462.501, y: 94.825356, z: -1867.5745}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: -2516.8533, y: 95.21, z: -1861.4943}
+    direction: {x: -2541.1455, y: 95.21, z: -1859.2549}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  curves:
+  - n1:
+      position: {x: -2371.0613, y: 93, z: -1876.7102}
+      direction: {x: -2395.089, y: 93.81268, z: -1875.045}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: -2441.3135, y: 94.5, z: -1869.7755}
+      direction: {x: -2462.501, y: 94.825356, z: -1867.5745}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: -2441.3135, y: 94.5, z: -1869.7755}
+      direction: {x: -2462.501, y: 94.825356, z: -1867.5745}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: -2516.8533, y: 95.21, z: -1861.4943}
+      direction: {x: -2541.1455, y: 95.21, z: -1859.2549}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  Length: 146.61292
+  isLoop: 0
+  CurveChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1305362382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305362379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
+  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
+  physicMaterial: {fileID: 0}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0}
+  scale: {x: 10, y: 0.159, z: 1.505}
+  generateCollider: 0
+  updateInPlayMode: 1
+  curveSpace: 0
+  mode: 1
+--- !u!4 &1305362383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305362379}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 454486405}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1368300137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
   m_PrefabInstance: {fileID: 8639451569834059016}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1369747428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1369747429}
+  - component: {fileID: 1369747430}
+  m_Layer: 0
+  m_Name: 0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1369747429
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369747428}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2371.0613, y: 93, z: -1876.7102}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 85985447}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1369747430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369747428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87957185587a4105a30d8c16c07c0798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
+  <Next>k__BackingField: {fileID: 589144665}
+  <Original>k__BackingField: {fileID: 1305362380}
+  <Beginning>k__BackingField: 0
+  <End>k__BackingField: 30
 --- !u!1 &1373718055
 GameObject:
   m_ObjectHideFlags: 0
@@ -6795,9 +7106,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -6929,6 +7240,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1952295028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1440216691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1440216692}
+  m_Layer: 0
+  m_Name: "Bik\xE1s > Kelenf\xF6ld"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1440216692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440216691}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 690274260}
+  - {fileID: 454486405}
+  - {fileID: 85985447}
+  m_Father: {fileID: 1450066030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1447225335
 GameObject:
   m_ObjectHideFlags: 0
@@ -7015,7 +7360,7 @@ Transform:
   - {fileID: 93541583}
   - {fileID: 300232808}
   - {fileID: 1549363359}
-  - {fileID: 690274260}
+  - {fileID: 1440216692}
   m_Father: {fileID: 1821383470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1481446892
@@ -7400,6 +7745,38 @@ MonoBehaviour:
   <Distance>k__BackingField: 11.929655
   <Reverse>k__BackingField: 1
   <Area>k__BackingField: {fileID: 635414244}
+--- !u!1 &1524226866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524226867}
+  m_Layer: 0
+  m_Name: Visual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1524226867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524226866}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2038675510}
+  m_Father: {fileID: 1908899011}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1527458137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7603,9 +7980,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -8227,9 +8604,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -8494,6 +8871,54 @@ MonoBehaviour:
   <Distance>k__BackingField: 70.00009
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 635414244}
+--- !u!1 &1784282868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1784282869}
+  - component: {fileID: 1784282870}
+  m_Layer: 0
+  m_Name: 0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1784282869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784282868}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2369.9553, y: 93, z: -1860.7485}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 923623908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1784282870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784282868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87957185587a4105a30d8c16c07c0798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
+  <Next>k__BackingField: {fileID: 1866051215}
+  <Original>k__BackingField: {fileID: 2038675507}
+  <Beginning>k__BackingField: 0
+  <End>k__BackingField: 30
 --- !u!1 &1812508130
 GameObject:
   m_ObjectHideFlags: 0
@@ -8576,6 +9001,7 @@ Transform:
   - {fileID: 1450066030}
   - {fileID: 646608023}
   - {fileID: 635414243}
+  - {fileID: 789900549}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1825283000
@@ -8675,9 +9101,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -8929,6 +9355,54 @@ Transform:
   - {fileID: 100024243}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1866051213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1866051214}
+  - component: {fileID: 1866051215}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1866051214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866051213}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2399.854, y: 93.80816, z: -1858.4281}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 923623908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1866051215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866051213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87957185587a4105a30d8c16c07c0798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
+  <Next>k__BackingField: {fileID: 8639451569834059017}
+  <Original>k__BackingField: {fileID: 2038675507}
+  <Beginning>k__BackingField: 30
+  <End>k__BackingField: 146.2417
 --- !u!1 &1879075050
 GameObject:
   m_ObjectHideFlags: 0
@@ -9140,9 +9614,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -9276,6 +9750,40 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1908899010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1908899011}
+  m_Layer: 0
+  m_Name: "Bik\xE1s > Kelenf\xF6ld"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1908899011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908899010}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 18150746}
+  - {fileID: 1524226867}
+  - {fileID: 923623908}
+  m_Father: {fileID: 891280670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1927253217
 GameObject:
   m_ObjectHideFlags: 0
@@ -9666,9 +10174,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -9736,6 +10244,140 @@ MonoBehaviour:
   <Distance>k__BackingField: 196.92392
   <Reverse>k__BackingField: 0
   station: {fileID: 647900862}
+--- !u!1 &2038675506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038675510}
+  - component: {fileID: 2038675508}
+  - component: {fileID: 2038675507}
+  - component: {fileID: 2038675509}
+  m_Layer: 0
+  m_Name: "Bik\xE1s > Kelenf\xF6ld 2"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2038675507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038675506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
+  <Next>k__BackingField: {fileID: 0}
+  spline: {fileID: 2038675508}
+--- !u!114 &2038675508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038675506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4a6b5a21acc984ea0a86d24ec6eeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
+  nodes:
+  - position: {x: -2369.9553, y: 93, z: -1860.7485}
+    direction: {x: -2393.9832, y: 93.81268, z: -1859.0834}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: -2439.7427, y: 94.5, z: -1854.6548}
+    direction: {x: -2460.9302, y: 94.825356, z: -1852.4537}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: -2515.4846, y: 95.21, z: -1846.6522}
+    direction: {x: -2539.7769, y: 95.21, z: -1844.4128}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  curves:
+  - n1:
+      position: {x: -2369.9553, y: 93, z: -1860.7485}
+      direction: {x: -2393.9832, y: 93.81268, z: -1859.0834}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: -2439.7427, y: 94.5, z: -1854.6548}
+      direction: {x: -2460.9302, y: 94.825356, z: -1852.4537}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: -2439.7427, y: 94.5, z: -1854.6548}
+      direction: {x: -2460.9302, y: 94.825356, z: -1852.4537}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: -2515.4846, y: 95.21, z: -1846.6522}
+      direction: {x: -2539.7769, y: 95.21, z: -1844.4128}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  Length: 146.2417
+  isLoop: 0
+  CurveChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2038675509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038675506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
+  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
+  physicMaterial: {fileID: 0}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0}
+  scale: {x: 10, y: 0.159, z: 1.505}
+  generateCollider: 0
+  updateInPlayMode: 1
+  curveSpace: 0
+  mode: 1
+--- !u!4 &2038675510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038675506}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1524226867}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2052300535
 GameObject:
   m_ObjectHideFlags: 0
@@ -9785,9 +10427,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -10091,9 +10733,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 2, z: 0}
+  translation: {x: 0, y: 3, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 3, z: 3}
+  scale: {x: 10, y: 1.75, z: 1.75}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0

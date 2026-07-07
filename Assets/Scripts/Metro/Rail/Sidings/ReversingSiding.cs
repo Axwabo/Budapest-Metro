@@ -23,7 +23,7 @@ namespace Metro.Rail.Sidings
 
         private ReversingSidingJourney _entry;
 
-        private ReversingEntryJourney _target;
+        private ServiceJourney _target;
 
         public ReversingSidingArea Area { get; set; }
 
@@ -33,7 +33,7 @@ namespace Metro.Rail.Sidings
         {
             _entry = new ReversingSidingJourney(this);
             if (Area.ServiceTarget)
-                _target = new ReversingEntryJourney(Area.ServiceTarget);
+                _target = new ServiceJourney(Area.ServiceTarget);
         }
 
 #nullable enable

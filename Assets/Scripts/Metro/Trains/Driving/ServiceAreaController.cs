@@ -15,7 +15,7 @@ namespace Metro.Trains.Driving
                     var isAfk = Journey is Afk;
                     CanDepart = true;
                     JourneyManager.Begin(journey);
-                    Parent.Driver.MarkReady(journey is ReversingEntryJourney ? 180 : isAfk ? 0 : 10);
+                    Parent.Driver.MarkReady(journey is ServiceJourney ? 180 : isAfk ? 0 : 10);
                     break;
                 case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area}) when area.Enter(Parent) is { } journey:
                     CanDepart = true;
@@ -33,7 +33,7 @@ namespace Metro.Trains.Driving
         {
             var checkEntry = State switch
             {
-                DriverState.Stopped => Journey is ReversingEntryJourney && Parent.Driver.IsOnTargetTrack,
+                DriverState.Stopped => Journey is ServiceJourney && Parent.Driver.IsOnTargetTrack,
                 DriverState.WaitingForDeparture => JourneyManager.IsDestination,
                 _ => false
             };
