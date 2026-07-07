@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.7175, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.05, z: 0.8}
+  m_LocalScale: {x: 0.836, y: 0.05, z: 0.836}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4442652305556629865}
@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 1879945905209105486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.45, z: 0}
+  m_LocalPosition: {x: 0, y: 0.418, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -152,7 +152,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.7175, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.05, z: 0.8}
+  m_LocalScale: {x: 0.836, y: 0.05, z: 0.836}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4442652305556629865}
@@ -350,4 +350,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Cars.Axle
   rotor: {fileID: 4442652305556629865}
-  wheelDiameter: 0.8
+  wheelDiameter: 0.836
