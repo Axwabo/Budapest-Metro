@@ -14,6 +14,8 @@ namespace Metro.Journeys.Routes
     {
 
         private static readonly TimeSpan StopTimeThreshold = TimeSpan.FromSeconds(22);
+        private static readonly TimeSpan HouseToDeparture = TimeSpan.FromMinutes(4);
+        private static readonly TimeSpan ReversingToDeparture = TimeSpan.FromSeconds(40);
 
         [SerializeField]
         private JourneyManager prefab;
@@ -27,7 +29,9 @@ namespace Metro.Journeys.Routes
         [SerializeField]
         private ReversingSidingArea reverse;
 
-        private readonly HashSet<JourneyManager> _housedMetros = new();
+        private readonly List<JourneyManager> _enteryMetros = new();
+
+        private readonly List<JourneyManager> _housedMetros = new();
 
         private readonly HashSet<Route> _spawned = new();
         private readonly HashSet<string> _spawnedStations = new();
@@ -42,6 +46,7 @@ namespace Metro.Journeys.Routes
         {
             if (_initiallySpawned)
             {
+                Rotate(_enteryMetros, entry);
                 DispatchAndRecall();
                 return;
             }
@@ -72,7 +77,7 @@ namespace Metro.Journeys.Routes
             // TODO: continuous
             if (_housedMetros.Count == 0 || house.PassingThrough.Count != 0)
                 return;
-            var next = entry.Route.Next(TimeSpan.FromMinutes(3));
+            var next = entry.Route.Next(HouseToDeparture);
             if (next == null || next == _lastDispatched)
                 return;
             foreach (var manager in _housedMetros)
@@ -87,8 +92,25 @@ namespace Metro.Journeys.Routes
             }
         }
 
+        private static void Rotate(List<JourneyManager> metros, ReversingSidingArea area)
+        {
+            var next = area.Route.Next(ReversingToDeparture);
+            if (next == null || metros.Count == 0)
+                return;
+            var metro = metros[0];
+            if (!area.Exit(metro.Parent, false))
+                return;
+            metro.Begin(new EnteringJourney(!area.Reverse, next));
+            metro.Driver.MarkReady(10);
+            metros.Remove(metro);
+        }
+
         public void NotifyArrived(MetroAssembly assembly, ReversingSidingArea area)
         {
+            if (area == house)
+                _housedMetros.Add(assembly.JourneyManager);
+            else if (area == entry)
+                _enteryMetros.Add(assembly.JourneyManager);
         }
 
     }
