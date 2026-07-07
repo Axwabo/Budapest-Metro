@@ -15,3 +15,8 @@ Label {
 #Transfers Label {
     word-spacing: 15px;
 }
+
+.no-scroll {
+    left: 50%;
+    translate: -50% 0 !important;
+}

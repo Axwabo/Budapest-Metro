@@ -8,8 +8,7 @@ namespace Metro.Trains.Routes
     {
 
         private const float PixelsPerSecond = 500;
-
-        private static readonly Translate TranslateBack = new Translate(Length.Percent(-100), 0);
+        private const string NoScroll = "no-scrolling";
 
         private readonly VisualElement _busIcon;
         private readonly Label _busList;
@@ -77,8 +76,7 @@ namespace Metro.Trains.Routes
             var count = hierarchy.childCount;
             for (var i = 0; i < count; i++)
                 _size += TotalWidth(hierarchy[i]);
-            if (_size <= 0)
-                _root.style.translate = TranslateBack;
+            _root.EnableInClassList(NoScroll, _size <= 0);
         }
 
         private static float TotalWidth(VisualElement element)
