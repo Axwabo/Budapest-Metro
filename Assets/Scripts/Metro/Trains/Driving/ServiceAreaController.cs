@@ -11,8 +11,8 @@ namespace Metro.Trains.Driving
         {
             switch (State, JourneyManager.Target)
             {
-                case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area, TracksClear: true}) when area.Enter(Parent) is { } journey:
-                    JourneyManager.Begin(journey);
+                case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area, TracksClear: true}):
+                    area.Enter(Parent);
                     break;
                 case (DriverState.Driving, _) when Journey is EnteringJourney {Next: var next} && Driver.IsOnTargetTrack:
                     JourneyManager.Begin(next);
@@ -39,9 +39,7 @@ namespace Metro.Trains.Driving
             if (!checkEntry || JourneyManager.Target is not ServiceEntryStopPoint {Area: var area, TracksClear: var clear})
                 return;
             Driver.MarkReadyNow();
-            if (clear && area.Enter(Parent) is { } journey)
-                JourneyManager.Begin(journey);
-            else
+            if (!clear || !area.Enter(Parent))
                 CanDepart = false;
         }
 

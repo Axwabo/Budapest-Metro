@@ -70,13 +70,19 @@ namespace Metro.Journeys.Routes
         private void DispatchAndRecall()
         {
             // TODO: continuous
-            if (_lastDispatched != null || _housedMetros.Count == 0 || house.PassingThrough.Count != 0)
+            if (_housedMetros.Count == 0 || house.PassingThrough.Count != 0)
                 return;
             var next = entry.Route.Next(TimeSpan.FromMinutes(3));
-            if (next == null)
+            if (next == null || next == _lastDispatched)
                 return;
             foreach (var manager in _housedMetros)
             {
+                if (!house.Exit(manager.Parent, true))
+                    continue;
+                manager.Begin(house.HouseJourney);
+                manager.Driver.MarkReadyNow();
+                _housedMetros.Remove(manager);
+                _lastDispatched = next;
                 break;
             }
         }

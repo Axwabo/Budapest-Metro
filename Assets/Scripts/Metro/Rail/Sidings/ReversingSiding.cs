@@ -29,14 +29,15 @@ namespace Metro.Rail.Sidings
 
 #nullable enable
 
-        public IJourney? Enter(MetroAssembly assembly)
+        public bool Enter(MetroAssembly assembly)
         {
             if (UsedBy.Count != 0)
-                return null;
+                return false;
             @in.Activate();
             UsedBy.Add(assembly);
             Area.PassingThrough.Add(assembly);
-            return _entry;
+            assembly.JourneyManager.Begin(_entry);
+            return true;
         }
 
         public bool Exit(MetroAssembly assembly)
