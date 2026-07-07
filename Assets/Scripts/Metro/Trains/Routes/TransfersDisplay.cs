@@ -9,6 +9,8 @@ namespace Metro.Trains.Routes
 
         private const float PixelsPerSecond = 500;
 
+        private static readonly Translate TranslateBack = new Translate(Length.Percent(-100), 0);
+
         private readonly VisualElement _busIcon;
         private readonly Label _busList;
         private readonly VisualElement _metroIcon;
@@ -75,6 +77,8 @@ namespace Metro.Trains.Routes
             var count = hierarchy.childCount;
             for (var i = 0; i < count; i++)
                 _size += TotalWidth(hierarchy[i]);
+            if (_size <= 0)
+                _root.style.translate = TranslateBack;
         }
 
         private static float TotalWidth(VisualElement element)
@@ -93,12 +97,16 @@ namespace Metro.Trains.Routes
 
         public void ResetPosition()
         {
+            if (_size <= 0)
+                return;
             _root.style.translate = StyleKeyword.None;
             _translate = 0;
         }
 
         public void Update()
         {
+            if (_size <= 0)
+                return;
             _root.style.translate = new Translate(-_translate, 0);
             _translate += Clock.Delta * PixelsPerSecond;
         }
