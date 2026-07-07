@@ -39,6 +39,10 @@ namespace Metro.Rail.Sidings
 
         public ReadOnlySpan<ReversingSiding> Sidings => sidings;
 
+        public bool ExitingPrevented => PassingThrough.Count != 0 || !StationTrackFree;
+
+        private bool StationTrackFree => !Route || !Station.TryGetLoadad(Route.Origin, out var station) || !station.Track(!Reverse).IsOccupied;
+
         private void Start()
         {
             if (HouseTarget)
@@ -65,12 +69,10 @@ namespace Metro.Rail.Sidings
 
         public bool Exit(MetroAssembly assembly, bool isHouseDispatchOrRecall)
         {
-            if (PassingThrough.Count != 0)
+            if (ExitingPrevented)
                 return false;
             if (!isHouseDispatchOrRecall)
             {
-                if (!Route || !Station.TryGetLoadad(Route.Origin, out var station) || station.Track(!Reverse).IsOccupied)
-                    return false;
                 foreach (var siding in sidings)
                     if (siding.Exit(assembly))
                         return true;

@@ -30,12 +30,9 @@ namespace Metro.Journeys.Routes
         [SerializeField]
         private ReversingSidingArea reverse;
 
-        private readonly HashSet<JourneyManager> _dispatching = new();
-
         private readonly List<JourneyManager> _enteryMetros = new();
 
         private readonly List<JourneyManager> _housedMetros = new();
-        private readonly HashSet<JourneyManager> _recalling = new();
 
         private readonly List<JourneyManager> _reverseMetros = new();
 
@@ -82,6 +79,8 @@ namespace Metro.Journeys.Routes
 
         private static void Rotate(List<JourneyManager> metros, ReversingSidingArea area)
         {
+            if (area.ExitingPrevented)
+                return;
             var next = area.Route.Next(ReversingToDeparture);
             if (next == null || metros.Count == 0)
                 return;
@@ -95,7 +94,7 @@ namespace Metro.Journeys.Routes
 
         private void Dispatch()
         {
-            if (_dispatching.Count != 0 || _housedMetros.Count == 0 || house.PassingThrough.Count != 0)
+            if (_housedMetros.Count == 0 || house.PassingThrough.Count != 0)
                 return;
             var next = entry.Route.Next(HouseToDeparture);
             if (next == null || next == _lastDispatched || next.Origin.Time < Clock.Now + MaxEarlyDispatch)
@@ -107,7 +106,6 @@ namespace Metro.Journeys.Routes
                 manager.Begin(house.HouseJourney);
                 manager.Driver.MarkReadyNow();
                 _housedMetros.Remove(manager);
-                _dispatching.Add(manager);
                 _lastDispatched = next;
                 break;
             }
@@ -115,7 +113,7 @@ namespace Metro.Journeys.Routes
 
         private void Recall()
         {
-            if (_recalling.Count != 0 || _enteryMetros.Count == 0 || entry.PassingThrough.Count != 0)
+            if (_enteryMetros.Count == 0 || entry.ExitingPrevented)
                 return;
             var next = entry.Route.Next(ReversingToDeparture);
             if (next != null && next.Origin.Time < Clock.Now + MaxEarlyDispatch)
@@ -127,22 +125,15 @@ namespace Metro.Journeys.Routes
             metro.Begin(entry.HouseJourney);
             metro.Driver.MarkReadyNow();
             _enteryMetros.Remove(metro);
-            _recalling.Add(metro);
         }
 
         public void NotifyArrived(MetroAssembly assembly, ReversingSidingArea area)
         {
             var metro = assembly.JourneyManager;
             if (area == house)
-            {
-                _recalling.Remove(metro);
                 _housedMetros.Add(metro);
-            }
             else if (area == entry)
-            {
-                _dispatching.Remove(metro);
                 _enteryMetros.Add(metro);
-            }
             else if (area == reverse)
                 _reverseMetros.Add(metro);
             // else where tf are you???? M2 > M3?
