@@ -150,7 +150,7 @@ namespace Metro.Trains.Driving
             if (State != DriverState.Driving)
                 return;
             Motor.Reverse = Journey.Reverse;
-            _departureDelay = 1;
+            _departureDelay = 2;
             if (FrontAxle.Track is StationTrack track)
                 track.Light.State = LightState.On;
         }
