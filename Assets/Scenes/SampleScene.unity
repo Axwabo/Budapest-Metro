@@ -1024,7 +1024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
   <Next>k__BackingField: {fileID: 1927253218}
   <Original>k__BackingField: {fileID: 576719773}
-  <Beginning>k__BackingField: 75
+  <Beginning>k__BackingField: 65
   <End>k__BackingField: 95
 --- !u!4 &129106593
 Transform:
@@ -1354,7 +1354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitTrack
   track: {fileID: 1906872358}
   points:
-  - 75
+  - 65
   - 95
 --- !u!114 &181202788
 MonoBehaviour:
@@ -1424,7 +1424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitTrack
   track: {fileID: 576719773}
   points:
-  - 75
+  - 65
   - 95
 --- !u!114 &205992945
 MonoBehaviour:
@@ -1635,33 +1635,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: -2671.2078, y: 95.21, z: -1847.3617}
-    direction: {x: -2677.7341, y: 95.21, z: -1846.7858}
+  - position: {x: -2661.2485, y: 95.21001, z: -1848.2643}
+    direction: {x: -2671.1997, y: 95.21001, z: -1847.3862}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   - position: {x: -2689.7705, y: 95.21, z: -1830.8586}
-    direction: {x: -2695.9326, y: 95.21, z: -1830.1606}
+    direction: {x: -2700.7336, y: 95.21, z: -1829.6168}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: -2671.2078, y: 95.21, z: -1847.3617}
-      direction: {x: -2677.7341, y: 95.21, z: -1846.7858}
+      position: {x: -2661.2485, y: 95.21001, z: -1848.2643}
+      direction: {x: -2671.1997, y: 95.21001, z: -1847.3862}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
       position: {x: -2689.7705, y: 95.21, z: -1830.8586}
-      direction: {x: -2695.9326, y: 95.21, z: -1830.1606}
+      direction: {x: -2700.7336, y: 95.21, z: -1829.6168}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 25.415974
+  Length: 33.986423
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -4993,7 +4993,7 @@ MonoBehaviour:
   <Next>k__BackingField: {fileID: 129106592}
   <Original>k__BackingField: {fileID: 576719773}
   <Beginning>k__BackingField: 0
-  <End>k__BackingField: 75
+  <End>k__BackingField: 65
 --- !u!4 &655224968
 Transform:
   m_ObjectHideFlags: 0
@@ -5392,7 +5392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplitSegment
   <Next>k__BackingField: {fileID: 538979344}
   <Original>k__BackingField: {fileID: 1906872358}
-  <Beginning>k__BackingField: 75
+  <Beginning>k__BackingField: 65
   <End>k__BackingField: 95
 --- !u!1 &789900548
 GameObject:
@@ -5909,7 +5909,7 @@ Transform:
   m_GameObject: {fileID: 873635393}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00000005284572, y: -0.67418146, z: 0.000000048238903, w: 0.7385658}
-  m_LocalPosition: {x: -2671.2078, y: 95.21, z: -1847.3617}
+  m_LocalPosition: {x: -2661.2485, y: 95.21001, z: -1848.2643}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6301,7 +6301,7 @@ MonoBehaviour:
   <Next>k__BackingField: {fileID: 773194865}
   <Original>k__BackingField: {fileID: 1906872358}
   <Beginning>k__BackingField: 0
-  <End>k__BackingField: 75
+  <End>k__BackingField: 65
 --- !u!4 &967269834
 Transform:
   m_ObjectHideFlags: 0
@@ -7031,6 +7031,7 @@ MonoBehaviour:
   <Distance>k__BackingField: 0
   <Reverse>k__BackingField: 1
   <Area>k__BackingField: {fileID: 635414244}
+  clear: []
 --- !u!1001 &1223423815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7162,6 +7163,7 @@ MonoBehaviour:
   <Distance>k__BackingField: 79.900085
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 646608024}
+  clear: []
 --- !u!1 &1305362379
 GameObject:
   m_ObjectHideFlags: 0
@@ -9468,33 +9470,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: -2669.8474, y: 95.20999, z: -1832.6133}
-    direction: {x: -2676.3738, y: 95.20999, z: -1832.0374}
+  - position: {x: -2659.8867, y: 95.20999, z: -1833.4982}
+    direction: {x: -2669.3254, y: 95.20999, z: -1832.6653}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   - position: {x: -2691.1003, y: 95.21001, z: -1845.2966}
-    direction: {x: -2697.2625, y: 95.21001, z: -1844.5986}
+    direction: {x: -2701.1924, y: 95.21001, z: -1844.1536}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: -2669.8474, y: 95.20999, z: -1832.6133}
-      direction: {x: -2676.3738, y: 95.20999, z: -1832.0374}
+      position: {x: -2659.8867, y: 95.20999, z: -1833.4982}
+      direction: {x: -2669.3254, y: 95.20999, z: -1832.6653}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
       position: {x: -2691.1003, y: 95.21001, z: -1845.2966}
-      direction: {x: -2697.2625, y: 95.21001, z: -1844.5986}
+      direction: {x: -2701.1924, y: 95.21001, z: -1844.1536}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 25.34717
+  Length: 33.917435
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -9688,7 +9690,7 @@ Transform:
   m_GameObject: {fileID: 1812508130}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000025907049, y: -0.6752998, z: -0.000000023720679, w: 0.7375433}
-  m_LocalPosition: {x: -2669.8474, y: 95.20999, z: -1832.6133}
+  m_LocalPosition: {x: -2659.8867, y: 95.20999, z: -1833.4982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
