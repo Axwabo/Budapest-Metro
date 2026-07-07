@@ -1,3 +1,4 @@
+using Metro.Stations;
 using Metro.Trains.Cars;
 using UnityEngine;
 
@@ -10,14 +11,22 @@ namespace Metro.Rail.Controls
         [SerializeField]
         private bool free;
 
+        private int _occupiedCount;
+
         private new StationTrack Track => (StationTrack) base.Track;
 
         public override void OnPassed(Axle axle)
         {
-            if (free)
-                Track.Occupants.Remove(axle);
-            else
+            if (!free)
+            {
                 Track.Occupants.Add(axle);
+                _occupiedCount = Track.Occupants.Count;
+                return;
+            }
+
+            if (Track.Occupants.Count == _occupiedCount)
+                Track.Light.State = LightState.On;
+            Track.Occupants.Remove(axle);
         }
 
     }
