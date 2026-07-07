@@ -24,7 +24,7 @@ namespace Metro.Trains.Driving
 
         public override void OnStateChanged()
         {
-            if (State == DriverState.Stopped && JourneyManager.Target is ServiceAreaExitPoint {Area: var exit})
+            if (State == DriverState.Stopped && JourneyManager.Target is ServiceAreaExitPoint {Area: var exit} && Driver.IsOnTargetTrack)
             {
                 exit.NotifyArrived(Parent);
                 return;
