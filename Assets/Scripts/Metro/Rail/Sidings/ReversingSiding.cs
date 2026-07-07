@@ -55,9 +55,11 @@ namespace Metro.Rail.Sidings
             @out.Activate();
             Area.PassingThrough.Add(assembly);
             var next = Area.Route.Next(TimeSpan.FromSeconds(40));
-            return next.Origin.Time > Clock.Now + TimeSpan.FromMinutes(10) && Area.ServiceTarget
-                ? _target
-                : new EnteringJourney(!Area.Reverse, next);
+            if (next.Origin.Time <= Clock.Now + TimeSpan.FromMinutes(10) || !Area.ServiceTarget)
+                return new EnteringJourney(!Area.Reverse, next);
+            if (Area.ServiceSwitches)
+                Area.ServiceSwitches.Activate();
+            return _target;
         }
 
     }
