@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1376619115877561759, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
+      propertyPath: isRear
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4370824142037565108, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
       propertyPath: m_Name
       value: Driver Car Back Variant
@@ -27,6 +31,10 @@ PrefabInstance:
     - target: {fileID: 4386072879281405004, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6538987501138146487, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
+      propertyPath: isRear
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7149425105553484872, guid: a7808ecc0e717632aaa705c22779a18f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
