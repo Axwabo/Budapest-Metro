@@ -15,13 +15,14 @@ namespace Metro.Trains.Driving
                     var isAfk = Journey is Afk;
                     CanDepart = true;
                     JourneyManager.Begin(journey);
-                    Parent.Driver.MarkReady(journey is ServiceJourney ? 180 : isAfk ? 0 : 10);
+                    // TODO: mathn't
+                    Driver.MarkReady(journey is ServiceJourney ? 180 : isAfk ? 0 : 10);
                     break;
-                case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area}) when area.Enter(Parent) is { } journey:
+                case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area, TracksClear: true}) when area.Enter(Parent) is { } journey:
                     CanDepart = true;
                     JourneyManager.Begin(journey);
                     break;
-                case (DriverState.Driving, _) when Journey is EnteringJourney {Next: var next} && Parent.Driver.IsOnTargetTrack:
+                case (DriverState.Driving, _) when Journey is EnteringJourney {Next: var next} && Driver.IsOnTargetTrack:
                     JourneyManager.Begin(next);
                     break;
             }
@@ -33,13 +34,14 @@ namespace Metro.Trains.Driving
         {
             var checkEntry = State switch
             {
-                DriverState.Stopped => Journey is ServiceJourney && Parent.Driver.IsOnTargetTrack,
+                DriverState.Stopped => Journey is ServiceJourney && Driver.IsOnTargetTrack,
                 DriverState.WaitingForDeparture => JourneyManager.IsDestination,
                 _ => false
             };
-            if (!checkEntry || JourneyManager.Target is not ServiceEntryStopPoint {Area: var area})
+            if (!checkEntry || JourneyManager.Target is not ServiceEntryStopPoint {Area: var area, TracksClear: var clear})
                 return;
-            if (area.Enter(Parent) is not { } journey)
+            Driver.MarkReadyNow();
+            if (!clear || area.Enter(Parent) is not { } journey)
             {
                 CanDepart = false;
                 return;
@@ -47,7 +49,6 @@ namespace Metro.Trains.Driving
 
             CanDepart = true;
             JourneyManager.Begin(journey);
-            Parent.Driver.MarkReady(0);
         }
 
     }

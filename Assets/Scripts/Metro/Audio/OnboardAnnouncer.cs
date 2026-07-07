@@ -47,7 +47,7 @@ namespace Metro.Audio
                 return;
             }
 
-            if (_arrivingPlayed || !JourneyManager.IsDestination && Parent.Motor.AbsoluteSpeed > arrivingSpeedThreshold || !Parent.Driver.IsOnTargetTrack)
+            if (_arrivingPlayed || !JourneyManager.IsDestination && Parent.Motor.AbsoluteSpeed > arrivingSpeedThreshold || !Driver.IsOnTargetTrack)
                 return;
             _arrivingPlayed = true;
             Play(Route, Stop.Name, AnnouncementType.Arriving);

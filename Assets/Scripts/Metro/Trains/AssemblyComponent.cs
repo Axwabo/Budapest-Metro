@@ -12,7 +12,9 @@ namespace Metro.Trains
     public abstract class AssemblyComponent : Subcomponent<MetroAssembly>
     {
 
-        public DriverState State => Parent.Driver.State;
+        public AutomaticDriver Driver => Parent.Driver;
+
+        public DriverState State => Driver.State;
 
         public JourneyManager JourneyManager => Parent.JourneyManager;
 

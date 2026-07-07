@@ -48,7 +48,7 @@ namespace Metro.Trains.Routes
         {
             base.Update();
             var previousSection = _section;
-            if (Parent.Driver.IsOnTargetTrack && IsInService && State == DriverState.Driving)
+            if (Driver.IsOnTargetTrack && IsInService && State == DriverState.Driving)
                 UpdateStopping();
             if (previousSection == DisplaySection.Transfers)
                 _transfersDisplay.Update();
