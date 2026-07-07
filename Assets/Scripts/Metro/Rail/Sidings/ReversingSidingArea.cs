@@ -28,6 +28,8 @@ namespace Metro.Rail.Sidings
         [field: SerializeField]
         public SwitchGroup ServiceSwitches { get; private set; }
 
+        public RouteRotor House { get; set; }
+
         public HashSet<MetroAssembly> PassingThrough { get; } = new();
 
         public ReadOnlySpan<ReversingSiding> Sidings => sidings;

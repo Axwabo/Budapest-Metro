@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Metro.Rail;
 using Metro.Rail.Sidings;
-using Metro.Stations;
 using Metro.Trains;
 using Metro.Trains.Routes;
 using UnityEngine;
@@ -14,18 +13,37 @@ namespace Metro.Journeys.Routes
     public sealed class RouteRotor : MonoBehaviour
     {
 
-        private static readonly HashSet<Route> Spawned = new();
-        private static readonly HashSet<string> SpawnedStations = new();
         private static readonly TimeSpan StopTimeThreshold = TimeSpan.FromSeconds(22);
 
         [SerializeField]
         private JourneyManager prefab;
 
         [SerializeField]
-        private ReversingSidingArea area;
+        private int max; // TODO
+
+        [SerializeField]
+        private ReversingSidingArea house;
+
+        [SerializeField]
+        private ReversingSidingArea[] reversing;
+
+        private readonly HashSet<JourneyManager> _housedMetros = new();
+
+        private readonly HashSet<Route> _spawned = new();
+        private readonly HashSet<string> _spawnedStations = new();
+
+        private bool _initiallySpawned;
+
+        private void Start()
+        {
+            house.House = this;
+            foreach (var area in reversing)
+                area.House = this;
+        }
 
         private void Update()
         {
+            /*
             Spawned.Add(area.Route.Next(TimeSpan.FromSeconds(40)));
             var now = Clock.Now - StopTimeThreshold;
             foreach (var route in area.Route.GetRoutes())
@@ -46,19 +64,20 @@ namespace Metro.Journeys.Routes
                     break;
                 }
             }
+            */
 
-            foreach (var siding in area.Sidings)
+            if (_initiallySpawned)
+                return;
+            _initiallySpawned = true;
+            foreach (var siding in house.Sidings)
             {
                 if (siding.UsedBy.Count != 0)
                     continue;
                 var (manager, assembly) = Spawn(siding.StopPoint.Track);
                 manager.InitialJourney = new Afk {Target = siding.StopPoint};
                 siding.UsedBy.Add(assembly);
+                _housedMetros.Add(manager);
             }
-
-            Destroy(this);
-            Spawned.Clear();
-            SpawnedStations.Clear();
         }
 
         private (JourneyManager, MetroAssembly) Spawn(TrackSegment track)

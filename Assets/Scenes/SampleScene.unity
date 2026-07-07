@@ -10260,6 +10260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350155972}
   - component: {fileID: 1350155973}
+  - component: {fileID: 1350155974}
   m_Layer: 0
   m_Name: Carriage House
   m_TagString: Untagged
@@ -10306,6 +10307,24 @@ MonoBehaviour:
   <Route>k__BackingField: {fileID: 0}
   <ServiceTarget>k__BackingField: {fileID: 967904682}
   <ServiceSwitches>k__BackingField: {fileID: 0}
+--- !u!114 &1350155974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350155971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae7b96e76f141deb3f6a71190f12c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.Routes.RouteRotor
+  prefab: {fileID: 2267057538019963242, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
+  max: 0
+  house: {fileID: 1350155973}
+  reversing:
+  - {fileID: 646608024}
+  - {fileID: 635414244}
 --- !u!1 &1350904873
 GameObject:
   m_ObjectHideFlags: 0
@@ -13744,8 +13763,6 @@ GameObject:
   - component: {fileID: 1879075052}
   - component: {fileID: 1879075051}
   - component: {fileID: 1879075053}
-  - component: {fileID: 1879075054}
-  - component: {fileID: 1879075055}
   m_Layer: 5
   m_Name: Clock
   m_TagString: Untagged
@@ -13804,34 +13821,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Clock
   start: 00:46:00
---- !u!114 &1879075054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879075050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae7b96e76f141deb3f6a71190f12c77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.Routes.RouteRotor
-  prefab: {fileID: 2267057538019963242, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
-  area: {fileID: 646608024}
---- !u!114 &1879075055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879075050}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae7b96e76f141deb3f6a71190f12c77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.Routes.RouteRotor
-  prefab: {fileID: 2267057538019963242, guid: 0ab95eeb182d70521af15bbf23148336, type: 3}
-  area: {fileID: 635414244}
 --- !u!1 &1883526873
 GameObject:
   m_ObjectHideFlags: 0
