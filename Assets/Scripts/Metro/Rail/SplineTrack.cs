@@ -27,7 +27,7 @@ namespace Metro.Rail
         {
             var sample = spline.GetProjectionSample(position);
             var length = spline.Length;
-            return Mathf.Clamp(sample.timeInCurve * length, 0, length);
+            return Mathf.Clamp(sample.distanceInCurve, 0, length);
         }
 
     }

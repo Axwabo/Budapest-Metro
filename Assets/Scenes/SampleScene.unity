@@ -5002,7 +5002,7 @@ Transform:
   m_GameObject: {fileID: 792171187}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.66963553, z: -0, w: 0.7426899}
-  m_LocalPosition: {x: -2396.1, y: 94.1505, z: -1858.4}
+  m_LocalPosition: {x: -2422.4353, y: 94.1505, z: -1855.6265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5020,8 +5020,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1de862c80242869cb867f840023889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
-  <Track>k__BackingField: {fileID: 2038675507}
-  <Distance>k__BackingField: 53.005104
+  <Track>k__BackingField: {fileID: 1866051215}
+  <Distance>k__BackingField: 22.693531
   <Reverse>k__BackingField: 0
   station: {fileID: 8639451569834059019}
 --- !u!1001 &796333032
