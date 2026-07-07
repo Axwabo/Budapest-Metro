@@ -23,13 +23,15 @@ namespace Metro.Trains.Routes
             _ => DisplaySection.Stop
         };
 
-        public static SectionStateMachine Stopping { get; } = previous => previous == DisplaySection.Stop ? DisplaySection.RouteAndTime : DisplaySection.Stop;
+        public static SectionStateMachine Stopping { get; } = Alternating(DisplaySection.Stop, DisplaySection.RouteAndTime);
 
-        public static SectionStateMachine StoppingDestination { get; } = previous => previous == DisplaySection.Stop ? DisplaySection.Terminus : DisplaySection.Stop;
+        public static SectionStateMachine StoppingDestination { get; } = Alternating(DisplaySection.Stop, DisplaySection.Terminus);
 
-        public static SectionStateMachine Stopped { get; } = previous => previous == DisplaySection.RouteAndTime ? DisplaySection.Destination : DisplaySection.RouteAndTime;
+        public static SectionStateMachine Stopped { get; } = Alternating(DisplaySection.RouteAndTime, DisplaySection.Destination);
 
         public static SectionStateMachine StoppedDestination { get; } = _ => DisplaySection.Terminus;
+
+        private static SectionStateMachine Alternating(DisplaySection a, DisplaySection b) => previous => previous == a ? b : a;
 
     }
 
