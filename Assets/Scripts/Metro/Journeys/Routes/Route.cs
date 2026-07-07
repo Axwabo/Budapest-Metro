@@ -42,7 +42,7 @@ namespace Metro.Journeys.Routes
                 _ => IntermediateStops[stopIndex]
             };
             return Station.TryGetLoadad(stop.Name, out var station)
-                ? (StopPoint: station.Track(Reverse).StopPoints, stop)
+                ? (station.Track(Reverse).StopPoint, stop)
                 : throw new MissingComponentException($"Station {stop.Name} not found");
         }
 
