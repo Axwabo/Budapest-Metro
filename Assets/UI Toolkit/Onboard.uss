@@ -16,7 +16,8 @@ Label {
     word-spacing: 15px;
 }
 
-.no-scroll {
-    left: 50%;
-    translate: -50% 0 !important;
+.no-scrolling {
+    left: 0;
+    translate: none !important;
+    align-items: center;
 }
