@@ -3720,7 +3720,7 @@ MonoBehaviour:
   <Next>k__BackingField: {fileID: 0}
   <Original>k__BackingField: {fileID: 1906872358}
   <Beginning>k__BackingField: 95
-  <End>k__BackingField: 181.01843
+  <End>k__BackingField: 185.01823
 --- !u!1 &560432679
 GameObject:
   m_ObjectHideFlags: 0
@@ -3863,8 +3863,8 @@ MonoBehaviour:
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: -2776.5576, y: 95.21, z: -1836.093}
-    direction: {x: -2810.7197, y: 95.21, z: -1833.1975}
+  - position: {x: -2780.5432, y: 95.21, z: -1835.7552}
+    direction: {x: -2814.7053, y: 95.21, z: -1832.8597}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
@@ -3891,15 +3891,15 @@ MonoBehaviour:
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: -2776.5576, y: 95.21, z: -1836.093}
-      direction: {x: -2810.7197, y: 95.21, z: -1833.1975}
+      position: {x: -2780.5432, y: 95.21, z: -1835.7552}
+      direction: {x: -2814.7053, y: 95.21, z: -1832.8597}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 180.95459
+  Length: 184.95319
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -5263,7 +5263,7 @@ Transform:
   m_GameObject: {fileID: 835570351}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000025907049, y: -0.6752998, z: -0.000000023720679, w: 0.7375433}
-  m_LocalPosition: {x: -2773.896, y: 95.2, z: -1823.4121}
+  m_LocalPosition: {x: -2777.8806, y: 95.2, z: -1823.0603}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5282,7 +5282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 538979344}
-  <Distance>k__BackingField: 83.19681
+  <Distance>k__BackingField: 87.139786
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 646608024}
 --- !u!1 &851485691
@@ -9250,8 +9250,8 @@ MonoBehaviour:
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: -2775.4663, y: 95.21, z: -1823.4171}
-    direction: {x: -2809.6284, y: 95.21, z: -1820.5216}
+  - position: {x: -2779.452, y: 95.21, z: -1823.0793}
+    direction: {x: -2813.614, y: 95.21, z: -1820.1838}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
@@ -9263,15 +9263,15 @@ MonoBehaviour:
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: -2775.4663, y: 95.21, z: -1823.4171}
-      direction: {x: -2809.6284, y: 95.21, z: -1820.5216}
+      position: {x: -2779.452, y: 95.21, z: -1823.0793}
+      direction: {x: -2813.614, y: 95.21, z: -1820.1838}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 181.01843
+  Length: 185.01823
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -9308,7 +9308,7 @@ MonoBehaviour:
   <Next>k__BackingField: {fileID: 0}
   <Original>k__BackingField: {fileID: 576719773}
   <Beginning>k__BackingField: 95
-  <End>k__BackingField: 180.95459
+  <End>k__BackingField: 184.95319
 --- !u!4 &1927253219
 Transform:
   m_ObjectHideFlags: 0
@@ -9532,7 +9532,7 @@ Transform:
   m_GameObject: {fileID: 1974421712}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000025907049, y: -0.6752998, z: -0.000000023720679, w: 0.7375433}
-  m_LocalPosition: {x: -2775.0461, y: 95.2, z: -1836.2222}
+  m_LocalPosition: {x: -2779.0308, y: 95.2, z: -1835.8704}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9551,7 +9551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 1927253218}
-  <Distance>k__BackingField: 83.1604
+  <Distance>k__BackingField: 87.10324
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 646608024}
 --- !u!1 &1983405008

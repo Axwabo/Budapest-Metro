@@ -21,13 +21,20 @@ namespace Metro.Rail.Sidings
         [field: SerializeField]
         public ServiceAreaExitPoint StopPoint { get; private set; }
 
-        private ReversingSidingJourney _journey;
+        private ReversingSidingJourney _entry;
+
+        private ReversingEntryJourney _target;
 
         public ReversingSidingArea Area { get; set; }
 
         public HashSet<MetroAssembly> UsedBy { get; } = new();
 
-        private void Start() => _journey = new ReversingSidingJourney(this);
+        private void Start()
+        {
+            _entry = new ReversingSidingJourney(this);
+            if (Area.ServiceTarget)
+                _target = new ReversingEntryJourney(Area.ServiceTarget);
+        }
 
 #nullable enable
 
@@ -38,7 +45,7 @@ namespace Metro.Rail.Sidings
             @in.Activate();
             UsedBy.Add(assembly);
             Area.PassingThrough.Add(assembly);
-            return _journey;
+            return _entry;
         }
 
         public IJourney? Exit(MetroAssembly assembly)
@@ -49,7 +56,7 @@ namespace Metro.Rail.Sidings
             Area.PassingThrough.Add(assembly);
             var next = Area.Route.Next(TimeSpan.FromSeconds(40));
             return next.Origin.Time > Clock.Now + TimeSpan.FromMinutes(10) && Area.ServiceTarget
-                ? new Afk {Target = Area.ServiceTarget}
+                ? _target
                 : new EnteringJourney(!Area.Reverse, next);
         }
 

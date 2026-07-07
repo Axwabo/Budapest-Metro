@@ -29,7 +29,7 @@ namespace Metro.Rail.Sidings
 
         public ReadOnlySpan<ReversingSiding> Sidings => sidings;
 
-        private void Start()
+        private void OnEnable()
         {
             foreach (var siding in sidings)
                 siding.Area = this;

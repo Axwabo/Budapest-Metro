@@ -1,4 +1,7 @@
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace Metro.Rail
 {
@@ -17,6 +20,23 @@ namespace Metro.Rail
 
         public override float Length => End - Beginning;
 
+        public override Pose Sample(float distance) => Original.Sample(distance + Beginning);
+
+        public override float GetDistance(Vector3 position) => Mathf.Clamp(Original.GetDistance(position) - Beginning, 0, Length);
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            if (!Original)
+                return;
+            var previousBeginning = Beginning;
+            var previousEnd = End;
+            Beginning = Mathf.Clamp(Beginning, 0, Original.Length);
+            End = Mathf.Clamp(End, Beginning, Original.Length);
+            if (!Mathf.Approximately(previousBeginning, Beginning) || !Mathf.Approximately(previousEnd, End))
+                EditorUtility.SetDirty(this);
+        }
+
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.white;
@@ -31,10 +51,7 @@ namespace Metro.Rail
 
             Gizmos.DrawLine(previous, Sample(Length).position);
         }
-
-        public override Pose Sample(float distance) => Original.Sample(distance + Beginning);
-
-        public override float GetDistance(Vector3 position) => Mathf.Clamp(Original.GetDistance(position) - Beginning, 0, Length);
+#endif
 
     }
 
