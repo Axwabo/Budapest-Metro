@@ -112,7 +112,7 @@ namespace Metro.Trains.Driving
                 return;
             }
 
-            if (axle.Track.StopPoint != Target)
+            if (!axle.Track.StopPoints.Contains(Target))
                 return;
             var distanceToStopPoint = Mathf.Abs(axle.Distance - Target.Distance);
             if (brakingDistance + StoppingHeadroom > distanceToStopPoint)
@@ -168,7 +168,7 @@ namespace Metro.Trains.Driving
             }
         }
 
-        private bool IsTargetTrack(TrackSegment track) => track.StopPoint == Target;
+        private bool IsTargetTrack(TrackSegment track) => track.StopPoints.Contains(Target);
 
     }
 

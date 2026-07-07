@@ -16,7 +16,7 @@ namespace Metro.Rail
 
         public HashSet<ControlPoint> ControlPoints { get; } = new();
 
-        public StopPoint StopPoint { get; private set; }
+        public HashSet<StopPoint> StopPoints { get; private set; }
 
         public abstract float Length { get; }
 
@@ -24,7 +24,7 @@ namespace Metro.Rail
         {
             RefreshNext();
             if (Application.isPlaying)
-                StopPoint = ControlPoints.OfType<StopPoint>().FirstOrDefault();
+                StopPoints = ControlPoints.OfType<StopPoint>().ToHashSet();
         }
 
         private void OnDrawGizmos()
