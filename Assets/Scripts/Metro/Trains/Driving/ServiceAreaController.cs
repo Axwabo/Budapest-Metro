@@ -11,15 +11,7 @@ namespace Metro.Trains.Driving
         {
             switch (State, JourneyManager.Target)
             {
-                case (DriverState.Stopped, ServiceAreaExitPoint {Area: var area}) when area.Exit(Parent) is { } journey:
-                    var isAfk = Journey is Afk;
-                    CanDepart = true;
-                    JourneyManager.Begin(journey);
-                    // TODO: mathn't
-                    Driver.MarkReady(journey is ServiceJourney ? 180 : isAfk ? 0 : 10);
-                    break;
                 case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area, TracksClear: true}) when area.Enter(Parent) is { } journey:
-                    CanDepart = true;
                     JourneyManager.Begin(journey);
                     break;
                 case (DriverState.Driving, _) when Journey is EnteringJourney {Next: var next} && Driver.IsOnTargetTrack:
@@ -32,6 +24,12 @@ namespace Metro.Trains.Driving
 
         public override void OnStateChanged()
         {
+            if (State == DriverState.Stopped && JourneyManager.Target is ServiceAreaExitPoint {Area: var exit})
+            {
+                exit.NotifyArrived(Parent);
+                return;
+            }
+
             var checkEntry = State switch
             {
                 DriverState.Stopped => Journey is ServiceJourney && Driver.IsOnTargetTrack,
@@ -41,15 +39,13 @@ namespace Metro.Trains.Driving
             if (!checkEntry || JourneyManager.Target is not ServiceEntryStopPoint {Area: var area, TracksClear: var clear})
                 return;
             Driver.MarkReadyNow();
-            if (!clear || area.Enter(Parent) is not { } journey)
-            {
+            if (clear && area.Enter(Parent) is { } journey)
+                JourneyManager.Begin(journey);
+            else
                 CanDepart = false;
-                return;
-            }
-
-            CanDepart = true;
-            JourneyManager.Begin(journey);
         }
+
+        public override void OnJourneyChanged() => CanDepart = true;
 
     }
 

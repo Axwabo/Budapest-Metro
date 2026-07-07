@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using Metro.Journeys;
-using Metro.Journeys.Routes;
 using Metro.Rail.Controls;
 using Metro.Trains;
 using UnityEngine;
@@ -23,18 +21,11 @@ namespace Metro.Rail.Sidings
 
         private ReversingSidingJourney _entry;
 
-        private ServiceJourney _target;
-
         public ReversingSidingArea Area { get; set; }
 
         public HashSet<MetroAssembly> UsedBy { get; } = new();
 
-        private void Start()
-        {
-            _entry = new ReversingSidingJourney(this);
-            if (Area.ServiceTarget)
-                _target = new ServiceJourney(Area.ServiceTarget);
-        }
+        private void Start() => _entry = new ReversingSidingJourney(this);
 
 #nullable enable
 
@@ -48,18 +39,13 @@ namespace Metro.Rail.Sidings
             return _entry;
         }
 
-        public IJourney? Exit(MetroAssembly assembly)
+        public bool Exit(MetroAssembly assembly)
         {
             if (!UsedBy.Remove(assembly))
-                return null;
+                return false;
             @out.Activate();
             Area.PassingThrough.Add(assembly);
-            var next = Area.Route.Next(TimeSpan.FromSeconds(40));
-            if (next.Origin.Time <= Clock.Now + TimeSpan.FromMinutes(10) || !Area.ServiceTarget)
-                return new EnteringJourney(!Area.Reverse, next);
-            if (Area.ServiceSwitches)
-                Area.ServiceSwitches.Activate();
-            return _target;
+            return true;
         }
 
     }

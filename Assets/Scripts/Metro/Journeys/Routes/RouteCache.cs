@@ -66,14 +66,15 @@ namespace Metro.Journeys.Routes
                 ? routes
                 : ReadOnlySpan<Route>.Empty;
 
-        public static Route Next(this RouteDescriptor descriptor, TimeSpan minimumOffset = default)
+        public static Route Next(this RouteDescriptor descriptor, TimeSpan minimumOffset = default) => descriptor.After(Clock.Now + minimumOffset);
+
+        public static Route After(this RouteDescriptor descriptor, TimeSpan after)
         {
             var routes = descriptor.GetRoutes();
-            var after = Clock.Now + minimumOffset;
             foreach (var route in routes)
                 if (route.Origin.Time >= after)
                     return route;
-            return routes[0];
+            return null;
         }
 
         private static bool TryParse(string time, out TimeSpan timeSpan)

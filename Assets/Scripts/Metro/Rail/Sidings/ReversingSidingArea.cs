@@ -6,6 +6,7 @@ using Metro.Rail.Controls;
 using Metro.Stations;
 using Metro.Trains;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Metro.Rail.Sidings
 {
@@ -22,17 +23,27 @@ namespace Metro.Rail.Sidings
         [field: SerializeField]
         public RouteDescriptor Route { get; private set; }
 
+        [field: FormerlySerializedAs("<ServiceTarget>k__BackingField")]
         [field: SerializeField]
-        public ServiceEntryStopPoint ServiceTarget { get; private set; }
+        public ServiceEntryStopPoint HouseTarget { get; private set; }
 
+        [field: FormerlySerializedAs("<ServiceSwitches>k__BackingField")]
         [field: SerializeField]
-        public SwitchGroup ServiceSwitches { get; private set; }
+        public SwitchGroup HouseSwitches { get; private set; }
 
-        public RouteRotor House { get; set; }
+        private ServiceJourney _house;
+
+        public RouteRotor CarriageHouse { get; set; }
 
         public HashSet<MetroAssembly> PassingThrough { get; } = new();
 
         public ReadOnlySpan<ReversingSiding> Sidings => sidings;
+
+        private void Start()
+        {
+            if (HouseTarget)
+                _house = new ServiceJourney(HouseTarget);
+        }
 
         private void OnEnable()
         {
@@ -52,15 +63,33 @@ namespace Metro.Rail.Sidings
             return null;
         }
 
-        public IJourney? Exit(MetroAssembly assembly)
+        public IJourney? Exit(MetroAssembly assembly, Route? route)
         {
-            if (PassingThrough.Count != 0 || !Route || !Station.TryGetLoadad(Route.Origin, out var station) || station.Track(!Reverse).IsOccupied)
+            if (PassingThrough.Count != 0)
                 return null;
+            if (route != null)
+            {
+                if (!Route || route.Descriptor != Route || !Station.TryGetLoadad(Route.Origin, out var station) || station.Track(!Reverse).IsOccupied)
+                    return null;
+                foreach (var siding in sidings)
+                    if (siding.Exit(assembly))
+                        return new EnteringJourney(!Reverse, route);
+                return null;
+            }
+
+            if (_house == null)
+            {
+                Debug.LogError("Cannot dispatch from/to house", this);
+                throw new InvalidOperationException("Cannot dispatch from/to house");
+            }
+
             foreach (var siding in sidings)
-                if (siding.Exit(assembly) is { } journey)
-                    return journey;
+                if (siding.Exit(assembly))
+                    return _house;
             return null;
         }
+
+        public void NotifyArrived(MetroAssembly assembly) => CarriageHouse.NotifyArrived(assembly, this);
 
     }
 

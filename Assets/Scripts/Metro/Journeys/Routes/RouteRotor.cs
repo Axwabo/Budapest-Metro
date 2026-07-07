@@ -19,13 +19,13 @@ namespace Metro.Journeys.Routes
         private JourneyManager prefab;
 
         [SerializeField]
-        private int max; // TODO
-
-        [SerializeField]
         private ReversingSidingArea house;
 
         [SerializeField]
-        private ReversingSidingArea[] reversing;
+        private ReversingSidingArea entry;
+
+        [SerializeField]
+        private ReversingSidingArea reverse;
 
         private readonly HashSet<JourneyManager> _housedMetros = new();
 
@@ -34,40 +34,18 @@ namespace Metro.Journeys.Routes
 
         private bool _initiallySpawned;
 
-        private void Start()
-        {
-            house.House = this;
-            foreach (var area in reversing)
-                area.House = this;
-        }
+        private Route _lastDispatched;
+
+        private void Start() => reverse.CarriageHouse = entry.CarriageHouse = house.CarriageHouse = this;
 
         private void Update()
         {
-            /*
-            Spawned.Add(area.Route.Next(TimeSpan.FromSeconds(40)));
-            var now = Clock.Now - StopTimeThreshold;
-            foreach (var route in area.Route.GetRoutes())
-            {
-                if (Spawned.Contains(route))
-                    continue;
-                for (var i = 0; i < route.IntermediateStops.Count; i++)
-                {
-                    var stop = route.IntermediateStops[i];
-                    var previous = i == 0 ? route.Origin.Time : stop.Time;
-                    if (SpawnedStations.Contains(stop.Name) || previous < now || stop.Time >= now || !Station.TryGetLoadad(stop.Name, out var station))
-                        continue;
-                    var (manager, _) = Spawn(station.Track(route.Reverse));
-                    manager.InitialJourney = route;
-                    manager.InitialStopIndex = i;
-                    Spawned.Add(route);
-                    SpawnedStations.Add(stop.Name);
-                    break;
-                }
-            }
-            */
-
             if (_initiallySpawned)
+            {
+                DispatchAndRecall();
                 return;
+            }
+
             _initiallySpawned = true;
             foreach (var siding in house.Sidings)
             {
@@ -87,6 +65,24 @@ namespace Metro.Journeys.Routes
             assembly.startingTrack = track;
             assembly.gameObject.name = Random.Range(500, 559).ToString();
             return (clone, assembly);
+        }
+
+        private void DispatchAndRecall()
+        {
+            // TODO: continuous
+            if (_lastDispatched != null || _housedMetros.Count == 0 || house.PassingThrough.Count != 0)
+                return;
+            var next = entry.Route.Next(TimeSpan.FromMinutes(3));
+            if (next == null)
+                return;
+            foreach (var manager in _housedMetros)
+            {
+                break;
+            }
+        }
+
+        public void NotifyArrived(MetroAssembly assembly, ReversingSidingArea area)
+        {
         }
 
     }
