@@ -36,7 +36,6 @@ namespace Metro.Rail.Controls
         }
 
 #if UNITY_EDITOR
-        [ContextMenu("Recalculate")]
         private void OnValidate()
         {
             if (Track && Track.didAwake)
@@ -50,6 +49,14 @@ namespace Metro.Rail.Controls
             var distance = Track.GetDistance(t.position);
             Distance = Mathf.Approximately(0, distance) ? 0 : Mathf.Clamp(distance, 0, Track.Length);
             Reverse = Vector3.Dot(t.forward, Track.Sample(Distance).forward) < 0;
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            if (!Track)
+                return;
+            Gizmos.color = Color.orange;
+            Gizmos.DrawSphere(Track.Sample(Distance).position, 0.5f);
         }
 #endif
 
