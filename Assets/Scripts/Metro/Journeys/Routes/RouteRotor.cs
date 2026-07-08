@@ -42,8 +42,6 @@ namespace Metro.Journeys.Routes
         private readonly HashSet<Route> _spawnedRoutes = new();
         private readonly HashSet<string> _spawnedStations = new();
 
-        private Route _lastDispatched;
-
         private int _spawned;
 
         private void Start() => reverse.CarriageHouse = entry.CarriageHouse = house.CarriageHouse = this;
@@ -72,10 +70,10 @@ namespace Metro.Journeys.Routes
 
         private void Spawn(List<JourneyManager> metros, ReversingSidingArea area)
         {
-            if (Next(area) == null)
+            if (area.ExitingPrevented || Next(area) is not { } route)
                 return;
             foreach (var siding in area.Sidings)
-                if (siding.UsedBy.Count == 0)
+                if (siding.UsedBy.Count == 0 && _spawnedRoutes.Add(route))
                     Spawn(metros, siding);
         }
 
@@ -106,6 +104,7 @@ namespace Metro.Journeys.Routes
             var metro = metros[0];
             if (!area.Exit(metro.Parent, next == null))
                 return;
+            metro.Driver.MarkReadyNow();
             metro.Begin(next != null ? new EnteringJourney(!area.Reverse, next) : area.ServiceJourney);
             metros.Remove(metro);
         }
@@ -115,7 +114,7 @@ namespace Metro.Journeys.Routes
             if (_housedMetros.Count == 0 || house.ExitingPrevented)
                 return;
             var next = entry.Route.Next(HouseToDeparture, MaxEarlyDispatch);
-            if (next == null || next == _lastDispatched)
+            if (next == null || _spawnedRoutes.Contains(next))
                 return;
             foreach (var manager in _housedMetros)
             {
@@ -124,7 +123,7 @@ namespace Metro.Journeys.Routes
                 manager.Begin(house.ServiceJourney);
                 manager.Driver.MarkReadyNow();
                 _housedMetros.Remove(manager);
-                _lastDispatched = next;
+                _spawnedRoutes.Add(next);
                 break;
             }
         }
