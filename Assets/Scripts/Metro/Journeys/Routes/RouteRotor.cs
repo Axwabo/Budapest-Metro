@@ -39,18 +39,18 @@ namespace Metro.Journeys.Routes
 
         private readonly List<JourneyManager> _reverseMetros = new();
 
-        private readonly HashSet<Route> _spawned = new();
+        private readonly HashSet<Route> _spawnedRoutes = new();
         private readonly HashSet<string> _spawnedStations = new();
 
-        private bool _initiallySpawned;
-
         private Route _lastDispatched;
+
+        private int _spawned;
 
         private void Start() => reverse.CarriageHouse = entry.CarriageHouse = house.CarriageHouse = this;
 
         private void Update()
         {
-            if (!_initiallySpawned)
+            if (_spawned == 0)
             {
                 Spawn();
                 return;
@@ -63,16 +63,30 @@ namespace Metro.Journeys.Routes
 
         private void Spawn()
         {
-            _initiallySpawned = true;
+            Spawn(_enteryMetros, entry);
+            Spawn(_reverseMetros, reverse);
             foreach (var siding in house.Sidings)
-            {
-                if (siding.UsedBy.Count != 0)
-                    continue;
-                var (manager, assembly) = Spawn(siding.StopPoint.Track);
-                manager.InitialJourney = new Afk {Target = siding.StopPoint};
-                siding.UsedBy.Add(assembly);
-                _housedMetros.Add(manager);
-            }
+                if (siding.UsedBy.Count == 0)
+                    Spawn(_housedMetros, siding);
+        }
+
+        private void Spawn(List<JourneyManager> metros, ReversingSidingArea area)
+        {
+            if (Next(area) == null)
+                return;
+            foreach (var siding in area.Sidings)
+                if (siding.UsedBy.Count == 0)
+                    Spawn(metros, siding);
+        }
+
+        private void Spawn(List<JourneyManager> metros, ReversingSiding siding)
+        {
+            if (++_spawned > house.Sidings.Length)
+                return;
+            var (manager, assembly) = Spawn(siding.StopPoint.Track);
+            manager.InitialJourney = new Afk {Target = siding.StopPoint};
+            siding.UsedBy.Add(assembly);
+            metros.Add(manager);
         }
 
         private (JourneyManager, MetroAssembly) Spawn(TrackSegment track)
