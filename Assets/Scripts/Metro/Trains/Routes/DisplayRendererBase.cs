@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Experimental.Rendering;
 using UnityEngine.UIElements;
 
 namespace Metro.Trains.Routes
@@ -9,39 +8,18 @@ namespace Metro.Trains.Routes
     {
 
         [SerializeField]
-        private int width;
-
-        [SerializeField]
-        private int height;
-
-        [SerializeField]
-        private Material parentMaterial;
-
-        [SerializeField]
-        private PanelSettings settingsReference;
-
-        [SerializeField]
         private UIDocument document;
+
+        [SerializeField]
+        private RenderMaterial material;
 
         private VisualElement _content;
 
-        private PanelSettings _settings;
-
         private float _showIn;
 
-        private RenderTexture _texture;
+        public Material Material => material.Material;
 
-        public Material Material { get; private set; }
-
-        private void Awake()
-        {
-            _texture = new RenderTexture(width, height, GraphicsFormat.R8G8B8A8_SNorm, GraphicsFormat.None);
-            _settings = Instantiate(settingsReference);
-            _settings.name = name;
-            _settings.targetTexture = _texture;
-            document.panelSettings = _settings;
-            Material = new Material(parentMaterial) {mainTexture = _texture};
-        }
+        private void Awake() => material.Init(name, document);
 
         protected virtual void Update()
         {
@@ -49,13 +27,7 @@ namespace Metro.Trains.Routes
                 _content.visible = true;
         }
 
-        private void OnDestroy()
-        {
-            _texture.Release();
-            Destroy(Material);
-            Destroy(_texture);
-            Destroy(_settings);
-        }
+        private void OnDestroy() => material.Destroy();
 
         protected override void OnInitialized()
         {
