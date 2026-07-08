@@ -112,7 +112,7 @@ namespace Metro.Trains.Routes
                     _stateMachine = ServiceArea;
                     _serviceArea.text = Journey switch
                     {
-                        ServiceJourney {ToCarriageHouse: true} => ToCarriageHouse,
+                        ICarriageHouseJourney {ToCarriageHouse: true} => ToCarriageHouse,
                         Afk => "Üzemi terület", // valóságos ellentétben a hamissal (fake vs reality)
                         _ => None
                     };

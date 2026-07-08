@@ -4,7 +4,7 @@ using Metro.Rail.Sidings;
 namespace Metro.Journeys
 {
 
-    public sealed class ReversingSidingJourney : IJourney
+    public sealed class ReversingSidingJourney : ICarriageHouseJourney
     {
 
         private readonly ReversingSiding _siding;
@@ -12,6 +12,8 @@ namespace Metro.Journeys
         public ReversingSidingJourney(ReversingSiding siding) => _siding = siding;
 
         public ReversingSidingArea Area => _siding.Area;
+
+        public bool ToCarriageHouse { get; set; }
 
         public bool Reverse => Area.Reverse;
 

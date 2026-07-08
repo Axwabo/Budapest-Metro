@@ -49,7 +49,12 @@ namespace Metro.Journeys.Routes
 
         private int Max => house.Sidings.Length;
 
-        private void Start() => reverse.CarriageHouse = entry.CarriageHouse = house.CarriageHouse = this;
+        private void Start()
+        {
+            reverse.CarriageHouse = entry.CarriageHouse = house.CarriageHouse = this;
+            foreach (var siding in house.Sidings)
+                siding.MarkAsHouse();
+        }
 
         private void Update()
         {

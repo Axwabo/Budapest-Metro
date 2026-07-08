@@ -27,6 +27,8 @@ namespace Metro.Rail.Sidings
 
         private void Start() => _entry = new ReversingSidingJourney(this);
 
+        public void MarkAsHouse() => _entry.ToCarriageHouse = true;
+
 #nullable enable
 
         public bool Enter(MetroAssembly assembly)
