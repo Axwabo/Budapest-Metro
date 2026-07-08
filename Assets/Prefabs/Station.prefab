@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a30ed456c6149abbc9d1d36b190bc04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.Station
+  <ID>k__BackingField: {fileID: 0}
   <Left>k__BackingField: {fileID: 3403368601219536001}
   <Right>k__BackingField: {fileID: 5451736466235538789}
   platform: {fileID: 5172738444332177414}
@@ -377,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c438606077244adafc99268598c0667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.StationSigns
+  reverse: 1
   document: {fileID: 8879873209163752015}
   material:
     width: 2250

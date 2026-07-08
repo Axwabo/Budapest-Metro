@@ -8,6 +8,9 @@ namespace Metro.Stations
     {
 
         [SerializeField]
+        private bool reverse;
+
+        [SerializeField]
         private UIDocument document;
 
         [SerializeField]
@@ -33,6 +36,15 @@ namespace Metro.Stations
             var root = document.rootVisualElement;
             root.Q<Label>("Current").text = _station.name;
             root.RegisterCallbackOnce<GeometryChangedEvent>(_ => _done = true);
+            var stations = reverse ? _station.ID.Relation.Reverse : _station.ID.Relation.Forwards;
+            if (_station.ID == stations[^1])
+                root.Q("OtherSide").Display();
+            else
+            {
+                var directiohn = root.Q("Direction");
+                directiohn.Display();
+                directiohn.Q<Label>("Name").text = stations[^1].name;
+            }
         }
 
         private void Update()
