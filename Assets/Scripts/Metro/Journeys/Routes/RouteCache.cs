@@ -45,8 +45,13 @@ namespace Metro.Journeys.Routes
                     continue;
                 var stops = new List<Stop>();
                 for (var i = 0; i < relative.Count; i++)
-                    stops.Add(new Stop(stations[i + 1], initialDeparture + relative[i]));
-                routes.Add(new Route(descriptor, new Stop(stations[0], departureTime), stops, new Stop(stations[^1], departureTime + relative[^1])));
+                    stops.Add(new Stop(stations[i + 1], departureTime + relative[i]));
+                routes.Add(new Route(
+                    descriptor,
+                    new Stop(stations[0], departureTime),
+                    stops,
+                    new Stop(stations[^1], departureTime + relative[^1])
+                ));
             }
 
             var routeArray = routes.ToArray();
