@@ -6,7 +6,6 @@ using Metro.Stations;
 using Metro.Trains;
 using Metro.Trains.Routes;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Metro.Journeys.Routes
 {
@@ -123,7 +122,7 @@ namespace Metro.Journeys.Routes
             var clone = Instantiate(prefab);
             var assembly = clone.GetComponentInParent<MetroAssembly>();
             assembly.startingTrack = track;
-            assembly.gameObject.name = Random.Range(500, 559).ToString();
+            assembly.gameObject.name = (499 + _spawned).ToString();
             return (clone, assembly);
         }
 
