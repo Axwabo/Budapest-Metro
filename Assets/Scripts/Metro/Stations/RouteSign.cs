@@ -4,6 +4,7 @@ using Metro.Journeys.Routes;
 using Metro.Rail;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static Metro.Journeys.IJourney;
 
 namespace Metro.Stations
 {
@@ -59,6 +60,10 @@ namespace Metro.Stations
             }
         }
 
+        private string DestinationName => StationIdCache.TryGet(descriptor.Destination, out var id) && !string.IsNullOrEmpty(id.StationTime)
+            ? id.StationTime
+            : descriptor.Destination;
+
         private void Awake()
         {
             material.Init(name, document);
@@ -73,28 +78,19 @@ namespace Metro.Stations
         private void Start()
         {
             var station = GetComponentInParent<Station>();
-            var stationName = station.ID.name;
-            var stops = descriptor.IntermediateStops;
-            for (var i = 0; i < stops.Length; i++)
-            {
-                var stop = stops[i];
-                if (!stop.Equals(stationName, StringComparison.OrdinalIgnoreCase))
-                    continue;
-                _index = i;
-                break;
-            }
-
-            var destination = StationIdCache.TryGet(descriptor.Destination, out var id) && !string.IsNullOrEmpty(id.StationTime)
-                ? id.StationTime
-                : descriptor.Destination;
             var root = document.rootVisualElement;
-            root.Q<Label>("Destination").text = $"{destination} felé";
+            var destination = root.Q<Label>("Destination");
+            var description = root.Q<Label>("Description");
+            destination.text = $"{DestinationName} felé";
+            _index = FindIndex(station.ID.name);
             _minutes = root.Q<Label>("Minutes");
             _seconds = root.Q<Label>("Seconds");
             _bar = root.Q("Bar");
             _track = station.Track(descriptor.Reverse);
-            if (_index == -1)
-                root.Q<Label>("Description").text = "Várható indulási idő:";
+            if (_index == Origin)
+                description.text = "Várható indulási idő:";
+            else if (_index == Destination)
+                description.text = "";
         }
 
         private void Update()
@@ -105,7 +101,28 @@ namespace Metro.Stations
             UpdateDisplay();
         }
 
-        private Stop Stop(Route route) => _index == -1 ? route.Origin : route.IntermediateStops[_index];
+        private int FindIndex(string stationName)
+        {
+            if (stationName.Equals(descriptor.Destination, StringComparison.OrdinalIgnoreCase))
+                return Destination;
+            var stops = descriptor.IntermediateStops;
+            for (var i = 0; i < stops.Length; i++)
+            {
+                var stop = stops[i];
+                if (!stop.Equals(stationName, StringComparison.OrdinalIgnoreCase))
+                    continue;
+                return i;
+            }
+
+            return Origin;
+        }
+
+        private Stop Stop(Route route) => _index switch
+        {
+            Origin => route.Origin,
+            Destination => route.Destination,
+            _ => route.IntermediateStops[_index]
+        };
 
         private void UpdateDisplay()
         {
@@ -123,8 +140,9 @@ namespace Metro.Stations
             var delta = Stop(_route).Time - Clock.Now;
             if (delta < TimeSpan.Zero)
                 delta = TimeSpan.Zero;
-            _minutes.text = delta.Minutes.ToString("00");
-            _seconds.text = delta.Seconds.ToString("00");
+            var equals = _index == Destination && delta > TimeSpan.FromMinutes(2);
+            _minutes.text = equals ? "=" : delta.Minutes.ToString("00");
+            _seconds.text = equals ? "" : delta.Seconds.ToString("00");
             _bar.style.width = Length.Percent(Mathf.Min(100, (float) (delta.TotalSeconds * SecondsToOnePercent)));
         }
 

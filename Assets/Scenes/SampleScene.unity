@@ -7692,10 +7692,13 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.900055
       objectReference: {fileID: 0}
+    - target: {fileID: 8044632557283373120, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
     m_RemovedComponents:
     - {fileID: 5610589851177103019, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 7932942874359685154, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 779698760297868956, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       insertIndex: -1
@@ -16143,15 +16146,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2559.319
+      value: 2340.9
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 97.513
+      value: 93.26
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1853.917
+      value: 2420.5
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalRotation.w
