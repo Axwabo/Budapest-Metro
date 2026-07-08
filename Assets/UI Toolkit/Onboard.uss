@@ -16,8 +16,12 @@ Label {
     word-spacing: 15px;
 }
 
+.scrollable {
+    flex-grow: 1;
+    left: 100%;
+}
+
 .no-scrolling {
     left: 0;
-    translate: none !important;
-    align-items: center;
+    justify-content: center;
 }

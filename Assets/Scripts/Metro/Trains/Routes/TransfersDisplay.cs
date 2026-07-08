@@ -47,7 +47,7 @@ namespace Metro.Trains.Routes
         public void Display(string name)
         {
             _size = 0;
-            ResetPosition();
+            ResetPositionInternal();
             if (!StationIdCache.TryGet(name, out var id))
             {
                 DisplayList(_metroIcon, _metroList, "");
@@ -76,7 +76,8 @@ namespace Metro.Trains.Routes
             var count = hierarchy.childCount;
             for (var i = 0; i < count; i++)
                 _size += TotalWidth(hierarchy[i]);
-            _root.EnableInClassList(NoScroll, _size <= 0);
+            var noScroll = _size <= 0;
+            _root.EnableInClassList(NoScroll, noScroll);
         }
 
         private static float TotalWidth(VisualElement element)
@@ -95,8 +96,12 @@ namespace Metro.Trains.Routes
 
         public void ResetPosition()
         {
-            if (_size <= 0)
-                return;
+            if (_size > 0)
+                ResetPositionInternal();
+        }
+
+        private void ResetPositionInternal()
+        {
             _root.style.translate = StyleKeyword.None;
             _translate = 0;
         }
