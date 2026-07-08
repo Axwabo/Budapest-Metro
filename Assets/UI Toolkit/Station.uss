@@ -8,10 +8,6 @@ Label {
     translate: 0 -2px;
 }
 
-.separator {
-    flex-grow: 1;
-}
-
 .board {
     width: 22%;
 }

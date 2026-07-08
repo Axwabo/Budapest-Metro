@@ -27,9 +27,10 @@ namespace Metro.Stations
         private void Start()
         {
             var station = GetComponentInParent<Station>().ID.name;
-            for (var i = 0; i < descriptor.IntermediateStops.Length; i++)
+            var stops = descriptor.IntermediateStops;
+            for (var i = 0; i < stops.Length; i++)
             {
-                var stop = descriptor.IntermediateStops[i];
+                var stop = stops[i];
                 if (!stop.Equals(station, StringComparison.OrdinalIgnoreCase))
                     continue;
                 _index = i;
@@ -65,10 +66,10 @@ namespace Metro.Stations
             foreach (var route in descriptor.GetRoutes())
             {
                 var delta = route.IntermediateStops[_index].Time - now;
-                if (now < TimeSpan.Zero || now > TimeSpan.FromMinutes(30))
+                if (delta < TimeSpan.Zero || delta > TimeSpan.FromMinutes(30))
                     continue;
-                _minutes.text = delta.Minutes.ToString();
-                _seconds.text = delta.Seconds.ToString();
+                _minutes.text = delta.Minutes.ToString("00");
+                _seconds.text = delta.Seconds.ToString("00");
                 break;
             }
         }

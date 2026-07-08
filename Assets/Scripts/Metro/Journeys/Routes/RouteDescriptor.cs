@@ -39,7 +39,7 @@ namespace Metro.Journeys.Routes
         [field: HideInInspector]
         public string Destination { get; private set; }
 
-        public ReadOnlySpan<string> IntermediateStops => intermediateStops;
+        public ReadOnlySpan<string> IntermediateStops => intermediateStops.AsSpan()[1..^1];
 
 #if UNITY_EDITOR
         private void OnValidate()

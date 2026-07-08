@@ -2394,10 +2394,17 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.899994
       objectReference: {fileID: 0}
+    - target: {fileID: 8044632557283373120, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &224085832 stripped
 MonoBehaviour:
@@ -2600,10 +2607,17 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.90001
       objectReference: {fileID: 0}
+    - target: {fileID: 8044632557283373120, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &228167100 stripped
 MonoBehaviour:
@@ -3360,10 +3374,17 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.90005
       objectReference: {fileID: 0}
+    - target: {fileID: 8044632557283373120, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &333323286 stripped
 MonoBehaviour:
@@ -4731,10 +4752,17 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.89998
       objectReference: {fileID: 0}
+    - target: {fileID: 8044632557283373120, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &475460703 stripped
 MonoBehaviour:
@@ -5646,10 +5674,17 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.89998
       objectReference: {fileID: 0}
+    - target: {fileID: 8044632557283373120, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &527658585 stripped
 MonoBehaviour:
@@ -6850,10 +6885,17 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.90003
       objectReference: {fileID: 0}
+    - target: {fileID: 8044632557283373120, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!4 &647900860 stripped
 Transform:
@@ -7631,7 +7673,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1733962557333107071, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
     - {fileID: 5610589851177103019, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7932942874359685154, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 779698760297868956, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       insertIndex: -1
@@ -11617,10 +11660,17 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.90001
       objectReference: {fileID: 0}
+    - target: {fileID: 8044632557283373120, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &1511502333 stripped
 MonoBehaviour:
@@ -11911,10 +11961,17 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.90001
       objectReference: {fileID: 0}
+    - target: {fileID: 8044632557283373120, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &1527458138 stripped
 MonoBehaviour:
@@ -16055,15 +16112,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2541.8777
+      value: -1562.7322
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 97.29
+      value: 91.59
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1851.1937
+      value: -1768.4064
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16351,7 +16408,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7074083197338159851, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
     - {fileID: 1546240059519603492, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7932942874359685154, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3727201132112062455, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       insertIndex: -1
