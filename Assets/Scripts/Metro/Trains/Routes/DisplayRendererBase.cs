@@ -15,6 +15,9 @@ namespace Metro.Trains.Routes
         private int height;
 
         [SerializeField]
+        private Material parentMaterial;
+
+        [SerializeField]
         private PanelSettings settingsReference;
 
         [SerializeField]
@@ -37,7 +40,7 @@ namespace Metro.Trains.Routes
             _settings.name = name;
             _settings.targetTexture = _texture;
             document.panelSettings = _settings;
-            Material = new Material(Shader.Find("Universal Render Pipeline/Lit")) {mainTexture = _texture};
+            Material = new Material(parentMaterial) {mainTexture = _texture};
         }
 
         protected virtual void Update()
