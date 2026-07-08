@@ -8,8 +8,6 @@ namespace Metro.Trains.Routes
     public abstract class DisplayRendererBase : AssemblyComponent
     {
 
-        private static readonly int Emission = Shader.PropertyToID("Emission");
-
         [SerializeField]
         private int width;
 
@@ -18,10 +16,6 @@ namespace Metro.Trains.Routes
 
         [SerializeField]
         private Material parentMaterial;
-
-        [SerializeField]
-        [ColorUsage(true, true)]
-        private Color emission;
 
         [SerializeField]
         private PanelSettings settingsReference;
@@ -47,7 +41,6 @@ namespace Metro.Trains.Routes
             _settings.targetTexture = _texture;
             document.panelSettings = _settings;
             Material = new Material(parentMaterial) {mainTexture = _texture};
-            Material.SetColor(Emission, emission);
         }
 
         protected virtual void Update()
