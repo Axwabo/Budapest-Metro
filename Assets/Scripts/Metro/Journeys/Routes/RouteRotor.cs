@@ -19,7 +19,8 @@ namespace Metro.Journeys.Routes
 
         private static readonly TimeSpan StopTimeThreshold = TimeSpan.FromSeconds(22);
         private static readonly TimeSpan HouseToDeparture = TimeSpan.FromMinutes(4);
-        private static readonly TimeSpan MaxEarlyDispatch = TimeSpan.FromMinutes(10);
+        private static readonly TimeSpan MaxEarlyDispatch = TimeSpan.FromMinutes(8);
+        private static readonly TimeSpan MaxEarlyRotate = TimeSpan.FromMinutes(10);
         private static readonly TimeSpan ReversingToDeparture = TimeSpan.FromSeconds(40);
 
         [SerializeField]
@@ -140,6 +141,8 @@ namespace Metro.Journeys.Routes
             metro.Driver.MarkReadyNow();
             metro.Begin(toHouse ? area.ServiceJourney : new EnteringJourney(!area.Reverse, next));
             metros.Remove(metro);
+            if (next != null)
+                _spawnedRoutes.Add(next);
             if (toHouse && checkRecall)
                 _recalling.Add(metro);
         }
@@ -186,7 +189,7 @@ namespace Metro.Journeys.Routes
             // else where tf are you???? M2 > M3?
         }
 
-        private static Route Next(ReversingSidingArea area) => area.Route.Next(ReversingToDeparture, MaxEarlyDispatch);
+        private static Route Next(ReversingSidingArea area) => area.Route.Next(ReversingToDeparture, MaxEarlyRotate);
 
         public void NotifyReady(MetroAssembly assembly, ReversingSidingArea area)
         {
