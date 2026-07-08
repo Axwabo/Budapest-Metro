@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement class="stop">
+    <ui:VisualElement class="stop border-accent">
         <ui:VisualElement name="Fill" style="flex-grow: 1;" />
         <ui:Label name="Name" style="position: absolute; translate: -50% 0; -unity-text-align: upper-center; max-width: 64px; white-space: normal; top: 10px;" />
     </ui:VisualElement>

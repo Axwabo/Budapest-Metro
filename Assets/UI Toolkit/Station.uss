@@ -9,22 +9,29 @@ Label {
 }
 
 .board {
-    width: 32%;
+    width: 23%;
 }
 
 .bg-accent {
     background-color: var(--accent);
 }
 
-.stop {
+.border-accent {
     border-color: var(--accent);
+}
+
+.board.border-accent {
+    border-top-width: 10px;
+}
+
+.stop {
     width: 12px;
     height: 12px;
     border-radius: 6px;
     border-width: 3px;
 }
 
-.stop.inactive {
+.border-accent.inactive {
     border-color: rgb(140, 140, 140);
 }
 
@@ -33,7 +40,7 @@ Label {
 }
 
 .line {
-    width: 56px;
+    width: 80px;
     height: 3px;
     scale: 1.1 1;
 }

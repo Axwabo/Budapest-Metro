@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 namespace Metro.Stations
 {
 
-    public sealed class StationSigns : MonoBehaviour
+    public sealed class StationSign : MonoBehaviour
     {
 
         [SerializeField]
@@ -37,7 +37,8 @@ namespace Metro.Stations
         private void Start()
         {
             var root = document.rootVisualElement;
-            root.Q<Label>("Current").text = _station.name;
+            foreach (var label in root.Query<Label>("Current").Build())
+                label.text = _station.name;
             root.RegisterCallbackOnce<GeometryChangedEvent>(_ => _done = true);
             var stops = root.Q("Stops");
             var stations = reverse ? _station.ID.Relation.Reverse : _station.ID.Relation.Forwards;
