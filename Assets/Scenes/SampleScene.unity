@@ -2370,6 +2370,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.90001
       objectReference: {fileID: 0}
+    - target: {fileID: 4841251609467242464, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 13.75
@@ -2401,10 +2405,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &224085832 stripped
 MonoBehaviour:
@@ -2583,6 +2584,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.899994
       objectReference: {fileID: 0}
+    - target: {fileID: 4841251609467242464, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 9.6875
@@ -2614,10 +2619,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &228167100 stripped
 MonoBehaviour:
@@ -3350,6 +3352,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.90004
       objectReference: {fileID: 0}
+    - target: {fileID: 4841251609467242464, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 10.25
@@ -3381,10 +3387,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &333323286 stripped
 MonoBehaviour:
@@ -4728,6 +4731,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.89999
       objectReference: {fileID: 0}
+    - target: {fileID: 4841251609467242464, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 10.25
@@ -4759,10 +4766,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &475460703 stripped
 MonoBehaviour:
@@ -5650,6 +5654,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.899956
       objectReference: {fileID: 0}
+    - target: {fileID: 4841251609467242464, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 11.625
@@ -5681,10 +5689,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &527658585 stripped
 MonoBehaviour:
@@ -6861,6 +6866,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.89998
       objectReference: {fileID: 0}
+    - target: {fileID: 4841251609467242464, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 11.875
@@ -6892,10 +6901,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!4 &647900860 stripped
 Transform:
@@ -7654,6 +7660,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.89998
       objectReference: {fileID: 0}
+    - target: {fileID: 4841251609467242464, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 13.75
@@ -11636,6 +11646,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.90002
       objectReference: {fileID: 0}
+    - target: {fileID: 4841251609467242464, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 11.5625
@@ -11667,10 +11681,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &1511502333 stripped
 MonoBehaviour:
@@ -11937,6 +11948,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.9
       objectReference: {fileID: 0}
+    - target: {fileID: 4841251609467242464, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 13.125
@@ -11968,10 +11983,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1910341798313647118, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
 --- !u!114 &1527458138 stripped
 MonoBehaviour:
@@ -16373,6 +16385,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 79.89998
       objectReference: {fileID: 0}
+    - target: {fileID: 4841251609467242464, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
+      propertyPath: descriptor
+      value: 
+      objectReference: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
     - target: {fileID: 5172738444332177414, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
       propertyPath: m_LocalScale.x
       value: 12.125
