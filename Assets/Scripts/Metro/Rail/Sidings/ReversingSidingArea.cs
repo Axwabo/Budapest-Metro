@@ -48,7 +48,7 @@ namespace Metro.Rail.Sidings
         private void Start()
         {
             if (ServiceTarget)
-                ServiceJourney = new ServiceJourney(ServiceTarget);
+                ServiceJourney = new ServiceJourney(ServiceTarget, this);
         }
 
         private void OnEnable()

@@ -1,4 +1,5 @@
 using Metro.Rail.Controls;
+using Metro.Rail.Sidings;
 
 namespace Metro.Journeys
 {
@@ -8,7 +9,13 @@ namespace Metro.Journeys
 
         private readonly ServiceAreaPointBase _target;
 
-        public ServiceJourney(ServiceAreaPointBase target) => _target = target;
+        public ServiceJourney(ServiceAreaPointBase target, ReversingSidingArea origin)
+        {
+            Origin = origin;
+            _target = target;
+        }
+
+        public ReversingSidingArea Origin { get; }
 
         public bool ToCarriageHouse { get; set; }
 
