@@ -77,7 +77,7 @@ namespace Metro.Journeys.Routes
             var now = Clock.Now - StopTimeThreshold;
             foreach (var route in descriptor.GetRoutes())
             {
-                if (_spawnedRoutes.Contains(route))
+                if (_spawnedRoutes.Contains(route) || route.Destination.Time < now)
                     continue;
                 for (var i = 0; i < route.IntermediateStops.Count; i++)
                 {
@@ -85,7 +85,7 @@ namespace Metro.Journeys.Routes
                     if (!Station.TryGetLoadad(stop, out var station))
                         continue;
                     var previousTime = i == 0 ? route.Origin.Time : route.IntermediateStops[i - 1].Time;
-                    if (previousTime < now || currentTime >= now || ++_spawned > Max)
+                    if (previousTime > now || currentTime < now || ++_spawned > Max)
                         continue;
                     var manager = Spawn(station.Track(route.Reverse)).Item1;
                     manager.InitialJourney = route;
