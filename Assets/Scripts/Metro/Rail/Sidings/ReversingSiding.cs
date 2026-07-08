@@ -25,8 +25,9 @@ namespace Metro.Rail.Sidings
 
         public HashSet<MetroAssembly> UsedBy { get; } = new();
 
-        private void Start() => _entry = new ReversingSidingJourney(this);
+        private void Awake() => _entry = new ReversingSidingJourney(this);
 
+        // boots 'n' cats
         public void MarkAsHouse() => _entry.ToCarriageHouse = true;
 
 #nullable enable
