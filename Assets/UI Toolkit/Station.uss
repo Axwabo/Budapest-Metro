@@ -46,5 +46,5 @@ Label {
 .line {
     width: 200px;
     height: 6px;
-    scale: 1.02 1;
+    scale: 1.0001 1;
 }
