@@ -23,15 +23,17 @@ namespace Metro.Rail.Sidings
         [field: SerializeField]
         public RouteDescriptor Route { get; private set; }
 
+        [field: FormerlySerializedAs("<HouseTarget>k__BackingField")]
         [field: FormerlySerializedAs("<ServiceTarget>k__BackingField")]
         [field: SerializeField]
-        public ServiceEntryStopPoint HouseTarget { get; private set; }
+        public ServiceEntryStopPoint ServiceTarget { get; private set; }
 
+        [field: FormerlySerializedAs("<HouseSwitches>k__BackingField")]
         [field: FormerlySerializedAs("<ServiceSwitches>k__BackingField")]
         [field: SerializeField]
-        public SwitchGroup HouseSwitches { get; private set; }
+        public SwitchGroup ServiceSwitches { get; private set; }
 
-        public ServiceJourney HouseJourney { get; private set; }
+        public ServiceJourney ServiceJourney { get; private set; }
 
         public RouteRotor CarriageHouse { get; set; }
 
@@ -45,8 +47,8 @@ namespace Metro.Rail.Sidings
 
         private void Start()
         {
-            if (HouseTarget)
-                HouseJourney = new ServiceJourney(HouseTarget);
+            if (ServiceTarget)
+                ServiceJourney = new ServiceJourney(ServiceTarget);
         }
 
         private void OnEnable()
@@ -79,8 +81,8 @@ namespace Metro.Rail.Sidings
                 return false;
             }
 
-            if (HouseJourney == null)
-                throw new InvalidOperationException("Cannot dispatch from/to house");
+            if (ServiceSwitches)
+                ServiceSwitches.Activate();
             foreach (var siding in sidings)
                 if (siding.Exit(assembly))
                     return true;

@@ -15,7 +15,7 @@ namespace Metro.Journeys.Routes
 
         private static readonly TimeSpan StopTimeThreshold = TimeSpan.FromSeconds(22);
         private static readonly TimeSpan HouseToDeparture = TimeSpan.FromMinutes(4);
-        private static readonly TimeSpan MaxEarlyDispatch = TimeSpan.FromSeconds(10);
+        private static readonly TimeSpan MaxEarlyDispatch = TimeSpan.FromMinutes(10);
         private static readonly TimeSpan ReversingToDeparture = TimeSpan.FromSeconds(40);
 
         [SerializeField]
@@ -47,15 +47,21 @@ namespace Metro.Journeys.Routes
 
         private void Update()
         {
-            if (_initiallySpawned)
+            if (!_initiallySpawned)
             {
-                Rotate(_enteryMetros, entry);
-                Rotate(_reverseMetros, reverse);
-                Dispatch();
-                Recall();
+                Spawn();
                 return;
             }
 
+            Rotate(_enteryMetros, entry);
+            Rotate(_reverseMetros, reverse);
+            Dispatch();
+            RecallFromReverse();
+            Recall();
+        }
+
+        private void Spawn()
+        {
             _initiallySpawned = true;
             foreach (var siding in house.Sidings)
             {
@@ -82,11 +88,12 @@ namespace Metro.Journeys.Routes
             if (area.ExitingPrevented || metros.Count == 0)
                 return;
             var next = area.Route.Next(ReversingToDeparture);
+            if (next.Origin.Time > Clock.Now + MaxEarlyDispatch)
+                return;
             var metro = metros[0];
             if (!area.Exit(metro.Parent, false))
                 return;
             metro.Begin(new EnteringJourney(!area.Reverse, next));
-            metro.Driver.MarkReady(10);
             metros.Remove(metro);
         }
 
@@ -101,12 +108,26 @@ namespace Metro.Journeys.Routes
             {
                 if (!house.Exit(manager.Parent, true))
                     continue;
-                manager.Begin(house.HouseJourney);
+                manager.Begin(house.ServiceJourney);
                 manager.Driver.MarkReadyNow();
                 _housedMetros.Remove(manager);
                 _lastDispatched = next;
                 break;
             }
+        }
+
+        private void RecallFromReverse()
+        {
+            if (_reverseMetros.Count == 0 || reverse.ExitingPrevented)
+                return;
+            var next = entry.Route.Next(ReversingToDeparture);
+            if (next.Origin.Time < Clock.Now + MaxEarlyDispatch)
+                return;
+            var metro = _reverseMetros[0];
+            if (!reverse.Exit(metro.Parent, true))
+                return;
+            metro.Begin(reverse.ServiceJourney);
+            _reverseMetros.Remove(metro);
         }
 
         private void Recall()
@@ -120,8 +141,7 @@ namespace Metro.Journeys.Routes
             if (!entry.Exit(metro.Parent, true))
                 return;
             // TODO: delay
-            metro.Begin(entry.HouseJourney);
-            metro.Driver.MarkReadyNow();
+            metro.Begin(entry.ServiceJourney);
             _enteryMetros.Remove(metro);
         }
 
