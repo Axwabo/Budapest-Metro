@@ -1,3 +1,4 @@
+using System;
 using Metro.Audio;
 using Metro.Stations;
 using UnityEngine;
@@ -30,18 +31,24 @@ namespace Metro.Journeys.Routes
         [field: HideInInspector]
         public string Origin { get; private set; }
 
+        [SerializeField]
+        [HideInInspector]
+        private string[] intermediateStops;
+
         [field: SerializeField]
         [field: HideInInspector]
         public string Destination { get; private set; }
+
+        public ReadOnlySpan<string> IntermediateStops => intermediateStops;
 
 #if UNITY_EDITOR
         private void OnValidate()
         {
             if (!Stops)
                 return;
-            var stops = RouteCache.ReadTwoLines(Stops).Item1.Split(',');
-            Origin = stops[0];
-            Destination = stops[^1];
+            intermediateStops = RouteCache.ReadTwoLines(Stops).Item1.Split(',');
+            Origin = intermediateStops[0];
+            Destination = intermediateStops[^1];
         }
 #endif
 
