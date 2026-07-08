@@ -44,17 +44,17 @@ namespace Metro.Stations
             var inactive = true;
             for (var i = 0; i < stations.Length; i++)
             {
+                var last = i >= stations.Length - 1;
                 var station = stations[i];
-                var current = station == _station.ID;
-                if (current)
+                if (station == _station.ID)
                     inactive = false;
                 var stop = stationTemplate.CloneTree();
                 var fill = stop.Q("Fill");
-                fill.EnableInClassList("inactive", inactive);
-                fill.EnableInClassList("bg-accent", current);
+                stop.EnableInClassList("inactive", inactive);
+                fill.EnableInClassList("bg-accent", i == 0 || last || !string.IsNullOrEmpty(_station.ID.Metros));
                 stop.Q<Label>("Name").text = station.name;
                 stops.Add(stop);
-                if (i >= stations.Length - 1)
+                if (last)
                     continue;
                 var line = new VisualElement();
                 line.AddToClassList("line");

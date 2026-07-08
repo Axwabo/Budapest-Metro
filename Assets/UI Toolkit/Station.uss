@@ -28,7 +28,7 @@ Label {
     border-color: rgb(140, 140, 140);
 }
 
-.inactive.bg-accent {
+.inactive .bg-accent {
     background-color: rgb(140, 140, 140);
 }
 
