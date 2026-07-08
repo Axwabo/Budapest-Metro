@@ -44,7 +44,7 @@ namespace Metro.Journeys.Routes
                 if (!TryParse(departure, out var departureTime))
                     continue;
                 var stops = new List<Stop>();
-                for (var i = 0; i < relative.Count; i++)
+                for (var i = 0; i < relative.Count - 1; i++)
                     stops.Add(new Stop(stations[i + 1], departureTime + relative[i]));
                 routes.Add(new Route(
                     descriptor,
