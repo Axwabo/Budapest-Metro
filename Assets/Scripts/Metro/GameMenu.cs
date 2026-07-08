@@ -14,6 +14,9 @@ namespace Metro
         [SerializeField]
         private UIDocument document;
 
+        [SerializeField]
+        private InputActionAsset playerActions;
+
         private VisualElement _menu;
 
         private InputActionMap _player;
@@ -25,17 +28,10 @@ namespace Metro
         private void Start()
         {
             //_menu = document.rootVisualElement.Q("Menu");
-            foreach (var map in InputSystem.actions.actionMaps)
-                if (map.name == "Player")
-                {
-                    _player = map;
-                    map.Disable();
-                }
-                else if (map.name == "UI")
-                {
-                    _ui = map;
-                    map.Disable();
-                }
+            _ui = InputSystem.actions.FindActionMap("UI", true);
+            _player = playerActions.FindActionMap("Player", true);
+            _ui.Disable();
+            _player.Disable();
         }
 
         private void Update()

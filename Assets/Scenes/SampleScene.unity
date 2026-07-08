@@ -14290,7 +14290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.GameMenu
   document: {fileID: 0}
-  input: {fileID: 0}
+  playerActions: {fileID: -944628639613478452, guid: 5df729fb3942b7c3490afdbb2d5aae3d, type: 3}
 --- !u!114 &1879075054
 MonoBehaviour:
   m_ObjectHideFlags: 0
