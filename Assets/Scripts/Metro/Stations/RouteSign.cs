@@ -7,14 +7,25 @@ using UnityEngine.UIElements;
 namespace Metro.Stations
 {
 
-    public class RouteSign : MonoBehaviour
+    public sealed class RouteSign : MonoBehaviour
     {
+
+        private const double SecondsToOnePercent = 100 / 60d;
 
         [SerializeField]
         private RouteDescriptor descriptor;
 
         [SerializeField]
         private UIDocument document;
+
+        [SerializeField]
+        private RenderMaterial material;
+
+        [SerializeField]
+        private int targetMaterialIndex;
+
+        [SerializeField]
+        private MeshRenderer[] renderers;
 
         private VisualElement _bar;
 
@@ -47,6 +58,17 @@ namespace Metro.Stations
             }
         }
 
+        private void Awake()
+        {
+            material.Init(name, document);
+            foreach (var meshRenderer in renderers)
+            {
+                var materials = meshRenderer.sharedMaterials;
+                materials[targetMaterialIndex] = material.Material;
+                meshRenderer.sharedMaterials = materials;
+            }
+        }
+
         private void Start()
         {
             var station = GetComponentInParent<Station>();
@@ -70,7 +92,6 @@ namespace Metro.Stations
             _seconds = root.Q<Label>("Seconds");
             _bar = root.Q("Bar");
             _track = station.Track(descriptor.Reverse);
-            Initialize(root);
         }
 
         private void Update()
@@ -79,10 +100,6 @@ namespace Metro.Stations
                 return;
             _delay = 7; // or something like that, idrk
             UpdateDisplay();
-        }
-
-        protected virtual void Initialize(VisualElement root)
-        {
         }
 
         private void UpdateDisplay()
@@ -103,6 +120,7 @@ namespace Metro.Stations
                 delta = TimeSpan.Zero;
             _minutes.text = delta.Minutes.ToString("00");
             _seconds.text = delta.Seconds.ToString("00");
+            _bar.style.width = Length.Percent(Mathf.Min(100, (float) (delta.TotalSeconds * SecondsToOnePercent)));
         }
 
     }
