@@ -143,7 +143,7 @@ namespace Metro.Trains.Driving
         private void Stay(double minStaySeconds)
         {
             var departMinStay = Clock.Now + TimeSpan.FromSeconds(minStaySeconds);
-            var stopTime = IsInService ? Stop.Time : TimeSpan.MinValue;
+            var stopTime = Stop?.Time ?? TimeSpan.MinValue;
             _departAt = stopTime < departMinStay ? departMinStay : stopTime;
         }
 
