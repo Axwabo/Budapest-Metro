@@ -1,0 +1,49 @@
+:root {
+    --accent: rgb(0, 200, 0);
+}
+
+Label {
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    rotate: -135deg;
+    translate: 0 -2px;
+}
+
+.board {
+    width: 32%;
+}
+
+.bg-accent {
+    background-color: var(--accent);
+}
+
+.station {
+    border-color: var(--accent);
+    width: 12px;
+    height: 12px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+}
+
+.inactive {
+    background-color: rgb(140, 140, 140);
+    border-left-color: rgb(140, 140, 140);
+    border-right-color: rgb(140, 140, 140);
+    border-top-color: rgb(140, 140, 140);
+    border-bottom-color: rgb(140, 140, 140);
+}
+
+.line {
+    width: 56px;
+    height: 3px;
+    scale: 1.1 1;
+}
