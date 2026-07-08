@@ -106,10 +106,23 @@ namespace Metro.Trains.Routes
 
         public override void OnStateChanged()
         {
-            if (State != DriverState.Stopped || !IsInService)
-                return;
-            _stateMachine = StoppedStateMachine;
-            _time = 0;
+            switch (State, IsInService)
+            {
+                case (DriverState.Driving, false):
+                    _stateMachine = ServiceArea;
+                    _serviceArea.text = Journey switch
+                    {
+                        ServiceJourney {ToCarriageHouse: true} => ToCarriageHouse,
+                        Afk => "Üzemi terület", // valóságos ellentétben a hamissal (fake vs reality)
+                        _ => None
+                    };
+                    _time = 0;
+                    break;
+                case (DriverState.Stopped, true):
+                    _stateMachine = StoppedStateMachine;
+                    _time = 0;
+                    break;
+            }
         }
 
         public override void OnStopChanged()
@@ -130,15 +143,6 @@ namespace Metro.Trains.Routes
         {
             _destination.text = Route?.Destination.Onboard() ?? "";
             _relation.text = Route?.Relation ?? "";
-            if (IsInService)
-                return;
-            _stateMachine = ServiceArea;
-            _serviceArea.text = Journey switch
-            {
-                ServiceJourney {ToCarriageHouse: true} => ToCarriageHouse,
-                Afk => "Üzemi terület", // valóságos ellentétben a hamissal (fake vs reality)
-                _ => None
-            };
         }
 
     }
