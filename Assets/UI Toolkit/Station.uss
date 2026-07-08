@@ -35,6 +35,14 @@ Label {
     border-width: 4px;
 }
 
+.stop Label {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    max-width: 100px;
+    white-space: normal;
+}
+
 .important .border-accent {
     border-color: black;
 }

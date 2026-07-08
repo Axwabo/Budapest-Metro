@@ -56,6 +56,7 @@ namespace Metro.Stations
                 stop.EnableInClassList("important", !accent);
                 fill.EnableInClassList("bg-accent", accent);
                 stop.Q<Label>("Name").text = station.name;
+                stop.Q<Label>("Metros").text = station.Metros;
                 stops.Add(stop);
                 if (last)
                     continue;
