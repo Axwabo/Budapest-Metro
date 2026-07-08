@@ -37,11 +37,7 @@ namespace Metro
             _settings.targetTexture = _texture;
             if (theme)
                 _settings.themeStyleSheet = theme;
-            Material = new Material(parentMaterial.shader)
-            {
-                parent = parentMaterial,
-                mainTexture = _texture
-            };
+            Material = new Material(parentMaterial) {mainTexture = _texture};
             document.panelSettings = _settings;
         }
 
