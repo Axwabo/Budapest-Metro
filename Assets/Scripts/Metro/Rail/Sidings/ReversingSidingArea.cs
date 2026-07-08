@@ -6,7 +6,6 @@ using Metro.Rail.Controls;
 using Metro.Stations;
 using Metro.Trains;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Metro.Rail.Sidings
 {
@@ -27,14 +26,10 @@ namespace Metro.Rail.Sidings
         [field: SerializeField]
         public SwitchGroup TrafficSwitches { get; private set; }
 
-        [field: FormerlySerializedAs("<HouseTarget>k__BackingField")]
-        [field: FormerlySerializedAs("<ServiceTarget>k__BackingField")]
         [field: SerializeField]
         [field: Header("Service")]
         public ServiceEntryStopPoint ServiceTarget { get; private set; }
 
-        [field: FormerlySerializedAs("<HouseSwitches>k__BackingField")]
-        [field: FormerlySerializedAs("<ServiceSwitches>k__BackingField")]
         [field: SerializeField]
         public SwitchGroup ServiceSwitches { get; private set; }
 

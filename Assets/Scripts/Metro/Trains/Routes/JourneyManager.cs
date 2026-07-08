@@ -4,7 +4,6 @@ using Metro.Journeys.Routes;
 using Metro.Rail.Controls;
 using Metro.Trains.Driving;
 using UnityEngine;
-using UnityEngine.Serialization;
 using static Metro.Journeys.IJourney;
 
 #nullable enable
@@ -15,12 +14,9 @@ namespace Metro.Trains.Routes
     public sealed class JourneyManager : AssemblyComponent
     {
 
-        [FormerlySerializedAs("<Route>k__BackingField")]
-        [FormerlySerializedAs("<Current>k__BackingField")]
         [SerializeField]
         private RouteDescriptor? initialRoute;
 
-        [field: FormerlySerializedAs("initialStopIndex")]
         [field: SerializeField]
         [field: Min(Origin)]
         public int InitialStopIndex { get; set; } = Origin;
