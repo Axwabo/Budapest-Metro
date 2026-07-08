@@ -51,7 +51,7 @@ namespace Metro.Stations
                 var stop = stationTemplate.CloneTree();
                 var fill = stop.Q("Fill");
                 stop.EnableInClassList("inactive", inactive);
-                fill.EnableInClassList("bg-accent", i == 0 || last || !string.IsNullOrEmpty(_station.ID.Metros));
+                fill.EnableInClassList("bg-accent", i != 0 && !last && string.IsNullOrEmpty(_station.ID.Metros));
                 stop.Q<Label>("Name").text = station.name;
                 stops.Add(stop);
                 if (last)
