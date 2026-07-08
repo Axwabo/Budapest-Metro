@@ -15,7 +15,7 @@ MonoBehaviour:
   <Relation>k__BackingField: {fileID: 11400000, guid: 25d58d3380b5908f083ad1bbebfad3f1, type: 2}
   <Forehead>k__BackingField: 
   <Onboard>k__BackingField: 
-  <Metros>k__BackingField: 
+  <Metros>k__BackingField: M3
   <Railways>k__BackingField: 0
   <RegionalBuses>k__BackingField: 0
   <Trams>k__BackingField: 47 49
