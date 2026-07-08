@@ -22,7 +22,7 @@ namespace Metro.Journeys.Routes
 
         public RouteDescriptor Descriptor { get; }
 
-        public string Relation => Descriptor.Relation;
+        public string Relation => Descriptor.Relation.Line;
 
         public Stop Origin { get; }
 

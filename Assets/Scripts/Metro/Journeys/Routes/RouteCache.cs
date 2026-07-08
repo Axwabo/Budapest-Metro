@@ -19,8 +19,9 @@ namespace Metro.Journeys.Routes
         {
             foreach (var descriptor in Resources.LoadAll<RouteDescriptor>("Journeys"))
             {
-                if (!Routes.TryGetValue(descriptor.Relation, out var directions))
-                    directions = Routes[descriptor.Relation] = new Dictionary<string, Route[]>();
+                var line = descriptor.Relation.Line;
+                if (!Routes.TryGetValue(line, out var directions))
+                    directions = Routes[line] = new Dictionary<string, Route[]>();
                 directions[descriptor.Destination] = CreateRoutes(descriptor);
             }
         }
@@ -66,7 +67,7 @@ namespace Metro.Journeys.Routes
         }
 
         public static ReadOnlySpan<Route> GetRoutes(this RouteDescriptor descriptor)
-            => Routes.TryGetValue(descriptor.Relation, out var directions)
+            => Routes.TryGetValue(descriptor.Relation.Line, out var directions)
                && directions.TryGetValue(descriptor.Destination, out var routes)
                 ? routes
                 : ReadOnlySpan<Route>.Empty;

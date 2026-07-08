@@ -1,4 +1,5 @@
 using Metro.Audio;
+using Metro.Stations;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -17,7 +18,7 @@ namespace Metro.Journeys.Routes
         public TextAsset Departures { get; private set; }
 
         [field: SerializeField]
-        public string Relation { get; private set; }
+        public Relation Relation { get; private set; }
 
         [field: SerializeField]
         public bool Reverse { get; private set; }

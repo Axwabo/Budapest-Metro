@@ -32,7 +32,8 @@ namespace Metro.Stations
         {
             var root = document.rootVisualElement;
             root.Q<Label>("Current").text = _station.name;
-            root.RegisterCallbackOnce<GeometryChangedEvent>(_ => _done = true);
+            root.customStyle. // this sucks
+                root.RegisterCallbackOnce<GeometryChangedEvent>(_ => _done = true);
         }
 
         private void Update()

@@ -14,12 +14,17 @@ namespace Metro.Stations
         private static readonly Dictionary<string, Station> LoadedStations = new();
 
         [field: SerializeField]
+        public StationId ID { get; private set; }
+
+        [field: SerializeField]
+        [field: Header("Tracks")]
         public StationTrack Left { get; private set; }
 
         [field: SerializeField]
         public StationTrack Right { get; private set; }
 
         [SerializeField]
+        [Header("Auto-size")]
         private Transform platform;
 
         [SerializeField]

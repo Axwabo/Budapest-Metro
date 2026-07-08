@@ -1,34 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/Station.uss?fileID=7433441132597879392&amp;guid=d0cc5f48f8eefdcd1857f679bfd51862&amp;type=3#Station" />
-    <ui:VisualElement style="flex-grow: 1; flex-direction: row; -unity-text-align: middle-center;">
-        <ui:VisualElement class="board" style="background-color: rgb(255, 255, 255); flex-direction: row; justify-content: center; align-items: center; font-size: 10px;">
-            <ui:VisualElement class="station">
-                <ui:Label name="Name" text="Keleti pályaudvar" style="position: absolute; translate: -50% 0; -unity-text-align: upper-center; max-width: 64px; white-space: normal; top: 10px;" />
-            </ui:VisualElement>
-            <ui:VisualElement class="line bg-accent" />
-            <ui:VisualElement class="station">
-                <ui:Label name="Name" text="II. János Pál pápa tér" style="position: absolute; translate: -50% 0; -unity-text-align: upper-center; max-width: 64px; white-space: normal; top: 10px;" />
-            </ui:VisualElement>
-            <ui:VisualElement class="line bg-accent" />
-        </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 1;" />
-        <ui:VisualElement class="board" style="background-color: rgb(255, 255, 255);">
-            <ui:VisualElement name="OtherSide" class="display-none" style="flex-grow: 1; flex-direction: row; justify-content: center;">
-                <ui:Label text="⛔" style="font-size: 72px; margin-right: 20px;" />
-                <ui:VisualElement style="justify-content: center;">
-                    <ui:Label text="Beszállás a másik oldalon" style="font-size: 44px;" />
-                    <ui:Label text="Please board on the other side" style="font-size: 32px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="Direction" style="flex-grow: 1; font-size: 48px; flex-direction: row; justify-content: center;">
-                <ui:Label text="↗" class="left" style="font-size: 50px;" />
-                <ui:Label text="Kelenföld vasútállomás" name="Station" style="margin-left: 20px;" />
-            </ui:VisualElement>
-        </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 1;" />
-        <ui:VisualElement class="board" style="background-color: rgb(0, 0, 0);">
-            <ui:VisualElement class="bg-accent" style="height: 5px;" />
-            <ui:Label text="Szent Gellért tér - Műegyetem" name="Current" style="color: rgb(255, 255, 255); flex-grow: 1; font-size: 40px;" />
-        </ui:VisualElement>
+    <ui:VisualElement class="station">
+        <ui:Label name="Name" style="position: absolute; translate: -50% 0; -unity-text-align: upper-center; max-width: 64px; white-space: normal; top: 10px;" />
     </ui:VisualElement>
 </ui:UXML>
