@@ -107,7 +107,7 @@ namespace Metro.Trains.Driving
                 return;
             var axle = FrontAxle;
             var brakingDistance = Motor.BrakingDistance + (Motor.Reverse ? Parent.PrimaryCar.BackAxleOffset : Parent.PrimaryCar.FrontAxleOffset);
-            if (ShouldSlowDown(axle, brakingDistance))
+            if (Motor.TargetSpeed >= Constants.SlowMps && ShouldSlowDown(axle, brakingDistance))
             {
                 Motor.TargetSpeed = Constants.SlowMps;
                 return;
