@@ -33,7 +33,7 @@ namespace Metro.Audio
 
         private float _delay;
 
-        private bool _serviceAreaPlayed;
+        private bool _serviceAreaPlayed = true;
 
         private bool? _wasInService;
 

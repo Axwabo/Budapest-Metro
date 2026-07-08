@@ -1819,6 +1819,53 @@ MonoBehaviour:
     isLeft: 1
   - switch: {fileID: 1522779601}
     isLeft: 1
+--- !u!1 &200278720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 200278721}
+  - component: {fileID: 200278722}
+  m_Layer: 0
+  m_Name: To Traffic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &200278721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200278720}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 646608023}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &200278722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200278720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a4f242b9df4b8792dd81fe6717aea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.SwitchGroup
+  switches:
+  - switch: {fileID: 578217708}
+    isLeft: 1
 --- !u!1 &205992942
 GameObject:
   m_ObjectHideFlags: 0
@@ -5698,8 +5745,6 @@ MonoBehaviour:
     isLeft: 0
   - switch: {fileID: 1409320369}
     isLeft: 1
-  - switch: {fileID: 578217708}
-    isLeft: 1
 --- !u!1 &571225259
 GameObject:
   m_ObjectHideFlags: 0
@@ -6448,6 +6493,7 @@ MonoBehaviour:
   - {fileID: 1486852090}
   <Reverse>k__BackingField: 1
   <Route>k__BackingField: {fileID: 11400000, guid: c247045756936f3ba823a179f8d30068, type: 2}
+  <TrafficSwitches>k__BackingField: {fileID: 0}
   <ServiceTarget>k__BackingField: {fileID: 1292886322}
   <ServiceSwitches>k__BackingField: {fileID: 0}
 --- !u!1 &638664720
@@ -6625,6 +6671,7 @@ Transform:
   - {fileID: 1722355409}
   - {fileID: 560432680}
   - {fileID: 800324675}
+  - {fileID: 200278721}
   m_Father: {fileID: 1821383470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &646608024
@@ -6644,6 +6691,7 @@ MonoBehaviour:
   - {fileID: 181202788}
   <Reverse>k__BackingField: 0
   <Route>k__BackingField: {fileID: 11400000, guid: 7b48e86efdad1f7e7ad7daae5529dbc9, type: 2}
+  <TrafficSwitches>k__BackingField: {fileID: 200278722}
   <ServiceTarget>k__BackingField: {fileID: 170854483}
   <ServiceSwitches>k__BackingField: {fileID: 800324676}
 --- !u!1001 &647900859
@@ -7683,7 +7731,7 @@ GameObject:
   - component: {fileID: 800324675}
   - component: {fileID: 800324676}
   m_Layer: 0
-  m_Name: Exit
+  m_Name: To House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10306,6 +10354,7 @@ MonoBehaviour:
   - {fileID: 979653618}
   <Reverse>k__BackingField: 1
   <Route>k__BackingField: {fileID: 0}
+  <TrafficSwitches>k__BackingField: {fileID: 0}
   <ServiceTarget>k__BackingField: {fileID: 967904682}
   <ServiceSwitches>k__BackingField: {fileID: 0}
 --- !u!114 &1350155974
@@ -13212,8 +13261,6 @@ MonoBehaviour:
   - switch: {fileID: 1383113257}
     isLeft: 1
   - switch: {fileID: 873635394}
-    isLeft: 1
-  - switch: {fileID: 578217708}
     isLeft: 1
 --- !u!1 &1767763855
 GameObject:

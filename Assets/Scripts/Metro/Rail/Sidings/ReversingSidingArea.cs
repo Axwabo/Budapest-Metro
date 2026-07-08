@@ -21,11 +21,16 @@ namespace Metro.Rail.Sidings
         public bool Reverse { get; private set; }
 
         [field: SerializeField]
+        [field: Header("Traffic")]
         public RouteDescriptor Route { get; private set; }
+
+        [field: SerializeField]
+        public SwitchGroup TrafficSwitches { get; private set; }
 
         [field: FormerlySerializedAs("<HouseTarget>k__BackingField")]
         [field: FormerlySerializedAs("<ServiceTarget>k__BackingField")]
         [field: SerializeField]
+        [field: Header("Service")]
         public ServiceEntryStopPoint ServiceTarget { get; private set; }
 
         [field: FormerlySerializedAs("<HouseSwitches>k__BackingField")]
@@ -77,16 +82,21 @@ namespace Metro.Rail.Sidings
             {
                 foreach (var siding in sidings)
                     if (siding.Exit(assembly))
-                        return true;
+                        return Activate(TrafficSwitches);
                 return false;
             }
 
-            if (ServiceSwitches)
-                ServiceSwitches.Activate();
             foreach (var siding in sidings)
                 if (siding.Exit(assembly))
-                    return true;
+                    return Activate(ServiceSwitches);
             return false;
+        }
+
+        private static bool Activate(SwitchGroup group)
+        {
+            if (group)
+                group.Activate();
+            return true;
         }
 
         public void NotifyArrived(MetroAssembly assembly) => CarriageHouse.NotifyArrived(assembly, this);
