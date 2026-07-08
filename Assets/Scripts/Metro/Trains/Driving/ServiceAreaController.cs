@@ -11,7 +11,7 @@ namespace Metro.Trains.Driving
         {
             switch (State, JourneyManager.Target)
             {
-                case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area, TracksClear: true}):
+                case (DriverState.WaitingForDeparture, ServiceEntryStopPoint {Area: var area, TracksClear: true}) when Driver.IsOnTargetTrack:
                     area.Enter(Parent);
                     break;
                 case (DriverState.Driving, _) when Journey is EnteringJourney {Next: var next} && Driver.IsOnTargetTrack:

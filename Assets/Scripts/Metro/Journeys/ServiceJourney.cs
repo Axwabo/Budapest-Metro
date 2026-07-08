@@ -11,8 +11,8 @@ namespace Metro.Journeys
 
         public ServiceJourney(ServiceAreaPointBase target, ReversingSidingArea origin)
         {
-            Origin = origin;
             _target = target;
+            Origin = origin;
         }
 
         public ReversingSidingArea Origin { get; }
