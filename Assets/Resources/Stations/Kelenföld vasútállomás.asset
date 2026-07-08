@@ -15,6 +15,7 @@ MonoBehaviour:
   <Relation>k__BackingField: {fileID: 11400000, guid: 25d58d3380b5908f083ad1bbebfad3f1, type: 2}
   <Forehead>k__BackingField: "Kelenf\xF6ld v\xE1."
   <Onboard>k__BackingField: "Kelenf\xF6ld vas\xFAt\xE1ll."
+  <StationTime>k__BackingField: "Kelenf\xF6ld v."
   <Metros>k__BackingField: 
   <Railways>k__BackingField: 1
   <RegionalBuses>k__BackingField: 1

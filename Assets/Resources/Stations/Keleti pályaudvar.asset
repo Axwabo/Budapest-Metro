@@ -15,6 +15,7 @@ MonoBehaviour:
   <Relation>k__BackingField: {fileID: 11400000, guid: 25d58d3380b5908f083ad1bbebfad3f1, type: 2}
   <Forehead>k__BackingField: 
   <Onboard>k__BackingField: Keleti pu.
+  <StationTime>k__BackingField: Keleti pu.
   <Metros>k__BackingField: M2
   <Railways>k__BackingField: 1
   <RegionalBuses>k__BackingField: 0

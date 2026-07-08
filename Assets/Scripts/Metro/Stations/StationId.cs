@@ -16,6 +16,9 @@ namespace Metro.Stations
         [field: SerializeField]
         public string Onboard { get; private set; }
 
+        [field: SerializeField]
+        public string StationTime { get; private set; }
+
         [field: Header("Transfers")]
         [field: SerializeField]
         public string Metros { get; private set; }

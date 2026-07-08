@@ -1,0 +1,17 @@
+:root {
+    --color: rgb(231 244 71);
+    color: var(--color);
+}
+
+Label {
+    margin: 0;
+    padding: 0;
+}
+
+#Bar {
+    background-color: var(--color);
+}
+
+.border {
+    border-color: var(--color);
+}
