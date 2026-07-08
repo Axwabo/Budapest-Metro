@@ -35,10 +35,6 @@ Label {
     border-width: 4px;
 }
 
-#Fill {
-    background-color: white;
-}
-
 .inactive .border-accent {
     border-color: rgb(140, 140, 140);
 }
