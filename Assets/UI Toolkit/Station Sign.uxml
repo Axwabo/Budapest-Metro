@@ -2,11 +2,11 @@
     <Style src="project://database/Assets/UI%20Toolkit/Station.uss?fileID=7433441132597879392&amp;guid=d0cc5f48f8eefdcd1857f679bfd51862&amp;type=3#Station" />
     <ui:VisualElement style="flex-grow: 1; flex-direction: row; -unity-text-align: middle-center; background-color: rgb(255, 255, 255);">
         <ui:VisualElement class="board border-accent">
-            <ui:VisualElement name="OtherSide" class="display-none" style="flex-grow: 1; flex-direction: row; justify-content: center;">
+            <ui:VisualElement name="OtherSide" class="display-none" style="flex-grow: 1; flex-direction: row; justify-content: flex-start;">
                 <ui:Label text="⛔" style="font-size: 128px; margin-right: 40px;" />
-                <ui:VisualElement style="justify-content: center;">
-                    <ui:Label text="Beszállás a másik oldalon" style="font-size: 64px;" />
-                    <ui:Label text="Please board on the other side" style="font-size: 48px;" />
+                <ui:VisualElement style="justify-content: center; font-size: 56px; -unity-text-align: middle-left;">
+                    <ui:Label text="Beszállás a másik oldalon" style="-unity-font-style: bold;" />
+                    <ui:Label text="Please board on the opposite side" style="-unity-font-style: italic;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Direction" class="display-none" style="flex-grow: 1; font-size: 72px; flex-direction: row;">
