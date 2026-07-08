@@ -49,10 +49,12 @@ namespace Metro.Stations
                 var station = stations[i];
                 if (station == _station.ID)
                     inactive = false;
+                var accent = i != 0 && !last && string.IsNullOrEmpty(station.Metros);
                 var stop = stationTemplate.CloneTree();
                 var fill = stop.Q("Fill");
                 stop.EnableInClassList("inactive", inactive);
-                fill.EnableInClassList("bg-accent", i != 0 && !last && string.IsNullOrEmpty(station.Metros));
+                stop.EnableInClassList("important", !accent);
+                fill.EnableInClassList("bg-accent", accent);
                 stop.Q<Label>("Name").text = station.name;
                 stops.Add(stop);
                 if (last)

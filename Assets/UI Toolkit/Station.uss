@@ -29,10 +29,14 @@ Label {
 }
 
 .stop {
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
     border-width: 4px;
+}
+
+.important .border-accent {
+    border-color: black;
 }
 
 .inactive .border-accent {
@@ -46,5 +50,5 @@ Label {
 .line {
     width: 100px;
     height: 6px;
-    scale: 1.05 1;
+    scale: 1.003 1;
 }
