@@ -16,7 +16,7 @@ Label {
     background-color: var(--accent);
 }
 
-.station {
+.stop {
     border-color: var(--accent);
     width: 12px;
     height: 12px;
@@ -25,8 +25,11 @@ Label {
 }
 
 .inactive {
-    background-color: rgb(140, 140, 140);
     border-color: rgb(140, 140, 140);
+}
+
+.inactive.bg-accent {
+    background-color: rgb(140, 140, 140);
 }
 
 .line {

@@ -14,6 +14,9 @@ namespace Metro.Stations
         private UIDocument document;
 
         [SerializeField]
+        private VisualTreeAsset stationTemplate;
+
+        [SerializeField]
         private RenderMaterial material;
 
         [SerializeField]
@@ -36,15 +39,39 @@ namespace Metro.Stations
             var root = document.rootVisualElement;
             root.Q<Label>("Current").text = _station.name;
             root.RegisterCallbackOnce<GeometryChangedEvent>(_ => _done = true);
+            var stops = root.Q("Stops");
             var stations = reverse ? _station.ID.Relation.Reverse : _station.ID.Relation.Forwards;
-            if (_station.ID == stations[^1])
-                root.Q("OtherSide").Display();
-            else
+            var inactive = true;
+            for (var i = 0; i < stations.Length; i++)
             {
-                var directiohn = root.Q("Direction");
-                directiohn.Display();
-                directiohn.Q<Label>("Name").text = stations[^1].name;
+                var station = stations[i];
+                var current = station == _station.ID;
+                if (current)
+                    inactive = false;
+                var stop = stationTemplate.CloneTree();
+                var fill = stop.Q("Fill");
+                fill.EnableInClassList("inactive", inactive);
+                fill.EnableInClassList("bg-accent", current);
+                stop.Q<Label>("Name").text = station.name;
+                stops.Add(stop);
+                if (i >= stations.Length - 1)
+                    continue;
+                var line = new VisualElement();
+                line.AddToClassList("line");
+                line.AddToClassList("bg-accent");
+                line.EnableInClassList("inactive", inactive);
+                stops.Add(line);
             }
+
+            if (_station.ID == stations[^1])
+            {
+                root.Q("OtherSide").Display();
+                return;
+            }
+
+            var directiohn = root.Q("Direction");
+            directiohn.Display();
+            directiohn.Q<Label>("Name").text = stations[^1].name;
         }
 
         private void Update()
