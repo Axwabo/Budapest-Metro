@@ -26,8 +26,6 @@ namespace Metro.Movement
 
         private Vector3 _desiredMove;
 
-        private bool _lockLook;
-
         private float _pitch;
 
         private float _upwards;
@@ -66,8 +64,6 @@ namespace Metro.Movement
 
         private void OnLook(InputValue look)
         {
-            if (_lockLook)
-                return;
             var vector = look.Get<Vector2>() * sensitivity;
             Transform.Rotate(Vector3.up, vector.x);
             _pitch = Mathf.Clamp(_pitch - vector.y, -90, 90);
@@ -84,8 +80,6 @@ namespace Metro.Movement
         }
 
         private void OnJump() => _wantsToJump = true;
-
-        private void OnAttack() => _lockLook = !_lockLook;
 
     }
 
