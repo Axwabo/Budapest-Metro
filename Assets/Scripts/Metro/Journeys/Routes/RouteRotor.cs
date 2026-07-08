@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Metro.Rail;
 using Metro.Rail.Sidings;
+using Metro.Stations;
 using Metro.Trains;
 using Metro.Trains.Routes;
 using UnityEngine;
@@ -40,9 +41,10 @@ namespace Metro.Journeys.Routes
         private readonly List<JourneyManager> _reverseMetros = new();
 
         private readonly HashSet<Route> _spawnedRoutes = new();
-        private readonly HashSet<string> _spawnedStations = new();
 
         private int _spawned;
+
+        private int Max => house.Sidings.Length;
 
         private void Start() => reverse.CarriageHouse = entry.CarriageHouse = house.CarriageHouse = this;
 
@@ -61,11 +63,36 @@ namespace Metro.Journeys.Routes
 
         private void Spawn()
         {
+            Spawn(entry.Route);
+            Spawn(reverse.Route);
             Spawn(_enteryMetros, entry);
             Spawn(_reverseMetros, reverse);
             foreach (var siding in house.Sidings)
                 if (siding.UsedBy.Count == 0)
                     Spawn(_housedMetros, siding);
+        }
+
+        private void Spawn(RouteDescriptor descriptor)
+        {
+            var now = Clock.Now - StopTimeThreshold;
+            foreach (var route in descriptor.GetRoutes())
+            {
+                if (_spawnedRoutes.Contains(route))
+                    continue;
+                for (var i = 0; i < route.IntermediateStops.Count; i++)
+                {
+                    var (stop, currentTime) = route.IntermediateStops[i];
+                    if (!Station.TryGetLoadad(stop, out var station))
+                        continue;
+                    var previousTime = i == 0 ? route.Origin.Time : route.IntermediateStops[i - 1].Time;
+                    if (previousTime < now || currentTime >= now || ++_spawned > Max)
+                        continue;
+                    var manager = Spawn(station.Track(route.Reverse)).Item1;
+                    manager.InitialJourney = route;
+                    manager.InitialStopIndex = i;
+                    _spawnedRoutes.Add(route);
+                }
+            }
         }
 
         private void Spawn(List<JourneyManager> metros, ReversingSidingArea area)
@@ -79,7 +106,7 @@ namespace Metro.Journeys.Routes
 
         private void Spawn(List<JourneyManager> metros, ReversingSiding siding)
         {
-            if (++_spawned > house.Sidings.Length)
+            if (++_spawned > Max)
                 return;
             var (manager, assembly) = Spawn(siding.StopPoint.Track);
             manager.InitialJourney = new Afk {Target = siding.StopPoint};
