@@ -12,8 +12,8 @@
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="Direction" class="display-none" style="flex-grow: 1; font-size: 48px; flex-direction: row;">
-                <ui:Label text="↗" class="left" style="font-size: 50px;" />
-                <ui:Label text="Kelenföld vasútállomás" name="Name" style="margin: 20px 0;" />
+                <ui:Label text="↗" class="left" style="font-size: 50px; margin: 0 20px;" />
+                <ui:Label text="Kelenföld vasútállomás" name="Name" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement style="flex-grow: 1;" />
