@@ -27,6 +27,8 @@ namespace Metro.Trains.Driving
 
         private DriverState _previousState;
 
+        private bool _stopping;
+
         public new DriverState State { get; private set; }
 
         public bool IsOnTargetTrack => IsTargetTrack(FrontAxle.Track);
@@ -93,6 +95,7 @@ namespace Metro.Trains.Driving
             AdjustSpeed();
             if (Motor.AbsoluteSpeed != 0 || Motor.TargetSpeed != 0)
                 return;
+            _stopping = false;
             State = DriverState.Stopped;
             if (!JourneyManager.IsOrigin)
                 _departAt = Clock.Now + TimeSpan.FromSeconds(JourneyManager.IsDestination ? Constants.DestinationStaySeconds : Constants.MinStaySeconds);
@@ -107,8 +110,9 @@ namespace Metro.Trains.Driving
                 return;
             var axle = FrontAxle;
             var brakingDistance = Motor.BrakingDistance + (Motor.Reverse ? Parent.PrimaryCar.BackAxleOffset : Parent.PrimaryCar.FrontAxleOffset);
-            if (Motor.TargetSpeed >= Constants.SlowMps && ShouldSlowDown(axle, brakingDistance))
+            if (!_stopping && ShouldSlowDown(axle, brakingDistance))
             {
+                _stopping = true;
                 Motor.TargetSpeed = Constants.SlowMps;
                 return;
             }
