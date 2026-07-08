@@ -60,15 +60,16 @@ namespace Metro.Trains.Routes
             _index = journey is Route ? index : OutOfService;
             Current = journey;
             Route = journey as Route;
-            Parent.NotifyJourneyChanged();
-            UpdateTarget(_index);
+            UpdateTarget(_index, true);
         }
 
-        private void UpdateTarget(int index)
+        private void UpdateTarget(int index, bool journeyChanged = false)
         {
             var current = Stop;
             _index = index;
             (Target, Stop) = Current.GetTarget(index);
+            if (journeyChanged)
+                Parent.NotifyJourneyChanged();
             Parent.NotifyTargetChanged();
             if (current != Stop)
                 Parent.NotifyStopChanged();
