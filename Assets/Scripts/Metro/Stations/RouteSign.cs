@@ -1,4 +1,5 @@
 using System;
+using Metro.Journeys;
 using Metro.Journeys.Routes;
 using Metro.Rail;
 using UnityEngine;
@@ -31,7 +32,7 @@ namespace Metro.Stations
 
         private float _delay;
 
-        private int _index;
+        private int _index = -1;
 
         private Label _minutes;
 
@@ -49,7 +50,7 @@ namespace Metro.Stations
                 var now = Clock.Now;
                 foreach (var route in descriptor.GetRoutes())
                 {
-                    var delta = route.IntermediateStops[_index].Time - now;
+                    var delta = Stop(route).Time - now;
                     if (delta >= TimeSpan.Zero && delta <= TimeSpan.FromMinutes(30))
                         return route;
                 }
@@ -92,6 +93,8 @@ namespace Metro.Stations
             _seconds = root.Q<Label>("Seconds");
             _bar = root.Q("Bar");
             _track = station.Track(descriptor.Reverse);
+            if (_index == -1)
+                root.Q<Label>("Description").text = "Várható indulási idő:";
         }
 
         private void Update()
@@ -101,6 +104,8 @@ namespace Metro.Stations
             _delay = 7; // or something like that, idrk
             UpdateDisplay();
         }
+
+        private Stop Stop(Route route) => _index == -1 ? route.Origin : route.IntermediateStops[_index];
 
         private void UpdateDisplay()
         {
@@ -115,7 +120,7 @@ namespace Metro.Stations
             _route ??= NextRoute;
             if (_route == null)
                 return;
-            var delta = _route.IntermediateStops[_index].Time - Clock.Now;
+            var delta = Stop(_route).Time - Clock.Now;
             if (delta < TimeSpan.Zero)
                 delta = TimeSpan.Zero;
             _minutes.text = delta.Minutes.ToString("00");
