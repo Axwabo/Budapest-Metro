@@ -36,7 +36,7 @@ namespace Metro.Rail.Sidings
             @in.Activate();
             UsedBy.Add(assembly);
             Area.PassingThrough.Add(assembly);
-            if (assembly.JourneyManager.Target == _entry.GetTarget(IJourney.OutOfService).Target)
+            if (assembly.JourneyManager.Journey is ServiceJourney)
                 return true;
             assembly.JourneyManager.Begin(_entry);
             assembly.Driver.MarkReadyNow();
