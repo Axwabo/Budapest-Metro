@@ -14,15 +14,16 @@
                 <ui:Label text="Kelenföld vasútállomás" name="Name" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 1;" />
+        <ui:VisualElement class="separator" />
         <ui:VisualElement class="board border-accent" style="background-color: rgb(0, 0, 0);">
             <ui:Label text="Szent Gellért tér - Műegyetem" name="Current" style="color: rgb(255, 255, 255); flex-grow: 1; font-size: 72px;" />
         </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 1;" />
+        <ui:VisualElement class="separator" />
         <ui:VisualElement name="Stops" class="board" style="flex-direction: row-reverse; justify-content: center; align-items: center; font-size: 20px;" />
-        <ui:VisualElement style="flex-grow: 1;" />
+        <ui:VisualElement class="separator" />
         <ui:VisualElement class="board border-accent" style="background-color: rgb(0, 0, 0);">
             <ui:Label text="Szent Gellért tér - Műegyetem" name="Current" style="color: rgb(255, 255, 255); flex-grow: 1; font-size: 72px;" />
         </ui:VisualElement>
+        <ui:VisualElement class="separator" />
     </ui:VisualElement>
 </ui:UXML>

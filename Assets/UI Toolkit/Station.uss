@@ -8,8 +8,12 @@ Label {
     translate: 0 -2px;
 }
 
+.separator {
+    flex-grow: 1;
+}
+
 .board {
-    width: 23%;
+    width: 22%;
 }
 
 .bg-accent {
@@ -25,13 +29,13 @@ Label {
 }
 
 .stop {
-    width: 12px;
-    height: 12px;
-    border-radius: 6px;
-    border-width: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    border-width: 6px;
 }
 
-.border-accent.inactive {
+.inactive .border-accent {
     border-color: rgb(140, 140, 140);
 }
 
@@ -40,7 +44,7 @@ Label {
 }
 
 .line {
-    width: 80px;
-    height: 3px;
-    scale: 1.1 1;
+    width: 140px;
+    height: 6px;
+    scale: 1.05 1;
 }
