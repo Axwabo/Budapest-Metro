@@ -335,6 +335,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3727201132112062455}
+  - component: {fileID: 7537427527029433602}
+  - component: {fileID: 8879873209163752015}
   m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
@@ -360,8 +362,52 @@ Transform:
   - {fileID: 3048824711556643119}
   - {fileID: 8887479000271287882}
   - {fileID: 5175295206465572989}
+  - {fileID: 826077285380413682}
   m_Father: {fileID: 4044997385528384409}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7537427527029433602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3273191608264927181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c438606077244adafc99268598c0667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.StationSigns
+  document: {fileID: 8879873209163752015}
+  material:
+    width: 2250
+    height: 100
+    parentMaterial: {fileID: 2100000, guid: ece7f7ca8edcf5fadb11338c87cca906, type: 2}
+    settingsReference: {fileID: 11400000, guid: 6ddc7b53d95a2d1a39c9d760fdeeb104, type: 2}
+  renderers:
+  - {fileID: 3546183628869174308}
+--- !u!114 &8879873209163752015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3273191608264927181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 0}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: a96c9c568001bd0f58f602d72d9ba5cb, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
 --- !u!1 &3427618337539234215
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.TrackOccupationChanger
   <Track>k__BackingField: {fileID: 5451736466235538789}
-  <Distance>k__BackingField: 0.000059604645
+  <Distance>k__BackingField: 0.000059604637
   <Reverse>k__BackingField: 0
   free: 0
 --- !u!1 &3502792920430162063
@@ -672,7 +718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.StopPoint
   <Track>k__BackingField: {fileID: 3403368601219536001}
-  <Distance>k__BackingField: 0
+  <Distance>k__BackingField: 0.00003814697
   <Reverse>k__BackingField: 1
 --- !u!114 &2301761229045101827
 MonoBehaviour:
@@ -738,6 +784,96 @@ MonoBehaviour:
   <Distance>k__BackingField: 79.89991
   <Reverse>k__BackingField: 1
   free: 0
+--- !u!1 &6670416322200702647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 826077285380413682}
+  - component: {fileID: 6656908213314315213}
+  - component: {fileID: 3546183628869174308}
+  m_Layer: 0
+  m_Name: Signs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &826077285380413682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6670416322200702647}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalScale: {x: 22.5, y: 1, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3727201132112062455}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!33 &6656908213314315213
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6670416322200702647}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3546183628869174308
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6670416322200702647}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ece7f7ca8edcf5fadb11338c87cca906, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7333328333677013609
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.StopPoint
   <Track>k__BackingField: {fileID: 5451736466235538789}
-  <Distance>k__BackingField: 79.9
+  <Distance>k__BackingField: 79.899925
   <Reverse>k__BackingField: 0
 --- !u!114 &7336609900697272932
 MonoBehaviour:
@@ -799,7 +935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.TrackOccupationChanger
   <Track>k__BackingField: {fileID: 5451736466235538789}
-  <Distance>k__BackingField: 79.89993
+  <Distance>k__BackingField: 79.899925
   <Reverse>k__BackingField: 0
   free: 1
 --- !u!1 &8161380490943532378

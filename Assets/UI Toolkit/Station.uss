@@ -24,22 +24,13 @@ Label {
     border-color: var(--accent);
     width: 12px;
     height: 12px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-top-width: 3px;
-    border-right-width: 3px;
-    border-bottom-width: 3px;
-    border-left-width: 3px;
+    border-radius: 6px;
+    border-width: 3px;
 }
 
 .inactive {
     background-color: rgb(140, 140, 140);
-    border-left-color: rgb(140, 140, 140);
-    border-right-color: rgb(140, 140, 140);
-    border-top-color: rgb(140, 140, 140);
-    border-bottom-color: rgb(140, 140, 140);
+    border-color: rgb(140, 140, 140);
 }
 
 .line {

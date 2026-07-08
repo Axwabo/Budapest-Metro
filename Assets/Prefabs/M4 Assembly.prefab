@@ -108,11 +108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc80930797844c6b442b508c751b646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Routes.OnboardDisplayRenderer
-  width: 800
-  height: 100
-  parentMaterial: {fileID: 2100000, guid: a87b69b44b5005df39d8f5b53c306571, type: 2}
-  settingsReference: {fileID: 11400000, guid: 6ddc7b53d95a2d1a39c9d760fdeeb104, type: 2}
   document: {fileID: 5273456485205096212}
+  material:
+    width: 800
+    height: 100
+    parentMaterial: {fileID: 2100000, guid: a87b69b44b5005df39d8f5b53c306571, type: 2}
+    settingsReference: {fileID: 11400000, guid: 6ddc7b53d95a2d1a39c9d760fdeeb104, type: 2}
 --- !u!114 &5273456485205096212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,11 +182,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9a781d5d8b461ba8d0502065bd0e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Routes.OnboardDisplayRenderer
-  width: 1000
-  height: 200
-  parentMaterial: {fileID: 2100000, guid: 8948d7838d6ff2d5797a6b78fd6297c1, type: 2}
-  settingsReference: {fileID: 11400000, guid: 6ddc7b53d95a2d1a39c9d760fdeeb104, type: 2}
   document: {fileID: 8487047778774462085}
+  material:
+    width: 1000
+    height: 200
+    parentMaterial: {fileID: 2100000, guid: 8948d7838d6ff2d5797a6b78fd6297c1, type: 2}
+    settingsReference: {fileID: 11400000, guid: 6ddc7b53d95a2d1a39c9d760fdeeb104, type: 2}
 --- !u!114 &8487047778774462085
 MonoBehaviour:
   m_ObjectHideFlags: 0

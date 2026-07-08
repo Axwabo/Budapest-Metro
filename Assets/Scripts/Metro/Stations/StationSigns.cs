@@ -1,11 +1,9 @@
-using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Metro.Stations
 {
 
-    [RequireComponent(typeof(Station))]
     public sealed class StationSigns : MonoBehaviour
     {
 
@@ -13,23 +11,27 @@ namespace Metro.Stations
         private UIDocument document;
 
         [SerializeField]
-        private int width;
+        private RenderMaterial material;
 
         [SerializeField]
-        private int height;
-
-        [SerializeField]
-        private Material parentMaterial;
+        private MeshRenderer[] renderers;
 
         private bool _done;
 
-        private Material _material;
+        private Station _station;
 
-        private RenderTexture _texture;
+        private void Awake()
+        {
+            _station = GetComponentInParent<Station>();
+            material.Init(name, document);
+            foreach (var meshRenderer in renderers)
+                meshRenderer.sharedMaterial = material.Material;
+        }
 
         private void Start()
         {
-            throw new NotImplementedException();
+            var root = document.rootVisualElement;
+            root.Q<Label>("Name").text = _station.name;
         }
 
         private void LateUpdate()
@@ -40,11 +42,7 @@ namespace Metro.Stations
                 _done = true;
         }
 
-        private void OnDestroy()
-        {
-            _texture.Release();
-            Destroy(_texture);
-        }
+        private void OnDestroy() => material.Destroy();
 
         private void Dispose()
         {
