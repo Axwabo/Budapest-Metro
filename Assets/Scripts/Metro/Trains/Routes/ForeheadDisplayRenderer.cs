@@ -22,7 +22,7 @@ namespace Metro.Trains.Routes
         public override void OnStateChanged()
         {
             if (State == DriverState.Driving && !IsInService && Journey is not Afk)
-                _label.text = "-";
+                _label.text = Journey is ServiceJourney {ToCarriageHouse: true} ? ToCarriageHouse : None;
         }
 
     }

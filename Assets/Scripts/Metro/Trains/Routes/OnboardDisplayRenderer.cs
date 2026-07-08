@@ -1,4 +1,5 @@
 using System;
+using Metro.Journeys;
 using Metro.Stations;
 using Metro.Trains.Driving;
 using UnityEngine.UIElements;
@@ -26,7 +27,7 @@ namespace Metro.Trains.Routes
 
         private DisplaySection _section;
 
-        private VisualElement _serviceArea;
+        private Label _serviceArea;
 
         private SectionStateMachine _stateMachine = ServiceArea;
 
@@ -99,7 +100,7 @@ namespace Metro.Trains.Routes
             _clock = root.Q<Label>("Clock");
             _terminus = root.Q("Terminus");
             _transfers = root.Q("Transfers");
-            _serviceArea = root.Q("ServiceArea");
+            _serviceArea = root.Q<Label>("ServiceArea");
             _transfersDisplay = new TransfersDisplay(_transfers);
         }
 
@@ -129,8 +130,15 @@ namespace Metro.Trains.Routes
         {
             _destination.text = Route?.Destination.Onboard() ?? "";
             _relation.text = Route?.Relation ?? "";
-            if (!IsInService)
-                _stateMachine = ServiceArea;
+            if (IsInService)
+                return;
+            _stateMachine = ServiceArea;
+            _serviceArea.text = Journey switch
+            {
+                ServiceJourney {ToCarriageHouse: true} => ToCarriageHouse,
+                Afk => "Üzemi terület", // valóságos ellentétben a hamissal (fake vs reality)
+                _ => None
+            };
         }
 
     }

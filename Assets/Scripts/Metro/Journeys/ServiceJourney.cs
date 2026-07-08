@@ -10,6 +10,8 @@ namespace Metro.Journeys
 
         public ServiceJourney(ServiceAreaPointBase target) => _target = target;
 
+        public bool ToCarriageHouse { get; set; }
+
         public bool Reverse => _target.Area.Reverse;
 
         public (StopPoint Target, Stop Stop) GetTarget(int stopIndex) => (_target, null);

@@ -7,6 +7,9 @@ namespace Metro.Trains.Routes
     public abstract class DisplayRendererBase : AssemblyComponent
     {
 
+        protected const string ToCarriageHouse = "Kocsiszínbe";
+        protected const string None = "-";
+
         [SerializeField]
         private UIDocument document;
 

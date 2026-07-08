@@ -138,13 +138,17 @@ namespace Metro.Journeys.Routes
             var metro = metros[0];
             if (!area.Exit(metro.Parent, toHouse))
                 return;
+            if (toHouse && checkRecall)
+            {
+                _recalling.Add(metro);
+                area.ServiceJourney.ToCarriageHouse = true;
+            }
+
             metro.Driver.MarkReadyNow();
             metro.Begin(toHouse ? area.ServiceJourney : new EnteringJourney(!area.Reverse, next));
             metros.Remove(metro);
             if (next != null)
                 _spawnedRoutes.Add(next);
-            if (toHouse && checkRecall)
-                _recalling.Add(metro);
         }
 
         private void Dispatch()
