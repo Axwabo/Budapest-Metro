@@ -77,7 +77,7 @@ namespace Metro.Journeys.Routes
             var now = Clock.Now - StopTimeThreshold;
             foreach (var route in descriptor.GetRoutes())
             {
-                if (_spawnedRoutes.Contains(route) || route.Origin.Time < now)
+                if (_spawnedRoutes.Contains(route) || route.Destination.Time > now)
                     continue;
                 for (var i = 0; i < route.IntermediateStops.Count; i++)
                 {
