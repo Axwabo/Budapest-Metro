@@ -13,6 +13,9 @@ namespace Metro.Journeys.Routes
     public sealed class RouteRotor : MonoBehaviour
     {
 
+        private const float ReverseDelay = 10;
+        private const float RecallDelay = 180;
+
         private static readonly TimeSpan StopTimeThreshold = TimeSpan.FromSeconds(22);
         private static readonly TimeSpan HouseToDeparture = TimeSpan.FromMinutes(4);
         private static readonly TimeSpan MaxEarlyDispatch = TimeSpan.FromMinutes(10);
@@ -56,8 +59,6 @@ namespace Metro.Journeys.Routes
             Rotate(_enteryMetros, entry);
             Rotate(_reverseMetros, reverse);
             Dispatch();
-            RecallFromReverse();
-            Recall();
         }
 
         private void Spawn()
@@ -85,24 +86,22 @@ namespace Metro.Journeys.Routes
 
         private static void Rotate(List<JourneyManager> metros, ReversingSidingArea area)
         {
-            if (area.ExitingPrevented || metros.Count == 0)
+            if (metros.Count == 0 || area.ExitingPrevented)
                 return;
-            var next = area.Route.Next(ReversingToDeparture);
-            if (next.Origin.Time > Clock.Now + MaxEarlyDispatch)
-                return;
+            var next = Next(area);
             var metro = metros[0];
-            if (!area.Exit(metro.Parent, false))
+            if (!area.Exit(metro.Parent, next == null))
                 return;
-            metro.Begin(new EnteringJourney(!area.Reverse, next));
+            metro.Begin(next != null ? new EnteringJourney(!area.Reverse, next) : area.ServiceJourney);
             metros.Remove(metro);
         }
 
         private void Dispatch()
         {
-            if (_housedMetros.Count == 0 || house.PassingThrough.Count != 0)
+            if (_housedMetros.Count == 0 || house.ExitingPrevented)
                 return;
-            var next = entry.Route.Next(HouseToDeparture);
-            if (next == _lastDispatched || next.Origin.Time < Clock.Now + MaxEarlyDispatch)
+            var next = entry.Route.Next(HouseToDeparture, MaxEarlyDispatch);
+            if (next == null || next == _lastDispatched)
                 return;
             foreach (var manager in _housedMetros)
             {
@@ -116,35 +115,6 @@ namespace Metro.Journeys.Routes
             }
         }
 
-        private void RecallFromReverse()
-        {
-            if (_reverseMetros.Count == 0 || reverse.ExitingPrevented)
-                return;
-            var next = entry.Route.Next(ReversingToDeparture);
-            if (next.Origin.Time < Clock.Now + MaxEarlyDispatch)
-                return;
-            var metro = _reverseMetros[0];
-            if (!reverse.Exit(metro.Parent, true))
-                return;
-            metro.Begin(reverse.ServiceJourney);
-            _reverseMetros.Remove(metro);
-        }
-
-        private void Recall()
-        {
-            if (_enteryMetros.Count == 0 || entry.ExitingPrevented)
-                return;
-            var next = entry.Route.Next(ReversingToDeparture);
-            if (next.Origin.Time < Clock.Now + MaxEarlyDispatch)
-                return;
-            var metro = _enteryMetros[0];
-            if (!entry.Exit(metro.Parent, true))
-                return;
-            // TODO: delay
-            metro.Begin(entry.ServiceJourney);
-            _enteryMetros.Remove(metro);
-        }
-
         public void NotifyArrived(MetroAssembly assembly, ReversingSidingArea area)
         {
             if (area == house)
@@ -155,14 +125,17 @@ namespace Metro.Journeys.Routes
             }
             else if (area == entry)
             {
-                assembly.Driver.MarkReady(10);
+                assembly.Driver.MarkReady(ReverseDelay);
             }
             else if (area == reverse)
             {
-                assembly.Driver.MarkReady(10);
+                var delay = Next(area) == null ? RecallDelay : ReverseDelay;
+                assembly.Driver.MarkReady(delay);
             }
             // else where tf are you???? M2 > M3?
         }
+
+        private static Route Next(ReversingSidingArea area) => area.Route.Next(ReversingToDeparture, MaxEarlyDispatch);
 
         public void NotifyReady(MetroAssembly assembly, ReversingSidingArea area)
         {

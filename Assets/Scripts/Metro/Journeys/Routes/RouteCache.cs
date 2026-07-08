@@ -68,6 +68,14 @@ namespace Metro.Journeys.Routes
 
         public static Route Next(this RouteDescriptor descriptor, TimeSpan minimumOffset = default) => descriptor.After(Clock.Now + minimumOffset);
 
+        public static Route Next(this RouteDescriptor descriptor, TimeSpan minimumOffset, TimeSpan maximumOriginOffset)
+        {
+            var next = descriptor.Next(minimumOffset);
+            return next.Origin.Time > Clock.Now + maximumOriginOffset
+                ? null
+                : next;
+        }
+
         public static Route After(this RouteDescriptor descriptor, TimeSpan after)
         {
             var routes = descriptor.GetRoutes();
