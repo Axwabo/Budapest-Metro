@@ -32,14 +32,13 @@ namespace Metro.Stations
         {
             var root = document.rootVisualElement;
             root.Q<Label>("Name").text = _station.name;
+            root.RegisterCallbackOnce<GeometryChangedEvent>(_ => _done = true);
         }
 
-        private void LateUpdate()
+        private void Update()
         {
             if (_done)
                 Dispose();
-            else
-                _done = true;
         }
 
         private void OnDestroy() => material.Destroy();
