@@ -44,8 +44,7 @@ Label {
 }
 
 .line {
-    width: 200px;
+    width: 100px;
     height: 6px;
-    scale: 0.99 1;
-    translate: 3px 0;
+    scale: 1.05 1;
 }
