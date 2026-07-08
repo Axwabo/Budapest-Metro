@@ -18,5 +18,5 @@ MonoBehaviour:
   <Railways>k__BackingField: 1
   <RegionalBuses>k__BackingField: 0
   <Trams>k__BackingField: 23 24
-  <Trolleys>k__BackingField: 73 76 79 80 980
-  <LocalBuses>k__BackingField: 5 7 7E 8E 20E 30 30A 107 108E 110 112 133E 230
+  <Trolleys>k__BackingField: 73 76 79 80
+  <LocalBuses>k__BackingField: 5 7 7E 8E 20E 30 30A 107 108E 110 112 133E 230 980
