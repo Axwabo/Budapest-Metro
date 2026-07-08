@@ -14,6 +14,8 @@ namespace Metro.Stations
 
         private const double SecondsToOnePercent = 100 / 60d;
 
+        private static readonly TimeSpan TwoMinutes = TimeSpan.FromMinutes(2);
+
         [SerializeField]
         private RouteDescriptor descriptor;
 
@@ -140,10 +142,12 @@ namespace Metro.Stations
             var delta = Stop(_route).Time - Clock.Now;
             if (delta < TimeSpan.Zero)
                 delta = TimeSpan.Zero;
-            var equals = _index == Destination && delta > TimeSpan.FromMinutes(2);
+            var equals = _index == Destination && delta > TwoMinutes;
             _minutes.text = equals ? "=" : delta.Minutes.ToString("00");
             _seconds.text = equals ? "" : delta.Seconds.ToString("00");
             _bar.style.width = Length.Percent(Mathf.Min(100, (float) (delta.TotalSeconds * SecondsToOnePercent)));
+            if (delta < -TwoMinutes)
+                _route = null; // késing/skipped
         }
 
     }
