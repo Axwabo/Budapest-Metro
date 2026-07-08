@@ -1,5 +1,6 @@
 using System;
 using Metro.Journeys.Routes;
+using Metro.Rail;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -22,16 +23,39 @@ namespace Metro.Stations
         private int _index;
 
         private Label _minutes;
+
+        private Route _route;
         private Label _seconds;
+
+        private StationTrack _track;
+
+        private bool _wasOccupied;
+
+        private Route NextRoute
+        {
+            get
+            {
+                var now = Clock.Now;
+                foreach (var route in descriptor.GetRoutes())
+                {
+                    var delta = route.IntermediateStops[_index].Time - now;
+                    if (delta >= TimeSpan.Zero && delta <= TimeSpan.FromMinutes(30))
+                        return route;
+                }
+
+                return null;
+            }
+        }
 
         private void Start()
         {
-            var station = GetComponentInParent<Station>().ID.name;
+            var station = GetComponentInParent<Station>();
+            var stationName = station.ID.name;
             var stops = descriptor.IntermediateStops;
             for (var i = 0; i < stops.Length; i++)
             {
                 var stop = stops[i];
-                if (!stop.Equals(station, StringComparison.OrdinalIgnoreCase))
+                if (!stop.Equals(stationName, StringComparison.OrdinalIgnoreCase))
                     continue;
                 _index = i;
                 break;
@@ -45,6 +69,7 @@ namespace Metro.Stations
             _minutes = root.Q<Label>("Minutes");
             _seconds = root.Q<Label>("Seconds");
             _bar = root.Q("Bar");
+            _track = station.Track(descriptor.Reverse);
             Initialize(root);
         }
 
@@ -62,16 +87,22 @@ namespace Metro.Stations
 
         private void UpdateDisplay()
         {
-            var now = Clock.Now;
-            foreach (var route in descriptor.GetRoutes())
+            var occupied = _track.IsOccupied;
+            if (_wasOccupied != occupied)
             {
-                var delta = route.IntermediateStops[_index].Time - now;
-                if (delta < TimeSpan.Zero || delta > TimeSpan.FromMinutes(30))
-                    continue;
-                _minutes.text = delta.Minutes.ToString("00");
-                _seconds.text = delta.Seconds.ToString("00");
-                break;
+                _wasOccupied = occupied;
+                if (!occupied)
+                    _route = null;
             }
+
+            _route ??= NextRoute;
+            if (_route == null)
+                return;
+            var delta = _route.IntermediateStops[_index].Time - Clock.Now;
+            if (delta < TimeSpan.Zero)
+                delta = TimeSpan.Zero;
+            _minutes.text = delta.Minutes.ToString("00");
+            _seconds.text = delta.Seconds.ToString("00");
         }
 
     }

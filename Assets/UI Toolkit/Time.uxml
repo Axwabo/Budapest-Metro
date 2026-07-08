@@ -2,8 +2,8 @@
     <Style src="project://database/Assets/UI%20Toolkit/Time.uss?fileID=7433441132597879392&amp;guid=f19f911accda00981bef8eb3351f11ae&amp;type=3#Time" />
     <ui:VisualElement style="flex-grow: 1; flex-direction: row; background-color: rgb(24 48 24);">
         <ui:VisualElement style="flex-grow: 1; justify-content: space-between;">
-            <ui:Label text="Kelenföld v. felé" name="Destination" style="flex-grow: 1; -unity-text-align: middle-center; -unity-font-style: bold; font-size: 39px;" />
-            <ui:Label text="Várható érkezési idő:" name="Description" style="font-size: 24px; padding: 4px;" />
+            <ui:Label text="Kelenföld v. felé" name="Destination" style="flex-grow: 1; -unity-text-align: middle-left; -unity-font-style: bold; font-size: 39px;" />
+            <ui:Label text="Várható érkezési idő:" name="Description" style="font-size: 24px; padding: 4px; -unity-text-align: middle-center;" />
             <ui:VisualElement name="Bar" style="width: 100%; height: 30px;" />
         </ui:VisualElement>
         <ui:VisualElement style="min-width: 210px; border-width: 1px;" class="border">
