@@ -35,9 +35,13 @@ namespace Metro.Stations
 
         private float _delay;
 
+        private bool _everUpdated;
+
         private int _index = -1;
 
         private Label _minutes;
+
+        private VisualElement _root;
 
         private Route _route;
         private Label _seconds;
@@ -79,15 +83,15 @@ namespace Metro.Stations
 
         private void Start()
         {
+            _root = document.rootVisualElement;
             var station = GetComponentInParent<Station>();
-            var root = document.rootVisualElement;
-            var destination = root.Q<Label>("Destination");
-            var description = root.Q<Label>("Description");
+            var destination = _root.Q<Label>("Destination");
+            var description = _root.Q<Label>("Description");
             destination.text = $"{DestinationName} felé";
             _index = FindIndex(station.ID.name);
-            _minutes = root.Q<Label>("Minutes");
-            _seconds = root.Q<Label>("Seconds");
-            _bar = root.Q("Bar");
+            _minutes = _root.Q<Label>("Minutes");
+            _seconds = _root.Q<Label>("Seconds");
+            _bar = _root.Q("Bar");
             _track = station.Track(descriptor.Reverse);
             if (_index == Origin)
                 description.text = "Várható indulási idő:";
@@ -138,16 +142,25 @@ namespace Metro.Stations
 
             _route ??= NextRoute;
             if (_route == null)
+            {
+                if (_index != Destination || _everUpdated)
+                    return;
+                _everUpdated = true;
+                _root.AddToClassList("no-information");
+                _minutes.text = "=";
                 return;
+            }
+
             var delta = Stop(_route).Time - Clock.Now;
+            if (delta < -TwoMinutes)
+                _route = null; // késing/skipped
             if (delta < TimeSpan.Zero)
                 delta = TimeSpan.Zero;
             var equals = _index == Destination && delta > TwoMinutes;
+            _root.EnableInClassList("no-information", equals);
             _minutes.text = equals ? "=" : delta.Minutes.ToString("00");
             _seconds.text = equals ? "" : delta.Seconds.ToString("00");
             _bar.style.width = Length.Percent(Mathf.Min(100, (float) (delta.TotalSeconds * SecondsToOnePercent)));
-            if (delta < -TwoMinutes)
-                _route = null; // késing/skipped
         }
 
     }

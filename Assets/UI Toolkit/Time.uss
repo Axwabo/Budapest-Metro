@@ -15,3 +15,15 @@ Label {
 .border {
     border-color: var(--color);
 }
+
+.no-information #Minutes {
+    -unity-text-align: middle-center;
+}
+
+.no-information #Seconds {
+    display: none;
+}
+
+.no-information #Footer {
+    visibility: hidden;
+}

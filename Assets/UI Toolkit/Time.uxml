@@ -6,12 +6,12 @@
             <ui:Label text="Várható érkezési idő:" name="Description" style="font-size: 24px; padding: 4px; -unity-text-align: middle-center;" />
             <ui:VisualElement name="Bar" style="width: 100%; height: 30px;" />
         </ui:VisualElement>
-        <ui:VisualElement style="min-width: 210px; border-width: 1px;" class="border">
+        <ui:VisualElement style="min-width: 210px; border-width: 2px;" class="border">
             <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
                 <ui:Label text="05" name="Minutes" style="flex-grow: 1; font-size: 120px; -unity-font-style: bold; scale: 1; translate: 0 -15px;" />
                 <ui:Label text="58" name="Seconds" style="font-size: 40px; min-width: 58px;" />
             </ui:VisualElement>
-            <ui:Label text="perc" style="-unity-text-align: lower-center;" />
+            <ui:Label text="perc" name="Footer" style="-unity-text-align: lower-center;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
