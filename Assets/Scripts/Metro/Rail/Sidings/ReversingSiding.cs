@@ -37,6 +37,7 @@ namespace Metro.Rail.Sidings
             UsedBy.Add(assembly);
             Area.PassingThrough.Add(assembly);
             assembly.JourneyManager.Begin(_entry);
+            assembly.Driver.MarkReadyNow();
             return true;
         }
 

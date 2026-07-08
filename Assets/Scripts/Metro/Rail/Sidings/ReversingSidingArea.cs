@@ -89,6 +89,8 @@ namespace Metro.Rail.Sidings
 
         public void NotifyArrived(MetroAssembly assembly) => CarriageHouse.NotifyArrived(assembly, this);
 
+        public void NotifyReady(MetroAssembly assembly) => CarriageHouse.NotifyReady(assembly, this);
+
     }
 
 }

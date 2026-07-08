@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Metro.Journeys;
 using Metro.Rail;
 using Metro.Rail.Controls;
 using Metro.Stations;
@@ -125,14 +126,14 @@ namespace Metro.Trains.Driving
 
         public override void OnTargetChanged()
         {
-            if (!IsInService)
-                return;
-            if (JourneyManager.IsDestination)
+            if (JourneyManager.IsDestination || Journey is Afk)
             {
                 _departAt = TimeSpan.MaxValue;
                 return;
             }
 
+            if (!IsInService)
+                return;
             var departMinStay = Clock.Now + TimeSpan.FromSeconds(Constants.MinStaySeconds);
             _departAt = Stop.Time < departMinStay
                 ? departMinStay

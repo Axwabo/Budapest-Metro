@@ -57,7 +57,7 @@ namespace Metro.Trains.Routes
         public void Begin(IJourney journey) => Begin(journey, Origin);
 
         [ContextMenu("Idle")]
-        public void Idle() => Begin(Afk.Instance);
+        public void Idle() => Begin(Target ? new Afk {Target = Target} : Afk.Instance);
 
         private void Begin(IJourney journey, int index)
         {

@@ -79,11 +79,9 @@ namespace Metro.Journeys.Routes
 
         private static void Rotate(List<JourneyManager> metros, ReversingSidingArea area)
         {
-            if (area.ExitingPrevented)
+            if (area.ExitingPrevented || metros.Count == 0)
                 return;
             var next = area.Route.Next(ReversingToDeparture);
-            if (next == null || metros.Count == 0)
-                return;
             var metro = metros[0];
             if (!area.Exit(metro.Parent, false))
                 return;
@@ -97,7 +95,7 @@ namespace Metro.Journeys.Routes
             if (_housedMetros.Count == 0 || house.PassingThrough.Count != 0)
                 return;
             var next = entry.Route.Next(HouseToDeparture);
-            if (next == null || next == _lastDispatched || next.Origin.Time < Clock.Now + MaxEarlyDispatch)
+            if (next == _lastDispatched || next.Origin.Time < Clock.Now + MaxEarlyDispatch)
                 return;
             foreach (var manager in _housedMetros)
             {
@@ -116,7 +114,7 @@ namespace Metro.Journeys.Routes
             if (_enteryMetros.Count == 0 || entry.ExitingPrevented)
                 return;
             var next = entry.Route.Next(ReversingToDeparture);
-            if (next != null && next.Origin.Time < Clock.Now + MaxEarlyDispatch)
+            if (next.Origin.Time < Clock.Now + MaxEarlyDispatch)
                 return;
             var metro = _enteryMetros[0];
             if (!entry.Exit(metro.Parent, true))
@@ -129,14 +127,29 @@ namespace Metro.Journeys.Routes
 
         public void NotifyArrived(MetroAssembly assembly, ReversingSidingArea area)
         {
-            var metro = assembly.JourneyManager;
             if (area == house)
+            {
+                var metro = assembly.JourneyManager;
+                metro.Idle();
                 _housedMetros.Add(metro);
+            }
             else if (area == entry)
-                _enteryMetros.Add(metro);
+            {
+                assembly.Driver.MarkReady(10);
+            }
             else if (area == reverse)
-                _reverseMetros.Add(metro);
+            {
+                assembly.Driver.MarkReady(10);
+            }
             // else where tf are you???? M2 > M3?
+        }
+
+        public void NotifyReady(MetroAssembly assembly, ReversingSidingArea area)
+        {
+            if (area == entry)
+                _enteryMetros.Add(assembly.JourneyManager);
+            else if (area == reverse)
+                _reverseMetros.Add(assembly.JourneyManager);
         }
 
     }

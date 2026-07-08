@@ -74,7 +74,7 @@ namespace Metro.Journeys.Routes
             foreach (var route in routes)
                 if (route.Origin.Time >= after)
                     return route;
-            return null;
+            return routes[0];
         }
 
         private static bool TryParse(string time, out TimeSpan timeSpan)
