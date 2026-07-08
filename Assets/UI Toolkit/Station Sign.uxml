@@ -4,8 +4,8 @@
         <ui:VisualElement style="flex-grow: 0.5;" />
         <ui:VisualElement class="board border-accent">
             <ui:VisualElement name="OtherSide" class="display-none" style="flex-grow: 1; flex-direction: row; justify-content: flex-start;">
-                <ui:Label text="⛔" style="font-size: 128px; margin-right: 40px;" />
-                <ui:VisualElement style="justify-content: center; font-size: 56px; -unity-text-align: middle-left;">
+                <ui:Label text="⛔" style="font-size: 120px; margin-right: 40px;" />
+                <ui:VisualElement style="justify-content: center; font-size: 48px; -unity-text-align: middle-left;">
                     <ui:Label text="Beszállás a másik oldalon" style="-unity-font-style: bold;" />
                     <ui:Label text="Please board on the opposite side" style="-unity-font-style: italic;" />
                 </ui:VisualElement>
