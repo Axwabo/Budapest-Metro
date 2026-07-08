@@ -24,11 +24,11 @@ Label {
     border-width: 3px;
 }
 
-.inactive {
+.stop.inactive {
     border-color: rgb(140, 140, 140);
 }
 
-.inactive .bg-accent {
+.inactive.bg-accent, .inactive .bg-accent {
     background-color: rgb(140, 140, 140);
 }
 
