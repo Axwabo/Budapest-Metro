@@ -98,7 +98,7 @@ namespace Metro.Trains.Driving
             _stopping = false;
             State = DriverState.Stopped;
             if (!JourneyManager.IsOrigin)
-                _departAt = Clock.Now + TimeSpan.FromSeconds(JourneyManager.IsDestination ? Constants.DestinationStaySeconds : Constants.MinStaySeconds);
+                Stay(JourneyManager.IsDestination ? Constants.DestinationStaySeconds : Constants.MinStaySeconds);
             _passedPoints.Clear();
             if (FrontAxle.Track is StationTrack track)
                 track.Light.State = LightState.Off;
@@ -136,12 +136,15 @@ namespace Metro.Trains.Driving
                 return;
             }
 
-            if (!IsInService)
-                return;
-            var departMinStay = Clock.Now + TimeSpan.FromSeconds(Constants.MinStaySeconds);
-            _departAt = Stop.Time < departMinStay
-                ? departMinStay
-                : Stop.Time;
+            if (IsInService)
+                Stay(Constants.MinStaySeconds);
+        }
+
+        private void Stay(double minStaySeconds)
+        {
+            var departMinStay = Clock.Now + TimeSpan.FromSeconds(minStaySeconds);
+            var stopTime = IsInService ? Stop.Time : TimeSpan.MinValue;
+            _departAt = stopTime < departMinStay ? departMinStay : stopTime;
         }
 
         private void Depart()
