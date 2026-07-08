@@ -8,6 +8,9 @@ namespace Metro.Stations
     {
 
         [field: SerializeField]
+        public Relation Relation { get; private set; }
+
+        [field: SerializeField]
         public string Forehead { get; private set; }
 
         [field: SerializeField]

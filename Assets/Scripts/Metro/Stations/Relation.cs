@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Metro.Stations
 {
@@ -12,7 +13,7 @@ namespace Metro.Stations
         public string Line { get; private set; }
 
         [field: SerializeField]
-        public Color Color { get; private set; }
+        public ThemeStyleSheet Theme { get; private set; }
 
         [SerializeField]
         private StationId[] forwards;

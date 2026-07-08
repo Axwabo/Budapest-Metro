@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a6feff374348a1aacf2d5d19d57aff, type: 3}
+  m_Name: M4
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.Relation
+  <Line>k__BackingField: M4
+  <Theme>k__BackingField: {fileID: 0}
+  forwards:
+  - {fileID: 11400000, guid: df50e87da5e00d1689f77655158f8825, type: 2}
+  - {fileID: 11400000, guid: 3c00e33b16a11ecc6ac5765367a38b38, type: 2}
+  - {fileID: 11400000, guid: b7e230849acb8dd409faf82576ba2aa3, type: 2}
+  - {fileID: 11400000, guid: ced1e0f44371b5d928763e0ea3a765ab, type: 2}
+  - {fileID: 11400000, guid: ceedda31b18b24932816d382276a991e, type: 2}
+  - {fileID: 11400000, guid: 3d1cf58873c8b0d4a9cbd4e30793da88, type: 2}
+  - {fileID: 11400000, guid: 4e0a24c87d12d6ad89d96f3ec404a63c, type: 2}
+  - {fileID: 11400000, guid: 205dfe65bf061517182cdb1af403d1dd, type: 2}
+  - {fileID: 11400000, guid: 9db6577a43149ed1fa2a4d1875cc9fff, type: 2}
+  - {fileID: 11400000, guid: 62be6fc18ace7bb7fadf53f276e0679d, type: 2}
+  reverse:
+  - {fileID: 11400000, guid: 62be6fc18ace7bb7fadf53f276e0679d, type: 2}
+  - {fileID: 11400000, guid: 9db6577a43149ed1fa2a4d1875cc9fff, type: 2}
+  - {fileID: 11400000, guid: 205dfe65bf061517182cdb1af403d1dd, type: 2}
+  - {fileID: 11400000, guid: 4e0a24c87d12d6ad89d96f3ec404a63c, type: 2}
+  - {fileID: 11400000, guid: 3d1cf58873c8b0d4a9cbd4e30793da88, type: 2}
+  - {fileID: 11400000, guid: ceedda31b18b24932816d382276a991e, type: 2}
+  - {fileID: 11400000, guid: ced1e0f44371b5d928763e0ea3a765ab, type: 2}
+  - {fileID: 11400000, guid: b7e230849acb8dd409faf82576ba2aa3, type: 2}
+  - {fileID: 11400000, guid: 3c00e33b16a11ecc6ac5765367a38b38, type: 2}
+  - {fileID: 11400000, guid: df50e87da5e00d1689f77655158f8825, type: 2}

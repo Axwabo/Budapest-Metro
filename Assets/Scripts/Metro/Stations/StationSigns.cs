@@ -23,7 +23,7 @@ namespace Metro.Stations
         private void Awake()
         {
             _station = GetComponentInParent<Station>();
-            material.Init(name, document);
+            material.Init(_station.name, document, _station.ID.Relation.Theme);
             foreach (var meshRenderer in renderers)
                 meshRenderer.sharedMaterial = material.Material;
         }
@@ -32,8 +32,7 @@ namespace Metro.Stations
         {
             var root = document.rootVisualElement;
             root.Q<Label>("Current").text = _station.name;
-            root.customStyle. // this sucks
-                root.RegisterCallbackOnce<GeometryChangedEvent>(_ => _done = true);
+            root.RegisterCallbackOnce<GeometryChangedEvent>(_ => _done = true);
         }
 
         private void Update()

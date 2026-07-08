@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6278ff3d2c5340b5b2f83ce82f40a32c, type: 3}
   m_Name: "Szent Gell\xE9rt t\xE9r - M\u0171egyetem"
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.StationId
+  <Relation>k__BackingField: {fileID: 11400000, guid: 25d58d3380b5908f083ad1bbebfad3f1, type: 2}
   <Forehead>k__BackingField: 
   <Onboard>k__BackingField: 
   <Metros>k__BackingField: 

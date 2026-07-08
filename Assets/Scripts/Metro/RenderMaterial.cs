@@ -29,12 +29,14 @@ namespace Metro
 
         public Material Material { get; private set; }
 
-        public void Init(string name, UIDocument document)
+        public void Init(string name, UIDocument document, ThemeStyleSheet theme = null)
         {
             _texture = new RenderTexture(width, height, GraphicsFormat.R8G8B8A8_SNorm, GraphicsFormat.None);
             _settings = Object.Instantiate(settingsReference);
             _settings.name = name;
             _settings.targetTexture = _texture;
+            if (theme)
+                _settings.themeStyleSheet = theme;
             Material = new Material(parentMaterial) {mainTexture = _texture};
             document.panelSettings = _settings;
         }
