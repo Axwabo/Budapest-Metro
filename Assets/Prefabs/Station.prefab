@@ -382,9 +382,9 @@ MonoBehaviour:
   document: {fileID: 8879873209163752015}
   stationTemplate: {fileID: 9197481963319205126, guid: 7923b95ff85341efa295210fcbaa3665, type: 3}
   material:
-    width: 2250
-    height: 100
-    parentMaterial: {fileID: 2100000, guid: ece7f7ca8edcf5fadb11338c87cca906, type: 2}
+    width: 4500
+    height: 200
+    parentMaterial: {fileID: 2100000, guid: a6ed25ac12d9d8033bdfe51ce93f0359, type: 2}
     settingsReference: {fileID: 11400000, guid: 6ddc7b53d95a2d1a39c9d760fdeeb104, type: 2}
   renderers:
   - {fileID: 3546183628869174308}
@@ -815,7 +815,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 22.5, y: 1, z: 10}
+  m_LocalScale: {x: 54, y: 0.8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3727201132112062455}
@@ -853,7 +853,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ece7f7ca8edcf5fadb11338c87cca906, type: 2}
+  - {fileID: 2100000, guid: a6ed25ac12d9d8033bdfe51ce93f0359, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -996,9 +996,9 @@ MonoBehaviour:
   document: {fileID: 1127613961797018820}
   stationTemplate: {fileID: 9197481963319205126, guid: 7923b95ff85341efa295210fcbaa3665, type: 3}
   material:
-    width: 2250
-    height: 100
-    parentMaterial: {fileID: 2100000, guid: ece7f7ca8edcf5fadb11338c87cca906, type: 2}
+    width: 4500
+    height: 200
+    parentMaterial: {fileID: 2100000, guid: a6ed25ac12d9d8033bdfe51ce93f0359, type: 2}
     settingsReference: {fileID: 11400000, guid: 6ddc7b53d95a2d1a39c9d760fdeeb104, type: 2}
   renderers:
   - {fileID: 6638166384662907769}
@@ -1206,7 +1206,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 22.5, y: 1, z: 10}
+  m_LocalScale: {x: 54, y: 0.8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 779698760297868956}
@@ -1244,7 +1244,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ece7f7ca8edcf5fadb11338c87cca906, type: 2}
+  - {fileID: 2100000, guid: a6ed25ac12d9d8033bdfe51ce93f0359, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
