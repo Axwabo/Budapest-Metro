@@ -34,9 +34,12 @@ namespace Metro.Journeys.Routes
         [SerializeField]
         private ReversingSidingArea reverse;
 
+        private readonly HashSet<JourneyManager> _dispatching = new();
+
         private readonly List<JourneyManager> _enteryMetros = new();
 
         private readonly List<JourneyManager> _housedMetros = new();
+        private readonly HashSet<JourneyManager> _recalling = new();
 
         private readonly List<JourneyManager> _reverseMetros = new();
 
@@ -56,8 +59,8 @@ namespace Metro.Journeys.Routes
                 return;
             }
 
-            Rotate(_enteryMetros, entry);
-            Rotate(_reverseMetros, reverse);
+            Rotate(_enteryMetros, entry, true);
+            Rotate(_reverseMetros, reverse, false);
             Dispatch();
         }
 
@@ -123,22 +126,27 @@ namespace Metro.Journeys.Routes
             return (clone, assembly);
         }
 
-        private static void Rotate(List<JourneyManager> metros, ReversingSidingArea area)
+        private void Rotate(List<JourneyManager> metros, ReversingSidingArea area, bool checkRecall)
         {
             if (metros.Count == 0 || area.ExitingPrevented)
                 return;
             var next = Next(area);
+            var toHouse = next == null;
+            if (toHouse && checkRecall && _recalling.Count != 0)
+                return;
             var metro = metros[0];
-            if (!area.Exit(metro.Parent, next == null))
+            if (!area.Exit(metro.Parent, toHouse))
                 return;
             metro.Driver.MarkReadyNow();
-            metro.Begin(next != null ? new EnteringJourney(!area.Reverse, next) : area.ServiceJourney);
+            metro.Begin(toHouse ? area.ServiceJourney : new EnteringJourney(!area.Reverse, next));
             metros.Remove(metro);
+            if (toHouse && checkRecall)
+                _recalling.Add(metro);
         }
 
         private void Dispatch()
         {
-            if (_housedMetros.Count == 0 || house.ExitingPrevented)
+            if (_housedMetros.Count == 0 || _dispatching.Count != 0 || house.ExitingPrevented)
                 return;
             var next = entry.Route.Next(HouseToDeparture, MaxEarlyDispatch);
             if (next == null || _spawnedRoutes.Contains(next))
@@ -151,6 +159,7 @@ namespace Metro.Journeys.Routes
                 manager.Driver.MarkReadyNow();
                 _housedMetros.Remove(manager);
                 _spawnedRoutes.Add(next);
+                _dispatching.Add(manager);
                 break;
             }
         }
@@ -162,9 +171,11 @@ namespace Metro.Journeys.Routes
                 var metro = assembly.JourneyManager;
                 metro.Idle();
                 _housedMetros.Add(metro);
+                _recalling.Remove(metro);
             }
             else if (area == entry)
             {
+                _dispatching.Remove(prefab);
                 assembly.Driver.MarkReady(ReverseDelay);
             }
             else if (area == reverse)
