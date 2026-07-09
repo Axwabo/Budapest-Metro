@@ -39,10 +39,8 @@ namespace Metro
 
         private void Update()
         {
-            if ((_time += Clock.Delta) < 0.5f)
-                return;
-            enabled = false;
-            OnMenu();
+            if (_time < 0.5f && (_time += Clock.Delta) >= 0.5f || InputSystem.actions["Menu"].WasPressedThisFrame())
+                OnMenu();
         }
 
         public void OnMenu()
