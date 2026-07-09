@@ -18,7 +18,7 @@ namespace Metro.Menu
             _slider.RegisterValueChangedCallback(evt =>
             {
                 Time.timeScale = evt.newValue;
-                _label.text = $"{Time.timeScale:#.##}x";
+                _label.text = $"{Time.timeScale:0.##}x";
             });
             _label = root.Q<Label>("TimeScale");
             root.Q<Button>("Reset").clicked += () =>

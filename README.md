@@ -17,10 +17,6 @@ You can select when and where to start the game.
 > [!TIP]
 > Press `[TAB]` to open the in-game menu.
 
-> [!IMPORTANT]
-> The time scale input is broken because Unity decided that it doesn't want to be focused.
-> I really don't know what I've done wrong...
-
 # Assets
 
 Sounds were recorded and edited by me.
