@@ -11,7 +11,7 @@ namespace Metro.Audio
 
         private const float Delay = 0.5f;
 
-        private readonly List<(AudioClip, double)> _scheduledOneShot = new();
+        private readonly List<(AudioClip, double, bool)> _scheduled = new();
 
         private AudioSource _source;
 
@@ -19,24 +19,29 @@ namespace Metro.Audio
 
         private void Update()
         {
-            var now = AudioSettings.dspTime;
-            for (var i = _scheduledOneShot.Count - 1; i >= 0; i--)
+            var now = Time.timeSinceLevelLoadAsDouble;
+            for (var i = _scheduled.Count - 1; i >= 0; i--)
             {
-                var (clip, time) = _scheduledOneShot[i];
+                var (clip, time, oneShot) = _scheduled[i];
                 if (time > now)
                     continue;
-                _source.PlayOneShot(clip);
-                _scheduledOneShot.RemoveAt(i);
+                if (oneShot)
+                    _source.PlayOneShot(clip);
+                else
+                {
+                    _source.clip = clip;
+                    _source.Play();
+                }
+
+                _scheduled.RemoveAt(i);
             }
         }
 
-        public void PlayOneShit(AudioClip clip) => _scheduledOneShot.Add((clip, AudioSettings.dspTime + Delay));
+        public void PlayOneShit(AudioClip clip) => Schedule(clip, true);
 
-        public void Play(AudioClip clip)
-        {
-            _source.clip = clip;
-            _source.PlayDelayed(Delay);
-        }
+        public void Play(AudioClip clip) => Schedule(clip, false);
+
+        private void Schedule(AudioClip clip, bool oneShot) => _scheduled.Add((clip, Time.timeSinceLevelLoadAsDouble + Delay, oneShot));
 
     }
 
