@@ -17,6 +17,11 @@ namespace Metro
 
         private int _second;
 
+        public static TimeSpan Start
+        {
+            set => _start = DateTime.Today + value;
+        }
+
         public static TimeSpan Now => _start.AddSeconds(Time.timeSinceLevelLoadAsDouble).TimeOfDay;
 
         public static float Delta
@@ -31,7 +36,7 @@ namespace Metro
         private void Awake()
         {
             if (TimeSpan.TryParse(start, out var startTime))
-                _start = DateTime.Today + startTime;
+                Start = startTime;
             if (!TryGetComponent(out _document))
                 Destroy(this);
         }
@@ -43,8 +48,10 @@ namespace Metro
             if (second == _second)
                 return;
             _second = second;
-            _document.rootVisualElement.Q<Label>().text = now.ToString("hh':'mm':'ss");
+            _document.rootVisualElement.Q<Label>().text = Format(now);
         }
+
+        public static string Format(TimeSpan now) => now.ToString("hh':'mm':'ss");
 
     }
 

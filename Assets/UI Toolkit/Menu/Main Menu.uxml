@@ -9,8 +9,8 @@
         <ui:DropdownField name="Station" label="Select a station:" />
         <ui:VisualElement>
             <ui:SliderInt name="Hours" label="Hour" value="8" high-value="23" />
-            <ui:SliderInt name="Minute" label="Minutes" value="30" high-value="59" />
-            <ui:SliderInt name="Second" label="Seconds" high-value="59" />
+            <ui:SliderInt name="Minutes" label="Minute" value="30" high-value="59" />
+            <ui:SliderInt name="Seconds" label="Second" high-value="59" />
         </ui:VisualElement>
         <ui:Label name="Time" text="08:30:59" />
         <ui:Button name="Play" text="Play" />
