@@ -277,16 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 1, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 79947ffbfe3602fe09c32ec5dc2627e5, type: 2}
 --- !u!114 &16684324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,16 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &18150748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,16 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &30384235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,16 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 3, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
 --- !u!114 &86317013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,16 +1050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &93541585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,16 +1495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &163953035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2256,16 +2202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 2, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 79947ffbfe3602fe09c32ec5dc2627e5, type: 2}
 --- !u!114 &215759190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3147,16 +3084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &300232810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3640,16 +3568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 3, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
 --- !u!114 &343102483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3871,16 +3790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &374853943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4081,16 +3991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 3, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
 --- !u!114 &390157113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4378,16 +4279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 1, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 79947ffbfe3602fe09c32ec5dc2627e5, type: 2}
 --- !u!114 &427527725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4592,16 +4484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 3, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
 --- !u!114 &456640119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4944,16 +4827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &488022641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5120,16 +4994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 2, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 79947ffbfe3602fe09c32ec5dc2627e5, type: 2}
 --- !u!114 &502220411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5367,16 +5232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &508509625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5563,16 +5419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &517389746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6016,16 +5863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &576719773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6389,16 +6227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &604548290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6719,16 +6548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &638664723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7134,16 +6954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &690274262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7370,16 +7181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 3, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
 --- !u!114 &723719261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8682,16 +8484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &960185659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9332,16 +9125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &1066036389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9491,16 +9275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &1148459172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9789,16 +9564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!4 &1175792095
 Transform:
   m_ObjectHideFlags: 0
@@ -10094,16 +9860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 5, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &1275067934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10384,16 +10141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!4 &1305362383
 Transform:
   m_ObjectHideFlags: 0
@@ -10677,16 +10425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 3, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
 --- !u!114 &1371471118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10791,16 +10530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &1373718058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11065,16 +10795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &1404374184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11250,16 +10971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 5, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &1434837167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12138,16 +11850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 2, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
 --- !u!114 &1529633562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12342,16 +12045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &1549363361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13241,16 +12935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!1 &1694470122
 GameObject:
   m_ObjectHideFlags: 0
@@ -13348,16 +13033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 2, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 79947ffbfe3602fe09c32ec5dc2627e5, type: 2}
 --- !u!114 &1715054362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13856,16 +13532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &1845205855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14337,16 +14004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!4 &1883526877
 Transform:
   m_ObjectHideFlags: 0
@@ -14408,16 +14066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 3, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
 --- !u!114 &1893800657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14542,16 +14191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 2, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
 --- !u!114 &1899922790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14701,16 +14341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &1906872358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14863,16 +14494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &1942180630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15330,16 +14952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!4 &1983405012
 Transform:
   m_ObjectHideFlags: 0
@@ -15605,16 +15218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!4 &2038675510
 Transform:
   m_ObjectHideFlags: 0
@@ -15727,16 +15331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 3, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
 --- !u!114 &2048274009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15861,16 +15456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!114 &2052300538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16066,16 +15652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 3, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
 --- !u!114 &2128240195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16283,16 +15860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
-  physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 0}
-  scale: {x: 10, y: 1, z: 1}
-  generateCollider: 0
-  updateInPlayMode: 1
-  curveSpace: 0
-  mode: 1
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
 --- !u!4 &2145463361
 Transform:
   m_ObjectHideFlags: 0

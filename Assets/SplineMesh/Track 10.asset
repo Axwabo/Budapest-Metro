@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6c64bca6ed416b94bc870c73151dbc, type: 3}
+  m_Name: Track 10
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.MeshPreset
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
+  physicMaterial: {fileID: 0}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 10, y: 1, z: 1}
+  generateCollider: 0
+  updateInPlayMode: 1
+  curveSpace: 0
+  mode: 1

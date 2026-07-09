@@ -20,41 +20,14 @@ namespace SplineMesh
     public class SplineMeshTiling : MonoBehaviour
     {
 
+        [SerializeField]
+        public MeshPreset preset;
+
         private GameObject generated;
         private Spline spline = null;
 #if UNITY_EDITOR
         private bool toUpdate = false;
 #endif
-
-        [Tooltip("Mesh to bend along the spline.")]
-        public Mesh mesh;
-
-        [Tooltip("Material to apply on the bent mesh.")]
-        public Material material;
-
-        [Tooltip("Physic material to apply on the bent mesh.")]
-        public PhysicsMaterial physicMaterial;
-
-        [Tooltip("Translation to apply on the mesh before bending it.")]
-        public Vector3 translation;
-
-        [Tooltip("Rotation to apply on the mesh before bending it.")]
-        public Vector3 rotation;
-
-        [Tooltip("Scale to apply on the mesh before bending it.")]
-        public Vector3 scale = Vector3.one;
-
-        [Tooltip("If true, a mesh collider will be generated.")]
-        public bool generateCollider = true;
-
-        [Tooltip("If true, the mesh will be bent on play mode. If false, the bent mesh will be kept from the editor mode, allowing lighting baking.")]
-        public bool updateInPlayMode;
-
-        [Tooltip("If true, a mesh will be placed on each curve of the spline. If false, a single mesh will be placed for the whole spline.")]
-        public bool curveSpace = false;
-
-        [Tooltip("The mode to use to fill the choosen interval with the bent mesh.")]
-        public MeshBender.FillingMode mode = MeshBender.FillingMode.StretchToInterval;
 
         private void OnEnable()
         {
@@ -73,26 +46,6 @@ namespace SplineMesh
             CreateMeshes();
         }
 
-#if UNITY_EDITOR
-        private void OnValidate()
-        {
-            if (spline == null) return;
-            toUpdate = true;
-        }
-
-        private void Update()
-        {
-            // we can prevent the generated content to be updated during playmode to preserve baked data saved in the scene
-            if (!updateInPlayMode && Application.isPlaying) return;
-
-            if (toUpdate)
-            {
-                toUpdate = false;
-                CreateMeshes();
-            }
-        }
-#endif
-
         public void CreateMeshes()
         {
 #if UNITY_EDITOR
@@ -101,14 +54,14 @@ namespace SplineMesh
 #endif
             var used = new List<GameObject>();
 
-            if (curveSpace)
+            if (preset.curveSpace)
             {
                 int i = 0;
                 foreach (var curve in spline.curves)
                 {
                     var go = FindOrCreate("segment " + i++ + " mesh");
                     go.GetComponent<MeshBender>().SetInterval(curve);
-                    go.GetComponent<MeshCollider>().enabled = generateCollider;
+                    go.GetComponent<MeshCollider>().enabled = preset.generateCollider;
                     used.Add(go);
                 }
             }
@@ -116,7 +69,7 @@ namespace SplineMesh
             {
                 var go = FindOrCreate("segment 1 mesh");
                 go.GetComponent<MeshBender>().SetInterval(spline, 0);
-                go.GetComponent<MeshCollider>().enabled = generateCollider;
+                go.GetComponent<MeshCollider>().enabled = preset.generateCollider;
                 used.Add(go);
             }
 
@@ -141,7 +94,7 @@ namespace SplineMesh
                     typeof(MeshRenderer),
                     typeof(MeshBender),
                     typeof(MeshCollider));
-                res.isStatic = !updateInPlayMode;
+                res.isStatic = !preset.updateInPlayMode;
             }
             else
             {
@@ -149,16 +102,36 @@ namespace SplineMesh
             }
 
             res.hideFlags = HideFlags.DontSaveInEditor | HideFlags.DontSaveInBuild;
-            res.GetComponent<MeshRenderer>().material = material;
-            res.GetComponent<MeshCollider>().material = physicMaterial;
+            res.GetComponent<MeshRenderer>().material = preset.material;
+            res.GetComponent<MeshCollider>().material = preset.physicMaterial;
             MeshBender mb = res.GetComponent<MeshBender>();
-            mb.Source = SourceMesh.Build(mesh)
-                .Translate(translation)
-                .Rotate(Quaternion.Euler(rotation))
-                .Scale(scale);
-            mb.Mode = mode;
+            mb.Source = SourceMesh.Build(preset.mesh)
+                .Translate(preset.translation)
+                .Rotate(Quaternion.Euler(preset.rotation))
+                .Scale(preset.scale);
+            mb.Mode = preset.mode;
             return res;
         }
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            if (spline == null) return;
+            toUpdate = true;
+        }
+
+        private void Update()
+        {
+            // we can prevent the generated content to be updated during playmode to preserve baked data saved in the scene
+            if (!preset.updateInPlayMode && Application.isPlaying) return;
+
+            if (toUpdate)
+            {
+                toUpdate = false;
+                CreateMeshes();
+            }
+        }
+#endif
 
     }
 
