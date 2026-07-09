@@ -37,6 +37,7 @@ namespace Metro.Menu
             _m = m.value;
             _s = s.value;
             _time = root.Q<Label>("Time");
+            Refresh();
         }
 
         private void Refresh() => _time.text = Clock.Format(Clock.Start = new TimeSpan(_h, _m, _s));

@@ -24,6 +24,7 @@ namespace Metro.Menu
             }
 
             dropdown.index = dropdown.choices.IndexOf(Name);
+            dropdown.RegisterValueChangedCallback(evt => Name = evt.newValue);
         }
 
     }
