@@ -33,6 +33,9 @@ Yeah, they aren't pretty, but they somewhat resemble the vehicles :3
 
 There's quite a bit of public information about metro line M4 on its [official website](https://www.metro4.hu/en)
 
+The railway map was created with [overpass turbo](https://overpass-turbo.eu/) -
+I stitched screenshots together because the rendering tool is too low-resolution and doesn't show overlays.
+
 # Future Plans
 
 I plan on reaching out to BKK (Budapest Transportation Center) for permission to use the on-board announcements
