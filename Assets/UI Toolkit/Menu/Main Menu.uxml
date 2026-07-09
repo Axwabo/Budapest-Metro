@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Menu/Main%20Menu.uss?fileID=7433441132597879392&amp;guid=84683283633ed6eb19eda3b02fca49ae&amp;type=3#Main Menu" />
+    <ui:VisualElement name="Container" class="grow">
+        <ui:Label text="Budapest Metro" class="title" />
+        <ui:VisualElement class="row">
+            <ui:Label text="🚇" />
+            <ui:Label text="M4" class="M4" />
+        </ui:VisualElement>
+        <ui:DropdownField label="Select a station:" />
+        <ui:VisualElement>
+            <ui:SliderInt name="Hours" label="Hour" value="8" high-value="23" />
+            <ui:SliderInt name="Minute" label="Minutes" value="30" high-value="59" />
+            <ui:SliderInt name="Second" label="Seconds" high-value="59" />
+        </ui:VisualElement>
+        <ui:Label name="Time" text="08:30:59" />
+        <ui:Button name="Play" text="Play" />
+    </ui:VisualElement>
+</ui:UXML>

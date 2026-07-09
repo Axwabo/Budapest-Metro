@@ -1,3 +1,3 @@
 :root {
-    --accent: rgb(0, 200, 0);
+    --accent: var(--m4);
 }

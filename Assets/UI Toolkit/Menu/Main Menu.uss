@@ -1,0 +1,36 @@
+#Container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 48px;
+}
+
+#Container > * {
+    margin: 20px 0;
+}
+
+#Play {
+    color: black;
+    padding: 10px 20px;
+}
+
+SliderInt > Label {
+    min-width: 210px;
+    margin: 0;
+    padding: 0;
+}
+
+SliderInt > VisualElement {
+    min-width: 240px;
+}
+
+.title {
+    font-size: 96px;
+    -unity-font-style: bold;
+}
+
+.M4 {
+    color: var(--m4);
+}
