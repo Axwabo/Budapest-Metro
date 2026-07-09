@@ -33,9 +33,9 @@ namespace Metro.Menu
                 _s = evt.newValue;
                 Refresh();
             });
-            _h = h.value;
-            _m = m.value;
-            _s = s.value;
+            h.value = _h = Clock.Start.Hours;
+            m.value = _m = Clock.Start.Minutes;
+            s.value = _s = Clock.Start.Seconds;
             _time = root.Q<Label>("Time");
             Refresh();
         }

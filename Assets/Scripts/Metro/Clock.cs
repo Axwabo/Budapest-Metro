@@ -19,6 +19,7 @@ namespace Metro
 
         public static TimeSpan Start
         {
+            get => _start.TimeOfDay;
             set => _start = DateTime.Today + value;
         }
 
