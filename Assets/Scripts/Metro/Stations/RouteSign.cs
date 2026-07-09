@@ -96,7 +96,10 @@ namespace Metro.Stations
             if (_index == Origin)
                 description.text = "Várható indulási idő:";
             else if (_index == Destination)
+            {
                 description.text = "";
+                _bar.style.width = 0;
+            }
         }
 
         private void Update()
@@ -160,7 +163,8 @@ namespace Metro.Stations
             _root.EnableInClassList("no-information", equals);
             _minutes.text = equals ? "=" : delta.Minutes.ToString("00");
             _seconds.text = equals ? "" : delta.Seconds.ToString("00");
-            _bar.style.width = Length.Percent(Mathf.Min(100, (float) (delta.TotalSeconds * SecondsToOnePercent)));
+            if (_index != Destination)
+                _bar.style.width = Length.Percent(Mathf.Min(100, (float) (delta.TotalSeconds * SecondsToOnePercent)));
         }
 
     }
