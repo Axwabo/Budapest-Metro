@@ -40,10 +40,6 @@ SliderInt > VisualElement {
     min-width: 240px;
 }
 
-SliderInt:focus .unity-slider-int__label {
-    color: white;
-}
-
 .title {
     font-size: 96px;
     -unity-font-style: bold;

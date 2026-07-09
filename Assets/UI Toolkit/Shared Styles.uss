@@ -18,3 +18,7 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+
+:focus .unity-slider-int__label {
+    color: white;
+}
