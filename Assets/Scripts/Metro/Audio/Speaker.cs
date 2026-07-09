@@ -1,3 +1,4 @@
+using System;
 using Metro.Trains;
 using UnityEngine;
 
@@ -8,14 +9,13 @@ namespace Metro.Audio
     public sealed class Speaker : AssemblyComponent
     {
 
-        private readonly object _lock = new();
-
         private float[] _buffer;
 
         private int _delaySamples;
-        private int _position;
+        private double _previousTime;
 
         private AudioSource _source;
+        private int _writeHead;
 
         private void Start()
         {
@@ -26,8 +26,30 @@ namespace Metro.Audio
 
         private void OnAudioFilterRead(float[] data, int channels)
         {
-            lock (_lock)
+            lock (_buffer)
             {
+                var now = AudioSettings.dspTime;
+                if ()
+                    Write(data);
+            }
+        }
+
+        private void Write(float[] data)
+        {
+            var dataSpan = data.AsSpan();
+            var forward = _buffer.AsSpan(_writeHead);
+            var backward = _buffer.AsSpan(0, _writeHead);
+            if (dataSpan.Length <= forward.Length)
+            {
+                dataSpan.CopyTo(forward);
+                _writeHead += dataSpan.Length;
+            }
+            else
+            {
+                dataSpan[..forward.Length].CopyTo(forward);
+                var remaining = dataSpan[forward.Length..];
+                remaining.CopyTo(backward);
+                _writeHead = remaining.Length;
             }
         }
 
