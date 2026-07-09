@@ -90,8 +90,6 @@ namespace Metro.Movement
 
         private void OnJump() => _wantsToJump = true;
 
-        private void OnMenu() => GameMenu.Instance.OnMenu();
-
     }
 
 }
