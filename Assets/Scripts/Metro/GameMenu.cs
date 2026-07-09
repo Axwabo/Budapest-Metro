@@ -25,8 +25,11 @@ namespace Metro
 
         private InputActionMap _ui;
 
+        public static GameMenu Instance { get; private set; }
+
         private void Start()
         {
+            Instance = this;
             _menu = document.rootVisualElement.Q("Menu");
             _ui = InputSystem.actions.FindActionMap("UI", true);
             _player = playerActions.FindActionMap("Player", true);
@@ -42,7 +45,7 @@ namespace Metro
             OnMenu();
         }
 
-        private void OnMenu()
+        public void OnMenu()
         {
             if (_time < 0.5f)
                 return;

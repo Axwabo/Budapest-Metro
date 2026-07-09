@@ -418,34 +418,6 @@
                     "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "Amogus",
-            "id": "db464538-0a4b-4be8-91eb-4685c2889179",
-            "actions": [
-                {
-                    "name": "Menu",
-                    "type": "Button",
-                    "id": "11e3cf78-1479-4f7b-8138-444a323dbc61",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "9134fcff-2ca5-4514-b4aa-4bac96ecbfa0",
-                    "path": "<Keyboard>/tab",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Menu",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
         }
     ],
     "controlSchemes": [
