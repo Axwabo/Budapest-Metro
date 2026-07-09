@@ -49,7 +49,7 @@ namespace Metro.Movement
 
         private void Start()
         {
-            if (Station.TryGetLoadad(StartingStationPicker.Name, out var station))
+            if (StartingStationPicker.Name is { } target && Station.TryGetLoadad(target, out var station))
                 Transform.position = station.transform.position + Vector3.up * 1.5f;
         }
 
