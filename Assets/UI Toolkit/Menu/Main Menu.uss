@@ -16,6 +16,20 @@
     padding: 10px 20px;
 }
 
+DropdownField {
+    flex-direction: column;
+    min-width: 600px;
+    font-size: 32px;
+}
+
+DropdownField > Label {
+    -unity-text-align: middle-center;
+}
+
+DropdownField > VisualElement {
+    color: black;
+}
+
 SliderInt > Label {
     min-width: 210px;
     margin: 0;

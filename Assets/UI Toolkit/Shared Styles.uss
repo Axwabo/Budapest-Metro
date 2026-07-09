@@ -13,3 +13,8 @@
 .grow {
     flex-grow: 1;
 }
+
+.unity-base-dropdown__checkmark {
+    margin-top: auto;
+    margin-bottom: auto;
+}
