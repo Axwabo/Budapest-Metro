@@ -277,12 +277,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 1, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -604,12 +604,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -952,12 +952,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 3, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -2301,12 +2301,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 2, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -3685,12 +3685,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 3, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -4126,12 +4126,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 3, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -4423,12 +4423,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 1, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -4637,12 +4637,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 3, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -5165,12 +5165,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 2, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -6061,12 +6061,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -7415,12 +7415,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 3, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -9377,12 +9377,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -10139,12 +10139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 5, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 5, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -10722,12 +10722,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 3, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -10836,12 +10836,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -11295,12 +11295,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 5, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 5, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -12183,12 +12183,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 2, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -13393,12 +13393,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 2, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -14439,12 +14439,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 3, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -14573,12 +14573,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 2, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -14732,12 +14732,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -14894,12 +14894,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -15758,12 +15758,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 3, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -16097,12 +16097,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
   material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 2, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 3, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
