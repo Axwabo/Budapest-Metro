@@ -23,10 +23,14 @@ namespace Metro
 
         private float _time;
 
+        private InputActionMap _ui;
+
         private void Start()
         {
             _menu = document.rootVisualElement.Q("Menu");
+            _ui = InputSystem.actions.FindActionMap("UI", true);
             _player = playerActions.FindActionMap("Player", true);
+            _ui.Disable();
             _player.Disable();
         }
 
@@ -43,10 +47,8 @@ namespace Metro
             if (_time < 0.5f)
                 return;
             var show = _player.enabled;
-            if (show)
-                _player.Disable();
-            else
-                _player.Enable();
+            (show ? _ui : _player).Enable();
+            (show ? _player : _ui).Disable();
             Cursor.lockState = show ? CursorLockMode.None : CursorLockMode.Locked;
             _menu?.Display(show);
         }
