@@ -417,7 +417,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1908899011}
+  m_Father: {fileID: 891280670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &18150747
 MonoBehaviour:
@@ -434,9 +434,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -1087,11 +1087,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -1543,9 +1543,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -3195,9 +3195,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -3902,7 +3902,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1440216692}
+  m_Father: {fileID: 1450066030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &374853942
 MonoBehaviour:
@@ -3916,12 +3916,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
+  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
+  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -4591,37 +4591,6 @@ MonoBehaviour:
   toLeft: {fileID: 1593878084}
   fromRight: {fileID: 1942180630}
   toRight: {fileID: 502220411}
---- !u!1 &454486404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 454486405}
-  m_Layer: 0
-  m_Name: Visual
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &454486405
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454486404}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1440216692}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &456640116
 GameObject:
   m_ObjectHideFlags: 0
@@ -5023,9 +4992,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -5446,9 +5415,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -5642,9 +5611,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -6451,7 +6420,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1908899011}
+  m_Father: {fileID: 891280670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &604548289
 MonoBehaviour:
@@ -6465,12 +6434,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
+  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
+  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -6798,9 +6767,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -7196,7 +7165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1440216692}
+  m_Father: {fileID: 1450066030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &690274261
 MonoBehaviour:
@@ -7213,9 +7182,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -8618,7 +8587,9 @@ Transform:
   - {fileID: 1883526877}
   - {fileID: 1845205853}
   - {fileID: 1404374182}
-  - {fileID: 1908899011}
+  - {fileID: 18150746}
+  - {fileID: 2038675510}
+  - {fileID: 604548288}
   m_Father: {fileID: 1821383470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &921198449
@@ -8759,9 +8730,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -9568,9 +9539,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -9866,9 +9837,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -10458,12 +10429,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
+  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
+  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -10481,7 +10452,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1440216692}
+  m_Father: {fileID: 1450066030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1313629243
 GameObject:
@@ -11142,9 +11113,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -11452,41 +11423,6 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1440216691
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1440216692}
-  m_Layer: 0
-  m_Name: "Bik\xE1s > Kelenf\xF6ld"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1440216692
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440216691}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 690274260}
-  - {fileID: 1305362383}
-  - {fileID: 374853941}
-  - {fileID: 454486405}
-  m_Father: {fileID: 1450066030}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1447225335
 GameObject:
   m_ObjectHideFlags: 0
@@ -11573,7 +11509,9 @@ Transform:
   - {fileID: 93541583}
   - {fileID: 300232808}
   - {fileID: 1549363359}
-  - {fileID: 1440216692}
+  - {fileID: 690274260}
+  - {fileID: 1305362383}
+  - {fileID: 374853941}
   m_Father: {fileID: 1821383470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1481446892
@@ -12452,9 +12390,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -13351,9 +13289,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -13966,9 +13904,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -14433,9 +14371,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -14862,40 +14800,6 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1908899010
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1908899011}
-  m_Layer: 0
-  m_Name: "Bik\xE1s > Kelenf\xF6ld"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1908899011
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908899010}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 18150746}
-  - {fileID: 2038675510}
-  - {fileID: 604548288}
-  m_Father: {fileID: 891280670}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1927253217
 GameObject:
   m_ObjectHideFlags: 0
@@ -15460,9 +15364,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -15732,12 +15636,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
+  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
+  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 0.159, z: 1.505}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -15755,7 +15659,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1908899011}
+  m_Father: {fileID: 891280670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2040060408
 GameObject:
@@ -15991,9 +15895,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
@@ -16413,9 +16317,9 @@ MonoBehaviour:
   mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
-  translation: {x: 0, y: 3, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
-  scale: {x: 10, y: 1.75, z: 1.75}
+  translation: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 90, z: 90}
+  scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
