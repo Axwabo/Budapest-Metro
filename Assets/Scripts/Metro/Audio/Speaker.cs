@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Metro.Trains;
 using UnityEngine;
 
@@ -9,9 +8,10 @@ namespace Metro.Audio
     public sealed class Speaker : AssemblyComponent
     {
 
-        private readonly List<float[]> _buffers = new();
-
         private readonly object _lock = new();
+
+        private float[] _buffer;
+
         private int _delaySamples;
         private int _position;
 
@@ -21,13 +21,13 @@ namespace Metro.Audio
         {
             _source = GetComponent<AudioSource>();
             _delaySamples = AudioSettings.outputSampleRate / 2;
+            _buffer = new float[_delaySamples * 4];
         }
 
         private void OnAudioFilterRead(float[] data, int channels)
         {
             lock (_lock)
             {
-                // let me think
             }
         }
 
