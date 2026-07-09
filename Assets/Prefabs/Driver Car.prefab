@@ -49,6 +49,7 @@ MonoBehaviour:
   backPivot: {fileID: 6284397857367204520}
   <Front>k__BackingField: {fileID: 7128706858758394882}
   <Back>k__BackingField: {fileID: 298483663678681936}
+  <Bounds>k__BackingField: {fileID: 2370544615815793137}
 --- !u!1 &4566924532807726987
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,8 +81,6 @@ Transform:
   m_Children:
   - {fileID: 4438711199349080665}
   - {fileID: 5203909633249313459}
-  - {fileID: 8274197547724944921}
-  - {fileID: 4305180279534292641}
   - {fileID: 3765666677137738717}
   m_Father: {fileID: 4634346813422356667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -317,68 +316,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1001 &258292102730300313
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7851839466532502739}
-    m_Modifications:
-    - target: {fileID: 3467855502924832440, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_Name
-      value: Left Speakers
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18c665e45ebd390939408af52c89923f, type: 3}
---- !u!4 &8274197547724944921 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-  m_PrefabInstance: {fileID: 258292102730300313}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3374998165325139280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -988,60 +925,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3100247069095537337, guid: 4af7aabd3e61b0c7a80c075411d372cb, type: 3}
   m_PrefabInstance: {fileID: 4681692534837210429}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5402467149583352609
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7851839466532502739}
-    m_Modifications:
-    - target: {fileID: 3467855502924832440, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_Name
-      value: Right Speakers
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18c665e45ebd390939408af52c89923f, type: 3}
---- !u!4 &4305180279534292641 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-  m_PrefabInstance: {fileID: 5402467149583352609}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5893487518754258064
 PrefabInstance:

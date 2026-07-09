@@ -252,6 +252,7 @@ Transform:
   - {fileID: 962834591379616110}
   - {fileID: 3972119905897072391}
   - {fileID: 7653735747912062762}
+  - {fileID: 9185500459417850062}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8921545013366236275
@@ -568,4 +569,86 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6877757374412686438, guid: 8431d839f457b89d58cd5a8eefa49c56, type: 3}
   m_PrefabInstance: {fileID: 5921704721228428552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7760626113450210269
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8957598004594227194}
+    m_Modifications:
+    - target: {fileID: 1498076162245010195, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498076162245010195, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498076162245010195, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498076162245010195, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498076162245010195, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498076162245010195, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498076162245010195, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498076162245010195, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498076162245010195, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498076162245010195, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450856466472534876, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      propertyPath: m_Name
+      value: Speaker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5450856466472534876, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8323222795303369106}
+  m_SourcePrefab: {fileID: 100100000, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+--- !u!1 &2312067648062320769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5450856466472534876, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+  m_PrefabInstance: {fileID: 7760626113450210269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8323222795303369106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2312067648062320769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 099d934bd9724b428949cdc2142095d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Audio.AssemblyAudioSource
+--- !u!4 &9185500459417850062 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1498076162245010195, guid: b93df928ed8abbddb91619f9f7aba028, type: 3}
+  m_PrefabInstance: {fileID: 7760626113450210269}
   m_PrefabAsset: {fileID: 0}

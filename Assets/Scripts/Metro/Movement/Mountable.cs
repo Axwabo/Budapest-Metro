@@ -31,12 +31,14 @@ namespace Metro.Movement
 
         private void OnTriggerExit(Collider other)
         {
-            if (!other.TryGetComponent(out MovementController controller) || controller.Mount != _t)
+            if (!other.TryGetComponent(out MovementController controller))
+                return;
+            if (_inCar)
+                _car.IsPlayerMounted = false;
+            if (controller.Mount != _t)
                 return;
             controller.Mount = null;
             controller.Transform.parent = null;
-            if (_inCar)
-                _car.IsPlayerMounted = false;
         }
 
     }

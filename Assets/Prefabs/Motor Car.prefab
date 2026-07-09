@@ -184,8 +184,6 @@ Transform:
   - {fileID: 3301134190785777939}
   - {fileID: 3129755179891998672}
   - {fileID: 6190093149609834933}
-  - {fileID: 4370881972407683830}
-  - {fileID: 4800185247743213337}
   - {fileID: 1688071429487343697}
   m_Father: {fileID: 6877757374412686438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -205,6 +203,7 @@ MonoBehaviour:
   backPivot: {fileID: 421435489028233098}
   <Front>k__BackingField: {fileID: 7585560880006238003}
   <Back>k__BackingField: {fileID: 9171454550248497950}
+  <Bounds>k__BackingField: {fileID: 2049435166866956985}
 --- !u!1 &6097508836100998468
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,44 +726,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2308267239041807647, guid: 4df73f20fc6208062894438c6b871c97, type: 3}
   m_PrefabInstance: {fileID: 2725136867212616341}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3736816249758773913
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7715441990966297500}
-    m_Modifications:
-    - target: {fileID: 3467855502924832440, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_Name
-      value: Right Speakers
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18c665e45ebd390939408af52c89923f, type: 3}
---- !u!4 &4800185247743213337 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-  m_PrefabInstance: {fileID: 3736816249758773913}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3762051635509584416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -872,68 +833,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2308267239041807647, guid: 4df73f20fc6208062894438c6b871c97, type: 3}
   m_PrefabInstance: {fileID: 5510491740643299146}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5615430624707757942
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7715441990966297500}
-    m_Modifications:
-    - target: {fileID: 3467855502924832440, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_Name
-      value: Left Speakers
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18c665e45ebd390939408af52c89923f, type: 3}
---- !u!4 &4370881972407683830 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8162345069572689280, guid: 18c665e45ebd390939408af52c89923f, type: 3}
-  m_PrefabInstance: {fileID: 5615430624707757942}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6008921395351486933
 PrefabInstance:
