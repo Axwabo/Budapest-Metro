@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -35,6 +36,8 @@ namespace Metro
             parent.GetComponentsInChildren(target);
             parent.InitializeComponents(target);
         }
+
+        public static T RequireComponent<T>(this ISubcomponentParent parent) => parent.Components<T>().First();
 
     }
 

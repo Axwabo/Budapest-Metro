@@ -34,6 +34,8 @@ namespace Metro.Movement
 
         private bool _wantsToJump;
 
+        public static Vector3 LastPosition { get; private set; }
+
         public Transform Transform { get; private set; }
 
         public Transform Mount { get; set; }
@@ -64,10 +66,9 @@ namespace Metro.Movement
 
             _wantsToJump = false;
             move.y = _upwards;
-            if (move == Vector3.zero)
-                return;
-            if ((_cc.Move(move) & CollisionFlags.Below) != 0)
+            if (move != Vector3.zero && (_cc.Move(move) & CollisionFlags.Below) != 0)
                 _upwards = 0;
+            LastPosition = Transform.position;
         }
 
         private void OnLook(InputValue look)

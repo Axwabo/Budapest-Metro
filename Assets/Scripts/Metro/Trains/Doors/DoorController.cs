@@ -1,6 +1,6 @@
 using System.Collections.Generic;
+using Metro.Audio;
 using Metro.Stations;
-using Metro.Trains.Cars;
 using Metro.Trains.Driving;
 using UnityEngine;
 
@@ -14,7 +14,6 @@ namespace Metro.Trains.Doors
         private AudioClip beep;
 
         private readonly List<MetroDoor> _doors = new();
-        private readonly List<Speaker> _speakers = new();
 
         private float _closeDelay;
 
@@ -23,6 +22,8 @@ namespace Metro.Trains.Doors
         private float _openDelay;
 
         private bool _reverse;
+
+        private Speaker _speaker;
 
         private bool _target;
 
@@ -52,11 +53,9 @@ namespace Metro.Trains.Doors
 
         protected override void OnInitialized()
         {
+            _speaker = Parent.RequireComponent<Speaker>();
             foreach (var car in Parent.Cars)
-            {
                 _doors.AddRange(car.Components<MetroDoor>());
-                _speakers.AddRange(car.Components<Speaker>());
-            }
         }
 
         public override void OnStateChanged()
@@ -83,8 +82,7 @@ namespace Metro.Trains.Doors
 
         private void Beep(float at)
         {
-            foreach (var speaker in _speakers)
-                speaker.PlayOneShit(beep);
+            _speaker.PlayOneShit(beep);
             _lastBeeped = at;
             foreach (var door in _doors)
                 if (door.Reverse == _reverse)

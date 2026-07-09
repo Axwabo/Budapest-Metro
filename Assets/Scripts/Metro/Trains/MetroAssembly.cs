@@ -10,7 +10,7 @@ using UnityEngine;
 namespace Metro.Trains
 {
 
-    public sealed class MetroAssembly : MonoBehaviour
+    public sealed class MetroAssembly : MonoBehaviour, ISubcomponentParent
     {
 
         [SerializeField]
@@ -36,14 +36,12 @@ namespace Metro.Trains
         {
             this.GetComponentsInImmediateChildren(_components);
             _cars = Components<MetroCar>().ToArray();
-            Motor = RequireComponent<Motor>();
-            JourneyManager = RequireComponent<JourneyManager>();
-            Driver = RequireComponent<AutomaticDriver>();
+            Motor = this.RequireComponent<Motor>();
+            JourneyManager = this.RequireComponent<JourneyManager>();
+            Driver = this.RequireComponent<AutomaticDriver>();
             this.InitializeComponents(_components);
             JourneyManager.Begin();
         }
-
-        public T RequireComponent<T>() => _components.OfType<T>().First();
 
         public IEnumerable<T> Components<T>() => _components.OfType<T>();
 

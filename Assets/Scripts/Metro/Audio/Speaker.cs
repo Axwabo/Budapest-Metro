@@ -1,10 +1,11 @@
+using Metro.Trains;
 using UnityEngine;
 
-namespace Metro.Trains.Cars
+namespace Metro.Audio
 {
 
     [RequireComponent(typeof(AudioSource))]
-    public sealed class Speaker : CarComponent
+    public sealed class Speaker : AssemblyComponent
     {
 
         private AudioSource _source;

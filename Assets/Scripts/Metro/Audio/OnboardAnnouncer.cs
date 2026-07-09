@@ -1,7 +1,5 @@
-using System.Collections.Generic;
 using Metro.Journeys.Routes;
 using Metro.Trains;
-using Metro.Trains.Cars;
 using Metro.Trains.Driving;
 using UnityEngine;
 
@@ -27,13 +25,13 @@ namespace Metro.Audio
         [SerializeField]
         private AudioClip trafficArea;
 
-        private readonly List<Speaker> _speakers = new();
-
         private bool _arrivingPlayed;
 
         private float _delay;
 
         private bool _serviceAreaPlayed = true;
+
+        private Speaker _speaker;
 
         private bool? _wasInService;
 
@@ -59,17 +57,9 @@ namespace Metro.Audio
                 Play(clip);
         }
 
-        private void Play(AudioClip clip)
-        {
-            foreach (var speaker in _speakers)
-                speaker.Play(clip);
-        }
+        private void Play(AudioClip clip) => _speaker.Play(clip);
 
-        protected override void OnInitialized()
-        {
-            foreach (var car in Parent.Cars)
-                _speakers.AddRange(car.Components<Speaker>());
-        }
+        protected override void OnInitialized() => _speaker = Parent.RequireComponent<Speaker>();
 
         public override void OnStateChanged()
         {

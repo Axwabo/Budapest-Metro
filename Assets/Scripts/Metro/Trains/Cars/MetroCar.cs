@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Metro.Trains.Cars
 {
 
-    public sealed class MetroCar : AssemblyComponent
+    public sealed class MetroCar : AssemblyComponent, ISubcomponentParent
     {
 
         private readonly List<CarComponent> _components = new();
@@ -18,15 +18,17 @@ namespace Metro.Trains.Cars
 
         public float BackAxleOffset { get; private set; }
 
+        public bool IsPlayerMounted { get; set; }
+
         public IEnumerable<T> Components<T>() => _components.OfType<T>();
 
         protected override void OnInitialized()
         {
             this.GetAndInitializeComponents(_components);
-            var axles = _components.OfType<Axle>().OrderByDescending(e => e.Distance).ToArray();
+            var axles = Components<Axle>().OrderByDescending(e => e.Distance).ToArray();
             FrontAxle = axles[0];
             BackAxle = axles[^1];
-            var body = Components<CarBody>().First();
+            var body = this.RequireComponent<CarBody>();
             FrontAxleOffset = Mathf.Abs(body.Inverse(FrontAxle.Transform) - body.Inverse(body.Front));
             BackAxleOffset = Mathf.Abs(body.Inverse(BackAxle.Transform) - body.Inverse(body.Back));
         }

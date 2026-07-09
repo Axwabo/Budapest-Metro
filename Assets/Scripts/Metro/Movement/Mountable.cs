@@ -1,3 +1,4 @@
+using Metro.Trains.Cars;
 using UnityEngine;
 
 namespace Metro.Movement
@@ -6,9 +7,17 @@ namespace Metro.Movement
     public sealed class Mountable : MonoBehaviour
     {
 
+        private MetroCar _car;
+
+        private bool _inCar;
+
         private Transform _t;
 
-        private void Awake() => _t = transform;
+        private void Awake()
+        {
+            _t = transform;
+            _inCar = _car = GetComponentInParent<MetroCar>();
+        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -16,6 +25,8 @@ namespace Metro.Movement
                 return;
             controller.Mount = _t;
             controller.Transform.parent = _t;
+            if (_inCar)
+                _car.IsPlayerMounted = true;
         }
 
         private void OnTriggerExit(Collider other)
@@ -24,6 +35,8 @@ namespace Metro.Movement
                 return;
             controller.Mount = null;
             controller.Transform.parent = null;
+            if (_inCar)
+                _car.IsPlayerMounted = false;
         }
 
     }
