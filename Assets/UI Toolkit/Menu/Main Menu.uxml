@@ -6,7 +6,7 @@
             <ui:Label text="🚇" />
             <ui:Label text="M4" class="M4" />
         </ui:VisualElement>
-        <ui:DropdownField label="Select a station:" />
+        <ui:DropdownField name="Station" label="Select a station:" />
         <ui:VisualElement>
             <ui:SliderInt name="Hours" label="Hour" value="8" high-value="23" />
             <ui:SliderInt name="Minute" label="Minutes" value="30" high-value="59" />
