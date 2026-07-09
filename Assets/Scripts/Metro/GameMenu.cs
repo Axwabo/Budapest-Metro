@@ -27,7 +27,7 @@ namespace Metro
 
         private void Start()
         {
-            //_menu = document.rootVisualElement.Q("Menu");
+            _menu = document.rootVisualElement.Q("Menu");
             _ui = InputSystem.actions.FindActionMap("UI", true);
             _player = playerActions.FindActionMap("Player", true);
             _ui.Disable();

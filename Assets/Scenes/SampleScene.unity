@@ -15019,6 +15019,7 @@ GameObject:
   - component: {fileID: 1879075053}
   - component: {fileID: 1879075054}
   - component: {fileID: 1879075055}
+  - component: {fileID: 1879075056}
   m_Layer: 5
   m_Name: Game Menu
   m_TagString: Untagged
@@ -15076,7 +15077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54882da58d545199d34505aa2045e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.GameMenu
-  document: {fileID: 0}
+  document: {fileID: 1879075051}
   playerActions: {fileID: -944628639613478452, guid: 5df729fb3942b7c3490afdbb2d5aae3d, type: 3}
 --- !u!114 &1879075054
 MonoBehaviour:
@@ -15121,6 +15122,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Clock
   start: 
+--- !u!114 &1879075056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879075050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b686a7d66064e5e8143adbb6bc58458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Menu.SceneSwitcher
+  sceneName: Main Menu
+  buttonName: Exit
+  scene: {fileID: 102900000, guid: 933f114f86b6e231b969f22daa33cbcf, type: 3}
 --- !u!1 &1883526873
 GameObject:
   m_ObjectHideFlags: 0
