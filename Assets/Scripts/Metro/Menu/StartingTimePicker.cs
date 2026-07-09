@@ -40,7 +40,11 @@ namespace Metro.Menu
             Refresh();
         }
 
-        private void Refresh() => _time.text = Clock.Format(Clock.Start = new TimeSpan(_h, _m, _s));
+        private void Refresh()
+        {
+            if (_time != null)
+                _time.text = Clock.Format(Clock.Start = new TimeSpan(_h, _m, _s));
+        }
 
     }
 
