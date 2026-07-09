@@ -431,11 +431,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -1086,11 +1086,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -1540,11 +1540,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -2944,55 +2944,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 318336518}
     m_Modifications:
-    - target: {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: <Next>k__BackingField
       value: 
       objectReference: {fileID: 456640119}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9999844
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0.0055885315
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -0.64
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7441886322972466006, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8207057862909982042, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_Name
-      value: Straight Track
+      value: Track
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
 --- !u!4 &246295754 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
   m_PrefabInstance: {fileID: 246295753}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &246295755 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
   m_PrefabInstance: {fileID: 246295753}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -3192,11 +3192,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -3829,39 +3829,39 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1536637318}
     m_Modifications:
-    - target: {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: <Next>k__BackingField
       value: 
       objectReference: {fileID: 343102483}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7441886322972466006, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8207057862909982042, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_Name
-      value: Straight Track
+      value: Track
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
 --- !u!4 &360115899 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
   m_PrefabInstance: {fileID: 360115898}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &360115900 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
   m_PrefabInstance: {fileID: 360115898}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -3916,11 +3916,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -4989,11 +4989,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -5412,11 +5412,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -5608,11 +5608,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -6434,11 +6434,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -6764,11 +6764,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -7179,11 +7179,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -7920,39 +7920,39 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1831735416}
     m_Modifications:
-    - target: {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: <Next>k__BackingField
       value: 
       objectReference: {fileID: 2048274009}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7441886322972466006, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8207057862909982042, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_Name
-      value: Straight Track
+      value: Track
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
 --- !u!4 &800287893 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
   m_PrefabInstance: {fileID: 800287892}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &800287894 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
   m_PrefabInstance: {fileID: 800287892}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -8508,39 +8508,39 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1040369775}
     m_Modifications:
-    - target: {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: <Next>k__BackingField
       value: 
       objectReference: {fileID: 86317013}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7441886322972466006, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8207057862909982042, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_Name
-      value: Straight Track
+      value: Track
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
 --- !u!4 &890980211 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
   m_PrefabInstance: {fileID: 890980210}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &890980212 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
   m_PrefabInstance: {fileID: 890980210}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -8727,11 +8727,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -9536,11 +9536,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -9834,11 +9834,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -9951,59 +9951,59 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 979653617}
     m_Modifications:
-    - target: {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: <Next>k__BackingField
       value: 
       objectReference: {fileID: 1893800657}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.00008159876
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7441886322972466006, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+    - target: {fileID: 8207057862909982042, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_Name
-      value: Straight Track
+      value: Track
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
 --- !u!4 &1252846973 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
   m_PrefabInstance: {fileID: 1252846972}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1252846974 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
   m_PrefabInstance: {fileID: 1252846972}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -10429,11 +10429,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -11110,11 +11110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -12387,11 +12387,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -13286,11 +13286,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -13901,11 +13901,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -14368,11 +14368,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -15361,11 +15361,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -15636,11 +15636,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -15892,11 +15892,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
@@ -16314,11 +16314,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
-  material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
+  mesh: {fileID: -5495902117074765545, guid: dddbbc327d826aac290aca93f2b32f76, type: 3}
+  material: {fileID: 2100000, guid: fb6244f7282ff333ebd3c8359c2ad39a, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
+  rotation: {x: 0, y: 90, z: 0}
   scale: {x: 10, y: 1, z: 1}
   generateCollider: 0
   updateInPlayMode: 1
