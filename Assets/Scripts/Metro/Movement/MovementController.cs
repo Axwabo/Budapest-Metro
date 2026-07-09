@@ -1,3 +1,5 @@
+using Metro.Menu;
+using Metro.Stations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -41,6 +43,12 @@ namespace Metro.Movement
             _cc = GetComponent<CharacterController>();
             Transform = transform;
             _cam = GetComponentInChildren<Camera>().transform;
+        }
+
+        private void Start()
+        {
+            if (Station.TryGetLoadad(StartingStationPicker.Name, out var station))
+                Transform.position = station.transform.position + Vector3.up * 1.5f;
         }
 
         private void Update()

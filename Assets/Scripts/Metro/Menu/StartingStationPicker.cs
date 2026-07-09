@@ -23,7 +23,7 @@ namespace Metro.Menu
                 dropdown.choices.Add(station);
             }
 
-            dropdown.index = 0;
+            dropdown.index = dropdown.choices.IndexOf(Name);
         }
 
     }
