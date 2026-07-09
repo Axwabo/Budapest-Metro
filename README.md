@@ -71,8 +71,25 @@ that they've reached a different spline.
 
 ## UI Rendering
 
+All UI was made with UI Toolkit.
+I've wanted to learn data binding properly but I didn't feel like doing that just yet.
 
+The framework definitely has room for improvement, just to name a few issues:
+
+- way too many allocations
+- the UI Builder just decides to crap itself sometimes
+- full document reload even when only the stylesheet changes
+
+Rendering each display (forehead/on-board) separately caused significant performance regressions,
+so the displays are rendered onto a RenderTexture once, which can be placed on quads in the world.
+This also lets me customize the materials, allowing for shaders (e.g. slight emission).
 
 ## Tiling Shader
 
-Creating a 
+Creating the station overhead signs took a lot of time, because the default tiling property didn't work at first.
+
+Turns out, I had to set the texture's TilingMode to Wrap, and after using the Tiling & Offset node
+in the ShaderGraph, it magically worked.
+
+I also managed to waste time by attempting to make the tiling node myself with divisions and modulo
+because I thought the tiling node didn't work (I didn't connect it to a texture sampling node).
