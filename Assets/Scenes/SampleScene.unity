@@ -15020,6 +15020,7 @@ GameObject:
   - component: {fileID: 1879075054}
   - component: {fileID: 1879075055}
   - component: {fileID: 1879075056}
+  - component: {fileID: 1879075057}
   m_Layer: 5
   m_Name: Game Menu
   m_TagString: Untagged
@@ -15137,6 +15138,18 @@ MonoBehaviour:
   sceneName: Main Menu
   buttonName: Exit
   scene: {fileID: 102900000, guid: 933f114f86b6e231b969f22daa33cbcf, type: 3}
+--- !u!114 &1879075057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879075050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21196290fb494d7998cc7b090bed8506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Menu.TimeScale
 --- !u!1 &1883526873
 GameObject:
   m_ObjectHideFlags: 0
