@@ -23,8 +23,17 @@ namespace SplineMesh
         [SerializeField]
         public MeshPreset preset;
 
+        [SerializeField]
+        private Spline spline;
+
+        [SerializeField]
+        private float start;
+
+        [SerializeField]
+        private float end;
+
         private GameObject generated;
-        private Spline spline = null;
+
 #if UNITY_EDITOR
         private bool toUpdate = false;
 #endif
@@ -38,7 +47,8 @@ namespace SplineMesh
             generated = generatedTranform != null ? generatedTranform.gameObject : UOUtility.Create(generatedName, gameObject);
             generated.hideFlags = HideFlags.DontSaveInEditor | HideFlags.DontSaveInBuild;
 
-            spline = GetComponentInParent<Spline>();
+            if (!spline)
+                spline = GetComponentInParent<Spline>();
 #if UNITY_EDITOR
             spline.NodeListChanged += (s, e) => toUpdate = true;
 #endif
@@ -68,7 +78,7 @@ namespace SplineMesh
             else
             {
                 var go = FindOrCreate("segment 1 mesh");
-                go.GetComponent<MeshBender>().SetInterval(spline, 0);
+                go.GetComponent<MeshBender>().SetInterval(spline, start, end);
                 go.GetComponent<MeshCollider>().enabled = preset.generateCollider;
                 used.Add(go);
             }

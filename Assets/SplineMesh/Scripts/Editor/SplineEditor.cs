@@ -20,6 +20,9 @@ namespace SplineMesh
 
         private static bool showUpVector = false;
 
+        private static Vector3 _sparePosition;
+        private static Vector3 _spareDirection;
+
         private readonly List<Pose> _snapPoints = new();
         private bool mustCreateNewNode = false;
 
@@ -27,9 +30,6 @@ namespace SplineMesh
 
         private SplineNode selection;
         private SelectionType selectionType;
-
-        private static Vector3 _sparePosition;
-        private static Vector3 _spareDirection;
 
         private SerializedProperty nodesProp
         {
@@ -309,6 +309,8 @@ namespace SplineMesh
                 serializedObject.Update();
             }
 
+            GUI.enabled = true;
+
             if (GUILayout.Button("Store Spare"))
             {
                 _sparePosition = selection.Position;
@@ -320,8 +322,6 @@ namespace SplineMesh
                 (selection.Position, selection.Direction) = (_sparePosition, _spareDirection);
                 serializedObject.Update();
             }
-
-            GUI.enabled = true;
 
             showUpVector = GUILayout.Toggle(showUpVector, "Show up vector");
             spline.IsLoop = GUILayout.Toggle(spline.IsLoop, "Is loop");
@@ -346,6 +346,9 @@ namespace SplineMesh
             {
                 EditorGUILayout.LabelField("No selected node");
             }
+
+            GUILayout.Space(20);
+            GUILayout.Label($"Length: {spline.Length}");
         }
 
         private void DrawNodeData(SerializedProperty nodeProperty, SplineNode node)
