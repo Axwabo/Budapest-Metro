@@ -19,6 +19,6 @@
     margin-bottom: auto;
 }
 
-:focus .unity-slider-int__label {
+Slider:focus .unity-slider-int__label, SliderInt:focus .unity-slider-int__label {
     color: white;
 }
