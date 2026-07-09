@@ -12,6 +12,9 @@ namespace Metro.Trains.Cars
         [field: SerializeField]
         public Transform Back { get; private set; }
 
+        [field: SerializeField]
+        public Collider Bounds { get; private set; }
+
     }
 
 }

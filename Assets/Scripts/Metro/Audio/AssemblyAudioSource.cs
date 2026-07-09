@@ -12,7 +12,6 @@ namespace Metro.Audio
 
         private static readonly Comparison<Vector3> DistanceComparison = (a, b) => Vector3.Distance(a, MovementController.LastPosition).CompareTo(Vector3.Distance(b, MovementController.LastPosition));
 
-        private readonly List<CarriageAudioBounds> _bounds = new();
         private readonly List<Vector3> _closestPoints = new();
 
         private Transform _t;
@@ -29,17 +28,16 @@ namespace Metro.Audio
                 return;
             }
 
-            for (var i = 0; i < _bounds.Count; i++)
-                _closestPoints[i] = _bounds[i].Collider.ClosestPoint(MovementController.LastPosition);
+            for (var i = 0; i < _closestPoints.Count; i++)
+                _closestPoints[i] = Parent.Cars[i].Bounds.ClosestPoint(MovementController.LastPosition);
             _closestPoints.Sort(DistanceComparison);
             _t.position = _closestPoints[0];
         }
 
         protected override void OnInitialized()
         {
-            foreach (var car in Parent.Cars)
-                _bounds.Add(car.RequireComponent<CarriageAudioBounds>());
-            for (var i = 0; i < _bounds.Count; i++)
+            var count = Parent.Cars.Length;
+            for (var i = 0; i < count; i++)
                 _closestPoints.Add(Vector3.zero);
         }
 

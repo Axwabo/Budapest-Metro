@@ -18,6 +18,8 @@ namespace Metro.Trains.Cars
 
         public float BackAxleOffset { get; private set; }
 
+        public Collider Bounds { get; private set; }
+
         public bool IsPlayerMounted { get; set; }
 
         public IEnumerable<T> Components<T>() => _components.OfType<T>();
@@ -31,6 +33,7 @@ namespace Metro.Trains.Cars
             var body = this.RequireComponent<CarBody>();
             FrontAxleOffset = Mathf.Abs(body.Inverse(FrontAxle.Transform) - body.Inverse(body.Front));
             BackAxleOffset = Mathf.Abs(body.Inverse(BackAxle.Transform) - body.Inverse(body.Back));
+            Bounds = body.Bounds;
         }
 
         public override void OnStateChanged()
