@@ -35,7 +35,11 @@
                         <ui:DataBinding property="visible" data-source-path="Metro" binding-mode="ToTarget" />
                     </Bindings>
                 </ui:Label>
-                <ui:Label text="M3" name="MetroList" />
+                <ui:Label text="M3" name="MetroList">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="MetroList" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
                 <ui:Label text="🚆" name="Railways" class="icon">
                     <Bindings>
                         <ui:DataBinding property="visible" data-source-path="Railways" binding-mode="ToTarget" />
@@ -51,19 +55,31 @@
                         <ui:DataBinding property="visible" data-source-path="Tram" binding-mode="ToTarget" />
                     </Bindings>
                 </ui:Label>
-                <ui:Label text="1 19 49" name="TramList" />
+                <ui:Label text="1 19 49" name="TramList">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="TramList" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
                 <ui:Label text="🚎" name="TrolleyIcon" class="icon">
                     <Bindings>
                         <ui:DataBinding property="visible" data-source-path="Trolley" binding-mode="ToTarget" />
                     </Bindings>
                 </ui:Label>
-                <ui:Label text="72 83" name="TrolleyList" />
+                <ui:Label text="72 83" name="TrolleyList">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="TrolleyList" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
                 <ui:Label text="🚌" name="BusIcon" class="icon">
                     <Bindings>
                         <ui:DataBinding property="visible" data-source-path="Bus" binding-mode="ToTarget" />
                     </Bindings>
                 </ui:Label>
-                <ui:Label text="100E" name="BusList" />
+                <ui:Label text="100E" name="BusList">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="BusList" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
             </ui:VisualElement>
             <ui:Label text="Üzemi terület" name="ServiceArea" style="-unity-text-align: middle-center;">
                 <Bindings>
