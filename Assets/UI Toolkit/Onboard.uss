@@ -1,6 +1,7 @@
 #Content > * {
     flex-grow: 1;
     flex-direction: row;
+    display: none;
 }
 
 Label {
@@ -24,4 +25,8 @@ Label {
 .no-scrolling {
     left: 0;
     justify-content: center;
+}
+
+.Destination #Destination, .RouteAndTime #RouteAndTime, .Stop #Stop, .Terminus #Terminus, .Transfers #Transfers, .ServiceArea #ServiceArea {
+    display: flex;
 }
