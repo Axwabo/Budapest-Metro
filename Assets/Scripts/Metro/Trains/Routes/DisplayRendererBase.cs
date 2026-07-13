@@ -41,7 +41,7 @@ namespace Metro.Trains.Routes
 
         private void OnDestroy() => material.Destroy();
 
-        protected virtual void Bind(VisualElement element)
+        protected virtual void Bind(VisualElement root)
         {
         }
 
@@ -51,6 +51,8 @@ namespace Metro.Trains.Routes
                 _content.visible = false;
             _showIn = seconds;
         }
+
+        protected void SetClass(string className, bool enable) => document.rootVisualElement.EnableInClassList(className, enable);
 
     }
 

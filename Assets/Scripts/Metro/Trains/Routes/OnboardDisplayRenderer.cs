@@ -1,7 +1,7 @@
-using System;
 using Metro.Journeys;
 using Metro.Stations;
 using Metro.Trains.Driving;
+using Unity.Properties;
 using UnityEngine.UIElements;
 using static Metro.Trains.Routes.SectionStateMachines;
 
@@ -11,35 +11,28 @@ namespace Metro.Trains.Routes
     public sealed class OnboardDisplayRenderer : DisplayRendererBase
     {
 
-        private Label _clock;
-
-        private VisualElement _current;
-
-        private Label _destination;
-
-        private VisualElement _destinationContainer;
-
-        private VisualElement _previous;
-
-        private Label _relation;
-
-        private VisualElement _routeAndTime;
-
         private DisplaySection _section;
-
-        private Label _serviceArea;
 
         private SectionStateMachine _stateMachine = ServiceArea;
 
-        private Label _stop;
-
-        private VisualElement _terminus;
-
         private float _time;
 
-        private VisualElement _transfers;
-
         private TransfersDisplay _transfersDisplay;
+
+        [CreateProperty]
+        public string Time { get; private set; }
+
+        [CreateProperty]
+        public string Destination { get; private set; }
+
+        [CreateProperty]
+        public string Relation { get; private set; }
+
+        [CreateProperty]
+        public string StopName { get; private set; }
+
+        [CreateProperty]
+        public string Service { get; private set; }
 
         private SectionStateMachine StoppedStateMachine => JourneyManager.IsDestination ? StoppedDestination : Stopped;
 
@@ -58,7 +51,7 @@ namespace Metro.Trains.Routes
             _time = 5;
             _section = _stateMachine(previousSection);
             if (_section != previousSection)
-                UpdateSection();
+                UpdateSection(previousSection);
         }
 
         private void UpdateStopping()
@@ -69,27 +62,18 @@ namespace Metro.Trains.Routes
             _stateMachine = target;
         }
 
-        private void UpdateSection()
+        private void UpdateSection(DisplaySection previousSection)
         {
             if (_section == DisplaySection.RouteAndTime)
-                _clock.text = Clock.Now.ToString("hh':'mm");
+                Time = Clock.Now.ToString("hh':'mm");
             else if (_section == DisplaySection.Transfers)
                 _transfersDisplay.ResetPosition();
-            _previous?.Display(false);
-            _previous = _current = _section switch
-            {
-                DisplaySection.Destination => _destinationContainer,
-                DisplaySection.RouteAndTime => _routeAndTime,
-                DisplaySection.Stop => _stop,
-                DisplaySection.Terminus => _terminus,
-                DisplaySection.Transfers => _transfers,
-                DisplaySection.ServiceArea => _serviceArea,
-                _ => throw new InvalidOperationException()
-            };
-            _current.Display();
+            SetClass(previousSection.ToString(), false);
+            SetClass(_section.ToString(), true);
             Blink(0.2f);
         }
 
+        /*
         protected override void Initialize(VisualElement root)
         {
             _stop = root.Q<Label>("Stop");
@@ -103,6 +87,9 @@ namespace Metro.Trains.Routes
             _serviceArea = root.Q<Label>("ServiceArea");
             _transfersDisplay = new TransfersDisplay(_transfers);
         }
+        */
+
+        protected override void Bind(VisualElement root) => _transfersDisplay = new TransfersDisplay(root.Q("Transfers"));
 
         public override void OnStateChanged()
         {
@@ -110,7 +97,7 @@ namespace Metro.Trains.Routes
             {
                 case (DriverState.Driving, false):
                     _stateMachine = ServiceArea;
-                    _serviceArea.text = Journey switch
+                    Service = Journey switch
                     {
                         ICarriageHouseJourney {ToCarriageHouse: true} => ToCarriageHouse,
                         Afk => "Üzemi terület", // valóságos ellentétben a hamissal (fake vs reality)
@@ -129,7 +116,7 @@ namespace Metro.Trains.Routes
         {
             if (Stop is {Name: var stopName})
             {
-                _stop.text = stopName;
+                StopName = stopName;
                 _transfersDisplay.Display(stopName);
             }
 
@@ -141,8 +128,8 @@ namespace Metro.Trains.Routes
 
         public override void OnJourneyChanged()
         {
-            _destination.text = Route?.Destination.Onboard() ?? "";
-            _relation.text = Route?.Relation ?? "";
+            Destination = Route?.Destination.Onboard() ?? "";
+            Relation = Route?.Relation ?? "";
         }
 
     }
