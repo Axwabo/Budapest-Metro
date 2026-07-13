@@ -1,15 +1,31 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/Onboard.uss?fileID=7433441132597879392&amp;guid=a46ba75295d832b67b4983c6e4645bb1&amp;type=3#Onboard"/>
-    <ui:VisualElement style="flex-grow: 1; background-color: rgb(0, 0, 0);">
+    <Style src="project://database/Assets/UI%20Toolkit/Onboard.uss?fileID=7433441132597879392&amp;guid=a46ba75295d832b67b4983c6e4645bb1&amp;type=3#Onboard" />
+    <ui:VisualElement data-source-type="Metro.Trains.Routes.OnboardDisplayRenderer, Assembly-CSharp" style="flex-grow: 1; background-color: rgb(0, 0, 0);">
         <ui:VisualElement name="Content" style="flex-grow: 1; font-size: 80px; color: rgb(255, 0, 0); -unity-text-align: middle-left;">
             <ui:VisualElement name="Destination" class="display-none" style="flex-grow: 1;">
                 <ui:Label text="⇧" name="Label" style="rotate: 90deg; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 0;" />
-                <ui:Label text="Keleti pályaudvar" name="Destination" />
+                <ui:Label text="Keleti pályaudvar" name="Destination">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="Description" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
             </ui:VisualElement>
-            <ui:Label text="Kelenföld vasútáll." name="Stop" class="display-none" style="-unity-text-align: middle-center;"/>
+            <ui:Label text="Kelenföld vasútáll." name="Stop" class="display-none" style="-unity-text-align: middle-center;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="StopName" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
             <ui:VisualElement name="RouteAndTime" class="display-none" style="justify-content: space-evenly;">
-                <ui:Label text="M4" name="Relation"/>
-                <ui:Label text="14:00" name="Clock"/>
+                <ui:Label text="M4" name="Relation">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="Relation" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
+                <ui:Label text="14:00" name="Clock">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="Time" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
             </ui:VisualElement>
             <ui:Label text="végállomás" name="Terminus" class="display-none" style="-unity-text-align: middle-center;" />
             <ui:VisualElement name="Transfers" usage-hints="DynamicTransform, LargePixelCoverage" class="display-none scrollable" style="padding-top: 0; padding-right: 50px; padding-bottom: 0; padding-left: 50px;">
@@ -24,7 +40,11 @@
                 <ui:Label text="🚌" name="BusIcon" class="icon" />
                 <ui:Label text="100E" name="BusList" />
             </ui:VisualElement>
-            <ui:Label text="Üzemi terület" name="ServiceArea" class="display-none" style="-unity-text-align: middle-center;" />
+            <ui:Label text="Üzemi terület" name="ServiceArea" class="display-none" style="-unity-text-align: middle-center;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="Service" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
