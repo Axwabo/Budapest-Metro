@@ -32,7 +32,7 @@
                               name="Transfers" usage-hints="DynamicTransform, LargePixelCoverage" class="display-none scrollable" style="padding: 0 50px;">
                 <ui:Label text="🚇" name="MetroIcon" class="icon">
                     <Bindings>
-                        <ui:DataBinding property="visible" data-source-path="Metro" binding-mode="ToTarget" />
+                        <ui:DataBinding property="style.display" data-source-path="Metro" binding-mode="ToTarget" />
                     </Bindings>
                 </ui:Label>
                 <ui:Label text="M3" name="MetroList">
@@ -42,17 +42,17 @@
                 </ui:Label>
                 <ui:Label text="🚆" name="Railways" class="icon">
                     <Bindings>
-                        <ui:DataBinding property="visible" data-source-path="Railways" binding-mode="ToTarget" />
+                        <ui:DataBinding property="style.display" data-source-path="Railways" binding-mode="ToTarget" />
                     </Bindings>
                 </ui:Label>
                 <ui:Label text="🚍" name="RegionalBuses" class="icon">
                     <Bindings>
-                        <ui:DataBinding property="visible" data-source-path="RegionalBuses" binding-mode="ToTarget" />
+                        <ui:DataBinding property="style.display" data-source-path="RegionalBuses" binding-mode="ToTarget" />
                     </Bindings>
                 </ui:Label>
                 <ui:Label text="🚊" name="TramIcon" class="icon">
                     <Bindings>
-                        <ui:DataBinding property="visible" data-source-path="Tram" binding-mode="ToTarget" />
+                        <ui:DataBinding property="style.display" data-source-path="Tram" binding-mode="ToTarget" />
                     </Bindings>
                 </ui:Label>
                 <ui:Label text="1 19 49" name="TramList">
@@ -62,7 +62,7 @@
                 </ui:Label>
                 <ui:Label text="🚎" name="TrolleyIcon" class="icon">
                     <Bindings>
-                        <ui:DataBinding property="visible" data-source-path="Trolley" binding-mode="ToTarget" />
+                        <ui:DataBinding property="style.display" data-source-path="Trolley" binding-mode="ToTarget" />
                     </Bindings>
                 </ui:Label>
                 <ui:Label text="72 83" name="TrolleyList">
@@ -72,7 +72,7 @@
                 </ui:Label>
                 <ui:Label text="🚌" name="BusIcon" class="icon">
                     <Bindings>
-                        <ui:DataBinding property="visible" data-source-path="Bus" binding-mode="ToTarget" />
+                        <ui:DataBinding property="style.display" data-source-path="Bus" binding-mode="ToTarget" />
                     </Bindings>
                 </ui:Label>
                 <ui:Label text="100E" name="BusList">
