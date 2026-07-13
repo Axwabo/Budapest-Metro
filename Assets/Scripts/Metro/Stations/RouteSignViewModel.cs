@@ -11,7 +11,7 @@ namespace Metro.Stations
         public string Destination { get; set; }
 
         [CreateProperty]
-        public string Description { get; set; }
+        public string Description { get; set; } = "Várható érkezési idő:";
 
         [CreateProperty]
         public StyleLength Width { get; set; } = 0;
