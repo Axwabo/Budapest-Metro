@@ -30,13 +30,19 @@ namespace Metro.Trains.Routes
                 _content.visible = true;
         }
 
-        private void OnDestroy() => material.Destroy();
-
-        protected override void OnInitialized()
+        private void OnEnable()
         {
             var root = document.rootVisualElement;
+            root.dataSource = this;
+            Bind(root);
             _content = root.Q("Content");
-            Initialize(root);
+            _content.visible = _showIn <= 0;
+        }
+
+        private void OnDestroy() => material.Destroy();
+
+        protected virtual void Bind(VisualElement element)
+        {
         }
 
         protected void Blink(float seconds)
@@ -45,8 +51,6 @@ namespace Metro.Trains.Routes
                 _content.visible = false;
             _showIn = seconds;
         }
-
-        protected abstract void Initialize(VisualElement root);
 
     }
 

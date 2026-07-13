@@ -1,7 +1,7 @@
 using Metro.Journeys;
 using Metro.Stations;
 using Metro.Trains.Driving;
-using UnityEngine.UIElements;
+using Unity.Properties;
 
 namespace Metro.Trains.Routes
 {
@@ -9,20 +9,19 @@ namespace Metro.Trains.Routes
     public sealed class ForeheadDisplayRenderer : DisplayRendererBase
     {
 
-        private Label _label;
-
-        protected override void Initialize(VisualElement root) => _label = root.Q<Label>();
+        [CreateProperty]
+        public string Text { get; private set; }
 
         public override void OnJourneyChanged()
         {
-            _label.text = IsInService ? $"{Route.Relation} {Route.Destination.Forehead()}" : "";
+            Text = IsInService ? $"{Route.Relation} {Route.Destination.Forehead()}" : "";
             Blink(4);
         }
 
         public override void OnStateChanged()
         {
             if (State == DriverState.Driving && !IsInService && Journey is not Afk)
-                _label.text = Journey is ICarriageHouseJourney {ToCarriageHouse: true} ? ToCarriageHouse : None;
+                Text = Journey is ICarriageHouseJourney {ToCarriageHouse: true} ? ToCarriageHouse : None;
         }
 
     }
