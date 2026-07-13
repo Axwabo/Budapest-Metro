@@ -28,16 +28,41 @@
                 </ui:Label>
             </ui:VisualElement>
             <ui:Label text="végállomás" name="Terminus" style="-unity-text-align: middle-center;" />
-            <ui:VisualElement name="Transfers" usage-hints="DynamicTransform, LargePixelCoverage" class="display-none scrollable" style="padding-top: 0; padding-right: 50px; padding-bottom: 0; padding-left: 50px;">
-                <ui:Label text="🚇" name="MetroIcon" class="icon" />
+            <ui:VisualElement data-source-type="Metro.Trains.Routes.TransfersDisplay, Assembly-CSharp"
+                              name="Transfers" usage-hints="DynamicTransform, LargePixelCoverage" class="display-none scrollable" style="padding: 0 50px;">
+                <ui:Label text="🚇" name="MetroIcon" class="icon">
+                    <Bindings>
+                        <ui:DataBinding property="visible" data-source-path="Metro" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
                 <ui:Label text="M3" name="MetroList" />
-                <ui:Label text="🚆" name="Railways" class="icon" />
-                <ui:Label text="🚍" name="RegionalBuses" class="icon" />
-                <ui:Label text="🚊" name="TramIcon" class="icon" />
+                <ui:Label text="🚆" name="Railways" class="icon">
+                    <Bindings>
+                        <ui:DataBinding property="visible" data-source-path="Railways" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
+                <ui:Label text="🚍" name="RegionalBuses" class="icon">
+                    <Bindings>
+                        <ui:DataBinding property="visible" data-source-path="RegionalBuses" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
+                <ui:Label text="🚊" name="TramIcon" class="icon">
+                    <Bindings>
+                        <ui:DataBinding property="visible" data-source-path="Tram" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
                 <ui:Label text="1 19 49" name="TramList" />
-                <ui:Label text="🚎" name="TrolleyIcon" class="icon" />
+                <ui:Label text="🚎" name="TrolleyIcon" class="icon">
+                    <Bindings>
+                        <ui:DataBinding property="visible" data-source-path="Trolley" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
                 <ui:Label text="72 83" name="TrolleyList" />
-                <ui:Label text="🚌" name="BusIcon" class="icon" />
+                <ui:Label text="🚌" name="BusIcon" class="icon">
+                    <Bindings>
+                        <ui:DataBinding property="visible" data-source-path="Bus" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
                 <ui:Label text="100E" name="BusList" />
             </ui:VisualElement>
             <ui:Label text="Üzemi terület" name="ServiceArea" style="-unity-text-align: middle-center;">

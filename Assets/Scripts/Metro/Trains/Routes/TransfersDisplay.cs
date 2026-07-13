@@ -1,5 +1,8 @@
 using Metro.Stations;
+using Unity.Properties;
 using UnityEngine.UIElements;
+
+// ReSharper disable NotAccessedField.Global
 
 namespace Metro.Trains.Routes
 {
@@ -10,36 +13,46 @@ namespace Metro.Trains.Routes
         private const float PixelsPerSecond = 400;
         private const string NoScroll = "no-scrolling";
 
-        private readonly VisualElement _busIcon;
-        private readonly Label _busList;
-        private readonly VisualElement _metroIcon;
-        private readonly Label _metroList;
-        private readonly VisualElement _railways;
-        private readonly VisualElement _regionalBuses;
-
         private readonly VisualElement _root;
-        private readonly VisualElement _tramIcon;
-        private readonly Label _tramList;
-        private readonly VisualElement _trolleyIcon;
-        private readonly Label _trolleyList;
 
         private float _size;
 
         private float _translate;
 
+        [CreateProperty]
+        public bool Bus;
+
+        [CreateProperty]
+        public string BusList;
+
+        [CreateProperty]
+        public bool Metro;
+
+        [CreateProperty]
+        public string MetroList;
+
+        [CreateProperty]
+        public bool Railways;
+
+        [CreateProperty]
+        public bool RegionalBuses;
+
+        [CreateProperty]
+        public bool Tram;
+
+        [CreateProperty]
+        public string TramList;
+
+        [CreateProperty]
+        public bool Trolley;
+
+        [CreateProperty]
+        public string TrolleyList;
+
         public TransfersDisplay(VisualElement root)
         {
             _root = root;
-            _metroIcon = root.Q("MetroIcon");
-            _metroList = root.Q<Label>("MetroList");
-            _railways = root.Q("Railways");
-            _regionalBuses = root.Q("RegionalBuses");
-            _tramIcon = root.Q("TramIcon");
-            _tramList = root.Q<Label>("TramList");
-            _trolleyIcon = root.Q("TrolleyIcon");
-            _trolleyList = root.Q<Label>("TrolleyList");
-            _busIcon = root.Q("BusIcon");
-            _busList = root.Q<Label>("BusList");
+            root.dataSource = this;
         }
 
         public bool TransitionCompleted => _translate >= _size;
@@ -50,21 +63,21 @@ namespace Metro.Trains.Routes
             ResetPositionInternal();
             if (!StationIdCache.TryGet(name, out var id))
             {
-                DisplayList(_metroIcon, _metroList, "");
-                _railways.Display(false);
-                _regionalBuses.Display(false);
-                DisplayList(_tramIcon, _tramList, "");
-                DisplayList(_trolleyIcon, _trolleyList, "");
-                DisplayList(_busIcon, _busList, "");
+                (Metro, MetroList) = DisplayList("");
+                Railways = false;
+                RegionalBuses = false;
+                (Tram, TramList) = DisplayList("");
+                (Trolley, TrolleyList) = DisplayList("");
+                (Bus, BusList) = DisplayList("");
                 return;
             }
 
-            DisplayList(_metroIcon, _metroList, id.Metros);
-            _railways.Display(id.Railways);
-            _regionalBuses.Display(id.RegionalBuses);
-            DisplayList(_tramIcon, _tramList, id.Trams);
-            DisplayList(_trolleyIcon, _trolleyList, id.Trolleys);
-            DisplayList(_busIcon, _busList, id.LocalBuses);
+            (Metro, MetroList) = DisplayList(id.Metros);
+            Railways = id.Railways;
+            RegionalBuses = id.RegionalBuses;
+            (Tram, TramList) = DisplayList(id.Trams);
+            (Trolley, TrolleyList) = DisplayList(id.Trolleys);
+            (Bus, BusList) = DisplayList(id.LocalBuses);
             _root.RegisterCallbackOnce<GeometryChangedEvent>(UpdateGeometry); // holy GD reference
         }
 
@@ -88,11 +101,7 @@ namespace Metro.Trains.Routes
             return textWidth + element.resolvedStyle.paddingLeft + element.resolvedStyle.paddingRight;
         }
 
-        private static void DisplayList(VisualElement icon, Label list, string text)
-        {
-            icon.Display(!string.IsNullOrEmpty(text));
-            list.text = text;
-        }
+        private static (bool Icon, string List) DisplayList(string text) => (!string.IsNullOrEmpty(text), text);
 
         public void ResetPosition()
         {

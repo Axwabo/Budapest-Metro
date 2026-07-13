@@ -8,7 +8,7 @@ namespace Metro
     {
 
         [RuntimeInitializeOnLoadMethod]
-        private static void Init() => ConverterGroups.RegisterGlobalConverter<bool, StyleEnum<Visibility>>((ref bool value) => value ? Visibility.Visible : Visibility.Hidden);
+        private static void Init() => ConverterGroups.RegisterGlobalConverter<bool, StyleEnum<DisplayStyle>>((ref bool value) => value ? DisplayStyle.Flex : DisplayStyle.None);
 
         public static void Display(this VisualElement element, bool visible = true) => element.EnableInClassList("display-none", !visible);
 
