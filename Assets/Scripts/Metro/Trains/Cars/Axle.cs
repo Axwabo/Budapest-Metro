@@ -92,6 +92,8 @@ namespace Metro.Trains.Cars
             Track = Assembly.startingTrack;
             Distance = Assembly.transform.InverseTransformPoint(Transform.position).z;
             UpdateLocation();
+            if (Track is StationTrack stationTrack)
+                stationTrack.Occupants.Add(this);
         }
 
         private void UpdateLocation()
