@@ -31,7 +31,7 @@ namespace Metro.Stations
         [SerializeField]
         private MeshRenderer[] renderers;
 
-        private VisualElement _bar;
+        private readonly RouteSignViewModel _viewModel = new();
 
         private float _delay;
 
@@ -39,12 +39,7 @@ namespace Metro.Stations
 
         private int _index = -1;
 
-        private Label _minutes;
-
-        private VisualElement _root;
-
         private Route _route;
-        private Label _seconds;
 
         private StationTrack _track;
 
@@ -66,10 +61,6 @@ namespace Metro.Stations
             }
         }
 
-        private string DestinationName => StationIdCache.TryGet(descriptor.Destination, out var id) && !string.IsNullOrEmpty(id.StationTime)
-            ? id.StationTime
-            : descriptor.Destination;
-
         private void Awake()
         {
             material.Init(name, document);
@@ -83,23 +74,17 @@ namespace Metro.Stations
 
         private void Start()
         {
-            _root = document.rootVisualElement;
+            var destinationName = StationIdCache.TryGet(descriptor.Destination, out var id) && !string.IsNullOrEmpty(id.StationTime)
+                ? id.StationTime
+                : descriptor.Destination;
+            _viewModel.Destination = $"{destinationName} felé";
             var station = GetComponentInParent<Station>();
-            var destination = _root.Q<Label>("Destination");
-            var description = _root.Q<Label>("Description");
-            destination.text = $"{DestinationName} felé";
             _index = FindIndex(station.ID.name);
-            _minutes = _root.Q<Label>("Minutes");
-            _seconds = _root.Q<Label>("Seconds");
-            _bar = _root.Q("Bar");
             _track = station.Track(descriptor.Reverse);
             if (_index == Origin)
-                description.text = "Várható indulási idő:";
+                _viewModel.Description = "Várható indulási idő:";
             else if (_index == Destination)
-            {
-                description.text = "";
-                _bar.style.width = 0;
-            }
+                _viewModel.Description = "";
         }
 
         private void Update()
@@ -109,6 +94,8 @@ namespace Metro.Stations
             _delay = 7; // or something like that, idrk
             UpdateDisplay();
         }
+
+        private void OnEnable() => document.rootVisualElement.dataSource = _viewModel;
 
         private int FindIndex(string stationName)
         {
@@ -149,8 +136,9 @@ namespace Metro.Stations
                 if (_index != Destination || _everUpdated)
                     return;
                 _everUpdated = true;
-                _root.AddToClassList("no-information");
-                _minutes.text = "=";
+                _viewModel.NoInformation = true;
+                _viewModel.Minutes = "=";
+                document.rootVisualElement.AddToClassList("no-information");
                 return;
             }
 
@@ -160,11 +148,11 @@ namespace Metro.Stations
             if (delta < TimeSpan.Zero)
                 delta = TimeSpan.Zero;
             var equals = _index == Destination && delta > TwoMinutes;
-            _root.EnableInClassList("no-information", equals);
-            _minutes.text = equals ? "=" : delta.Minutes.ToString("00");
-            _seconds.text = equals ? "" : delta.Seconds.ToString("00");
+            document.rootVisualElement.EnableInClassList("no-information", equals);
+            _viewModel.Minutes = equals ? "=" : delta.Minutes.ToString("00");
+            _viewModel.Seconds = equals ? "" : delta.Seconds.ToString("00");
             if (_index != Destination)
-                _bar.style.width = Length.Percent(Mathf.Min(100, (float) (delta.TotalSeconds * SecondsToOnePercent)));
+                _viewModel.Width = Length.Percent(Mathf.Min(100, (float) (delta.TotalSeconds * SecondsToOnePercent)));
         }
 
     }
