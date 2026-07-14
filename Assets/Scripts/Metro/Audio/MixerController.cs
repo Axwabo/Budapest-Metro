@@ -15,6 +15,8 @@ namespace Metro.Audio
         [SerializeField]
         private AudioMixerGroup outside;
 
+        private readonly List<IAudioSourceProvider> _providers = new();
+
         private readonly List<AudioSource> _sources = new();
 
         private bool _wasMounted;
@@ -24,14 +26,19 @@ namespace Metro.Audio
             var mounted = IsPlayerMounted;
             if (_wasMounted == mounted)
                 return;
+            EnsureCached();
             var group = mounted ? onboard : outside;
             foreach (var provider in _sources)
                 provider.outputAudioMixerGroup = group;
         }
 
-        protected override void OnInitialized()
+        protected override void OnInitialized() => _providers.AddRange(Parent.Components<IAudioSourceProvider>());
+
+        private void EnsureCached()
         {
-            foreach (var provider in Parent.Components<IAudioSourceProvider>())
+            if (_sources.Count != 0)
+                return;
+            foreach (var provider in _providers)
             {
                 var multiple = provider.MultipleAudioSources;
                 if (multiple.Length == 0)

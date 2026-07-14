@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8854589536953131960}
   - component: {fileID: 41016802346417406}
   - component: {fileID: 4554281012297366040}
+  - component: {fileID: 2118601703680375773}
   m_Layer: 0
   m_Name: Car Controllers
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MonoBehaviour:
   objects:
   - {fileID: 5250728963853106611}
   - {fileID: 4211974764333996586}
+--- !u!114 &2118601703680375773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2251190178717856706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 475ef5264b3c4c1594436403deec047a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Audio.MixerController
+  onboard: {fileID: 0}
+  outside: {fileID: 698953866653218585, guid: 55ef02a4064ced2ab859a74a27a4f4c5, type: 2}
 --- !u!1 &4211974764333996586
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,8 +282,8 @@ Transform:
   - {fileID: 6896284280283426575}
   - {fileID: 962834591379616110}
   - {fileID: 3972119905897072391}
-  - {fileID: 7653735747912062762}
   - {fileID: 9185500459417850062}
+  - {fileID: 7653735747912062762}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8921545013366236275
