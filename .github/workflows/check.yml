@@ -42,7 +42,7 @@ jobs:
           username: ${{ secrets.UNITY_EMAIL }}
           password: ${{ secrets.UNITY_PASSWORD }}
 
-      - uses: actions/cache@v6.1
+      - uses: actions/cache@v6.1.0
         with:
           path: Library
           key: Library-${{ matrix.profile }}-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
