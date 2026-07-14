@@ -1,6 +1,5 @@
 using System.IO;
 using UnityEditor;
-using UnityEditor.Build.Profile;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
 
@@ -9,18 +8,17 @@ public static class Build
 
     private const string Folder = "Build";
 
-    public static void Windows() => Run("Windows");
+    public static void Windows() => Run(BuildTarget.StandaloneWindows64, "Budapest-Metro.exe");
 
-    public static void Linux() => Run("Linux");
+    public static void Linux() => Run(BuildTarget.StandaloneLinux64, "Budapest-Metro.x86_64");
 
-    private static void Run(string profile)
+    private static void Run(BuildTarget target, string filename)
     {
         Directory.CreateDirectory(Folder);
-        var buildProfile = AssetDatabase.LoadAssetAtPath<BuildProfile>($"Assets/Settings/Build Profiles/{profile}.asset");
-        var report = BuildPipeline.BuildPlayer(new BuildPlayerWithProfileOptions
+        var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
         {
-            buildProfile = buildProfile,
-            locationPathName = Folder
+            target = target,
+            locationPathName = Path.Combine(Folder, target.ToString(), filename),
         });
         var summary = report.summary;
         if (summary.result == BuildResult.Succeeded)
