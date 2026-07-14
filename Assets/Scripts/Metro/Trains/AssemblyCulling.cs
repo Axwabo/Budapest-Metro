@@ -14,7 +14,7 @@ namespace Metro.Trains
 
         private bool _culled;
 
-        private float _time = 0.5f;
+        private float _time = 2;
 
         private void Update()
         {
