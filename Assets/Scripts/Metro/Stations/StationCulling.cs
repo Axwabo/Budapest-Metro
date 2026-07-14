@@ -1,10 +1,10 @@
 using Metro.Movement;
 using UnityEngine;
 
-namespace Metro.Trains
+namespace Metro.Stations
 {
 
-    public sealed class AssemblyCulling : AssemblyComponent
+    public sealed class StationCulling : MonoBehaviour
     {
 
         private const float MaxDistance = 500;
@@ -14,18 +14,18 @@ namespace Metro.Trains
 
         private bool _culled;
 
+        private Vector3 _position;
+
         private float _time = 0.5f;
+
+        private void Awake() => _position = transform.position;
 
         private void Update()
         {
             if ((_time -= Time.unscaledDeltaTime) > 0)
                 return;
             _time = 0.5f;
-            var frontPosition = Parent.Cars[0].Transform.position;
-            var rearPosition = Parent.Cars[^1].Transform.position;
-            var frontDistance = Vector3.Distance(frontPosition, MovementController.LastPosition);
-            var rearDistance = Vector3.Distance(rearPosition, MovementController.LastPosition);
-            var cull = Mathf.Min(frontDistance, rearDistance) > MaxDistance;
+            var cull = Vector3.Distance(_position, MovementController.LastPosition) > MaxDistance;
             if (cull == _culled)
                 return;
             _culled = cull;

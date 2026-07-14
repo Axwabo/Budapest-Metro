@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4044997385528384409}
   - component: {fileID: 1353173126340682939}
+  - component: {fileID: 57982273869144956}
   m_Layer: 0
   m_Name: Station
   m_TagString: Untagged
@@ -57,6 +58,22 @@ MonoBehaviour:
   leftTrack: {fileID: 3727201132112062455}
   rightTrack: {fileID: 779698760297868956}
   usablePlatformArea: 800
+--- !u!114 &57982273869144956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593148613192888902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9acd992caaf64ca887944137d14f4c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.StationCulling
+  objects:
+  - {fileID: 8930892661670694719}
+  - {fileID: 6659763563606749007}
+  - {fileID: 7535203367746285829}
 --- !u!1 &827133332715094266
 GameObject:
   m_ObjectHideFlags: 0
