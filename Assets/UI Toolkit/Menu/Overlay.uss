@@ -1,4 +1,4 @@
-#TimeScale {
+#TimeScale > VisualElement {
     min-width: 400px;
 }
 
