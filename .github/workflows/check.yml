@@ -13,13 +13,17 @@ jobs:
       max-parallel: 1
       fail-fast: true
       matrix:
-        os: [ubuntu-latest, windows-latest]
         include:
 
           - os: ubuntu-latest
             profile: Linux
             build-target: StandaloneLinux64
             modules: linux-mono
+
+          - os: ubuntu-latest
+            profile: WebGL
+            build-target: WebGL
+            modules: webgl
 
           - os: windows-latest
             profile: Windows
