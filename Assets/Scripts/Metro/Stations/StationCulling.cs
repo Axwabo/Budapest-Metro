@@ -16,13 +16,19 @@ namespace Metro.Stations
 
         private Vector3 _position;
 
+        private Station _station;
+
         private float _time = 0.5f;
 
-        private void Awake() => _position = transform.position;
+        private void Awake()
+        {
+            _position = transform.position;
+            _station = GetComponent<Station>();
+        }
 
         private void Update()
         {
-            if ((_time -= Time.unscaledDeltaTime) > 0)
+            if (_station.RenderQueuedSigns.Count != 0 || (_time -= Time.unscaledDeltaTime) > 0)
                 return;
             _time = 0.5f;
             var cull = Vector3.Distance(_position, MovementController.LastPosition) > MaxDistance;

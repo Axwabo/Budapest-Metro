@@ -1,8 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Menu/Overlay.uss?fileID=7433441132597879392&amp;guid=df07b0e2fe5a90780bfa06f0755cfa9d&amp;type=3#Overlay" />
     <ui:VisualElement name="Menu" style="color: white; flex-grow: 1; background-color: rgba(0, 0, 0, 0.2); justify-content: space-between; align-items: flex-start; font-size: 30px;">
         <ui:VisualElement>
             <ui:Label text="00:00:00" style="-unity-font-style: normal; margin: 0; padding: 5px;" />
-            <ui:Slider name="TimeScale" value="1" high-value="20" label="Time Scale" picking-mode="Position" style="min-width: 300px;" />
+            <ui:Slider name="TimeScale" value="1" high-value="20" label="Time Scale" style="min-width: 300px;" />
             <ui:VisualElement class="row" style="align-items: center;">
                 <ui:Button name="Reset" text="Reset" style="color: black; width: 160px;" />
                 <ui:Label name="TimeScale" text="1x" style="margin-left: 10px;" />

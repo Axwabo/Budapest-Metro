@@ -36,6 +36,7 @@ namespace Metro.Stations
 
         private void Start()
         {
+            _station.RenderQueuedSigns.Add(this);
             var root = document.rootVisualElement;
             foreach (var label in root.Query<Label>("Current").Build())
                 label.text = _station.name;
@@ -90,6 +91,7 @@ namespace Metro.Stations
         {
             Destroy(document);
             enabled = false;
+            _station.RenderQueuedSigns.Remove(this);
         }
 
     }

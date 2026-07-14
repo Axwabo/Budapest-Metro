@@ -1,0 +1,7 @@
+#TimeScale {
+    min-width: 400px;
+}
+
+#TimeScale > Label {
+    color: white;
+}
