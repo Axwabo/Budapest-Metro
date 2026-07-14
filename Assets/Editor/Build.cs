@@ -1,4 +1,5 @@
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
@@ -19,6 +20,7 @@ public static class Build
         {
             target = target,
             locationPathName = Path.Combine(Folder, target.ToString(), filename),
+            scenes = EditorBuildSettings.scenes.Select(e => e.path).ToArray()
         });
         var summary = report.summary;
         if (summary.result == BuildResult.Succeeded)
