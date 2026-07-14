@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Metro.Audio;
 using Metro.Stations;
 using Metro.Trains.Driving;
@@ -7,7 +9,7 @@ using UnityEngine;
 namespace Metro.Trains.Doors
 {
 
-    public sealed class DoorController : AssemblyComponent, IDepartureBlocker
+    public sealed class DoorController : AssemblyComponent, IDepartureBlocker, IAudioSourceProvider
     {
 
         [SerializeField]
@@ -16,6 +18,8 @@ namespace Metro.Trains.Doors
         private readonly List<MetroDoor> _doors = new();
 
         private float _closeDelay;
+
+        private AudioSource[] _doorSources;
 
         private float _lastBeeped = float.MinValue;
 
@@ -40,6 +44,8 @@ namespace Metro.Trains.Doors
             _closeDelay -= Clock.Delta;
         }
 
+        public ReadOnlySpan<AudioSource> MultipleAudioSources => _doorSources;
+
         public bool CanDepart
         {
             get
@@ -56,6 +62,7 @@ namespace Metro.Trains.Doors
             _speaker = Parent.RequireComponent<Speaker>();
             foreach (var car in Parent.Cars)
                 _doors.AddRange(car.Components<MetroDoor>());
+            _doorSources = _doors.Select(e => e.SingleAudioSource).ToArray();
         }
 
         public override void OnStateChanged()

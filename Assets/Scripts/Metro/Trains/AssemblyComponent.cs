@@ -27,6 +27,17 @@ namespace Metro.Trains
 
         public Stop? Stop => JourneyManager.Stop;
 
+        public bool IsPlayerMounted
+        {
+            get
+            {
+                foreach (var car in Parent.Cars)
+                    if (car.IsPlayerMounted)
+                        return true;
+                return false;
+            }
+        }
+
         public virtual void OnStateChanged()
         {
         }

@@ -20,7 +20,7 @@ namespace Metro.Trains.Cars
 
         public Collider Bounds { get; private set; }
 
-        public bool IsPlayerMounted { get; set; }
+        public new bool IsPlayerMounted { get; set; }
 
         public Transform Transform { get; private set; }
 

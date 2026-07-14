@@ -1,3 +1,4 @@
+using Metro.Audio;
 using Metro.Trains.Cars;
 using UnityEngine;
 
@@ -5,7 +6,7 @@ namespace Metro.Trains.Doors
 {
 
     [RequireComponent(typeof(Animator), typeof(AudioSource))]
-    public sealed class MetroDoor : CarComponent, IDepartureBlocker
+    public sealed class MetroDoor : CarComponent, IDepartureBlocker, IAudioSourceProvider
     {
 
         private static readonly int Hash = Animator.StringToHash("Open");
@@ -24,22 +25,22 @@ namespace Metro.Trains.Doors
 
         private Animator _animator;
 
-        private AudioSource _source;
-
         public bool Open
         {
             set
             {
                 _animator.SetBool(Hash, value);
-                _source.PlayOneShot(value ? open : close);
+                SingleAudioSource.PlayOneShot(value ? open : close);
             }
         }
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
-            _source = GetComponent<AudioSource>();
+            SingleAudioSource = GetComponent<AudioSource>();
         }
+
+        public AudioSource SingleAudioSource { get; private set; }
 
         public bool CanDepart => !_animator.IsInTransition(0) && _animator.GetCurrentAnimatorStateInfo(0).IsName("Empty");
 

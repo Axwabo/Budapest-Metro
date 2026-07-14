@@ -21,10 +21,8 @@ namespace Metro.Audio
         private void LateUpdate()
         {
             var last = MovementController.LastPosition;
-            foreach (var car in Parent.Cars)
+            if (IsPlayerMounted)
             {
-                if (!car.IsPlayerMounted)
-                    continue;
                 _t.position = last;
                 return;
             }

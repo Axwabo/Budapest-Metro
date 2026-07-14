@@ -6,16 +6,14 @@ namespace Metro.Audio
 {
 
     [RequireComponent(typeof(AudioSource))]
-    public sealed class Speaker : AssemblyComponent
+    public sealed class Speaker : AssemblyComponent, IAudioSourceProvider
     {
 
         private const float Delay = 0.5f;
 
         private readonly List<(AudioClip, double, bool)> _scheduled = new();
 
-        private AudioSource _source;
-
-        private void Start() => _source = GetComponent<AudioSource>();
+        private void Start() => SingleAudioSource = GetComponent<AudioSource>();
 
         private void Update()
         {
@@ -26,16 +24,18 @@ namespace Metro.Audio
                 if (time > now)
                     continue;
                 if (oneShot)
-                    _source.PlayOneShot(clip);
+                    SingleAudioSource.PlayOneShot(clip);
                 else
                 {
-                    _source.clip = clip;
-                    _source.Play();
+                    SingleAudioSource.clip = clip;
+                    SingleAudioSource.Play();
                 }
 
                 _scheduled.RemoveAt(i);
             }
         }
+
+        public AudioSource SingleAudioSource { get; private set; }
 
         public void PlayOneShit(AudioClip clip) => Schedule(clip, true);
 
