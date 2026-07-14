@@ -44,8 +44,6 @@ namespace Metro.Trains.Routes
             var previousSection = _section;
             if (Driver.IsOnTargetTrack && IsInService && State == DriverState.Driving)
                 UpdateStopping();
-            if (previousSection == DisplaySection.Transfers)
-                _transfersDisplay.Update();
             if (!TransitionCompleted || (_time -= Clock.Delta) > 0)
                 return;
             _time = 5;
@@ -66,8 +64,6 @@ namespace Metro.Trains.Routes
         {
             if (_section == DisplaySection.RouteAndTime)
                 Time = Clock.Now.ToString("hh':'mm");
-            else if (_section == DisplaySection.Transfers)
-                _transfersDisplay.ResetPosition();
             SetClass(previousSection.ToString(), false);
             SetClass(_section.ToString(), true);
             Blink(0.2f);
