@@ -7,6 +7,7 @@ jobs:
   
   build:
     name: Build ${{ matrix.profile }}
+    runs-on: ${{ matrix.os }}
 
     strategy:
       max-parallel: 1
