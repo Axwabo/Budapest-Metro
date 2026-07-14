@@ -27,7 +27,7 @@ jobs:
             modules: windows-mono
     
     env:
-      OUT: Build/${{ matrix.profile }}
+      OUT: Build/${{ matrix.build-target }}
     
     steps:
 
