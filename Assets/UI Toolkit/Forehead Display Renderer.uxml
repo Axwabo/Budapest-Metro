@@ -1,5 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement style="flex-grow: 1; background-color: rgb(0, 0, 0);">
-        <ui:Label text="Label" name="Content" style="color: rgb(255, 129, 0); font-size: 60px; -unity-text-align: middle-center; flex-grow: 1;"/>
+        <ui:Label text="Label" name="Content" style="color: rgb(255, 129, 0); font-size: 60px; -unity-text-align: middle-center; flex-grow: 1;">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="Text" data-source-type="Metro.Trains.Routes.ForeheadDisplayRenderer, Assembly-CSharp" />
+            </Bindings>
+        </ui:Label>
     </ui:VisualElement>
 </ui:UXML>
