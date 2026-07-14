@@ -147,6 +147,10 @@ namespace SplineMesh {
             if(curve != null) {
                 curve.Changed.RemoveListener(Compute);
             }
+            #if !UNITY_EDITOR
+            if (result)
+                Destroy(result);
+            #endif
         }
 
         /// <summary>
