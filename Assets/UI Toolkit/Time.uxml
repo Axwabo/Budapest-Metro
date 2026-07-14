@@ -7,7 +7,7 @@
                     <ui:DataBinding property="text" data-source-path="Destination" data-source-type="Metro.Stations.RouteSignViewModel, Assembly-CSharp" binding-mode="ToTargetOnce" />
                 </Bindings>
             </ui:Label>
-            <ui:Label text="Várható érkezési idő:" name="Description" style="font-size: 24px; padding: 4px; -unity-text-align: middle-center;">
+            <ui:Label text="Várható érkezési idő:" name="Description" style="font-size: 24px; padding: 4px;">
                 <Bindings>
                     <ui:DataBinding property="text" data-source-path="Description" data-source-type="Metro.Stations.RouteSignViewModel, Assembly-CSharp" binding-mode="ToTarget" />
                 </Bindings>
@@ -18,9 +18,9 @@
                 </Bindings>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement class="border" style="min-width: 210px; border-width: 2px;">
+        <ui:VisualElement class="border" style="min-width: 200px; border-width: 2px;">
             <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                <ui:Label text="05" name="Minutes" style="flex-grow: 1; font-size: 120px; -unity-font-style: bold; scale: 1; translate: 0 -15px;">
+                <ui:Label text="05" name="Minutes" style="flex-grow: 1; font-size: 100px; -unity-font-style: bold; scale: 1; translate: 0 -15px;">
                     <Bindings>
                         <ui:DataBinding property="text" data-source-path="Minutes" data-source-type="Metro.Stations.RouteSignViewModel, Assembly-CSharp" binding-mode="ToTarget" />
                     </Bindings>
@@ -31,7 +31,7 @@
                     </Bindings>
                 </ui:Label>
             </ui:VisualElement>
-            <ui:Label text="perc" name="Footer" style="-unity-text-align: lower-center; font-size: 20px;" />
+            <ui:Label text="perc" name="Footer" style="-unity-text-align: lower-center; font-size: 25px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
