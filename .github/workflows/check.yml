@@ -14,15 +14,15 @@ jobs:
       matrix:
         include:
 
-          - profile: Windows
-            on: windows-latest
-            build-target: StandaloneWindows64
-            modules: windows-mono
-
           - profile: Linux
             on: ubuntu-latest
             build-target: StandaloneLinux64
             modules: linux-mono
+
+          - profile: Windows
+            on: windows-latest
+            build-target: StandaloneWindows64
+            modules: windows-mono
     
     env:
       OUT: Build/${{ matrix.profile }}
