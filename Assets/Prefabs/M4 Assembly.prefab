@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7653735747912062762}
   - component: {fileID: 8854589536953131960}
   - component: {fileID: 41016802346417406}
+  - component: {fileID: 4554281012297366040}
   m_Layer: 0
   m_Name: Car Controllers
   m_TagString: Untagged
@@ -63,6 +64,21 @@ MonoBehaviour:
   stoppedDelay: 4
   serviceArea: {fileID: 8300000, guid: b4234fd22f9586d358f29b22324d054f, type: 3}
   trafficArea: {fileID: 8300000, guid: 886cab874a7a2670a856c4ceca54fce9, type: 3}
+--- !u!114 &4554281012297366040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2251190178717856706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb85250ea054bd5b0bbfae8914aae39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.CarCulling
+  objects:
+  - {fileID: 5250728963853106611}
+  - {fileID: 4211974764333996586}
 --- !u!1 &4211974764333996586
 GameObject:
   m_ObjectHideFlags: 0

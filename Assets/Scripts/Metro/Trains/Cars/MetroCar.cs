@@ -22,6 +22,10 @@ namespace Metro.Trains.Cars
 
         public bool IsPlayerMounted { get; set; }
 
+        public Transform Transform { get; private set; }
+
+        private void Awake() => Transform = transform;
+
         public IEnumerable<T> Components<T>() => _components.OfType<T>();
 
         protected override void OnInitialized()
