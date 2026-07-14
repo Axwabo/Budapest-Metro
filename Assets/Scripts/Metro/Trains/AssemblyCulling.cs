@@ -7,15 +7,20 @@ namespace Metro.Trains
     public sealed class AssemblyCulling : AssemblyComponent
     {
 
-        private const float MaxDistance = 200;
+        private const float MaxDistance = 500;
 
         [SerializeField]
         private GameObject[] objects;
 
         private bool _culled;
 
+        private float _time;
+
         private void Update()
         {
+            if ((_time -= Time.unscaledDeltaTime) > 0)
+                return;
+            _time = 0.5f;
             var frontPosition = Parent.Cars[0].Transform.position;
             var rearPosition = Parent.Cars[^1].Transform.position;
             var frontDistance = Vector3.Distance(frontPosition, MovementController.LastPosition);
