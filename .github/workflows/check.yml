@@ -1,0 +1,67 @@
+name: Check Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  
+  build:
+    name: Build ${{ matrix.profile }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      max-parallel: 1
+      matrix:
+        include:
+
+          - profile: Windows
+            build-target: StandaloneWindows64
+            modules: windows-mono
+
+          - profile: Linux
+            build-target: StandaloneLinux64
+            modules: linux-mono
+    
+    env:
+      OUT: Build/${{ matrix.profile }}
+    
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - uses: buildalon/unity-setup@v2.6.0
+        id: unity-setup
+        with:
+          version-file: ProjectSettings/ProjectVersion.txt
+          build-targets: ${{ matrix.build-target }}
+          modules: ${{ matrix.modules }}
+
+      - uses: buildalon/activate-unity-license@v2.2.2
+        with:
+          license: Personal
+          username: ${{ secrets.UNITY_EMAIL }}
+          password: ${{ secrets.UNITY_PASSWORD }}
+
+      - uses: actions/cache@v6.1
+        with:
+          path: Library
+          key: Library-${{ matrix.profile }}-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-${{ matrix.profile }}-
+            Library-
+
+      - uses: buildalon/unity-action@v3.1.0
+        name: ${{ matrix.profile }} Build
+        with:
+          args: -quit -nographics -batchmode -executeMethod Build.${{ matrix.profile }}
+          
+      - name: Clean Directory
+        working-directory: ${{ env.OUT }}
+        run: rm -r *DoNotShip*
+          
+      - uses: actions/upload-artifact@v7.0.1
+        with:
+          name: ${{ matrix.profile }}
+          path: ${{ env.OUT }}
+          if-no-files-found: error
