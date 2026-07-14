@@ -151,8 +151,11 @@ namespace Metro.Stations
             document.rootVisualElement.EnableInClassList("no-information", equals);
             _viewModel.Minutes = equals ? "=" : delta.Minutes.ToString("00");
             _viewModel.Seconds = equals ? "" : delta.Seconds.ToString("00");
-            if (_index != Destination)
-                _viewModel.Width = Length.Percent(Mathf.Min(100, (float) (delta.TotalSeconds * SecondsToOnePercent)));
+            if (_index == Destination)
+                return;
+            var length = Length.Percent(Mathf.Min(100, (float) (delta.TotalSeconds * SecondsToOnePercent)));
+            if (_viewModel.Width != length)
+                _viewModel.Width = length;
         }
 
     }
