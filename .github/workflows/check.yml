@@ -37,7 +37,6 @@ jobs:
       - uses: buildalon/unity-setup@v2.6.0
         with:
           version-file: ProjectSettings/ProjectVersion.txt
-          build-targets: ${{ matrix.build-target }}
           modules: ${{ matrix.modules }}
 
       - uses: buildalon/activate-unity-license@v2.2.2
