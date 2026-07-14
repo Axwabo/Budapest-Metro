@@ -19,6 +19,8 @@ namespace Metro
 
         private VisualElement _menu;
 
+        private InputAction _menuAction;
+
         private InputActionMap _player;
 
         private float _time;
@@ -30,6 +32,7 @@ namespace Metro
         private void Start()
         {
             Instance = this;
+            _menuAction = InputSystem.actions["Menu"];
             _menu = document.rootVisualElement.Q("Menu");
             _ui = InputSystem.actions.FindActionMap("UI", true);
             _player = playerActions.FindActionMap("Player", true);
@@ -39,7 +42,7 @@ namespace Metro
 
         private void Update()
         {
-            if (_time < 0.5f && (_time += Clock.Delta) >= 0.5f || InputSystem.actions["Menu"].WasPressedThisFrame())
+            if (_time < 0.5f && (_time += Clock.Delta) >= 0.5f || _menuAction.WasPressedThisFrame())
                 OnMenu();
         }
 
