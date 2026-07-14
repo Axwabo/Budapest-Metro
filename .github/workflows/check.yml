@@ -60,7 +60,7 @@ jobs:
       - name: Clean Directory
         working-directory: ${{ env.OUT }}
         shell: bash
-        run: rm -r *DoNotShip*
+        run: rm -r *DoNotShip* || true
           
       - uses: actions/upload-artifact@v7.0.1
         with:
