@@ -7,7 +7,7 @@ jobs:
   
   build:
     name: Build ${{ matrix.profile }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.on }}
 
     strategy:
       max-parallel: 1
@@ -15,10 +15,12 @@ jobs:
         include:
 
           - profile: Windows
+            on: windows-latest
             build-target: StandaloneWindows64
             modules: windows-mono
 
           - profile: Linux
+            on: ubuntu-latest
             build-target: StandaloneLinux64
             modules: linux-mono
     
@@ -56,6 +58,7 @@ jobs:
           
       - name: Clean Directory
         working-directory: ${{ env.OUT }}
+        shell: bash
         run: rm -r *DoNotShip*
           
       - uses: actions/upload-artifact@v7.0.1
