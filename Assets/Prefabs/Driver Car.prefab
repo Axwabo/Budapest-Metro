@@ -875,7 +875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Cars.Headlight
   isRear: 0
   rearColor: {r: 1, g: 0.16470589, b: 0.16470589, a: 1}
-  rearIntensity: 20
+  rearIntensity: 10
 --- !u!4 &7128706858758394882 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2810949637231201872, guid: cd2573b1faf4b6448bd6c476e662eba4, type: 3}
@@ -900,7 +900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Trains.Cars.Headlight
   isRear: 0
   rearColor: {r: 1, g: 0.16470589, b: 0.16470589, a: 1}
-  rearIntensity: 20
+  rearIntensity: 10
 --- !u!1001 &4282601799310848496
 PrefabInstance:
   m_ObjectHideFlags: 0
