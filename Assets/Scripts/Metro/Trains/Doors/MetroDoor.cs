@@ -1,5 +1,6 @@
 using Metro.Audio;
 using Metro.Trains.Cars;
+using Metro.Trains.Driving;
 using UnityEngine;
 
 namespace Metro.Trains.Doors
@@ -25,10 +26,16 @@ namespace Metro.Trains.Doors
 
         private Animator _animator;
 
+        private float _lastOpenFlash;
+
+        private bool _targetOpen;
+
         public bool Open
         {
             set
             {
+                _lastOpenFlash = -10;
+                _targetOpen = value;
                 _animator.SetBool(Hash, value);
                 SingleAudioSource.PlayOneShot(value ? open : close);
             }
@@ -38,6 +45,23 @@ namespace Metro.Trains.Doors
         {
             _animator = GetComponent<Animator>();
             SingleAudioSource = GetComponent<AudioSource>();
+        }
+
+        private void Update()
+        {
+            if (!_targetOpen || State != DriverState.Stopped)
+                return;
+            var info = _animator.GetCurrentAnimatorStateInfo(0);
+            if (!info.IsName("Open") || info.normalizedTime >= 1)
+            {
+                Diode.On = false;
+                return;
+            }
+
+            if (Time.time - _lastOpenFlash < 0.5f)
+                return;
+            _lastOpenFlash = Time.time;
+            Diode.Toggle();
         }
 
         public AudioSource SingleAudioSource { get; private set; }
