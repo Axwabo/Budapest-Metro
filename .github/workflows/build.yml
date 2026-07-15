@@ -1,7 +1,13 @@
-name: Check Build
+name: Release
 
 on:
-  workflow_dispatch:
+  release: 
+    types:
+      - published
+
+permissions:
+  contents: write
+  pages: write
 
 jobs:
   
@@ -71,3 +77,47 @@ jobs:
           name: ${{ matrix.profile }}
           path: ${{ env.OUT }}
           if-no-files-found: error
+          
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    
+    permissions: 
+      pages: write
+      id-token: write
+    
+    steps:
+      - uses: actions/download-artifact@v8
+        name: WebGL
+        
+      - uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: Budapest-Metro/
+        
+      - uses: actions/deploy-pages@v5.0.0
+  
+  release:
+    name: Upload release assets
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: Linux
+          skip-decompress: true
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: Windows
+          skip-decompress: true
+
+      - run: |
+          mv Linux.zip Budapest-Metro-linux-x64.zip
+          mv Windows.zip Budapest-Metro-win-x64.zip
+
+      - uses: softprops/action-gh-release@v3.0.0
+        with:
+          files: Budapest-Metro-*.zip
