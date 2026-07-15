@@ -21,8 +21,8 @@ namespace Metro.Trains
             if ((_time -= Time.unscaledDeltaTime) > 0)
                 return;
             _time = 0.5f;
-            var frontPosition = Parent.Cars[0].Transform.position;
-            var rearPosition = Parent.Cars[^1].Transform.position;
+            var frontPosition = Parent.Cars[0].BodyTransform.position;
+            var rearPosition = Parent.Cars[^1].BodyTransform.position;
             var frontDistance = Vector3.Distance(frontPosition, MovementController.LastPosition);
             var rearDistance = Vector3.Distance(rearPosition, MovementController.LastPosition);
             var cull = Mathf.Min(frontDistance, rearDistance) > MaxDistance;

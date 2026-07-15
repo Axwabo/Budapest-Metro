@@ -22,9 +22,7 @@ namespace Metro.Trains.Cars
 
         public new bool IsPlayerMounted { get; set; }
 
-        public Transform Transform { get; private set; }
-
-        private void Awake() => Transform = transform;
+        public Transform BodyTransform { get; private set; }
 
         public IEnumerable<T> Components<T>() => _components.OfType<T>();
 
@@ -38,6 +36,7 @@ namespace Metro.Trains.Cars
             FrontAxleOffset = Mathf.Abs(body.Inverse(FrontAxle.Transform) - body.Inverse(body.Front));
             BackAxleOffset = Mathf.Abs(body.Inverse(BackAxle.Transform) - body.Inverse(body.Back));
             Bounds = body.Bounds;
+            BodyTransform = body.transform;
         }
 
         public override void OnStateChanged()
