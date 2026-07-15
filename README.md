@@ -13,8 +13,19 @@ It's objectively the best metro in the world, so I had to build it first :3
 
 Trains get dispatched and recalled automatically.
 
-~~You can select when and where to start the game.~~
-At the moment (due to a bug) the player always starts the game at Kelenföld vasútállomás.
+> [!NOTE]
+> You can select when and where to start the game.
+> However, due to a bug, the player always starts the game at Kelenföld vasútállomás on Linux (at least).
+
+## How to Play
+
+Currently, the web build doesn't work.
+
+1. Download the zip file for your platform from the [releases page](https://github.com/Axwabo/Budapest-Metro/releases)
+2. Extract the archive to a folder
+3. Run the executable
+    - `Budapest-Metro.x86_64` on Linux
+    - `Budapest-Metro.exe` on windows
 
 > [!TIP]
 > Press `[TAB]` to open the in-game menu.
