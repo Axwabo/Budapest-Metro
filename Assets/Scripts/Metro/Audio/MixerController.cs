@@ -19,7 +19,7 @@ namespace Metro.Audio
 
         private readonly List<AudioSource> _sources = new();
 
-        private bool _wasMounted;
+        private bool? _wasMounted;
 
         private void LateUpdate()
         {

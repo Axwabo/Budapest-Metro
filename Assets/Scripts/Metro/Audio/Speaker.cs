@@ -13,7 +13,7 @@ namespace Metro.Audio
 
         private readonly List<(AudioClip, double, bool)> _scheduled = new();
 
-        private void Start() => SingleAudioSource = GetComponent<AudioSource>();
+        private void Awake() => SingleAudioSource = GetComponent<AudioSource>();
 
         private void Update()
         {
