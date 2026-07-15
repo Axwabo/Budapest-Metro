@@ -92,8 +92,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 475ef5264b3c4c1594436403deec047a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Audio.MixerController
-  onboard: {fileID: 0}
-  outside: {fileID: 698953866653218585, guid: 55ef02a4064ced2ab859a74a27a4f4c5, type: 2}
+  mixer: {fileID: 24100000, guid: 55ef02a4064ced2ab859a74a27a4f4c5, type: 2}
+  outsideClosed: {fileID: 2084530493269727519, guid: 55ef02a4064ced2ab859a74a27a4f4c5, type: 2}
+  outsideOpen: {fileID: -4304338340801466901, guid: 55ef02a4064ced2ab859a74a27a4f4c5, type: 2}
+  this: {fileID: -3631507871938881350, guid: 55ef02a4064ced2ab859a74a27a4f4c5, type: 2}
+  anotherOpen: {fileID: -3687420612275482432, guid: 55ef02a4064ced2ab859a74a27a4f4c5, type: 2}
+  anotherClosed: {fileID: 5995548628119982839, guid: 55ef02a4064ced2ab859a74a27a4f4c5, type: 2}
 --- !u!1 &4211974764333996586
 GameObject:
   m_ObjectHideFlags: 0

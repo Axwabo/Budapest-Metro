@@ -1,8 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Metro.Movement;
 using Metro.Trains;
 using Metro.Trains.Doors;
-using Metro.Trains.Driving;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -36,37 +36,39 @@ namespace Metro.Audio
 
         private DoorController _doors;
 
-        private MountedState _previousState;
-
-        private bool? _wasMounted;
-
-        private MountedState MountState => (IsPlayerMounted, Mountable.IsPlayerMounted, _doors.CanDepart) switch
-        {
-            (true, _, _) => MountedState.This,
-            (false, false, true) => MountedState.OutsideClosed,
-            (false, false, false) => MountedState.OutsideOpen,
-            (false, true, true) => MountedState.AnotherClosed,
-            (false, true, false) => MountedState.AnotherOpen
-        };
+        private MountedState? _previousState;
 
         private void LateUpdate()
         {
-            var state = MountState;
-            if (mounted)
-                UpdateMountedVolume();
-            if (_wasMounted == mounted)
+            var canDepart = _doors.CanDepart;
+            var state = (IsPlayerMounted, Mountable.IsPlayerMounted, canDepart) switch
+            {
+                (true, _, _) => MountedState.This,
+                (false, false, true) => MountedState.OutsideClosed,
+                (false, false, false) => MountedState.OutsideOpen,
+                (false, true, true) => MountedState.AnotherClosed,
+                (false, true, false) => MountedState.AnotherOpen
+            };
+            if (state == MountedState.This)
+                UpdateMountedVolume(canDepart);
+            if (_previousState == state)
                 return;
+            _previousState = state;
             EnsureCached();
-            var group = mounted ? onboard : outside;
+            var group = state switch
+            {
+                MountedState.OutsideClosed => outsideClosed,
+                MountedState.OutsideOpen => outsideOpen,
+                MountedState.This => @this,
+                MountedState.AnotherOpen => anotherOpen,
+                MountedState.AnotherClosed => anotherClosed,
+                _ => throw new InvalidOperationException()
+            };
             foreach (var provider in _sources)
                 provider.outputAudioMixerGroup = group;
-            if (!mounted && !Mountable.IsPlayerMounted)
-                SetVolume(0);
         }
 
-        private void UpdateMountedVolume() => SetVolume(State == DriverState.Driving ? 1 : 0);
-
-        private void SetVolume(float reductionRatio) => mixer.SetFloat("OutsideVolume", -40 * reductionRatio);
+        private void UpdateMountedVolume(bool canDepart) => mixer.SetFloat("OnboardOthers", canDepart ? -20 : 0);
 
         protected override void OnInitialized()
         {
