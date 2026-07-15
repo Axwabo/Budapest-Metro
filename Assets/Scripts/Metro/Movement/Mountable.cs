@@ -13,6 +13,8 @@ namespace Metro.Movement
 
         private Transform _t;
 
+        public static bool IsPlayerMounted { get; private set; }
+
         private void Awake()
         {
             _t = transform;
@@ -26,7 +28,7 @@ namespace Metro.Movement
             controller.Mount = _t;
             controller.Transform.parent = _t;
             if (_inCar)
-                _car.IsPlayerMounted = true;
+                IsPlayerMounted = _car.IsPlayerMounted = true;
         }
 
         private void OnTriggerExit(Collider other)
@@ -39,6 +41,7 @@ namespace Metro.Movement
                 return;
             controller.Mount = null;
             controller.Transform.parent = null;
+            IsPlayerMounted = false;
         }
 
     }
