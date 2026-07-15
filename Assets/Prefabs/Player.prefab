@@ -300,5 +300,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Movement.MovementController
   speed: 5
   sensitivity: 0.3
-  jumpForce: 0.3
+  jumpForce: 0.1
   gravity: -1.96
