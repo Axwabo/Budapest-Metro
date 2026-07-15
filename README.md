@@ -12,7 +12,9 @@ At the moment, only the M4 line has been built (including the carriage house).
 It's objectively the best metro in the world, so I had to build it first :3
 
 Trains get dispatched and recalled automatically.
-You can select when and where to start the game.
+
+~~You can select when and where to start the game.~~
+At the moment (due to a bug) the player always starts the game at Kelenföld vasútállomás.
 
 > [!TIP]
 > Press `[TAB]` to open the in-game menu.
