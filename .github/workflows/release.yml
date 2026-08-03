@@ -17,7 +17,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     strategy:
-      fail-fast: true
+#      fail-fast: true
       matrix:
         include:
 
@@ -31,10 +31,10 @@ jobs:
             build-target: WebGL
             modules: webgl
 
-#          - os: windows-latest
-#            profile: Windows
-#            build-target: StandaloneWindows64
-#            modules: windows-mono
+          - os: windows-latest
+            profile: Windows
+            build-target: StandaloneWindows64
+            modules: windows-mono
     
     env:
       OUT: Build/${{ matrix.build-target }}
