@@ -14,24 +14,28 @@ jobs:
   
   build:
     name: Build ${{ matrix.profile }}
-    runs-on: windows-latest
+    runs-on: macos-latest
 
     strategy:
       fail-fast: false
       matrix:
         include:
 
-          - profile: Linux
-            build-target: StandaloneLinux64
-            modules: linux-mono
+          - profile: MacOS
+            build-target: StandaloneOSX64
+            modules: macos-mono
 
-          - profile: WebGL
-            build-target: WebGL
-            modules: webgl
-
-          - profile: Windows
-            build-target: StandaloneWindows64
-            modules: windows-mono
+#          - profile: Linux
+#            build-target: StandaloneLinux64
+#            modules: linux-mono
+#
+#          - profile: WebGL
+#            build-target: WebGL
+#            modules: webgl
+#
+#          - profile: Windows
+#            build-target: StandaloneWindows64
+#            modules: windows-mono
     
     env:
       OUT: Build/${{ matrix.build-target }}
@@ -93,7 +97,7 @@ jobs:
         
       - uses: actions/upload-pages-artifact@v5.0.0
         with:
-          path: Budapest-Metro/
+          path: WebGL/Budapest-Metro/
         
       - uses: actions/deploy-pages@v5.0.0
   
