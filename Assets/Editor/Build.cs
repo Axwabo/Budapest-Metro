@@ -13,7 +13,7 @@ public static class Build
 
     public static void Linux() => Run(BuildTarget.StandaloneLinux64, "Budapest-Metro.x86_64");
 
-    public static void MacOS() => Run(BuildTarget.StandaloneOSX, "Budapest-Metro");
+    public static void MacOS() => Run(BuildTarget.StandaloneOSX, "Budapest-Metro.app");
 
     public static void WebGL() => Run(BuildTarget.WebGL, "Budapest-Metro"); // TODO: idk the extension lmao
 
