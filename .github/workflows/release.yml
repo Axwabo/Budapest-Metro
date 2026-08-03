@@ -14,25 +14,22 @@ jobs:
   
   build:
     name: Build ${{ matrix.profile }}
-    runs-on: ${{ matrix.os }}
+    runs-on: windows-latest
 
     strategy:
       fail-fast: false
       matrix:
         include:
 
-          - os: ubuntu-latest
-            profile: Linux
+          - profile: Linux
             build-target: StandaloneLinux64
             modules: linux-mono
 
-          - os: ubuntu-latest
-            profile: WebGL
+          - profile: WebGL
             build-target: WebGL
             modules: webgl
 
-          - os: windows-latest
-            profile: Windows
+          - profile: Windows
             build-target: StandaloneWindows64
             modules: windows-mono
     
@@ -92,6 +89,7 @@ jobs:
         name: WebGL
         
       - run: ls -R
+        shell: bash
         
       - uses: actions/upload-pages-artifact@v5.0.0
         with:
@@ -119,6 +117,7 @@ jobs:
       - run: |
           mv Linux.zip Budapest-Metro-linux-x64.zip
           mv Windows.zip Budapest-Metro-win-x64.zip
+        shell: bash
 
       - uses: softprops/action-gh-release@v3.0.0
         with:
