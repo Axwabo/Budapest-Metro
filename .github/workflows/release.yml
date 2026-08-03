@@ -1,6 +1,7 @@
 name: Release
 
 on:
+  workflow_dispatch: 
   release: 
     types:
       - published
@@ -20,20 +21,20 @@ jobs:
       matrix:
         include:
 
-          - os: ubuntu-latest
-            profile: Linux
-            build-target: StandaloneLinux64
-            modules: linux-mono
+#          - os: ubuntu-latest
+#            profile: Linux
+#            build-target: StandaloneLinux64
+#            modules: linux-mono
 
           - os: ubuntu-latest
             profile: WebGL
             build-target: WebGL
             modules: webgl
 
-          - os: windows-latest
-            profile: Windows
-            build-target: StandaloneWindows64
-            modules: windows-mono
+#          - os: windows-latest
+#            profile: Windows
+#            build-target: StandaloneWindows64
+#            modules: windows-mono
     
     env:
       OUT: Build/${{ matrix.build-target }}
@@ -89,6 +90,8 @@ jobs:
     steps:
       - uses: actions/download-artifact@v8
         name: WebGL
+        
+      - run: ls -R
         
       - uses: actions/upload-pages-artifact@v5.0.0
         with:
