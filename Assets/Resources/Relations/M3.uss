@@ -1,0 +1,3 @@
+:root {
+    --accent: var(--m3);
+}
