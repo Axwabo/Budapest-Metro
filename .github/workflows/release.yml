@@ -68,10 +68,15 @@ jobs:
         with:
           args: -quit -nographics -batchmode -executeMethod Build.${{ matrix.profile }}
           
+      - name: Clean Directory
+        working-directory: ${{ env.OUT }}
+        shell: bash
+        run: rm -r *DoNotShip* || true
+          
       - uses: actions/upload-artifact@v7.0.1
         with:
           name: ${{ matrix.profile }}
-          path: Build
+          path: ${{ env.OUT }}
           if-no-files-found: error
           
   deploy:
