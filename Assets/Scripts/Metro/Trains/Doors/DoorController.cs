@@ -5,6 +5,7 @@ using Metro.Audio;
 using Metro.Stations;
 using Metro.Trains.Driving;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Metro.Trains.Doors
 {
@@ -97,6 +98,7 @@ namespace Metro.Trains.Doors
                     return;
                 case DriverState.WaitingForDeparture when _target || JourneyManager.IsInService:
                     _closeDelay = 3;
+                    _lastBeeped2 = _closeDelay - Random.Range(0, 3) * SecondaryBeepDelay;
                     break;
                 case DriverState.Driving:
                     foreach (var door in _doors)
