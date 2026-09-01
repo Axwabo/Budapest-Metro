@@ -155,12 +155,13 @@ namespace Metro.Journeys.Routes
                 _spawnedRoutes.Add(next);
         }
 
-        [ContextMenu("Dispatch")]
-        private void Dispatch()
+        private void Dispatch() => Dispatch(MaxEarlyDispatch);
+
+        private void Dispatch(TimeSpan maxOffset)
         {
             if (_housedMetros.Count == 0 || _dispatching.Count != 0 || house.ExitingPrevented)
                 return;
-            var next = entry.Route.Next(HouseToDeparture, MaxEarlyDispatch);
+            var next = entry.Route.Next(HouseToDeparture, maxOffset);
             if (next == null || _spawnedRoutes.Contains(next))
                 return;
             foreach (var manager in _housedMetros)
@@ -175,6 +176,11 @@ namespace Metro.Journeys.Routes
                 break;
             }
         }
+
+#if UNITY_EDITOR
+        [ContextMenu("Dispatch")]
+        private void DispatchIgnoreTime() => Dispatch(TimeSpan.FromDays(1));
+#endif
 
         public void NotifyArrived(MetroAssembly assembly, ReversingSidingArea area)
         {
