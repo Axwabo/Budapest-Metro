@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 13169298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.50021, y: 4.4205017, z: -5.000207}
+  m_LocalPosition: {x: 19.500107, y: 4.4205017, z: -5.000261}
   m_LocalScale: {x: 1, y: 11, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1842,6 +1842,8 @@ MonoBehaviour:
     isLeft: 1
   - switch: {fileID: 1522779601}
     isLeft: 0
+  - switch: {fileID: 725255053}
+    isLeft: 1
 --- !u!1 &173883405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,6 +2004,8 @@ MonoBehaviour:
   - switch: {fileID: 585027131}
     isLeft: 1
   - switch: {fileID: 1522779601}
+    isLeft: 1
+  - switch: {fileID: 725255053}
     isLeft: 1
 --- !u!1 &200278720
 GameObject:
@@ -2233,6 +2237,8 @@ MonoBehaviour:
     isLeft: 0
   - switch: {fileID: 585027131}
     isLeft: 0
+  - switch: {fileID: 725255053}
+    isLeft: 1
 --- !u!1 &209518225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2870,7 +2876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: -2.36
       objectReference: {fileID: 0}
     - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2878,7 +2884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3352,6 +3358,54 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &311171647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 311171648}
+  - component: {fileID: 311171649}
+  m_Layer: 0
+  m_Name: Passed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &311171648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311171647}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1699916172}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &311171649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311171647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6be05915821494391ff2997baf72dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
+  <Track>k__BackingField: {fileID: 1851513364}
+  <Distance>k__BackingField: 20.001192
+  <Reverse>k__BackingField: 1
+  <Area>k__BackingField: {fileID: 1350155973}
 --- !u!1 &317253500
 GameObject:
   m_ObjectHideFlags: 0
@@ -3708,36 +3762,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: -2254.9653, y: 0, z: -2373.1528}
-    direction: {x: -2248.1277, y: 0, z: -2357.6167}
+  - position: {x: -2254.9653, y: 105.57, z: -2373.1528}
+    direction: {x: -2248.1277, y: 105.57, z: -2357.6167}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: -2232.7273, y: 0, z: -2320.7764}
-    direction: {x: -2228.4597, y: 0, z: -2311.037}
+  - position: {x: -2232.7273, y: 105.57, z: -2320.7764}
+    direction: {x: -2228.4597, y: 105.57, z: -2311.037}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: -2217.9036, y: 0, z: -2285.863}
-    direction: {x: -2213.9126, y: 0, z: -2276.0396}
+  - position: {x: -2210.4338, y: 105.57, z: -2268.0159}
+    direction: {x: -2204.4094, y: 105.57, z: -2253.1875}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: -2207.8943, y: 0, z: -2249.9805}
-    direction: {x: -2202.8782, y: 0, z: -2239.4387}
+  - position: {x: -2194.5117, y: 105.57, z: -2218.497}
+    direction: {x: -2185.2754, y: 105.57, z: -2196.076}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: -2254.9653, y: 0, z: -2373.1528}
-      direction: {x: -2248.1277, y: 0, z: -2357.6167}
+      position: {x: -2254.9653, y: 105.57, z: -2373.1528}
+      direction: {x: -2248.1277, y: 105.57, z: -2357.6167}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: -2232.7273, y: 0, z: -2320.7764}
-      direction: {x: -2228.4597, y: 0, z: -2311.037}
+      position: {x: -2232.7273, y: 105.57, z: -2320.7764}
+      direction: {x: -2228.4597, y: 105.57, z: -2311.037}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -3745,14 +3799,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: -2232.7273, y: 0, z: -2320.7764}
-      direction: {x: -2228.4597, y: 0, z: -2311.037}
+      position: {x: -2232.7273, y: 105.57, z: -2320.7764}
+      direction: {x: -2228.4597, y: 105.57, z: -2311.037}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: -2217.9036, y: 0, z: -2285.863}
-      direction: {x: -2213.9126, y: 0, z: -2276.0396}
+      position: {x: -2210.4338, y: 105.57, z: -2268.0159}
+      direction: {x: -2204.4094, y: 105.57, z: -2253.1875}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -3760,21 +3814,21 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: -2217.9036, y: 0, z: -2285.863}
-      direction: {x: -2213.9126, y: 0, z: -2276.0396}
+      position: {x: -2210.4338, y: 105.57, z: -2268.0159}
+      direction: {x: -2204.4094, y: 105.57, z: -2253.1875}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: -2207.8943, y: 0, z: -2249.9805}
-      direction: {x: -2202.8782, y: 0, z: -2239.4387}
+      position: {x: -2194.5117, y: 105.57, z: -2218.497}
+      direction: {x: -2185.2754, y: 105.57, z: -2196.076}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 132.15579
+  Length: 166.2391
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -4595,6 +4649,8 @@ MonoBehaviour:
     isLeft: 1
   - switch: {fileID: 2008378804}
     isLeft: 1
+  - switch: {fileID: 725255053}
+    isLeft: 1
 --- !u!1 &427527722
 GameObject:
   m_ObjectHideFlags: 0
@@ -5372,6 +5428,7 @@ Transform:
   - {fileID: 1522779600}
   - {fileID: 585027130}
   - {fileID: 1338934029}
+  - {fileID: 725255052}
   - {fileID: 796576320}
   m_Father: {fileID: 789900549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7851,6 +7908,57 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &725255051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725255052}
+  - component: {fileID: 725255053}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &725255052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725255051}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.20323998, z: -0, w: 0.97912896}
+  m_LocalPosition: {x: -2194.5117, y: 105.57, z: -2218.497}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1130399834}
+  m_Father: {fileID: 500009556}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &725255053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725255051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 167beeddeb4544ba8e8a4f9c9c0e96d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.Switch
+  isLeft: 0
+  rotor: {fileID: 1130399834}
+  fromLeft: {fileID: 723719261}
+  toLeft: {fileID: 21883482}
+  fromRight: {fileID: 334173533}
+  toRight: {fileID: 21883482}
 --- !u!1 &726254505
 GameObject:
   m_ObjectHideFlags: 0
@@ -8533,6 +8641,8 @@ MonoBehaviour:
     isLeft: 1
   - switch: {fileID: 1522779601}
     isLeft: 0
+  - switch: {fileID: 725255053}
+    isLeft: 1
 --- !u!1 &812141771
 GameObject:
   m_ObjectHideFlags: 0
@@ -8776,6 +8886,8 @@ MonoBehaviour:
     isLeft: 1
   - switch: {fileID: 2008378804}
     isLeft: 0
+  - switch: {fileID: 725255053}
+    isLeft: 1
 --- !u!1 &851485691
 GameObject:
   m_ObjectHideFlags: 0
@@ -10141,6 +10253,68 @@ Transform:
   - {fileID: 1373718056}
   m_Father: {fileID: 173883406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1130399833
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 725255052}
+    m_Modifications:
+    - target: {fileID: 2271200654621653318, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+      propertyPath: m_Name
+      value: Switch Rotor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9659258
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.2588191
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 30
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+--- !u!4 &1130399834 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3664993716822807349, guid: 17ebc2c4ba15d6836af7183f2476a483, type: 3}
+  m_PrefabInstance: {fileID: 1130399833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1148459169
 GameObject:
   m_ObjectHideFlags: 0
@@ -10360,6 +10534,8 @@ MonoBehaviour:
     isLeft: 1
   - switch: {fileID: 2008378804}
     isLeft: 1
+  - switch: {fileID: 725255053}
+    isLeft: 1
 --- !u!4 &1154066948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4044997385528384409, guid: 124d20a3a07acd1ccac15245efbc5032, type: 3}
@@ -10548,8 +10724,8 @@ Transform:
   m_GameObject: {fileID: 1189431596}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000049591064, y: 9, z: -4.999944}
-  m_LocalScale: {x: 30, y: 1, z: 90}
+  m_LocalPosition: {x: 2.4952743, y: 9, z: -5.000014}
+  m_LocalScale: {x: 34.991997, y: 1, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1350155972}
@@ -11166,6 +11342,8 @@ MonoBehaviour:
     isLeft: 0
   - switch: {fileID: 585027131}
     isLeft: 0
+  - switch: {fileID: 725255053}
+    isLeft: 1
 --- !u!1 &1305362379
 GameObject:
   m_ObjectHideFlags: 0
@@ -11308,6 +11486,7 @@ Transform:
   - {fileID: 1831735416}
   - {fileID: 1536637318}
   - {fileID: 318336518}
+  - {fileID: 1699916172}
   m_Father: {fileID: 1350155972}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1338934028
@@ -11413,6 +11592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.ReversingSidingArea
   sidings:
+  - {fileID: 1699916173}
   - {fileID: 318336519}
   - {fileID: 1536637319}
   - {fileID: 1831735417}
@@ -11491,6 +11671,8 @@ MonoBehaviour:
   - switch: {fileID: 585027131}
     isLeft: 1
   - switch: {fileID: 1522779601}
+    isLeft: 1
+  - switch: {fileID: 725255053}
     isLeft: 1
 --- !u!1 &1368170695
 GameObject:
@@ -11820,6 +12002,7 @@ Transform:
   - {fileID: 802565933}
   - {fileID: 207162938}
   - {fileID: 1302700873}
+  - {fileID: 2127301231}
   m_Father: {fileID: 789900549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380757454
@@ -12196,6 +12379,54 @@ Transform:
   - {fileID: 206732823}
   m_Father: {fileID: 1952295028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1432975991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1432975992}
+  - component: {fileID: 1432975993}
+  m_Layer: 0
+  m_Name: Stop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1432975992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432975991}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -40}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1699916172}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1432975993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432975991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71fc91abab104f449517dd3f9ebf514b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 1851513364}
+  <Distance>k__BackingField: 0.0025367737
+  <Reverse>k__BackingField: 1
+  <Area>k__BackingField: {fileID: 1350155973}
 --- !u!1 &1434837164
 GameObject:
   m_ObjectHideFlags: 0
@@ -14376,6 +14607,56 @@ MonoBehaviour:
   toLeft: {fileID: 1608029930}
   fromRight: {fileID: 427527725}
   toRight: {fileID: 1608029930}
+--- !u!1 &1699916171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1699916172}
+  - component: {fileID: 1699916173}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1699916172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699916171}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.665144, y: 0, z: -0.008784895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1432975992}
+  - {fileID: 1851513365}
+  - {fileID: 311171648}
+  m_Father: {fileID: 1313629244}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1699916173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699916171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463911c95d1e4607869e319254c66f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.ReversingSiding
+  in: {fileID: 2127301232}
+  out: {fileID: 2127301232}
+  <StopPoint>k__BackingField: {fileID: 1432975993}
 --- !u!1 &1701141446
 GameObject:
   m_ObjectHideFlags: 0
@@ -14650,8 +14931,8 @@ Transform:
   m_GameObject: {fileID: 1767763855}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000049591064, y: -0.5794983, z: -4.999944}
-  m_LocalScale: {x: 30, y: 1, z: 90}
+  m_LocalPosition: {x: 2.4975805, y: -0.5794983, z: -4.9997993}
+  m_LocalScale: {x: 34.995, y: 1, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1350155972}
@@ -15135,6 +15416,71 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &1851513363
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1699916172}
+    m_Modifications:
+    - target: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 456640119}
+    - target: {fileID: 8207057862909982042, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+      propertyPath: m_Name
+      value: Track
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0055885315
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+--- !u!114 &1851513364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+  m_PrefabInstance: {fileID: 1851513363}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59bb90ec91214678a977fcd64ed6dae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
+--- !u!4 &1851513365 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8840147189551542240, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
+  m_PrefabInstance: {fileID: 1851513363}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1852293873
 GameObject:
   m_ObjectHideFlags: 0
@@ -16304,8 +16650,8 @@ Transform:
   m_GameObject: {fileID: 1981474084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3157, y: 4.4205017, z: -49.5001}
-  m_LocalScale: {x: 31.00034, y: 11, z: 1}
+  m_LocalPosition: {x: 2.315717, y: 4.4205017, z: -49.50021}
+  m_LocalScale: {x: 34.999382, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1350155972}
@@ -16836,6 +17182,8 @@ MonoBehaviour:
     isLeft: 1
   - switch: {fileID: 2008378804}
     isLeft: 0
+  - switch: {fileID: 725255053}
+    isLeft: 1
 --- !u!1 &2048274006
 GameObject:
   m_ObjectHideFlags: 0
@@ -17211,6 +17559,53 @@ MonoBehaviour:
     isLeft: 0
   - switch: {fileID: 419929118}
     isLeft: 1
+--- !u!1 &2127301230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2127301231}
+  - component: {fileID: 2127301232}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2127301231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127301230}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1374493020}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2127301232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127301230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a4f242b9df4b8792dd81fe6717aea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.SwitchGroup
+  switches:
+  - switch: {fileID: 725255053}
+    isLeft: 0
 --- !u!1 &2128240192
 GameObject:
   m_ObjectHideFlags: 0
