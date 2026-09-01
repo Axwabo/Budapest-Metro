@@ -98,7 +98,7 @@ namespace Metro.Trains.Doors
                     return;
                 case DriverState.WaitingForDeparture when _target || JourneyManager.IsInService:
                     _closeDelay = 3;
-                    _lastBeeped2 = _closeDelay - Random.value * SecondaryBeepDelay * 3;
+                    _lastBeeped2 = _closeDelay - Random.value * SecondaryBeepDelay;
                     break;
                 case DriverState.Driving:
                     foreach (var door in _doors)
