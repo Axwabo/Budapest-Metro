@@ -12424,7 +12424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 1851513364}
-  <Distance>k__BackingField: 0.0025367737
+  <Distance>k__BackingField: 0.0025391579
   <Reverse>k__BackingField: 1
   <Area>k__BackingField: {fileID: 1350155973}
 --- !u!1 &1434837164
@@ -15427,7 +15427,7 @@ PrefabInstance:
     - target: {fileID: 2435802231665545764, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: <Next>k__BackingField
       value: 
-      objectReference: {fileID: 456640119}
+      objectReference: {fileID: 334173533}
     - target: {fileID: 8207057862909982042, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
       propertyPath: m_Name
       value: Track

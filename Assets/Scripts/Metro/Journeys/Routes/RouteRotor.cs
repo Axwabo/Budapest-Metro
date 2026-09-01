@@ -155,6 +155,7 @@ namespace Metro.Journeys.Routes
                 _spawnedRoutes.Add(next);
         }
 
+        [ContextMenu("Dispatch")]
         private void Dispatch()
         {
             if (_housedMetros.Count == 0 || _dispatching.Count != 0 || house.ExitingPrevented)
