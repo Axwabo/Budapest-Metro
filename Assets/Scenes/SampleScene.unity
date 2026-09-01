@@ -7862,7 +7862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 1275067934}
+  <Next>k__BackingField: {fileID: 21883482}
   spline: {fileID: 723719262}
 --- !u!114 &723719262
 MonoBehaviour:
@@ -8472,9 +8472,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.Switch
   isLeft: 0
   rotor: {fileID: 632297409}
-  fromLeft: {fileID: 723719261}
+  fromLeft: {fileID: 21883482}
   toLeft: {fileID: 1275067934}
-  fromRight: {fileID: 723719261}
+  fromRight: {fileID: 21883482}
   toRight: {fileID: 1434837167}
 --- !u!4 &796576320
 Transform:
@@ -14901,9 +14901,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.SwitchGroup
   switches:
-  - switch: {fileID: 725255053}
-    isLeft: 0
   - switch: {fileID: 796576319}
+    isLeft: 0
+  - switch: {fileID: 725255053}
     isLeft: 0
 --- !u!1 &1761222325
 GameObject:
@@ -17654,10 +17654,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.SwitchGroup
   switches:
-  - switch: {fileID: 725255053}
-    isLeft: 0
   - switch: {fileID: 796576319}
     isLeft: 1
+  - switch: {fileID: 725255053}
+    isLeft: 0
 --- !u!1 &2128240192
 GameObject:
   m_ObjectHideFlags: 0
