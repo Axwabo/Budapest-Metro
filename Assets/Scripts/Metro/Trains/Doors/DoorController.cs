@@ -12,8 +12,14 @@ namespace Metro.Trains.Doors
     public sealed class DoorController : AssemblyComponent, IDepartureBlocker, IAudioSourceProvider
     {
 
+        private const float BeepDelay = 0.5f;
+        private const float SecondaryBeepDelay = 1.013f;
+
         [SerializeField]
         private AudioClip beep;
+
+        [SerializeField]
+        private AudioClip beep2;
 
         private readonly List<MetroDoor> _doors = new();
 
@@ -21,7 +27,11 @@ namespace Metro.Trains.Doors
 
         private AudioSource[] _doorSources;
 
+        private bool _hasBeep2;
+
         private float _lastBeeped = float.MinValue;
+
+        private float _lastBeeped2 = float.MinValue;
 
         private float _openDelay;
 
@@ -37,8 +47,17 @@ namespace Metro.Trains.Doors
                 SetDoors(true);
             if (State != DriverState.WaitingForDeparture)
                 return;
-            if (!CanDepart && Mathf.Abs(_lastBeeped - _closeDelay) >= 0.5f)
-                Beep(_closeDelay);
+            if (!CanDepart)
+            {
+                if (Mathf.Abs(_lastBeeped - _closeDelay) >= BeepDelay)
+                    Beep();
+                if (_hasBeep2 && Mathf.Abs(_lastBeeped2 - _closeDelay) >= SecondaryBeepDelay)
+                {
+                    _speaker.PlayOneShit(beep2);
+                    _lastBeeped2 = _closeDelay;
+                }
+            }
+
             if (_closeDelay <= 0)
                 SetDoors(false);
             _closeDelay -= Clock.Delta;
@@ -59,6 +78,7 @@ namespace Metro.Trains.Doors
 
         protected override void OnInitialized()
         {
+            _hasBeep2 = beep2;
             _speaker = Parent.RequireComponent<Speaker>();
             foreach (var car in Parent.Cars)
                 _doors.AddRange(car.Components<MetroDoor>());
@@ -87,10 +107,10 @@ namespace Metro.Trains.Doors
 
         public override void OnJourneyChanged() => OnStateChanged();
 
-        private void Beep(float at)
+        private void Beep()
         {
             _speaker.PlayOneShit(beep);
-            _lastBeeped = at;
+            _lastBeeped = _closeDelay;
             foreach (var door in _doors)
                 if (door.Reverse == _reverse)
                     door.Diode.Toggle();
