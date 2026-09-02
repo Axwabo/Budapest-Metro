@@ -23,7 +23,7 @@ namespace Metro.Rail.Controls
                 return;
             }
 
-            if (Track.Occupants.Count > _occupiedCount)
+            if (Track.Occupants.Count > _occupiedCount && Track.Light)
                 Track.Light.State = LightState.On;
             Track.Occupants.Remove(axle);
             _occupiedCount = Track.Occupants.Count;
