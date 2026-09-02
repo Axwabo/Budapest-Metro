@@ -65,8 +65,13 @@ namespace Metro.Trains.Driving
         protected override void OnInitialized()
         {
             _departureBlockers.AddRange(Parent.Components<IDepartureBlocker>());
-            if (Parent.startingTrack is StationTrack track)
-                track.Light.State = LightState.Off;
+            DisableLight(Parent.startingTrack);
+        }
+
+        private void DisableLight(TrackSegment track)
+        {
+            if (track is StationTrack station && station.Light)
+                station.Light.State = LightState.Off;
         }
 
         [ContextMenu("Mark Ready Now")]
@@ -100,8 +105,7 @@ namespace Metro.Trains.Driving
             if (!JourneyManager.IsOrigin)
                 Stay(JourneyManager.IsDestination ? Constants.DestinationStaySeconds : Constants.MinStaySeconds);
             _passedPoints.Clear();
-            if (FrontAxle.Track is StationTrack track)
-                track.Light.State = LightState.Off;
+            DisableLight(FrontAxle.Track);
         }
 
         private void AdjustSpeed()
