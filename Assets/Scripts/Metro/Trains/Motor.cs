@@ -6,9 +6,6 @@ namespace Metro.Trains
     public sealed class Motor : AssemblyComponent
     {
 
-        [field: SerializeField]
-        public float MaxSpeed { get; set; } = Constants.MaxMps;
-
         [SerializeField]
         [Range(0, Constants.MaxMps)]
         private float speed;
