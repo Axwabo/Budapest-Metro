@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4baac183edcb43439bd2b5ab8ce6a086, type: 3}
-  m_Name: "\xDAjpest"
+  m_Name: "K\xF6Ki"
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Audio.AnnouncementPack
   next:
   - {fileID: 8300000, guid: 84460c15170ea9010b1cd9e5b39def1c, type: 3}
@@ -25,13 +25,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2bbb016eae4a12d5392de8ba283863ae, type: 3}
   - {fileID: 8300000, guid: d587899807b9ec9d092db04004b6f7a5, type: 3}
   - {fileID: 8300000, guid: 2caaf6014a6a7ddbc9e7017e55c24964, type: 3}
-  - {fileID: 8300000, guid: 057726687de984bbc944e71e7ee0ce7d, type: 3}
-  - {fileID: 8300000, guid: dbb31a2481ba0edbc904baea8d8f7891, type: 3}
-  - {fileID: 8300000, guid: 68450b253ad80bae98d99ee14b7ee883, type: 3}
-  - {fileID: 8300000, guid: 7409a48e875c9f68bb50ea4dd9be25b9, type: 3}
-  - {fileID: 8300000, guid: 8189627218b4cbf609a199bcdbe0b97c, type: 3}
-  - {fileID: 8300000, guid: e08ae64d14113095babcb4a59b8cab54, type: 3}
-  - {fileID: 8300000, guid: 8d63534e60abdf5a18b2fe1a500c3823, type: 3}
+  - {fileID: 8300000, guid: 390c3e7ba9ee2308cb03a92a30b8dd72, type: 3}
+  - {fileID: 8300000, guid: 330339e854952c991958eaae4de80e12, type: 3}
+  - {fileID: 8300000, guid: 37035e63b9f466dbba3de732ebf6dc60, type: 3}
+  - {fileID: 8300000, guid: cb1a4b9168f212692a1531341a67ece2, type: 3}
+  - {fileID: 8300000, guid: 58b8bc2954bd90d07870c44d1181a698, type: 3}
+  - {fileID: 8300000, guid: a1d33374a4513a406ac5160bb2072196, type: 3}
+  - {fileID: 8300000, guid: efb4717b311120ba9bcec311d95555be, type: 3}
   arriving:
   - {fileID: 8300000, guid: d15a3d230b8ef9592ae0241d4c03adec, type: 3}
   - {fileID: 8300000, guid: f4f9e8166a12e3b0db908cac0fc5b85d, type: 3}
@@ -44,6 +44,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dbcc237a729dce4a180ad8772c0b9102, type: 3}
   - {fileID: 8300000, guid: 857cf7111b10893dbaa3b09c8ac19742, type: 3}
   - {fileID: 8300000, guid: 87a53dbca3f5558d9baf9184e433964a, type: 3}
+  - {fileID: 8300000, guid: e77a25ddff3460e65bfd2b501e0a0867, type: 3}
   - {fileID: 8300000, guid: 81091ae388534e266950c31f8f438c28, type: 3}
   - {fileID: 8300000, guid: 9e55bd0bf0e70d3f695c1d2e0024d712, type: 3}
   - {fileID: 8300000, guid: bdf236b4eb0033b3bb984a75d4ca20c9, type: 3}
@@ -51,5 +52,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f773fe33ed00dca95bd397586cf7ade5, type: 3}
   - {fileID: 8300000, guid: dafe4c41b16ddf6e4adc32aa9e3ba872, type: 3}
   - {fileID: 8300000, guid: 239800417a8c54c16ac6bb8a3e79cdad, type: 3}
-  - {fileID: 8300000, guid: 88447a3ccf797ec7891218fbeb55b8e6, type: 3}
   stopped: []
