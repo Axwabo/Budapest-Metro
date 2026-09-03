@@ -68,7 +68,7 @@ namespace Metro.Trains.Driving
             DisableLight(Parent.startingTrack);
         }
 
-        private void DisableLight(TrackSegment track)
+        private static void DisableLight(TrackSegment track)
         {
             if (track is StationTrack station && station.Light)
                 station.Light.State = LightState.Off;
@@ -93,7 +93,7 @@ namespace Metro.Trains.Driving
             {
                 if ((_departureDelay -= Time.fixedDeltaTime) > 0)
                     return;
-                Motor.TargetSpeed = IsInService ? Constants.MaxMps : Constants.SlowMps;
+                Motor.TargetSpeed = IsInService ? Parent.Motor.MaxSpeed : Constants.SlowMps;
                 return;
             }
 
