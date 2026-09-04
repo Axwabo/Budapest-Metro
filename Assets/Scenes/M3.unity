@@ -1064,6 +1064,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 955301422}
     m_Modifications:
     - target: {fileID: 1370371960718391079, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 733384008}
+    - target: {fileID: 1370371960718391079, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
       propertyPath: <Light>k__BackingField
       value: 
       objectReference: {fileID: 0}
@@ -1164,6 +1168,134 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1840445968839784991, guid: 0c8ca99df2aaa09fd9fff5b789481b55, type: 3}
   m_PrefabInstance: {fileID: 3904538801185792093}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &733384007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 733384010}
+  - component: {fileID: 733384009}
+  - component: {fileID: 733384008}
+  - component: {fileID: 733384011}
+  m_Layer: 0
+  m_Name: "Klinik\xE1k > Corvin"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &733384008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733384007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
+  <Next>k__BackingField: {fileID: 1018670825}
+  spline: {fileID: 733384009}
+--- !u!114 &733384009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733384007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4a6b5a21acc984ea0a86d24ec6eeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
+  nodes:
+  - position: {x: 2042.0944, y: 0, z: 411.78253}
+    direction: {x: 1977.5135, y: 0, z: 440.30066}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 1813.5851, y: 0, z: 517.43164}
+    direction: {x: 1742.4534, y: 0, z: 554.1655}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 1591.6428, y: 0, z: 632.04626}
+    direction: {x: 1534.6423, y: 0, z: 661.4823}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  curves:
+  - n1:
+      position: {x: 2042.0944, y: 0, z: 411.78253}
+      direction: {x: 1977.5135, y: 0, z: 440.30066}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 1813.5851, y: 0, z: 517.43164}
+      direction: {x: 1742.4534, y: 0, z: 554.1655}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 1813.5851, y: 0, z: 517.43164}
+      direction: {x: 1742.4534, y: 0, z: 554.1655}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 1591.6428, y: 0, z: 632.04626}
+      direction: {x: 1534.6423, y: 0, z: 661.4823}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  Length: 501.5785
+  isLoop: 0
+  CurveChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &733384010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733384007}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1733128708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &733384011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733384007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
+  spline: {fileID: 733384009}
+  start: 0
+  end: 0
 --- !u!1 &757477179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1625,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
+--- !u!114 &1018670825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1370371960718391079, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
+  m_PrefabInstance: {fileID: 1018670824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
 --- !u!1 &1028868312
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,6 +3212,7 @@ Transform:
   - {fileID: 1222100876}
   - {fileID: 546002897}
   - {fileID: 1746409917}
+  - {fileID: 733384010}
   m_Father: {fileID: 1821383470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1746409914
@@ -3084,7 +3228,7 @@ GameObject:
   - component: {fileID: 1746409915}
   - component: {fileID: 1746409918}
   m_Layer: 0
-  m_Name: "Nagyv\xE1rad > Semmelweis"
+  m_Name: "Nagyv\xE1rad > Klinik\xE1k"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3446,7 +3590,7 @@ GameObject:
   - component: {fileID: 1932102171}
   - component: {fileID: 1932102172}
   m_Layer: 0
-  m_Name: "Nagyv\xE1rad > Semmelweis"
+  m_Name: "Nagyv\xE1rad > Klinik\xE1k"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
