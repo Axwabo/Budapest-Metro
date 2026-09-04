@@ -650,6 +650,174 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506156599}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &546002896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 546002897}
+  - component: {fileID: 546002900}
+  - component: {fileID: 546002899}
+  - component: {fileID: 546002898}
+  m_Layer: 0
+  m_Name: "N\xE9p > Nagyv\xE1rad"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &546002897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546002896}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1733128708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &546002898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546002896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
+  spline: {fileID: 546002900}
+  start: 0
+  end: 0
+--- !u!114 &546002899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546002896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
+  <Next>k__BackingField: {fileID: 548959461}
+  spline: {fileID: 546002900}
+--- !u!114 &546002900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546002896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4a6b5a21acc984ea0a86d24ec6eeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
+  nodes:
+  - position: {x: 3815.0315, y: 0, z: -537.84766}
+    direction: {x: 3765.7502, y: 0, z: -512.3469}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 3711.2551, y: 0, z: -485.40518}
+    direction: {x: 3662.486, y: 0, z: -459.05566}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 3432.238, y: 0, z: -336.4658}
+    direction: {x: 3416.5608, y: 0, z: -328.0388}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 3320.162, y: 0, z: -273.87717}
+    direction: {x: 3304.4849, y: 0, z: -265.45016}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 3111.7812, y: 0, z: -155.8565}
+    direction: {x: 3046.026, y: 0, z: -114.45946}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  curves:
+  - n1:
+      position: {x: 3815.0315, y: 0, z: -537.84766}
+      direction: {x: 3765.7502, y: 0, z: -512.3469}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 3711.2551, y: 0, z: -485.40518}
+      direction: {x: 3662.486, y: 0, z: -459.05566}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 3711.2551, y: 0, z: -485.40518}
+      direction: {x: 3662.486, y: 0, z: -459.05566}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 3432.238, y: 0, z: -336.4658}
+      direction: {x: 3416.5608, y: 0, z: -328.0388}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 3432.238, y: 0, z: -336.4658}
+      direction: {x: 3416.5608, y: 0, z: -328.0388}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 3320.162, y: 0, z: -273.87717}
+      direction: {x: 3304.4849, y: 0, z: -265.45016}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 3320.162, y: 0, z: -273.87717}
+      direction: {x: 3304.4849, y: 0, z: -265.45016}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 3111.7812, y: 0, z: -155.8565}
+      direction: {x: 3046.026, y: 0, z: -114.45946}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  Length: 800.4521
+  isLoop: 0
+  CurveChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &548959460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1490,7 +1658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
   - position: {x: 4669.8784, y: 111.6, z: -1051.9377}
-    direction: {x: 4641.9688, y: 111.6, z: -1037.0802}
+    direction: {x: 4646.1694, y: 111.6, z: -1039.3163}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
@@ -1515,14 +1683,14 @@ MonoBehaviour:
     scale: {x: 1, y: 1}
     roll: 0
   - position: {x: 3921.6067, y: 107.79, z: -592.9999}
-    direction: {x: 3833.8806, y: 107.79, z: -546.2992}
+    direction: {x: 3855.331, y: 107.79, z: -558.7053}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
       position: {x: 4669.8784, y: 111.6, z: -1051.9377}
-      direction: {x: 4641.9688, y: 111.6, z: -1037.0802}
+      direction: {x: 4646.1694, y: 111.6, z: -1039.3163}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -1588,14 +1756,14 @@ MonoBehaviour:
       roll: 0
     n2:
       position: {x: 3921.6067, y: 107.79, z: -592.9999}
-      direction: {x: 3833.8806, y: 107.79, z: -546.2992}
+      direction: {x: 3855.331, y: 107.79, z: -558.7053}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 878.73376
+  Length: 878.71326
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -2672,6 +2840,7 @@ Transform:
   - {fileID: 1324833966}
   - {fileID: 1269084709}
   - {fileID: 1222100876}
+  - {fileID: 546002897}
   m_Father: {fileID: 1821383470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1821383469
