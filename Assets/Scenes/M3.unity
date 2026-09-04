@@ -357,6 +357,7 @@ Transform:
   - {fileID: 1622663958}
   - {fileID: 845041049}
   - {fileID: 1932102171}
+  - {fileID: 269206239}
   m_Father: {fileID: 2104011971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &191306817
@@ -405,6 +406,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
   preset: {fileID: 11400000, guid: 0f8e8c5249f5c82bf97f116a886089c3, type: 2}
   spline: {fileID: 1269084708}
+  start: 0
+  end: 0
+--- !u!1 &269206238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 269206239}
+  - component: {fileID: 269206240}
+  m_Layer: 0
+  m_Name: "Klinik\xE1k > Corvin"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &269206239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269206238}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 175835359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &269206240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269206238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
+  preset: {fileID: 11400000, guid: 0f8e8c5249f5c82bf97f116a886089c3, type: 2}
+  spline: {fileID: 733384009}
   start: 0
   end: 0
 --- !u!1 &435705213
@@ -1214,31 +1263,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 2042.0944, y: 0, z: 411.78253}
-    direction: {x: 1977.5135, y: 0, z: 440.30066}
+  - position: {x: 2042.0944, y: 84.03, z: 411.78253}
+    direction: {x: 1977.5135, y: 84.03, z: 440.30066}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 1813.5851, y: 0, z: 517.43164}
-    direction: {x: 1742.4534, y: 0, z: 554.1655}
+  - position: {x: 1813.5851, y: 80, z: 517.43164}
+    direction: {x: 1742.4534, y: 79, z: 554.1655}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 1591.6428, y: 0, z: 632.04626}
-    direction: {x: 1534.6423, y: 0, z: 661.4823}
+  - position: {x: 1591.6428, y: 76.58, z: 632.04626}
+    direction: {x: 1534.6423, y: 76.58, z: 661.4823}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 2042.0944, y: 0, z: 411.78253}
-      direction: {x: 1977.5135, y: 0, z: 440.30066}
+      position: {x: 2042.0944, y: 84.03, z: 411.78253}
+      direction: {x: 1977.5135, y: 84.03, z: 440.30066}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 1813.5851, y: 0, z: 517.43164}
-      direction: {x: 1742.4534, y: 0, z: 554.1655}
+      position: {x: 1813.5851, y: 80, z: 517.43164}
+      direction: {x: 1742.4534, y: 79, z: 554.1655}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -1246,21 +1295,21 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 1813.5851, y: 0, z: 517.43164}
-      direction: {x: 1742.4534, y: 0, z: 554.1655}
+      position: {x: 1813.5851, y: 80, z: 517.43164}
+      direction: {x: 1742.4534, y: 79, z: 554.1655}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 1591.6428, y: 0, z: 632.04626}
-      direction: {x: 1534.6423, y: 0, z: 661.4823}
+      position: {x: 1591.6428, y: 76.58, z: 632.04626}
+      direction: {x: 1534.6423, y: 76.58, z: 661.4823}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 501.5785
+  Length: 501.63922
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
