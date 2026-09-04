@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
   <Next>k__BackingField: {fileID: 0}
-  <Reverse>k__BackingField: 1
+  <Reverse>k__BackingField: 0
   <Light>k__BackingField: {fileID: 0}
 --- !u!1 &7155881727134260937
 GameObject:
@@ -1333,7 +1333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
   <Next>k__BackingField: {fileID: 0}
-  <Reverse>k__BackingField: 0
+  <Reverse>k__BackingField: 1
   <Light>k__BackingField: {fileID: 0}
 --- !u!1 &7184452962091463603
 GameObject:

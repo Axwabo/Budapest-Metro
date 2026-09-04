@@ -3790,8 +3790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9acd992caaf64ca887944137d14f4c04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.StationCulling
-  objects:
-  - {fileID: 0}
+  objects: []
 --- !u!114 &6487786762138745545
 MonoBehaviour:
   m_ObjectHideFlags: 0
