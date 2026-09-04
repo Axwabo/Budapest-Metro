@@ -1490,7 +1490,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
   - position: {x: 4669.8784, y: 0, z: -1051.9377}
-    direction: {x: 4600.4053, y: 0, z: -1014.95374}
+    direction: {x: 4641.9688, y: 0, z: -1037.0802}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 4573.8794, y: 0, z: -983.063}
+    direction: {x: 4548.485, y: 0, z: -961.8416}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 4478.4717, y: 0, z: -917.3882}
+    direction: {x: 4447.0073, y: 0, z: -897.7999}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 4315.883, y: 0, z: -821.5655}
+    direction: {x: 4283.3716, y: 0, z: -802.80695}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 4090.9744, y: 0, z: -689.023}
+    direction: {x: 4058.4631, y: 0, z: -670.26447}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
@@ -1502,7 +1522,67 @@ MonoBehaviour:
   curves:
   - n1:
       position: {x: 4669.8784, y: 0, z: -1051.9377}
-      direction: {x: 4600.4053, y: 0, z: -1014.95374}
+      direction: {x: 4641.9688, y: 0, z: -1037.0802}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 4573.8794, y: 0, z: -983.063}
+      direction: {x: 4548.485, y: 0, z: -961.8416}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 4573.8794, y: 0, z: -983.063}
+      direction: {x: 4548.485, y: 0, z: -961.8416}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 4478.4717, y: 0, z: -917.3882}
+      direction: {x: 4447.0073, y: 0, z: -897.7999}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 4478.4717, y: 0, z: -917.3882}
+      direction: {x: 4447.0073, y: 0, z: -897.7999}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 4315.883, y: 0, z: -821.5655}
+      direction: {x: 4283.3716, y: 0, z: -802.80695}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 4315.883, y: 0, z: -821.5655}
+      direction: {x: 4283.3716, y: 0, z: -802.80695}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 4090.9744, y: 0, z: -689.023}
+      direction: {x: 4058.4631, y: 0, z: -670.26447}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 4090.9744, y: 0, z: -689.023}
+      direction: {x: 4058.4631, y: 0, z: -670.26447}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -1515,7 +1595,7 @@ MonoBehaviour:
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 877.85126
+  Length: 878.72034
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
