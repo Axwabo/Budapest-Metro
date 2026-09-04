@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6278ff3d2c5340b5b2f83ce82f40a32c, type: 3}
   m_Name: "K\xE1lvin t\xE9r"
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.StationId
-  <Relation>k__BackingField: {fileID: 0}
+  <Relation>k__BackingField: {fileID: 11400000, guid: d8aa80ac00b48d65e8c280963a51c793, type: 2}
   <Forehead>k__BackingField: 
   <Onboard>k__BackingField: 
   <StationTime>k__BackingField: 
