@@ -727,6 +727,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+--- !u!114 &548959461 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7734146825860511574, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+  m_PrefabInstance: {fileID: 548959460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
 --- !u!1 &569419575 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8207057862909982042, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
@@ -1254,11 +1265,26 @@ PrefabInstance:
       propertyPath: <ID>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: dfe0282e92ae2d88d9ac8a9b75e75df6, type: 2}
+    - target: {fileID: 7734146825860511574, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 1222100874}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+--- !u!114 &1038890975 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7734146825860511574, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+  m_PrefabInstance: {fileID: 1038890974}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
 --- !u!1001 &1057495298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1417,11 +1443,227 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fb2be80aacc083caa86cddea939e25a, type: 3}
+--- !u!1 &1222100873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1222100876}
+  - component: {fileID: 1222100875}
+  - component: {fileID: 1222100874}
+  - component: {fileID: 1222100877}
+  m_Layer: 0
+  m_Name: "Ecseri > N\xE9p"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1222100874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222100873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
+  <Next>k__BackingField: {fileID: 548959461}
+  spline: {fileID: 1222100875}
+--- !u!114 &1222100875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222100873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4a6b5a21acc984ea0a86d24ec6eeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
+  nodes:
+  - position: {x: 4669.8784, y: 0, z: -1051.9377}
+    direction: {x: 4600.4053, y: 0, z: -1014.95374}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 3921.6067, y: 0, z: -592.9999}
+    direction: {x: 3833.8806, y: 0, z: -546.2992}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  curves:
+  - n1:
+      position: {x: 4669.8784, y: 0, z: -1051.9377}
+      direction: {x: 4600.4053, y: 0, z: -1014.95374}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 3921.6067, y: 0, z: -592.9999}
+      direction: {x: 3833.8806, y: 0, z: -546.2992}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  Length: 877.85126
+  isLoop: 0
+  CurveChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1222100876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222100873}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1733128708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1222100877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222100873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
+  spline: {fileID: 1222100875}
+  start: 0
+  end: 0
 --- !u!1 &1256892794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8207057862909982042, guid: 905c7199a063858c6ba309dc7ed50dc4, type: 3}
   m_PrefabInstance: {fileID: 8659369500377286878}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1269084706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1269084709}
+  - component: {fileID: 1269084708}
+  - component: {fileID: 1269084707}
+  - component: {fileID: 1269084710}
+  m_Layer: 0
+  m_Name: "P\xF6tty\xF6s > Ecseri"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1269084707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269084706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
+  <Next>k__BackingField: {fileID: 1038890975}
+  spline: {fileID: 1269084708}
+--- !u!114 &1269084708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269084706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4a6b5a21acc984ea0a86d24ec6eeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
+  nodes:
+  - position: {x: 5071.9785, y: 110.3, z: -1269.1377}
+    direction: {x: 5002.5054, y: 110.3, z: -1232.1537}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  - position: {x: 4775.8013, y: 111.6, z: -1108.3315}
+    direction: {x: 4688.075, y: 111.6, z: -1061.6309}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 1, y: 1}
+    roll: 0
+  curves:
+  - n1:
+      position: {x: 5071.9785, y: 110.3, z: -1269.1377}
+      direction: {x: 5002.5054, y: 110.3, z: -1232.1537}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    n2:
+      position: {x: 4775.8013, y: 111.6, z: -1108.3315}
+      direction: {x: 4688.075, y: 111.6, z: -1061.6309}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 1, y: 1}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  Length: 337.02008
+  isLoop: 0
+  CurveChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1269084709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269084706}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1733128708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1269084710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269084706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
+  preset: {fileID: 11400000, guid: 0798c4e8aab45806186315e4732f48fe, type: 2}
+  spline: {fileID: 1269084708}
+  start: 0
+  end: 0
 --- !u!1 &1324833965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,6 +2590,8 @@ Transform:
   m_Children:
   - {fileID: 687730985}
   - {fileID: 1324833966}
+  - {fileID: 1269084709}
+  - {fileID: 1222100876}
   m_Father: {fileID: 1821383470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1821383469
@@ -3317,6 +3561,10 @@ PrefabInstance:
       propertyPath: <ID>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: bf67414176de5d13d806a4a24ac62531, type: 2}
+    - target: {fileID: 7734146825860511574, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 1269084707}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
