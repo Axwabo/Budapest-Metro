@@ -1,9 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Station.uss?fileID=7433441132597879392&amp;guid=d0cc5f48f8eefdcd1857f679bfd51862&amp;type=3#Station" />
-    <ui:VisualElement style="flex-grow: 1; flex-direction: row; -unity-text-align: middle-center; background-color: rgb(255, 255, 255);">
+    <Style src="project://database/Assets/UI%20Toolkit/M3/Station%20Sign.uss?fileID=7433441132597879392&amp;guid=b18775d1a0757fabaa4ad9c0cb856107&amp;type=3#Station Sign" />
+    <ui:VisualElement style="flex-grow: 1; -unity-text-align: middle-center; background-color: rgb(255, 255, 255);">
         <ui:VisualElement class="metro-line">
             <ui:Label text="M" />
-            <ui:Label text="3" class="bg-accent" />
+            <ui:VisualElement class="bg-accent">
+                <ui:Label text="3" />
+            </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement class="border-accent">
             <ui:VisualElement name="OtherSide" class="display-none" style="flex-grow: 1; flex-direction: row; justify-content: flex-start;">
@@ -18,6 +21,6 @@
                 <ui:Label text="Újpest-központ" name="Name" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="Stops" class="board" style="flex-direction: row-reverse; justify-content: center; align-items: center; font-size: 14px;" />
+        <ui:VisualElement name="Stops" class="board" style="flex-direction: column-reverse; justify-content: center; font-size: 20px;" />
     </ui:VisualElement>
 </ui:UXML>

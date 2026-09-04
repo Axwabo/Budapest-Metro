@@ -1,0 +1,14 @@
+.metro-line {
+    flex-direction: row;
+    font-size: 64px;
+    align-self: center;
+}
+
+.metro-line .bg-accent {
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
