@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 548959461}
+  <Next>k__BackingField: {fileID: 1544344053}
   spline: {fileID: 546002900}
 --- !u!114 &546002900
 MonoBehaviour:
@@ -727,41 +727,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 3815.0315, y: 0, z: -537.84766}
-    direction: {x: 3765.7502, y: 0, z: -512.3469}
+  - position: {x: 3815.0315, y: 107.79, z: -537.84766}
+    direction: {x: 3765.7502, y: 107.79, z: -512.3469}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 3711.2551, y: 0, z: -485.40518}
-    direction: {x: 3662.486, y: 0, z: -459.05566}
+  - position: {x: 3711.2551, y: 107.5, z: -485.40518}
+    direction: {x: 3662.486, y: 107.3, z: -459.05566}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 3432.238, y: 0, z: -336.4658}
-    direction: {x: 3416.5608, y: 0, z: -328.0388}
+  - position: {x: 3432.238, y: 105.74, z: -336.4658}
+    direction: {x: 3416.5608, y: 105.74, z: -328.0388}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 3320.162, y: 0, z: -273.87717}
-    direction: {x: 3304.4849, y: 0, z: -265.45016}
+  - position: {x: 3320.162, y: 105.74, z: -273.87717}
+    direction: {x: 3304.4849, y: 105.74, z: -265.45016}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 3111.7812, y: 0, z: -155.8565}
-    direction: {x: 3046.026, y: 0, z: -114.45946}
+  - position: {x: 3111.7812, y: 105.74, z: -155.8565}
+    direction: {x: 3046.026, y: 105.74, z: -114.45946}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 3815.0315, y: 0, z: -537.84766}
-      direction: {x: 3765.7502, y: 0, z: -512.3469}
+      position: {x: 3815.0315, y: 107.79, z: -537.84766}
+      direction: {x: 3765.7502, y: 107.79, z: -512.3469}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 3711.2551, y: 0, z: -485.40518}
-      direction: {x: 3662.486, y: 0, z: -459.05566}
+      position: {x: 3711.2551, y: 107.5, z: -485.40518}
+      direction: {x: 3662.486, y: 107.3, z: -459.05566}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -769,14 +769,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 3711.2551, y: 0, z: -485.40518}
-      direction: {x: 3662.486, y: 0, z: -459.05566}
+      position: {x: 3711.2551, y: 107.5, z: -485.40518}
+      direction: {x: 3662.486, y: 107.3, z: -459.05566}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 3432.238, y: 0, z: -336.4658}
-      direction: {x: 3416.5608, y: 0, z: -328.0388}
+      position: {x: 3432.238, y: 105.74, z: -336.4658}
+      direction: {x: 3416.5608, y: 105.74, z: -328.0388}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -784,14 +784,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 3432.238, y: 0, z: -336.4658}
-      direction: {x: 3416.5608, y: 0, z: -328.0388}
+      position: {x: 3432.238, y: 105.74, z: -336.4658}
+      direction: {x: 3416.5608, y: 105.74, z: -328.0388}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 3320.162, y: 0, z: -273.87717}
-      direction: {x: 3304.4849, y: 0, z: -265.45016}
+      position: {x: 3320.162, y: 105.74, z: -273.87717}
+      direction: {x: 3304.4849, y: 105.74, z: -265.45016}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -799,21 +799,21 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 3320.162, y: 0, z: -273.87717}
-      direction: {x: 3304.4849, y: 0, z: -265.45016}
+      position: {x: 3320.162, y: 105.74, z: -273.87717}
+      direction: {x: 3304.4849, y: 105.74, z: -265.45016}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 3111.7812, y: 0, z: -155.8565}
-      direction: {x: 3046.026, y: 0, z: -114.45946}
+      position: {x: 3111.7812, y: 105.74, z: -155.8565}
+      direction: {x: 3046.026, y: 105.74, z: -114.45946}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 800.4521
+  Length: 800.45734
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -890,6 +890,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 0.99999905
       objectReference: {fileID: 0}
+    - target: {fileID: 7734146825860511574, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 546002899}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2585,6 +2589,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
+--- !u!114 &1544344053 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1370371960718391079, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
+  m_PrefabInstance: {fileID: 1544344052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
 --- !u!1 &1666291662
 GameObject:
   m_ObjectHideFlags: 0
