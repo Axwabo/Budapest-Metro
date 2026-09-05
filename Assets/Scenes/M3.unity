@@ -1091,7 +1091,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Straight Track
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1101,17 +1102,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5284378769983902588, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
   m_PrefabInstance: {fileID: 459336628}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &459336630 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3898274104004079947, guid: 9415b30289e4e69a2aaa9adfdca79da4, type: 3}
-  m_PrefabInstance: {fileID: 459336628}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59bb90ec91214678a977fcd64ed6dae4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
 --- !u!1 &506156599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3412,7 +3402,7 @@ PrefabInstance:
     - target: {fileID: 4516728846466402756, guid: 9fb2be80aacc083caa86cddea939e25a, type: 3}
       propertyPath: startingTrack
       value: 
-      objectReference: {fileID: 459336630}
+      objectReference: {fileID: 1255576668563350736}
     - target: {fileID: 6491694559044885725, guid: 9fb2be80aacc083caa86cddea939e25a, type: 3}
       propertyPath: initialRoute
       value: 
