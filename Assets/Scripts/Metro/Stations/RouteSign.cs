@@ -20,6 +20,9 @@ namespace Metro.Stations
         private RouteDescriptor descriptor;
 
         [SerializeField]
+        private bool @double;
+
+        [SerializeField]
         private UIDocument document;
 
         [SerializeField]
@@ -45,24 +48,11 @@ namespace Metro.Stations
 
         private bool _wasOccupied;
 
-        private Route NextRoute
-        {
-            get
-            {
-                var now = Clock.Now;
-                foreach (var route in descriptor.GetRoutes())
-                {
-                    var delta = Stop(route).Time - now;
-                    if (delta >= TimeSpan.Zero && delta <= TimeSpan.FromMinutes(30))
-                        return route;
-                }
-
-                return null;
-            }
-        }
+        private Route NextRoute => GetNextRoute(Clock.Now);
 
         private void Awake()
         {
+            _viewModel.Double = @double;
             material.Init(name, document);
             foreach (var meshRenderer in renderers)
             {
@@ -96,6 +86,18 @@ namespace Metro.Stations
         }
 
         private void OnEnable() => document.rootVisualElement.dataSource = _viewModel;
+
+        private Route GetNextRoute(TimeSpan now)
+        {
+            foreach (var route in descriptor.GetRoutes())
+            {
+                var delta = Stop(route).Time - now;
+                if (delta >= TimeSpan.Zero && delta <= TimeSpan.FromMinutes(30))
+                    return route;
+            }
+
+            return null;
+        }
 
         private int FindIndex(string stationName)
         {
@@ -137,26 +139,45 @@ namespace Metro.Stations
                     return;
                 _everUpdated = true;
                 _viewModel.NoInformation = true;
-                _viewModel.Minutes = "=";
+                if (_viewModel.Double)
+                    _viewModel.Minutes = _viewModel.Seconds = _viewModel.NextMinutes = _viewModel.NextSeconds = "--";
+                else
+                    _viewModel.Minutes = "=";
                 document.rootVisualElement.AddToClassList("no-information");
                 return;
             }
 
-            var delta = Stop(_route).Time - Clock.Now;
+            var now = Clock.Now;
+            var delta = Stop(_route).Time - now;
             if (delta < -TwoMinutes)
                 _route = null; // késing/skipped
             if (delta < TimeSpan.Zero)
                 delta = TimeSpan.Zero;
             var equals = _index == Destination && delta > TwoMinutes;
             document.rootVisualElement.EnableInClassList("no-information", equals);
-            _viewModel.Minutes = equals ? "=" : delta.Minutes.ToString("00");
-            _viewModel.Seconds = equals ? "" : delta.Seconds.ToString("00");
+            (_viewModel.Minutes, _viewModel.Seconds) = Deltas(delta, equals);
+            if (_viewModel.Double)
+            {
+                if (_route == null)
+                    return;
+                var next = GetNextRoute(now + delta);
+                (_viewModel.NextMinutes, _viewModel.NextSeconds) = next != null
+                    ? Deltas(Stop(_route).Time - now)
+                    : ("--", "--");
+                return;
+            }
+
             if (_index == Destination)
                 return;
             var length = Length.Percent(Mathf.Min(100, (float) (delta.TotalSeconds * SecondsToOnePercent)));
             if (_viewModel.Width != length)
                 _viewModel.Width = length;
         }
+
+        private static (string, string) Deltas(TimeSpan delta, bool equals = false) => (
+            equals ? "=" : delta.Minutes.ToString("00"),
+            equals ? "" : delta.Seconds.ToString("00")
+        );
 
     }
 

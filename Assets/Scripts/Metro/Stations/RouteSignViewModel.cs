@@ -25,6 +25,14 @@ namespace Metro.Stations
         [CreateProperty]
         public string Seconds { get; set; }
 
+        [CreateProperty]
+        public string NextMinutes { get; set; }
+
+        [CreateProperty]
+        public string NextSeconds { get; set; }
+
+        public bool Double { get; set; }
+
     }
 
 }
