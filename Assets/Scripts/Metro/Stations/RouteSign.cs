@@ -67,7 +67,7 @@ namespace Metro.Stations
             var destinationName = StationIdCache.TryGet(descriptor.Destination, out var id) && !string.IsNullOrEmpty(id.StationTime)
                 ? id.StationTime
                 : descriptor.Destination;
-            _viewModel.Destination = $"{destinationName} felé";
+            _viewModel.Destination = _viewModel.Double ? destinationName : $"{destinationName} felé";
             var station = GetComponentInParent<Station>();
             _index = FindIndex(station.ID.name);
             _track = station.Track(descriptor.Reverse);
@@ -160,7 +160,7 @@ namespace Metro.Stations
             {
                 if (_route == null)
                     return;
-                var next = GetNextRoute(now + delta);
+                var next = GetNextRoute(now + delta + TimeSpan.FromSeconds(10));
                 (_viewModel.NextMinutes, _viewModel.NextSeconds) = next != null
                     ? Deltas(Stop(_route).Time - now)
                     : ("--", "--");
