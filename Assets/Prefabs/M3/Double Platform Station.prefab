@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Stations.StationCulling
   objects:
-  - {fileID: 0}
+  - {fileID: 2327196611421947186}
 --- !u!1 &5088721560233425020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,5 +1089,10 @@ PrefabInstance:
 --- !u!4 &810134246726638856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 706622881029450019, guid: c3514a2ef5e9e57f5a4aff16878a8cfc, type: 3}
+  m_PrefabInstance: {fileID: 211740694386668587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2327196611421947186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2502767701498605849, guid: c3514a2ef5e9e57f5a4aff16878a8cfc, type: 3}
   m_PrefabInstance: {fileID: 211740694386668587}
   m_PrefabAsset: {fileID: 0}
