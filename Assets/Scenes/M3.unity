@@ -130,12 +130,12 @@ GameObject:
   - component: {fileID: 3873036}
   - component: {fileID: 3873037}
   m_Layer: 0
-  m_Name: "Ecseri > N\xE9p"
+  m_Name: "N\xE9p > Ecseri"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3873036
 Transform:
   m_ObjectHideFlags: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
   preset: {fileID: 11400000, guid: 9fdf068bb214967ff804043c9ce4de60, type: 2}
-  spline: {fileID: 1222100875}
+  spline: {fileID: 1562052893}
   start: 0
   end: 0
 --- !u!1 &4280058
@@ -2163,12 +2163,12 @@ GameObject:
   - component: {fileID: 454959764}
   - component: {fileID: 454959765}
   m_Layer: 0
-  m_Name: "Hat\xE1r > P\xF6tty\xF6s 2"
+  m_Name: "P\xF6tty\xF6s > Hat\xE1r 2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &454959764
 Transform:
   m_ObjectHideFlags: 0
@@ -2197,7 +2197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
   preset: {fileID: 11400000, guid: 9fdf068bb214967ff804043c9ce4de60, type: 2}
-  spline: {fileID: 1324833969}
+  spline: {fileID: 1636785500}
   start: 340
   end: 0
 --- !u!1001 &459336628
@@ -5294,6 +5294,10 @@ PrefabInstance:
       propertyPath: <Next>k__BackingField
       value: 
       objectReference: {fileID: 1222100874}
+    - target: {fileID: 7961109195478711865, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 1562052892}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5302,6 +5306,17 @@ PrefabInstance:
 --- !u!114 &1038890975 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7734146825860511574, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+  m_PrefabInstance: {fileID: 1038890974}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
+--- !u!114 &1038890976 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7961109195478711865, guid: f5de2c951c485330eb2090a954c71835, type: 3}
   m_PrefabInstance: {fileID: 1038890974}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -5925,7 +5940,7 @@ GameObject:
   - component: {fileID: 1190307432}
   - component: {fileID: 1190307431}
   m_Layer: 0
-  m_Name: "P\xF6tty\xF6s > Ecseri"
+  m_Name: "Ecseri > P\xF6tty\xF6s"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5974,7 +5989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 0}
+  <Next>k__BackingField: {fileID: 1038890976}
   spline: {fileID: 1190307433}
 --- !u!114 &1190307433
 MonoBehaviour:
@@ -5989,33 +6004,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 5071.9785, y: 110.3, z: -1269.1377}
-    direction: {x: 5002.5054, y: 110.3, z: -1232.1537}
+  - position: {x: 5070.0986, y: 110.3, z: -1272.6685}
+    direction: {x: 5000.6255, y: 110.3, z: -1235.6844}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 4775.8013, y: 111.6, z: -1108.3315}
-    direction: {x: 4688.075, y: 111.6, z: -1061.6309}
+  - position: {x: 4773.9214, y: 111.6, z: -1111.8623}
+    direction: {x: 4686.1953, y: 111.6, z: -1065.1616}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 5071.9785, y: 110.3, z: -1269.1377}
-      direction: {x: 5002.5054, y: 110.3, z: -1232.1537}
+      position: {x: 5070.0986, y: 110.3, z: -1272.6685}
+      direction: {x: 5000.6255, y: 110.3, z: -1235.6844}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 4775.8013, y: 111.6, z: -1108.3315}
-      direction: {x: 4688.075, y: 111.6, z: -1061.6309}
+      position: {x: 4773.9214, y: 111.6, z: -1111.8623}
+      direction: {x: 4686.1953, y: 111.6, z: -1065.1616}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 337.02008
+  Length: 337.02005
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -8189,7 +8204,7 @@ GameObject:
   - component: {fileID: 1562052892}
   - component: {fileID: 1562052891}
   m_Layer: 0
-  m_Name: "Ecseri > N\xE9p"
+  m_Name: "N\xE9p > Ecseri"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8253,46 +8268,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 4669.8784, y: 111.6, z: -1051.9377}
-    direction: {x: 4646.1694, y: 111.6, z: -1039.3163}
+  - position: {x: 4667.9985, y: 111.6, z: -1055.4685}
+    direction: {x: 4644.2896, y: 111.6, z: -1042.847}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 4573.8794, y: 111.6, z: -983.063}
-    direction: {x: 4548.485, y: 111.6, z: -961.8416}
+  - position: {x: 4568.0293, y: 111.6, z: -991.2448}
+    direction: {x: 4542.635, y: 111.6, z: -970.02344}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 4478.4717, y: 111.6, z: -917.3882}
-    direction: {x: 4447.0073, y: 111.6, z: -897.7999}
+  - position: {x: 4430.0796, y: 111.6, z: -898.1856}
+    direction: {x: 4398.615, y: 111.6, z: -878.59735}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 4315.883, y: 110, z: -821.5655}
-    direction: {x: 4283.3716, y: 109.70038, z: -802.80695}
+  - position: {x: 4310.197, y: 110, z: -831.4202}
+    direction: {x: 4277.131, y: 109.7004, z: -813.034}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 4090.9744, y: 108.5, z: -689.023}
-    direction: {x: 4058.4631, y: 108.5, z: -670.26447}
+  - position: {x: 4085.4373, y: 108.5, z: -698.62}
+    direction: {x: 4053.611, y: 108.5, z: -678.6741}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 3921.6067, y: 107.79, z: -592.9999}
-    direction: {x: 3855.331, y: 107.79, z: -558.7053}
+  - position: {x: 3919.7683, y: 107.79, z: -596.55237}
+    direction: {x: 3853.4927, y: 107.79, z: -562.2578}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 4669.8784, y: 111.6, z: -1051.9377}
-      direction: {x: 4646.1694, y: 111.6, z: -1039.3163}
+      position: {x: 4667.9985, y: 111.6, z: -1055.4685}
+      direction: {x: 4644.2896, y: 111.6, z: -1042.847}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 4573.8794, y: 111.6, z: -983.063}
-      direction: {x: 4548.485, y: 111.6, z: -961.8416}
+      position: {x: 4568.0293, y: 111.6, z: -991.2448}
+      direction: {x: 4542.635, y: 111.6, z: -970.02344}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -8300,14 +8315,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 4573.8794, y: 111.6, z: -983.063}
-      direction: {x: 4548.485, y: 111.6, z: -961.8416}
+      position: {x: 4568.0293, y: 111.6, z: -991.2448}
+      direction: {x: 4542.635, y: 111.6, z: -970.02344}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 4478.4717, y: 111.6, z: -917.3882}
-      direction: {x: 4447.0073, y: 111.6, z: -897.7999}
+      position: {x: 4430.0796, y: 111.6, z: -898.1856}
+      direction: {x: 4398.615, y: 111.6, z: -878.59735}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -8315,14 +8330,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 4478.4717, y: 111.6, z: -917.3882}
-      direction: {x: 4447.0073, y: 111.6, z: -897.7999}
+      position: {x: 4430.0796, y: 111.6, z: -898.1856}
+      direction: {x: 4398.615, y: 111.6, z: -878.59735}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 4315.883, y: 110, z: -821.5655}
-      direction: {x: 4283.3716, y: 109.70038, z: -802.80695}
+      position: {x: 4310.197, y: 110, z: -831.4202}
+      direction: {x: 4277.131, y: 109.7004, z: -813.034}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -8330,14 +8345,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 4315.883, y: 110, z: -821.5655}
-      direction: {x: 4283.3716, y: 109.70038, z: -802.80695}
+      position: {x: 4310.197, y: 110, z: -831.4202}
+      direction: {x: 4277.131, y: 109.7004, z: -813.034}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 4090.9744, y: 108.5, z: -689.023}
-      direction: {x: 4058.4631, y: 108.5, z: -670.26447}
+      position: {x: 4085.4373, y: 108.5, z: -698.62}
+      direction: {x: 4053.611, y: 108.5, z: -678.6741}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -8345,21 +8360,21 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 4090.9744, y: 108.5, z: -689.023}
-      direction: {x: 4058.4631, y: 108.5, z: -670.26447}
+      position: {x: 4085.4373, y: 108.5, z: -698.62}
+      direction: {x: 4053.611, y: 108.5, z: -678.6741}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 3921.6067, y: 107.79, z: -592.9999}
-      direction: {x: 3855.331, y: 107.79, z: -558.7053}
+      position: {x: 3919.7683, y: 107.79, z: -596.55237}
+      direction: {x: 3853.4927, y: 107.79, z: -562.2578}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 878.71326
+  Length: 878.4403
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -8375,12 +8390,12 @@ GameObject:
   - component: {fileID: 1562215531}
   - component: {fileID: 1562215532}
   m_Layer: 0
-  m_Name: "Hat\xE1r > P\xF6tty\xF6s 1"
+  m_Name: "P\xF6tty\xF6s > Hat\xE1r 1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1562215531
 Transform:
   m_ObjectHideFlags: 0
@@ -8409,7 +8424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
   preset: {fileID: 11400000, guid: 7614820ec526b2b6bafa78a9f83a3757, type: 2}
-  spline: {fileID: 1324833969}
+  spline: {fileID: 1636785500}
   start: 0
   end: 340
 --- !u!1001 &1587861354
@@ -8722,7 +8737,7 @@ GameObject:
   - component: {fileID: 1636785499}
   - component: {fileID: 1636785498}
   m_Layer: 0
-  m_Name: "Hat\xE1r > P\xF6tty\xF6s"
+  m_Name: "P\xF6tty\xF6s > Hat\xE1r"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8771,7 +8786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 3667625087083578045}
+  <Next>k__BackingField: {fileID: 3667625087083578046}
   spline: {fileID: 1636785500}
 --- !u!114 &1636785500
 MonoBehaviour:
@@ -8786,51 +8801,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 5867.458, y: 111.32, z: -1639.1926}
-    direction: {x: 5825.8735, y: 111.32, z: -1624.6788}
+  - position: {x: 5863.246, y: 111.32, z: -1651.2585}
+    direction: {x: 5821.6616, y: 111.32, z: -1636.7448}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 5785.9805, y: 111.32, z: -1608.203}
-    direction: {x: 5759.741, y: 111.32, z: -1595.6746}
+  - position: {x: 5779.6997, y: 111.32, z: -1619.6139}
+    direction: {x: 5751.647, y: 111.32, z: -1608.6698}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 5717.196, y: 111.32, z: -1582.6179}
-    direction: {x: 5694.3745, y: 111.32, z: -1576.0005}
+  - position: {x: 5713.6074, y: 111.32, z: -1594.9935}
+    direction: {x: 5691.023, y: 111.32, z: -1587.7075}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 5660.7715, y: 111.32, z: -1566.9152}
-    direction: {x: 5642.793, y: 111.32, z: -1561.3265}
+  - position: {x: 5657.6562, y: 111.32, z: -1576.937}
+    direction: {x: 5639.6777, y: 111.32, z: -1571.3484}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 5546.5522, y: 111.32, z: -1524.1854}
-    direction: {x: 5518.1445, y: 111.32, z: -1512.9701}
+  - position: {x: 5520.184, y: 111.32, z: -1520.7207}
+    direction: {x: 5489.135, y: 111.32, z: -1503.7155}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 5401.3687, y: 111.32, z: -1447.7628}
-    direction: {x: 5372.592, y: 111.32, z: -1431.617}
+  - position: {x: 5398.148, y: 111.32, z: -1453.5033}
+    direction: {x: 5369.371, y: 111.32, z: -1437.3574}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 5177.9014, y: 110.3, z: -1325.5315}
-    direction: {x: 5140.1064, y: 110.3, z: -1305.4114}
+  - position: {x: 5176.0215, y: 110.3, z: -1329.0623}
+    direction: {x: 5138.2266, y: 110.3, z: -1308.9421}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 5867.458, y: 111.32, z: -1639.1926}
-      direction: {x: 5825.8735, y: 111.32, z: -1624.6788}
+      position: {x: 5863.246, y: 111.32, z: -1651.2585}
+      direction: {x: 5821.6616, y: 111.32, z: -1636.7448}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 5785.9805, y: 111.32, z: -1608.203}
-      direction: {x: 5759.741, y: 111.32, z: -1595.6746}
+      position: {x: 5779.6997, y: 111.32, z: -1619.6139}
+      direction: {x: 5751.647, y: 111.32, z: -1608.6698}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -8838,14 +8853,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 5785.9805, y: 111.32, z: -1608.203}
-      direction: {x: 5759.741, y: 111.32, z: -1595.6746}
+      position: {x: 5779.6997, y: 111.32, z: -1619.6139}
+      direction: {x: 5751.647, y: 111.32, z: -1608.6698}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 5717.196, y: 111.32, z: -1582.6179}
-      direction: {x: 5694.3745, y: 111.32, z: -1576.0005}
+      position: {x: 5713.6074, y: 111.32, z: -1594.9935}
+      direction: {x: 5691.023, y: 111.32, z: -1587.7075}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -8853,14 +8868,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 5717.196, y: 111.32, z: -1582.6179}
-      direction: {x: 5694.3745, y: 111.32, z: -1576.0005}
+      position: {x: 5713.6074, y: 111.32, z: -1594.9935}
+      direction: {x: 5691.023, y: 111.32, z: -1587.7075}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 5660.7715, y: 111.32, z: -1566.9152}
-      direction: {x: 5642.793, y: 111.32, z: -1561.3265}
+      position: {x: 5657.6562, y: 111.32, z: -1576.937}
+      direction: {x: 5639.6777, y: 111.32, z: -1571.3484}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -8868,14 +8883,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 5660.7715, y: 111.32, z: -1566.9152}
-      direction: {x: 5642.793, y: 111.32, z: -1561.3265}
+      position: {x: 5657.6562, y: 111.32, z: -1576.937}
+      direction: {x: 5639.6777, y: 111.32, z: -1571.3484}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 5546.5522, y: 111.32, z: -1524.1854}
-      direction: {x: 5518.1445, y: 111.32, z: -1512.9701}
+      position: {x: 5520.184, y: 111.32, z: -1520.7207}
+      direction: {x: 5489.135, y: 111.32, z: -1503.7155}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -8883,14 +8898,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 5546.5522, y: 111.32, z: -1524.1854}
-      direction: {x: 5518.1445, y: 111.32, z: -1512.9701}
+      position: {x: 5520.184, y: 111.32, z: -1520.7207}
+      direction: {x: 5489.135, y: 111.32, z: -1503.7155}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 5401.3687, y: 111.32, z: -1447.7628}
-      direction: {x: 5372.592, y: 111.32, z: -1431.617}
+      position: {x: 5398.148, y: 111.32, z: -1453.5033}
+      direction: {x: 5369.371, y: 111.32, z: -1437.3574}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -8898,21 +8913,21 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 5401.3687, y: 111.32, z: -1447.7628}
-      direction: {x: 5372.592, y: 111.32, z: -1431.617}
+      position: {x: 5398.148, y: 111.32, z: -1453.5033}
+      direction: {x: 5369.371, y: 111.32, z: -1437.3574}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 5177.9014, y: 110.3, z: -1325.5315}
-      direction: {x: 5140.1064, y: 110.3, z: -1305.4114}
+      position: {x: 5176.0215, y: 110.3, z: -1329.0623}
+      direction: {x: 5138.2266, y: 110.3, z: -1308.9421}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 760.09375
+  Length: 761.2496
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -10069,12 +10084,12 @@ GameObject:
   - component: {fileID: 1861746817}
   - component: {fileID: 1861746818}
   m_Layer: 0
-  m_Name: "P\xF6tty\xF6s > Ecseri"
+  m_Name: "Ecseri > P\xF6tty\xF6s"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1861746817
 Transform:
   m_ObjectHideFlags: 0
@@ -10103,7 +10118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
   preset: {fileID: 11400000, guid: 9fdf068bb214967ff804043c9ce4de60, type: 2}
-  spline: {fileID: 1269084708}
+  spline: {fileID: 1190307433}
   start: 0
   end: 0
 --- !u!1 &1862706369
@@ -11963,6 +11978,10 @@ PrefabInstance:
       propertyPath: <Next>k__BackingField
       value: 
       objectReference: {fileID: 1269084707}
+    - target: {fileID: 7961109195478711865, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 1190307432}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11971,6 +11990,17 @@ PrefabInstance:
 --- !u!114 &3667625087083578045 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7734146825860511574, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+  m_PrefabInstance: {fileID: 3667625087083578044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
+--- !u!114 &3667625087083578046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7961109195478711865, guid: f5de2c951c485330eb2090a954c71835, type: 3}
   m_PrefabInstance: {fileID: 3667625087083578044}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -13084,7 +13114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
-  <Next>k__BackingField: {fileID: 0}
+  <Next>k__BackingField: {fileID: 1636785499}
   <Reverse>k__BackingField: 1
   <Light>k__BackingField: {fileID: 0}
 --- !u!1 &8622272678097862264
