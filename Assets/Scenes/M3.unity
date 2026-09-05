@@ -2963,6 +2963,7 @@ MonoBehaviour:
   reverse: 0
   document: {fileID: 1534486668}
   stationTemplate: {fileID: 9197481963319205126, guid: 243963da1cae4f55b24f839c1cf5e4f7, type: 3}
+  skipPreviousStations: 1
   material:
     width: 500
     height: 2000

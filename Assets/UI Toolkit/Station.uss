@@ -32,5 +32,6 @@ Label {
 }
 
 .stop Label {
+    white-space: nowrap;
     position: absolute;
 }
