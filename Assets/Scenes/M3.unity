@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 0}
+  <Next>k__BackingField: {fileID: 703377252}
   spline: {fileID: 9759198}
 --- !u!114 &9759198
 MonoBehaviour:
@@ -1118,54 +1118,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6699039778969011121, guid: 4f4b4be40c2529796b9d734b52626636, type: 3}
   m_PrefabInstance: {fileID: 158954561}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &160228392
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 160228393}
-  - component: {fileID: 160228394}
-  m_Layer: 0
-  m_Name: "Klinik\xE1k > Nagyv\xE1rad 2"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &160228393
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160228392}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1436801533}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &160228394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160228392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  preset: {fileID: 11400000, guid: 7614820ec526b2b6bafa78a9f83a3757, type: 2}
-  spline: {fileID: 9759198}
-  start: 470
-  end: 0
 --- !u!23 &163190114 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 1860083296792711945, guid: ebe0fa4ab93cfc763aecbc6c7893418f, type: 3}
@@ -1255,7 +1207,6 @@ Transform:
   - {fileID: 1622663958}
   - {fileID: 845041049}
   - {fileID: 1932102171}
-  - {fileID: 1490006946}
   - {fileID: 269206239}
   - {fileID: 169509009}
   m_Father: {fileID: 2104011971}
@@ -1370,7 +1321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 0}
+  <Next>k__BackingField: {fileID: 1018670826}
   spline: {fileID: 260218381}
 --- !u!114 &260218381
 MonoBehaviour:
@@ -3209,6 +3160,10 @@ PrefabInstance:
       propertyPath: <Next>k__BackingField
       value: 
       objectReference: {fileID: 546002899}
+    - target: {fileID: 7961109195478711865, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 939680291}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3217,6 +3172,17 @@ PrefabInstance:
 --- !u!114 &548959461 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7734146825860511574, guid: f5de2c951c485330eb2090a954c71835, type: 3}
+  m_PrefabInstance: {fileID: 548959460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
+--- !u!114 &548959462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7961109195478711865, guid: f5de2c951c485330eb2090a954c71835, type: 3}
   m_PrefabInstance: {fileID: 548959460}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -3600,6 +3566,10 @@ PrefabInstance:
       value: 20.000095
       objectReference: {fileID: 0}
     - target: {fileID: 8617583812742602435, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 260218380}
+    - target: {fileID: 8617583812742602435, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
       propertyPath: <Light>k__BackingField
       value: 
       objectReference: {fileID: 0}
@@ -3611,6 +3581,17 @@ PrefabInstance:
 --- !u!114 &703377251 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1370371960718391079, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
+  m_PrefabInstance: {fileID: 703377250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
+--- !u!114 &703377252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8617583812742602435, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
   m_PrefabInstance: {fileID: 703377250}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -4658,7 +4639,7 @@ GameObject:
   - component: {fileID: 939680291}
   - component: {fileID: 939680290}
   m_Layer: 0
-  m_Name: "N\xE9p > Nagyv\xE1rad"
+  m_Name: "Nagyv\xE1rad > N\xE9p"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4707,7 +4688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 0}
+  <Next>k__BackingField: {fileID: 548959462}
   spline: {fileID: 939680292}
 --- !u!114 &939680292
 MonoBehaviour:
@@ -4722,41 +4703,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 3815.0315, y: 107.79, z: -537.84766}
-    direction: {x: 3765.7502, y: 107.79, z: -512.3469}
+  - position: {x: 3813.193, y: 107.79, z: -541.40015}
+    direction: {x: 3763.9119, y: 107.79, z: -515.8994}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 3711.2551, y: 107.5, z: -485.40518}
-    direction: {x: 3662.486, y: 107.3, z: -459.05566}
+  - position: {x: 3707.8823, y: 107.5, z: -491.64783}
+    direction: {x: 3668.6672, y: 107.344864, z: -471.16794}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 3432.238, y: 105.74, z: -336.4658}
-    direction: {x: 3416.5608, y: 105.74, z: -328.0388}
+  - position: {x: 3438.2107, y: 105.74, z: -350.41937}
+    direction: {x: 3422.5334, y: 105.74, z: -341.99237}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 3320.162, y: 105.74, z: -273.87717}
-    direction: {x: 3304.4849, y: 105.74, z: -265.45016}
+  - position: {x: 3314.1401, y: 105.74, z: -285.0805}
+    direction: {x: 3298.463, y: 105.74, z: -276.6535}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 3111.7812, y: 105.74, z: -155.8565}
-    direction: {x: 3046.026, y: 105.74, z: -114.45946}
+  - position: {x: 3104.9727, y: 105.74, z: -166.67197}
+    direction: {x: 3039.2173, y: 105.74, z: -125.27492}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 3815.0315, y: 107.79, z: -537.84766}
-      direction: {x: 3765.7502, y: 107.79, z: -512.3469}
+      position: {x: 3813.193, y: 107.79, z: -541.40015}
+      direction: {x: 3763.9119, y: 107.79, z: -515.8994}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 3711.2551, y: 107.5, z: -485.40518}
-      direction: {x: 3662.486, y: 107.3, z: -459.05566}
+      position: {x: 3707.8823, y: 107.5, z: -491.64783}
+      direction: {x: 3668.6672, y: 107.344864, z: -471.16794}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -4764,14 +4745,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 3711.2551, y: 107.5, z: -485.40518}
-      direction: {x: 3662.486, y: 107.3, z: -459.05566}
+      position: {x: 3707.8823, y: 107.5, z: -491.64783}
+      direction: {x: 3668.6672, y: 107.344864, z: -471.16794}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 3432.238, y: 105.74, z: -336.4658}
-      direction: {x: 3416.5608, y: 105.74, z: -328.0388}
+      position: {x: 3438.2107, y: 105.74, z: -350.41937}
+      direction: {x: 3422.5334, y: 105.74, z: -341.99237}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -4779,14 +4760,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 3432.238, y: 105.74, z: -336.4658}
-      direction: {x: 3416.5608, y: 105.74, z: -328.0388}
+      position: {x: 3438.2107, y: 105.74, z: -350.41937}
+      direction: {x: 3422.5334, y: 105.74, z: -341.99237}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 3320.162, y: 105.74, z: -273.87717}
-      direction: {x: 3304.4849, y: 105.74, z: -265.45016}
+      position: {x: 3314.1401, y: 105.74, z: -285.0805}
+      direction: {x: 3298.463, y: 105.74, z: -276.6535}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -4794,21 +4775,21 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 3320.162, y: 105.74, z: -273.87717}
-      direction: {x: 3304.4849, y: 105.74, z: -265.45016}
+      position: {x: 3314.1401, y: 105.74, z: -285.0805}
+      direction: {x: 3298.463, y: 105.74, z: -276.6535}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 3111.7812, y: 105.74, z: -155.8565}
-      direction: {x: 3046.026, y: 105.74, z: -114.45946}
+      position: {x: 3104.9727, y: 105.74, z: -166.67197}
+      direction: {x: 3039.2173, y: 105.74, z: -125.27492}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 800.45734
+  Length: 801.53534
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
@@ -5181,6 +5162,17 @@ PrefabInstance:
 --- !u!114 &1018670825 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1370371960718391079, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
+  m_PrefabInstance: {fileID: 1018670824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
+--- !u!114 &1018670826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8617583812742602435, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
   m_PrefabInstance: {fileID: 1018670824}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -7427,7 +7419,6 @@ Transform:
   - {fileID: 3873036}
   - {fileID: 1472340203}
   - {fileID: 1894820961}
-  - {fileID: 160228393}
   - {fileID: 1187130773}
   - {fileID: 1340940052}
   m_Father: {fileID: 2104011971}
@@ -7555,12 +7546,12 @@ GameObject:
   - component: {fileID: 1472340203}
   - component: {fileID: 1472340204}
   m_Layer: 0
-  m_Name: "N\xE9p > Nagyv\xE1rad"
+  m_Name: "Nagyv\xE1rad > N\xE9p"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1472340203
 Transform:
   m_ObjectHideFlags: 0
@@ -7589,7 +7580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
   preset: {fileID: 11400000, guid: 9fdf068bb214967ff804043c9ce4de60, type: 2}
-  spline: {fileID: 546002900}
+  spline: {fileID: 939680292}
   start: 0
   end: 0
 --- !u!1001 &1475069463
@@ -7732,54 +7723,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 67540f8b80b279795a10230c60066b3e, type: 3}
   m_PrefabInstance: {fileID: 1477376926}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1490006945
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1490006946}
-  - component: {fileID: 1490006947}
-  m_Layer: 0
-  m_Name: "Nagyv\xE1rad > Klinik\xE1k 2"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1490006946
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490006945}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 175835359}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1490006947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490006945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  preset: {fileID: 11400000, guid: 7614820ec526b2b6bafa78a9f83a3757, type: 2}
-  spline: {fileID: 1746409916}
-  start: 470
-  end: 0
 --- !u!1 &1496980559
 GameObject:
   m_ObjectHideFlags: 0
@@ -8097,6 +8040,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 20.000032
       objectReference: {fileID: 0}
+    - target: {fileID: 8617583812742602435, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 9759197}
     - target: {fileID: 8617583812742602435, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
       propertyPath: <Light>k__BackingField
       value: 
@@ -10493,7 +10440,7 @@ GameObject:
   - component: {fileID: 1894820961}
   - component: {fileID: 1894820962}
   m_Layer: 0
-  m_Name: "Klinik\xE1k > Nagyv\xE1rad 1"
+  m_Name: "Klinik\xE1k > Nagyv\xE1rad"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10526,10 +10473,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  preset: {fileID: 11400000, guid: 9fdf068bb214967ff804043c9ce4de60, type: 2}
+  preset: {fileID: 11400000, guid: 7614820ec526b2b6bafa78a9f83a3757, type: 2}
   spline: {fileID: 9759198}
   start: 0
-  end: 470
+  end: 0
 --- !u!1001 &1914669555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10673,7 +10620,7 @@ GameObject:
   - component: {fileID: 1932102171}
   - component: {fileID: 1932102172}
   m_Layer: 0
-  m_Name: "Nagyv\xE1rad > Klinik\xE1k 1"
+  m_Name: "Nagyv\xE1rad > Klinik\xE1k"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10706,10 +10653,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  preset: {fileID: 11400000, guid: 3161ced4a3442cb8fb2f230f9c50e58f, type: 2}
+  preset: {fileID: 11400000, guid: 7614820ec526b2b6bafa78a9f83a3757, type: 2}
   spline: {fileID: 1746409916}
   start: 0
-  end: 470
+  end: 0
 --- !u!1 &1959319643
 GameObject:
   m_ObjectHideFlags: 0
