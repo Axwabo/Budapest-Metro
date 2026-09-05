@@ -1,0 +1,64 @@
+:root {
+    --color: rgb(243, 255, 94);
+    color: var(--color);
+    font-size: 35px;
+}
+
+Label {
+    margin: 0;
+    padding: 0;
+}
+
+#Bar {
+    background-color: var(--color);
+}
+
+.border {
+    border-color: var(--color);
+}
+
+.no-information #Minutes {
+    -unity-text-align: middle-center;
+}
+
+.no-information #Seconds {
+    display: none;
+}
+
+.no-information #Footer {
+    visibility: hidden;
+}
+
+.entry {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+.destination {
+    flex-grow: 1;
+    -unity-text-align: middle-left;
+}
+
+.arrow {
+    border-color: transparent;
+    border-width: 10px;
+    border-left-color: var(--color);
+    width: 10px;
+    height: 10px;
+}
+
+.list {
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.list.border {
+    align-items: center;
+}
+
+.time {
+    flex-grow: 1;
+    flex-direction: row;
+    -unity-text-align: middle-center;
+}

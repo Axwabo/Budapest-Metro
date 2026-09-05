@@ -1,0 +1,51 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/M3/Time.uss?fileID=7433441132597879392&amp;guid=65698f44b62e445ab22eaefa32aae90a&amp;type=3#Time" />
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; background-color: rgb(0, 91, 0);">
+        <ui:VisualElement class="list" style="flex-grow: 1;">
+            <ui:VisualElement class="entry">
+                <ui:VisualElement class="arrow" />
+                <ui:Label class="destination" text="Kőbánya-Kispest">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="Destination" data-source-type="Metro.Stations.RouteSignViewModel, Assembly-CSharp" binding-mode="ToTargetOnce" />
+                    </Bindings>
+                </ui:Label>
+            </ui:VisualElement>
+            <ui:VisualElement class="entry">
+                <ui:VisualElement class="arrow" />
+                <ui:Label class="destination" text="Kőbánya-Kispest">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="Destination" data-source-type="Metro.Stations.RouteSignViewModel, Assembly-CSharp" binding-mode="ToTargetOnce" />
+                    </Bindings>
+                </ui:Label>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="border list" style="min-width: 150px; border-width: 2px;">
+            <ui:VisualElement class="time">
+                <ui:Label text="05" name="Minutes">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="Minutes" data-source-type="Metro.Stations.RouteSignViewModel, Assembly-CSharp" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
+                <ui:Label text=":" />
+                <ui:Label text="58" name="Seconds">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="Seconds" data-source-type="Metro.Stations.RouteSignViewModel, Assembly-CSharp" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
+            </ui:VisualElement>
+            <ui:VisualElement class="time">
+                <ui:Label text="10" name="Minutes">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="NextMinutes" data-source-type="Metro.Stations.RouteSignViewModel, Assembly-CSharp" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
+                <ui:Label text=":" />
+                <ui:Label text="58" name="Seconds">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="NextSeconds" data-source-type="Metro.Stations.RouteSignViewModel, Assembly-CSharp" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
