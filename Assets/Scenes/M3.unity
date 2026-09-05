@@ -1249,6 +1249,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1028868313}
+  - {fileID: 1217007676}
   - {fileID: 443174036}
   - {fileID: 491642024}
   - {fileID: 191306818}
@@ -5575,7 +5576,7 @@ GameObject:
   - component: {fileID: 1028868313}
   - component: {fileID: 1028868314}
   m_Layer: 0
-  m_Name: "K\xF6Ki > Hat\xE1r"
+  m_Name: "K\xF6Ki > Hat\xE1r Support 3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5589,7 +5590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028868312}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5608,10 +5609,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  preset: {fileID: 11400000, guid: 7614820ec526b2b6bafa78a9f83a3757, type: 2}
+  preset: {fileID: 11400000, guid: 21791f4420828ac84a41766773909193, type: 2}
   spline: {fileID: 1680754201}
-  start: 226.6
-  end: 615
+  start: 0
+  end: 226.6
 --- !u!4 &1030660899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 706622881029450019, guid: c3514a2ef5e9e57f5a4aff16878a8cfc, type: 3}
@@ -6466,6 +6467,54 @@ MonoBehaviour:
   spline: {fileID: 813478340}
   start: 400
   end: 0
+--- !u!1 &1217007675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1217007676}
+  - component: {fileID: 1217007677}
+  m_Layer: 0
+  m_Name: "K\xF6Ki > Hat\xE1r Tunnel"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1217007676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217007675}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 175835359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1217007677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217007675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
+  preset: {fileID: 11400000, guid: 7614820ec526b2b6bafa78a9f83a3757, type: 2}
+  spline: {fileID: 1680754201}
+  start: 226.6
+  end: 615
 --- !u!1 &1222100873
 GameObject:
   m_ObjectHideFlags: 0
