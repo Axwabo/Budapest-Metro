@@ -14,6 +14,9 @@ namespace Metro.Stations
         private bool right;
 
         [SerializeField]
+        private bool noArrow;
+
+        [SerializeField]
         private VisualTreeAsset stationTemplate;
 
         [SerializeField]
@@ -66,6 +69,8 @@ namespace Metro.Stations
             directiohn.Q<Label>("Name").text = stations[^1].name;
             if (right)
                 directiohn.AddToClassList("right");
+            if (noArrow)
+                directiohn.AddToClassList("no-arrow");
         }
 
     }

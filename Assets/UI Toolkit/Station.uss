@@ -31,3 +31,7 @@ Label {
     white-space: nowrap;
     position: absolute;
 }
+
+.no-arrow .left {
+    display: none;
+}
