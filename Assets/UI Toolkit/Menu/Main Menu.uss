@@ -58,9 +58,9 @@ SliderInt:focus .unity-slider-int__label {
 }
 
 .relation {
-    padding: 5px;
+    padding: 10px;
 }
 
 .relation.selected {
-    background-color: #484;
+    background-color: #444;
 }

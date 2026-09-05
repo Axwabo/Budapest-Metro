@@ -2,6 +2,7 @@
     <Style src="project://database/Assets/UI%20Toolkit/Menu/Main%20Menu.uss?fileID=7433441132597879392&amp;guid=84683283633ed6eb19eda3b02fca49ae&amp;type=3#Main Menu" />
     <ui:VisualElement name="Container" class="grow">
         <ui:Label text="Budapest Metro" class="title" />
+        <ui:Label text="Select a line:" />
         <ui:VisualElement class="row">
             <ui:VisualElement class="row relation">
                 <ui:Button name="m3" class="M3" text="🚇 M3" />
