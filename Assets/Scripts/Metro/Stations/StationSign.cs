@@ -17,6 +17,9 @@ namespace Metro.Stations
         private VisualTreeAsset stationTemplate;
 
         [SerializeField]
+        private bool skipPreviousStations;
+
+        [SerializeField]
         private RenderMaterial material;
 
         [SerializeField]
@@ -48,13 +51,21 @@ namespace Metro.Stations
             {
                 var last = i >= stations.Length - 1;
                 var station = stations[i];
+                var current = false;
                 if (station == _station.ID)
+                {
                     inactive = false;
+                    current = true;
+                }
+                else if (inactive && skipPreviousStations)
+                    continue;
+
                 var accent = i != 0 && !last && string.IsNullOrEmpty(station.Metros);
                 var stop = stationTemplate.CloneTree();
                 var fill = stop.Q("Fill");
                 stop.EnableInClassList("inactive", inactive);
                 stop.EnableInClassList("important", !accent);
+                stop.EnableInClassList("current", current);
                 fill.EnableInClassList("bg-accent", accent);
                 stop.Q<Label>("Name").text = station.name;
                 stop.Q<Label>("Metros").text = station.Metros;
