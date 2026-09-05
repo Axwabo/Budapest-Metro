@@ -13,19 +13,30 @@ MonoBehaviour:
   m_Name: "M3 K\xF6Ki"
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Journeys.Routes.RouteDescriptor
   <Stops>k__BackingField: {fileID: 4900000, guid: 9d9ccf168551bbcc7b44fb549ab9493e, type: 3}
-  <Departures>k__BackingField: {fileID: 4900000, guid: b9635069d0864ac69f2bdf2acf55fe78, type: 3}
+  <Departures>k__BackingField: {fileID: 4900000, guid: 5104408aedde4de6aa785421d1bbebd2, type: 3}
   <Relation>k__BackingField: {fileID: 11400000, guid: d8aa80ac00b48d65e8c280963a51c793, type: 2}
   <Reverse>k__BackingField: 1
   <Pack>k__BackingField: {fileID: 11400000, guid: 29d4d1591bd2db7c88d5e533b9d5330e, type: 2}
-  <Origin>k__BackingField: "K\u0151b\xE1nya-Kispest"
+  <Origin>k__BackingField: "\xDAjpest-k\xF6zpont"
   intermediateStops:
-  - "K\u0151b\xE1nya-Kispest"
-  - "Hat\xE1r \xFAt"
-  - "P\xF6tty\xF6s utca"
-  - "Ecseri \xFAt"
-  - "N\xE9pliget"
-  - "Nagyv\xE1rad t\xE9r"
-  - "Semmelweis Klinik\xE1k"
-  - Corvin-negyed
+  - "\xDAjpest-k\xF6zpont"
+  - "\xDAjpest-v\xE1roskapu"
+  - "Gy\xF6ngy\xF6si utca"
+  - "Forg\xE1ch utca"
+  - "G\xF6ncz \xC1rp\xE1d v\xE1rosk\xF6zpont"
+  - "D\xF3zsa Gy\xF6rs \xFAt"
+  - "Lehel t\xE9r"
+  - "Nyugati p\xE1lyaudvar"
+  - "Arany J\xE1nos utca"
+  - "De\xE1k Ferenc t\xE9r"
+  - Ferenciek tere
   - "K\xE1lvin t\xE9r"
-  <Destination>k__BackingField: "K\xE1lvin t\xE9r"
+  - Corvin-negyed
+  - "Semmelweis Klinik\xE1k"
+  - "Nagyv\xE1rad t\xE9r"
+  - "N\xE9pliget"
+  - "Ecseri \xFAt"
+  - "P\xF6tty\xF6s utca"
+  - "Hat\xE1r \xFAt"
+  - "K\u0151b\xE1nya-Kispest"
+  <Destination>k__BackingField: "K\u0151b\xE1nya-Kispest"
