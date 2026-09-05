@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
   <Track>k__BackingField: {fileID: 1096813082}
-  <Distance>k__BackingField: 31.933275
+  <Distance>k__BackingField: 47.899918
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 462134676}
 --- !u!1 &105172331
@@ -4026,6 +4026,55 @@ MonoBehaviour:
     isLeft: 0
   - switch: {fileID: 261234132}
     isLeft: 1
+--- !u!1 &327601159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 327601160}
+  - component: {fileID: 327601161}
+  m_Layer: 0
+  m_Name: House
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &327601160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327601159}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.53799045, z: -0, w: 0.842951}
+  m_LocalPosition: {x: 7348.6484, y: 122.14, z: -1750.4026}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1998540013}
+  m_LocalEulerAnglesHint: {x: 0, y: -65.094, z: 0}
+--- !u!114 &327601161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327601159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a0b8157c9c49c994e02e2d8469f20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceEntryStopPoint
+  <Track>k__BackingField: {fileID: 98138127}
+  <Distance>k__BackingField: 447.4851
+  <Reverse>k__BackingField: 0
+  <Area>k__BackingField: {fileID: 462134676}
+  clear: []
 --- !u!1 &330441681
 GameObject:
   m_ObjectHideFlags: 0
@@ -4309,7 +4358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
   <Track>k__BackingField: {fileID: 84358430}
-  <Distance>k__BackingField: 31.933388
+  <Distance>k__BackingField: 47.900085
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 462134676}
 --- !u!1 &384724525
@@ -5207,7 +5256,7 @@ MonoBehaviour:
   <Reverse>k__BackingField: 0
   <Route>k__BackingField: {fileID: 0}
   <TrafficSwitches>k__BackingField: {fileID: 0}
-  <ServiceTarget>k__BackingField: {fileID: 0}
+  <ServiceTarget>k__BackingField: {fileID: 2074090973}
   <ServiceSwitches>k__BackingField: {fileID: 0}
 --- !u!4 &462134677
 Transform:
@@ -6840,7 +6889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 1057046814}
-  <Distance>k__BackingField: 75.26674
+  <Distance>k__BackingField: 112.900116
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 462134676}
 --- !u!1 &604571452
@@ -7464,6 +7513,7 @@ Transform:
   - {fileID: 1769222811}
   - {fileID: 1552259420}
   - {fileID: 94328869}
+  - {fileID: 1998540013}
   m_Father: {fileID: 1821383470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &703377250
@@ -8287,7 +8337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
   <Track>k__BackingField: {fileID: 1841462184}
-  <Distance>k__BackingField: 31.935482
+  <Distance>k__BackingField: 47.90322
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 462134676}
 --- !u!1001 &782428365
@@ -9662,7 +9712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
   <Track>k__BackingField: {fileID: 1057046814}
-  <Distance>k__BackingField: 31.933458
+  <Distance>k__BackingField: 47.900192
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 462134676}
 --- !u!1 &937688084
@@ -11870,7 +11920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 84358430}
-  <Distance>k__BackingField: 75.266624
+  <Distance>k__BackingField: 112.89995
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 462134676}
 --- !u!1 &1116079768
@@ -13051,7 +13101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
   <Track>k__BackingField: {fileID: 1306886004}
-  <Distance>k__BackingField: 31.935217
+  <Distance>k__BackingField: 47.902824
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 462134676}
 --- !u!1 &1217007675
@@ -17393,7 +17443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 1306886004}
-  <Distance>k__BackingField: 75.26608
+  <Distance>k__BackingField: 112.89912
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 462134676}
 --- !u!1 &1603669560
@@ -19436,7 +19486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 1096813082}
-  <Distance>k__BackingField: 75.266556
+  <Distance>k__BackingField: 112.89985
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 462134676}
 --- !u!1 &1723706123
@@ -20937,7 +20987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 1841462184}
-  <Distance>k__BackingField: 75.26605
+  <Distance>k__BackingField: 112.899086
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 462134676}
 --- !u!1 &1879075050
@@ -21906,6 +21956,39 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2484356878191788636, guid: e2b35990d629243b899f4b5f2089becf, type: 3}
   m_PrefabInstance: {fileID: 596965010}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1998540012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1998540013}
+  m_Layer: 0
+  m_Name: Control Points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1998540013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998540012}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 327601160}
+  - {fileID: 2074090972}
+  m_Father: {fileID: 702130648}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2007261121
 GameObject:
   m_ObjectHideFlags: 0
@@ -22332,6 +22415,55 @@ MonoBehaviour:
   in: {fileID: 1621237740}
   out: {fileID: 248394332}
   <StopPoint>k__BackingField: {fileID: 1712146524}
+--- !u!1 &2074090971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074090972}
+  - component: {fileID: 2074090973}
+  m_Layer: 0
+  m_Name: "K\xF6Ki"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2074090972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074090971}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.8062528, z: -0, w: 0.5915713}
+  m_LocalPosition: {x: 7666.49, y: 122.14, z: -1891.47}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1998540013}
+  m_LocalEulerAnglesHint: {x: 0, y: 107.463, z: 0}
+--- !u!114 &2074090973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074090971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a0b8157c9c49c994e02e2d8469f20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceEntryStopPoint
+  <Track>k__BackingField: {fileID: 1079697458}
+  <Distance>k__BackingField: 99.285675
+  <Reverse>k__BackingField: 1
+  <Area>k__BackingField: {fileID: 753757833}
+  clear: []
 --- !u!1001 &2093966110
 PrefabInstance:
   m_ObjectHideFlags: 0
