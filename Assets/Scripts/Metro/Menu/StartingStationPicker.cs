@@ -39,6 +39,7 @@ namespace Metro.Menu
             }
 
             Name ??= dropdown.choices[0];
+            dropdown.index = -1;
             dropdown.index = Mathf.Max(0, dropdown.choices.IndexOf(Name));
             dropdown.RegisterValueChangedCallback(evt => Name = evt.newValue);
         }
