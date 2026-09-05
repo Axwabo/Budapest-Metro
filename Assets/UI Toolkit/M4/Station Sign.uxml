@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Station.uss?fileID=7433441132597879392&amp;guid=d0cc5f48f8eefdcd1857f679bfd51862&amp;type=3#Station" />
+    <Style src="project://database/Assets/UI%20Toolkit/M4/Station%20Sign.uss?fileID=7433441132597879392&amp;guid=baa6852b2145350ad8a1a8dadadd0e85&amp;type=3#Station Sign" />
     <ui:VisualElement style="flex-grow: 1; flex-direction: row; -unity-text-align: middle-center; background-color: rgb(255, 255, 255);">
         <ui:VisualElement style="flex-grow: 0.5;" />
         <ui:VisualElement class="board border-accent">

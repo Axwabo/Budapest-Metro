@@ -1,0 +1,18 @@
+.important .border-accent {
+    border-color: black;
+}
+
+.inactive .border-accent {
+    border-color: rgb(140, 140, 140);
+}
+
+.inactive.bg-accent,
+.inactive .bg-accent {
+    background-color: rgb(140, 140, 140);
+}
+
+.line {
+    width: 100px;
+    height: 6px;
+    scale: 1.003 1;
+}

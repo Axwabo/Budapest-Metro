@@ -1,6 +1,6 @@
 .metro-line {
     flex-direction: row;
-    font-size: 64px;
+    font-size: 50px;
     align-self: center;
 }
 
@@ -15,15 +15,19 @@
 
 .line {
     width: 10px;
-    height: 100px;
+    height: 50px;
     scale: 1 1.003;
 }
 
-#Name {
-    width: 300px;
+.stop #Name {
+    min-width: 350px;
     padding: 4px;
 }
 
-#name.current {
+.stop #Name.current {
     background-color: #111;
+}
+
+.stop #Metros {
+    min-width: 50px;
 }
