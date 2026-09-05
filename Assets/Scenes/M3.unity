@@ -3218,7 +3218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 1544344053}
+  <Next>k__BackingField: {fileID: 1370371961993733843}
   spline: {fileID: 546002900}
 --- !u!114 &546002900
 MonoBehaviour:
@@ -8831,118 +8831,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537463930}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1544344052
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 955301422}
-    m_Modifications:
-    - target: {fileID: 1370371960718391079, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: <Next>k__BackingField
-      value: 
-      objectReference: {fileID: 1746409915}
-    - target: {fileID: 1370371960718391079, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: <Light>k__BackingField
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1544786184081237225, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: <Distance>k__BackingField
-      value: 20.000011
-      objectReference: {fileID: 0}
-    - target: {fileID: 4430452085345585190, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: <Distance>k__BackingField
-      value: 99.8999
-      objectReference: {fileID: 0}
-    - target: {fileID: 5142407927238934337, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: <Distance>k__BackingField
-      value: 20.000011
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362538858932170489, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: <ID>k__BackingField
-      value: 
-      objectReference: {fileID: 11400000, guid: f1752bf9858ad7cdea446846d0bfd33f, type: 2}
-    - target: {fileID: 5609697620023859558, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: <Distance>k__BackingField
-      value: 99.8999
-      objectReference: {fileID: 0}
-    - target: {fileID: 5807311329444624388, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: m_Name
-      value: "Nagyv\xE1rad t\xE9r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6946435661911770099, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: <Distance>k__BackingField
-      value: 99.90008
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957578562690404827, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3057.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957578562690404827, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 106.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957578562690404827, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -129.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957578562690404827, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.8754248
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957578562690404827, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957578562690404827, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.48335427
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957578562690404827, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957578562690404827, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957578562690404827, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -57.809
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957578562690404827, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768718444914832209, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: <Distance>k__BackingField
-      value: 20.000032
-      objectReference: {fileID: 0}
-    - target: {fileID: 8617583812742602435, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: <Next>k__BackingField
-      value: 
-      objectReference: {fileID: 9759197}
-    - target: {fileID: 8617583812742602435, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-      propertyPath: <Light>k__BackingField
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
---- !u!114 &1544344053 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1370371960718391079, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-  m_PrefabInstance: {fileID: 1544344052}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
 --- !u!1 &1545740374
 GameObject:
   m_ObjectHideFlags: 0
@@ -12942,6 +12830,17 @@ MonoBehaviour:
   <Next>k__BackingField: {fileID: 1324833968}
   <Reverse>k__BackingField: 0
   <Light>k__BackingField: {fileID: 0}
+--- !u!114 &1370371961993733843 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7134946662426143074, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+  m_PrefabInstance: {fileID: 6784267480163682737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
 --- !u!114 &1544786185145326302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13946,6 +13845,75 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &6784267480163682737
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 955301422}
+    m_Modifications:
+    - target: {fileID: 236855960673513878, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 9759197}
+    - target: {fileID: 5660691568852395953, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: m_Name
+      value: "Nagyv\xE1rad t\xE9r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967301620372093873, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: <ID>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: f1752bf9858ad7cdea446846d0bfd33f, type: 2}
+    - target: {fileID: 7134946662426143074, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 1746409915}
+    - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3057.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 106.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -129.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8754248
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.48335427
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -57.809
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
 --- !u!1001 &6821535962599762477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14116,8 +14084,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: -70.757, z: 0}
 --- !u!4 &6957578564099375151 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6957578562690404827, guid: f8d8bf15a065b0f3295987a33ff97e2c, type: 3}
-  m_PrefabInstance: {fileID: 1544344052}
+  m_CorrespondingSourceObject: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+  m_PrefabInstance: {fileID: 6784267480163682737}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &7065739020598349828
 MonoBehaviour:
