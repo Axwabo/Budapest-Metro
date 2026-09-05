@@ -2966,7 +2966,7 @@ MonoBehaviour:
   material:
     width: 500
     height: 2000
-    parentMaterial: {fileID: 2100000, guid: a6ed25ac12d9d8033bdfe51ce93f0359, type: 2}
+    parentMaterial: {fileID: 2100000, guid: ece7f7ca8edcf5fadb11338c87cca906, type: 2}
     settingsReference: {fileID: 11400000, guid: 6ddc7b53d95a2d1a39c9d760fdeeb104, type: 2}
   renderers:
   - {fileID: 1534486666}
