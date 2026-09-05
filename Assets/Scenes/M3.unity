@@ -1003,7 +1003,7 @@ MonoBehaviour:
   <Distance>k__BackingField: 72.595184
   <Reverse>k__BackingField: 1
   switch: {fileID: 363345436}
-  isLeft: 1
+  isLeft: 0
 --- !u!1 &66404804
 GameObject:
   m_ObjectHideFlags: 0
