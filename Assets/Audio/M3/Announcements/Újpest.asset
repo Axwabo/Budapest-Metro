@@ -32,6 +32,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8189627218b4cbf609a199bcdbe0b97c, type: 3}
   - {fileID: 8300000, guid: e08ae64d14113095babcb4a59b8cab54, type: 3}
   - {fileID: 8300000, guid: 8d63534e60abdf5a18b2fe1a500c3823, type: 3}
+  - {fileID: 8300000, guid: db7d0de712dd850ecb4463a23c72846c, type: 3}
   arriving:
   - {fileID: 8300000, guid: d15a3d230b8ef9592ae0241d4c03adec, type: 3}
   - {fileID: 8300000, guid: f4f9e8166a12e3b0db908cac0fc5b85d, type: 3}
