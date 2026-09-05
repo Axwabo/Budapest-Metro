@@ -16,7 +16,7 @@
                     <ui:Label text="Please board on the opposite side" style="-unity-font-style: italic;" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="Direction" class="display-none" style="flex-grow: 1; font-size: 50px;">
+            <ui:VisualElement name="Direction" class="display-none" style="flex-grow: 1;">
                 <ui:Label text="↗" class="left" style="margin: 0 20px;" />
                 <ui:Label text="Újpest-központ" name="Name" />
             </ui:VisualElement>

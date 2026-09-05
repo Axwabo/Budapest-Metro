@@ -105,8 +105,8 @@ namespace Metro.Stations
 
         private void Dispose()
         {
-            // Destroy(document);
-            // enabled = false;
+            Destroy(document);
+            enabled = false;
             _station.RenderQueuedSigns.Remove(this);
         }
 
