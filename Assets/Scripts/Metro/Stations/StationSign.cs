@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 namespace Metro.Stations
 {
 
-    public sealed class StationSign : MonoBehaviour
+    public sealed class StationSign : StationSignBase
     {
 
         [SerializeField]
@@ -14,48 +14,21 @@ namespace Metro.Stations
         private bool right;
 
         [SerializeField]
-        private UIDocument document;
-
-        [SerializeField]
         private VisualTreeAsset stationTemplate;
 
         [SerializeField]
         private bool skipPreviousStations;
 
-        [SerializeField]
-        private RenderMaterial material;
-
-        [SerializeField]
-        private MeshRenderer[] renderers;
-
-        private bool _done;
-
-        private Station _station;
-
-        private void Awake()
+        protected override void Build(VisualElement stops, VisualElement root)
         {
-            _station = GetComponentInParent<Station>();
-            material.Init(_station.name, document, _station.ID.Relation.Theme);
-            foreach (var meshRenderer in renderers)
-                meshRenderer.sharedMaterial = material.Material;
-        }
-
-        private void Start()
-        {
-            _station.RenderQueuedSigns.Add(this);
-            var root = document.rootVisualElement;
-            foreach (var label in root.Query<Label>("Current").Build())
-                label.text = _station.name;
-            root.RegisterCallbackOnce<GeometryChangedEvent>(_ => _done = true);
-            var stops = root.Q("Stops");
-            var stations = reverse ? _station.ID.Relation.Reverse : _station.ID.Relation.Forwards;
+            var stations = reverse ? Station.ID.Relation.Reverse : Station.ID.Relation.Forwards;
             var inactive = true;
             for (var i = 0; i < stations.Length; i++)
             {
                 var last = i >= stations.Length - 1;
                 var station = stations[i];
                 var current = false;
-                if (station == _station.ID)
+                if (station == Station.ID)
                 {
                     inactive = false;
                     current = true;
@@ -82,7 +55,7 @@ namespace Metro.Stations
                 stops.Add(line);
             }
 
-            if (_station.ID == stations[^1])
+            if (Station.ID == stations[^1])
             {
                 root.Q("OtherSide").Display();
                 return;
@@ -93,21 +66,6 @@ namespace Metro.Stations
             directiohn.Q<Label>("Name").text = stations[^1].name;
             if (right)
                 directiohn.AddToClassList("right");
-        }
-
-        private void Update()
-        {
-            if (_done)
-                Dispose();
-        }
-
-        private void OnDestroy() => material.Destroy();
-
-        private void Dispose()
-        {
-            Destroy(document);
-            enabled = false;
-            _station.RenderQueuedSigns.Remove(this);
         }
 
     }

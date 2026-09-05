@@ -36,7 +36,7 @@ namespace Metro.Stations
         [SerializeField]
         private float usablePlatformArea = 800;
 
-        public HashSet<StationSign> RenderQueuedSigns { get; } = new();
+        public HashSet<StationSignBase> RenderQueuedSigns { get; } = new();
 
         private void Awake() => LoadedStations.Add(name, this);
 
