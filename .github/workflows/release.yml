@@ -88,16 +88,14 @@ jobs:
       - uses: actions/download-artifact@v8
         name: WebGL
         
-      - run: ls -R
-        shell: bash
-        
       - uses: actions/upload-pages-artifact@v5.0.0
         with:
-          path: Budapest-Metro/
+          path: WebGL/Budapest-Metro/
         
       - uses: actions/deploy-pages@v5.0.0
   
   release:
+    if: github.event_name == 'release'
     name: Upload release assets
     needs: build
     runs-on: ubuntu-latest
