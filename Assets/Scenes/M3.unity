@@ -629,26 +629,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 7922.1313, y: 0, z: -2007.5748}
-    direction: {x: 7904.0684, y: 0, z: -2000.5171}
+  - position: {x: 7922.1313, y: 122.14, z: -2007.5748}
+    direction: {x: 7904.0684, y: 122.14, z: -2000.5171}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 7854.2656, y: 0, z: -1979.6437}
-    direction: {x: 7838.8423, y: 0, z: -1971.2335}
+  - position: {x: 7854.2656, y: 122.14, z: -1979.6437}
+    direction: {x: 7838.8423, y: 122.14, z: -1971.2335}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 7922.1313, y: 0, z: -2007.5748}
-      direction: {x: 7904.0684, y: 0, z: -2000.5171}
+      position: {x: 7922.1313, y: 122.14, z: -2007.5748}
+      direction: {x: 7904.0684, y: 122.14, z: -2000.5171}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 7854.2656, y: 0, z: -1979.6437}
-      direction: {x: 7838.8423, y: 0, z: -1971.2335}
+      position: {x: 7854.2656, y: 122.14, z: -1979.6437}
+      direction: {x: 7838.8423, y: 122.14, z: -1971.2335}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -776,7 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa89536ae37dacd9fb3be2afefc23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.SplineMeshTiling
-  preset: {fileID: 11400000, guid: 79947ffbfe3602fe09c32ec5dc2627e5, type: 2}
+  preset: {fileID: 11400000, guid: 382d223e3fc7c5f21a39408514d596f7, type: 2}
   spline: {fileID: 61949661}
   start: 0
   end: 0
@@ -807,26 +807,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 7836.0234, y: 0, z: -1970.3119}
-    direction: {x: 7830.2676, y: 0, z: -1967.8912}
+  - position: {x: 7836.0234, y: 122.14, z: -1970.3119}
+    direction: {x: 7830.2676, y: 122.14, z: -1967.8912}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 7755.254, y: 0, z: -1938.4291}
-    direction: {x: 7726.6353, y: 0, z: -1926.3934}
+  - position: {x: 7755.254, y: 122.14, z: -1938.4291}
+    direction: {x: 7726.6353, y: 122.14, z: -1926.3934}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 7836.0234, y: 0, z: -1970.3119}
-      direction: {x: 7830.2676, y: 0, z: -1967.8912}
+      position: {x: 7836.0234, y: 122.14, z: -1970.3119}
+      direction: {x: 7830.2676, y: 122.14, z: -1967.8912}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 7755.254, y: 0, z: -1938.4291}
-      direction: {x: 7726.6353, y: 0, z: -1926.3934}
+      position: {x: 7755.254, y: 122.14, z: -1938.4291}
+      direction: {x: 7726.6353, y: 122.14, z: -1926.3934}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -1376,26 +1376,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 7919.6353, y: 0, z: -2011.8389}
-    direction: {x: 7894.93, y: 0, z: -2002.186}
+  - position: {x: 7919.6353, y: 122.14, z: -2011.8389}
+    direction: {x: 7894.93, y: 122.14, z: -2002.186}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 7854.2656, y: 0, z: -1979.6437}
-    direction: {x: 7838.8423, y: 0, z: -1971.2335}
+  - position: {x: 7854.2656, y: 122.14, z: -1979.6437}
+    direction: {x: 7838.8423, y: 122.14, z: -1971.2335}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 7919.6353, y: 0, z: -2011.8389}
-      direction: {x: 7894.93, y: 0, z: -2002.186}
+      position: {x: 7919.6353, y: 122.14, z: -2011.8389}
+      direction: {x: 7894.93, y: 122.14, z: -2002.186}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 7854.2656, y: 0, z: -1979.6437}
-      direction: {x: 7838.8423, y: 0, z: -1971.2335}
+      position: {x: 7854.2656, y: 122.14, z: -1979.6437}
+      direction: {x: 7838.8423, y: 122.14, z: -1971.2335}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -2407,26 +2407,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 7852.9785, y: 0, z: -1989.7927}
-    direction: {x: 7815.474, y: 0, z: -1979.0629}
+  - position: {x: 7852.9785, y: 122.14, z: -1989.7927}
+    direction: {x: 7815.474, y: 122.14, z: -1979.0629}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 7746.346, y: 0, z: -1948.4285}
-    direction: {x: 7707.7886, y: 0, z: -1931.0043}
+  - position: {x: 7746.346, y: 122.14, z: -1948.4285}
+    direction: {x: 7707.7886, y: 122.14, z: -1931.0043}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 7852.9785, y: 0, z: -1989.7927}
-      direction: {x: 7815.474, y: 0, z: -1979.0629}
+      position: {x: 7852.9785, y: 122.14, z: -1989.7927}
+      direction: {x: 7815.474, y: 122.14, z: -1979.0629}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 7746.346, y: 0, z: -1948.4285}
-      direction: {x: 7707.7886, y: 0, z: -1931.0043}
+      position: {x: 7746.346, y: 122.14, z: -1948.4285}
+      direction: {x: 7707.7886, y: 122.14, z: -1931.0043}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -3214,26 +3214,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 7919.6353, y: 0, z: -2011.8389}
-    direction: {x: 7888.843, y: 0, z: -1999.8076}
+  - position: {x: 7919.6353, y: 122.14, z: -2011.8389}
+    direction: {x: 7888.843, y: 122.14, z: -1999.8076}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 7852.9785, y: 0, z: -1989.7927}
-    direction: {x: 7830.124, y: 0, z: -1983.2542}
+  - position: {x: 7852.9785, y: 122.14, z: -1989.7927}
+    direction: {x: 7830.124, y: 122.14, z: -1983.2542}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 7919.6353, y: 0, z: -2011.8389}
-      direction: {x: 7888.843, y: 0, z: -1999.8076}
+      position: {x: 7919.6353, y: 122.14, z: -2011.8389}
+      direction: {x: 7888.843, y: 122.14, z: -1999.8076}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 7852.9785, y: 0, z: -1989.7927}
-      direction: {x: 7830.124, y: 0, z: -1983.2542}
+      position: {x: 7852.9785, y: 122.14, z: -1989.7927}
+      direction: {x: 7830.124, y: 122.14, z: -1983.2542}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -4295,26 +4295,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 7854.2656, y: 0, z: -1979.6437}
-    direction: {x: 7849.073, y: 0, z: -1976.8124}
+  - position: {x: 7854.2656, y: 122.14, z: -1979.6437}
+    direction: {x: 7849.073, y: 122.14, z: -1976.8124}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 7836.0234, y: 0, z: -1970.3119}
-    direction: {x: 7830.2676, y: 0, z: -1967.8912}
+  - position: {x: 7836.0234, y: 122.14, z: -1970.3119}
+    direction: {x: 7830.2676, y: 122.14, z: -1967.8912}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 7854.2656, y: 0, z: -1979.6437}
-      direction: {x: 7849.073, y: 0, z: -1976.8124}
+      position: {x: 7854.2656, y: 122.14, z: -1979.6437}
+      direction: {x: 7849.073, y: 122.14, z: -1976.8124}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 7836.0234, y: 0, z: -1970.3119}
-      direction: {x: 7830.2676, y: 0, z: -1967.8912}
+      position: {x: 7836.0234, y: 122.14, z: -1970.3119}
+      direction: {x: 7830.2676, y: 122.14, z: -1967.8912}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -5128,6 +5128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 753757832}
+  - component: {fileID: 753757833}
   m_Layer: 0
   m_Name: "K\xF6Ki Sidings"
   m_TagString: Untagged
@@ -5153,6 +5154,26 @@ Transform:
   - {fileID: 1235421807}
   m_Father: {fileID: 1821383470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &753757833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753757831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a1d98a183b4fa6b8b3a03d10db4b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.ReversingSidingArea
+  sidings:
+  - {fileID: 1105237214}
+  - {fileID: 1555029335}
+  <Reverse>k__BackingField: 1
+  <Route>k__BackingField: {fileID: 11400000, guid: 33e11463a9b863f3dacbb43beb306b68, type: 2}
+  <TrafficSwitches>k__BackingField: {fileID: 0}
+  <ServiceTarget>k__BackingField: {fileID: 0}
+  <ServiceSwitches>k__BackingField: {fileID: 0}
 --- !u!1001 &756129594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6661,6 +6682,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975302102}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &993617528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 993617529}
+  - component: {fileID: 993617530}
+  m_Layer: 0
+  m_Name: Passed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &993617529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993617528}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.17225143, z: -0, w: 0.98505306}
+  m_LocalPosition: {x: 8053.43, y: 122.14, z: -2055.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1555029331}
+  m_LocalEulerAnglesHint: {x: 0, y: 19.837, z: 0}
+--- !u!114 &993617530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993617528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6be05915821494391ff2997baf72dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
+  <Track>k__BackingField: {fileID: 1555029333}
+  <Distance>k__BackingField: 110.07474
+  <Reverse>k__BackingField: 1
+  <Area>k__BackingField: {fileID: 753757833}
 --- !u!1 &1004665087
 GameObject:
   m_ObjectHideFlags: 0
@@ -7005,6 +7074,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 706622881029450019, guid: c3514a2ef5e9e57f5a4aff16878a8cfc, type: 3}
   m_PrefabInstance: {fileID: 904034161105576789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1032161249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032161250}
+  - component: {fileID: 1032161251}
+  m_Layer: 0
+  m_Name: Stop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1032161250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032161249}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.11350077, z: -0, w: 0.99353796}
+  m_LocalPosition: {x: 8153.35, y: 122.14, z: -2083.62}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1555029331}
+  m_LocalEulerAnglesHint: {x: 0, y: 13.034, z: 0}
+--- !u!114 &1032161251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032161249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71fc91abab104f449517dd3f9ebf514b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 1555029333}
+  <Distance>k__BackingField: 6.4143806
+  <Reverse>k__BackingField: 0
+  <Area>k__BackingField: {fileID: 753757833}
 --- !u!1001 &1038890974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7340,6 +7457,7 @@ GameObject:
   - component: {fileID: 1105237213}
   - component: {fileID: 1105237212}
   - component: {fileID: 1105237211}
+  - component: {fileID: 1105237214}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -7359,7 +7477,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1834143332}
+  - {fileID: 1732884661}
   m_Father: {fileID: 1172206203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1105237211
@@ -7405,31 +7525,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 8140.2007, y: 0, z: -2085.5469}
-    direction: {x: 8110.304, y: 0, z: -2077.3088}
+  - position: {x: 8140.2007, y: 122.14, z: -2085.5469}
+    direction: {x: 8110.304, y: 122.14, z: -2077.3088}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 8055.793, y: 0, z: -2062.1943}
-    direction: {x: 8030.231, y: 0, z: -2052.9902}
+  - position: {x: 8055.793, y: 122.14, z: -2062.1943}
+    direction: {x: 8030.231, y: 122.14, z: -2052.9902}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 7919.6353, y: 0, z: -2011.8389}
-    direction: {x: 7888.843, y: 0, z: -1999.8076}
+  - position: {x: 7919.6353, y: 122.14, z: -2011.8389}
+    direction: {x: 7888.843, y: 122.14, z: -1999.8076}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 8140.2007, y: 0, z: -2085.5469}
-      direction: {x: 8110.304, y: 0, z: -2077.3088}
+      position: {x: 8140.2007, y: 122.14, z: -2085.5469}
+      direction: {x: 8110.304, y: 122.14, z: -2077.3088}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 8055.793, y: 0, z: -2062.1943}
-      direction: {x: 8030.231, y: 0, z: -2052.9902}
+      position: {x: 8055.793, y: 122.14, z: -2062.1943}
+      direction: {x: 8030.231, y: 122.14, z: -2052.9902}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -7437,14 +7557,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 8055.793, y: 0, z: -2062.1943}
-      direction: {x: 8030.231, y: 0, z: -2052.9902}
+      position: {x: 8055.793, y: 122.14, z: -2062.1943}
+      direction: {x: 8030.231, y: 122.14, z: -2052.9902}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 7919.6353, y: 0, z: -2011.8389}
-      direction: {x: 7888.843, y: 0, z: -1999.8076}
+      position: {x: 7919.6353, y: 122.14, z: -2011.8389}
+      direction: {x: 7888.843, y: 122.14, z: -1999.8076}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -7456,6 +7576,21 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1105237214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105237209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463911c95d1e4607869e319254c66f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.ReversingSiding
+  in: {fileID: 18913460}
+  out: {fileID: 1514291507}
+  <StopPoint>k__BackingField: {fileID: 1834143333}
 --- !u!1 &1116079768
 GameObject:
   m_ObjectHideFlags: 0
@@ -7623,11 +7758,15 @@ PrefabInstance:
     - target: {fileID: 4516728846466402756, guid: 9fb2be80aacc083caa86cddea939e25a, type: 3}
       propertyPath: startingTrack
       value: 
-      objectReference: {fileID: 1255576668563350736}
+      objectReference: {fileID: 8617583811644793076}
     - target: {fileID: 6491694559044885725, guid: 9fb2be80aacc083caa86cddea939e25a, type: 3}
       propertyPath: initialRoute
       value: 
-      objectReference: {fileID: 11400000, guid: 33e11463a9b863f3dacbb43beb306b68, type: 2}
+      objectReference: {fileID: 11400000, guid: dfc5a927cf7c5d92fb130c6e4d4aade1, type: 2}
+    - target: {fileID: 6491694559044885725, guid: 9fb2be80aacc083caa86cddea939e25a, type: 3}
+      propertyPath: <InitialStopIndex>k__BackingField
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11187,6 +11326,7 @@ GameObject:
   - component: {fileID: 1555029334}
   - component: {fileID: 1555029333}
   - component: {fileID: 1555029332}
+  - component: {fileID: 1555029335}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -11206,7 +11346,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1032161250}
+  - {fileID: 993617529}
   m_Father: {fileID: 1172206203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1555029332
@@ -11252,31 +11394,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 8159.6133, y: 0, z: -2085.0989}
-    direction: {x: 8129.717, y: 0, z: -2076.8608}
+  - position: {x: 8159.6133, y: 122.14, z: -2085.0989}
+    direction: {x: 8129.717, y: 122.14, z: -2076.8608}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 8057.5854, y: 0, z: -2057.2163}
-    direction: {x: 8032.0234, y: 0, z: -2048.0122}
+  - position: {x: 8057.5854, y: 122.14, z: -2057.2163}
+    direction: {x: 8032.0234, y: 122.14, z: -2048.0122}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 7922.1313, y: 0, z: -2007.5748}
-    direction: {x: 7891.339, y: 0, z: -1995.5436}
+  - position: {x: 7922.1313, y: 122.14, z: -2007.5748}
+    direction: {x: 7891.339, y: 122.14, z: -1995.5436}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 8159.6133, y: 0, z: -2085.0989}
-      direction: {x: 8129.717, y: 0, z: -2076.8608}
+      position: {x: 8159.6133, y: 122.14, z: -2085.0989}
+      direction: {x: 8129.717, y: 122.14, z: -2076.8608}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 8057.5854, y: 0, z: -2057.2163}
-      direction: {x: 8032.0234, y: 0, z: -2048.0122}
+      position: {x: 8057.5854, y: 122.14, z: -2057.2163}
+      direction: {x: 8032.0234, y: 122.14, z: -2048.0122}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -11284,14 +11426,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - n1:
-      position: {x: 8057.5854, y: 0, z: -2057.2163}
-      direction: {x: 8032.0234, y: 0, z: -2048.0122}
+      position: {x: 8057.5854, y: 122.14, z: -2057.2163}
+      direction: {x: 8032.0234, y: 122.14, z: -2048.0122}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 7922.1313, y: 0, z: -2007.5748}
-      direction: {x: 7891.339, y: 0, z: -1995.5436}
+      position: {x: 7922.1313, y: 122.14, z: -2007.5748}
+      direction: {x: 7891.339, y: 122.14, z: -1995.5436}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -11303,6 +11445,21 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1555029335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555029330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463911c95d1e4607869e319254c66f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.ReversingSiding
+  in: {fileID: 314370940}
+  out: {fileID: 480470037}
+  <StopPoint>k__BackingField: {fileID: 1032161251}
 --- !u!1 &1562052889
 GameObject:
   m_ObjectHideFlags: 0
@@ -13118,26 +13275,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.Spline
   nodes:
-  - position: {x: 7922.1313, y: 0, z: -2007.5748}
-    direction: {x: 7901.2056, y: 0, z: -1999.505}
+  - position: {x: 7922.1313, y: 122.14, z: -2007.5748}
+    direction: {x: 7901.2056, y: 122.14, z: -1999.505}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
-  - position: {x: 7852.9785, y: 0, z: -1989.7927}
-    direction: {x: 7830.124, y: 0, z: -1983.2542}
+  - position: {x: 7852.9785, y: 122.14, z: -1989.7927}
+    direction: {x: 7830.124, y: 122.14, z: -1983.2542}
     up: {x: 0, y: 1, z: 0}
     scale: {x: 1, y: 1}
     roll: 0
   curves:
   - n1:
-      position: {x: 7922.1313, y: 0, z: -2007.5748}
-      direction: {x: 7901.2056, y: 0, z: -1999.505}
+      position: {x: 7922.1313, y: 122.14, z: -2007.5748}
+      direction: {x: 7901.2056, y: 122.14, z: -1999.505}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
     n2:
-      position: {x: 7852.9785, y: 0, z: -1989.7927}
-      direction: {x: 7830.124, y: 0, z: -1983.2542}
+      position: {x: 7852.9785, y: 122.14, z: -1989.7927}
+      direction: {x: 7830.124, y: 122.14, z: -1983.2542}
       up: {x: 0, y: 1, z: 0}
       scale: {x: 1, y: 1}
       roll: 0
@@ -13149,6 +13306,54 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1732884660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1732884661}
+  - component: {fileID: 1732884662}
+  m_Layer: 0
+  m_Name: Passed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1732884661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732884660}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.17225143, z: -0, w: 0.98505306}
+  m_LocalPosition: {x: 8047.5, y: 122.14, z: -2059.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1105237210}
+  m_LocalEulerAnglesHint: {x: 0, y: 19.837, z: 0}
+--- !u!114 &1732884662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732884660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6be05915821494391ff2997baf72dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
+  <Track>k__BackingField: {fileID: 1105237212}
+  <Distance>k__BackingField: 96.29015
+  <Reverse>k__BackingField: 0
+  <Area>k__BackingField: {fileID: 753757833}
 --- !u!1 &1733128707
 GameObject:
   m_ObjectHideFlags: 0
@@ -13691,6 +13896,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832860063}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1834143331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1834143332}
+  - component: {fileID: 1834143333}
+  m_Layer: 0
+  m_Name: Stop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1834143332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834143331}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.11350077, z: -0, w: 0.99353796}
+  m_LocalPosition: {x: 8134.57, y: 122.14, z: -2084.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1105237210}
+  m_LocalEulerAnglesHint: {x: 0, y: 13.034, z: 0}
+--- !u!114 &1834143333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834143331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71fc91abab104f449517dd3f9ebf514b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
+  <Track>k__BackingField: {fileID: 1105237212}
+  <Distance>k__BackingField: 5.7653785
+  <Reverse>k__BackingField: 0
+  <Area>k__BackingField: {fileID: 753757833}
 --- !u!1 &1861746816
 GameObject:
   m_ObjectHideFlags: 0
@@ -15232,8 +15485,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2419112693590290431}
-  - component: {fileID: 1664098220381124382}
   - component: {fileID: 4987101730681416886}
+  - component: {fileID: 4987101730681416887}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -15378,21 +15631,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.StopPoint
   <Track>k__BackingField: {fileID: 8617583811644793076}
   <Distance>k__BackingField: 2.0001953
-  <Reverse>k__BackingField: 1
---- !u!114 &1664098220381124382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192497555974494106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e2d178f59a64a6cb0376eeee748cd21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.StopPoint
-  <Track>k__BackingField: {fileID: 8502779103732501812}
-  <Distance>k__BackingField: 1.9998692
   <Reverse>k__BackingField: 1
 --- !u!1 &1986605961615246145
 GameObject:
@@ -15957,6 +16195,23 @@ MonoBehaviour:
   <Distance>k__BackingField: 1.9998692
   <Reverse>k__BackingField: 1
   free: 1
+--- !u!114 &4987101730681416887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192497555974494106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a0b8157c9c49c994e02e2d8469f20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceEntryStopPoint
+  <Track>k__BackingField: {fileID: 8502779103732501812}
+  <Distance>k__BackingField: 1.9998692
+  <Reverse>k__BackingField: 1
+  <Area>k__BackingField: {fileID: 0}
+  clear: []
 --- !u!33 &5054057033046133964
 MeshFilter:
   m_ObjectHideFlags: 0
