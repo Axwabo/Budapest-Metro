@@ -162,7 +162,7 @@ namespace Metro.Stations
                     return;
                 var next = GetNextRoute(now + delta + TimeSpan.FromSeconds(10));
                 (_viewModel.NextMinutes, _viewModel.NextSeconds) = next != null
-                    ? Deltas(Stop(_route).Time - now)
+                    ? Deltas(Stop(next).Time - now)
                     : ("--", "--");
                 return;
             }
