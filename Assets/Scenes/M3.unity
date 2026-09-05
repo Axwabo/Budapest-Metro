@@ -13677,7 +13677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.SwitchGroup
   switches:
   - switch: {fileID: 383653173}
-    isLeft: 0
+    isLeft: 1
   - switch: {fileID: 667802952}
     isLeft: 0
   - switch: {fileID: 1713669275}
