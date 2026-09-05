@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Station.uss?fileID=7433441132597879392&amp;guid=d0cc5f48f8eefdcd1857f679bfd51862&amp;type=3#Station" />
-    <ui:VisualElement class="board border-accent" style="flex-grow: 1; background-color: white; border-top-width: 20px;">
-        <ui:Label text="Nyugati Pályaudvar" name="Current" style="color: black; flex-grow: 1; font-size: 72px; -unity-text-align: middle-center;" />
+    <ui:VisualElement class="board border-accent" style="flex-grow: 1; background-color: rgb(0, 10, 60); border-top-width: 20px;">
+        <ui:Label text="Nyugati Pályaudvar" name="Current" style="color: white; flex-grow: 1; font-size: 72px; -unity-text-align: middle-center;" />
     </ui:VisualElement>
 </ui:UXML>
