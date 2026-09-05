@@ -947,6 +947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 66320088}
   - component: {fileID: 66320089}
+  - component: {fileID: 66320090}
   m_Layer: 0
   m_Name: Turnout
   m_TagString: Untagged
@@ -970,6 +971,23 @@ Transform:
   m_Father: {fileID: 1998540013}
   m_LocalEulerAnglesHint: {x: 0, y: 113.116, z: 0}
 --- !u!114 &66320089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66320087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191b90dffd4d4064a856a4e173bf7da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.TurnoutChanger
+  <Track>k__BackingField: {fileID: 1079697458}
+  <Distance>k__BackingField: 72.595184
+  <Reverse>k__BackingField: 1
+  switch: {fileID: 250114249}
+  isLeft: 1
+--- !u!114 &66320090
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
