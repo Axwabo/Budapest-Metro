@@ -19,6 +19,7 @@ MonoBehaviour:
   <Metros>k__BackingField: 
   <Railways>k__BackingField: 0
   <RegionalBuses>k__BackingField: 0
-  <Trams>k__BackingField: 
+  <Trams>k__BackingField: 42, 50, 52
   <Trolleys>k__BackingField: 
-  <LocalBuses>k__BackingField: 
+  <LocalBuses>k__BackingField: "200E \u2708\uFE0F, 66, 66B, 84E, 89E, 294E, 99, 123,
+    123A, 142E, 194, 194B"
