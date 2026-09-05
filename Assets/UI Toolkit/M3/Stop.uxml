@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement class="stop bg-accent">
         <ui:VisualElement name="Fill" style="flex-grow: 1;" />
-        <ui:Label name="Name" style="-unity-text-align: upper-center; left: 30px;" />
-        <ui:Label name="Metros" style="-unity-text-align: middle-left; right: 30px;" />
+        <ui:Label name="Name" style="-unity-text-align: middle-left; left: 30px;" />
+        <ui:Label name="Metros" style="-unity-text-align: middle-right; right: 30px;" />
     </ui:VisualElement>
 </ui:UXML>

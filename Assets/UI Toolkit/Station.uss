@@ -33,8 +33,4 @@ Label {
 
 .stop Label {
     position: absolute;
-    left: 50%;
-    translate: -50% 0;
-    max-width: 100px;
-    white-space: normal;
 }
