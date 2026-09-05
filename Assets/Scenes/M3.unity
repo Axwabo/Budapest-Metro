@@ -10668,13 +10668,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993617528}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.17225143, z: -0, w: 0.98505306}
+  m_LocalRotation: {x: -0, y: 0.7918606, z: -0, w: 0.6107019}
   m_LocalPosition: {x: 8053.43, y: 122.14, z: -2055.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555029331}
-  m_LocalEulerAnglesHint: {x: 0, y: 19.837, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 104.719, z: 0}
 --- !u!114 &993617530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11243,13 +11243,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032161249}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.11350077, z: -0, w: 0.99353796}
+  m_LocalRotation: {x: -0, y: 0.8070581, z: -0, w: 0.59047204}
   m_LocalPosition: {x: 8153.35, y: 122.14, z: -2083.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1555029331}
-  m_LocalEulerAnglesHint: {x: 0, y: 13.034, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 107.619, z: 0}
 --- !u!114 &1032161251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11264,7 +11264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 1555029333}
   <Distance>k__BackingField: 6.4143806
-  <Reverse>k__BackingField: 0
+  <Reverse>k__BackingField: 1
   <Area>k__BackingField: {fileID: 753757833}
 --- !u!1001 &1038890974
 PrefabInstance:
@@ -20926,13 +20926,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834143331}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.11350077, z: -0, w: 0.99353796}
+  m_LocalRotation: {x: -0, y: 0.77912784, z: -0, w: 0.62686515}
   m_LocalPosition: {x: 8134.57, y: 122.14, z: -2084.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1105237210}
-  m_LocalEulerAnglesHint: {x: 0, y: 13.034, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 102.362, z: 0}
 --- !u!114 &1834143333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20947,7 +20947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.ServiceAreaExitPoint
   <Track>k__BackingField: {fileID: 1105237212}
   <Distance>k__BackingField: 5.7653785
-  <Reverse>k__BackingField: 0
+  <Reverse>k__BackingField: 1
   <Area>k__BackingField: {fileID: 753757833}
 --- !u!1001 &1841462183
 PrefabInstance:
