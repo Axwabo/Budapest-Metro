@@ -16462,7 +16462,7 @@ MonoBehaviour:
   <Track>k__BackingField: {fileID: 8502779103732501812}
   <Distance>k__BackingField: 1.9998692
   <Reverse>k__BackingField: 1
-  <Area>k__BackingField: {fileID: 0}
+  <Area>k__BackingField: {fileID: 753757833}
   clear: []
 --- !u!33 &5054057033046133964
 MeshFilter:
@@ -17429,7 +17429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
   <Next>k__BackingField: {fileID: 485748133}
-  <Reverse>k__BackingField: 1
+  <Reverse>k__BackingField: 0
   <Light>k__BackingField: {fileID: 0}
 --- !u!114 &8617583811198258999 stripped
 MonoBehaviour:
