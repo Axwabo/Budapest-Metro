@@ -11,6 +11,9 @@ namespace Metro.Stations
         private bool reverse;
 
         [SerializeField]
+        private bool right;
+
+        [SerializeField]
         private UIDocument document;
 
         [SerializeField]
@@ -88,6 +91,8 @@ namespace Metro.Stations
             var directiohn = root.Q("Direction");
             directiohn.Display();
             directiohn.Q<Label>("Name").text = stations[^1].name;
+            if (right)
+                directiohn.AddToClassList("right");
         }
 
         private void Update()
