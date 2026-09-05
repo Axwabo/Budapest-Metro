@@ -38,7 +38,8 @@ namespace Metro.Menu
                 dropdown.choices.Add(station);
             }
 
-            dropdown.index = dropdown.choices.IndexOf(Name);
+            Name ??= dropdown.choices[0];
+            dropdown.index = Mathf.Max(0, dropdown.choices.IndexOf(Name));
             dropdown.RegisterValueChangedCallback(evt => Name = evt.newValue);
         }
 
