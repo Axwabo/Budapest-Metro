@@ -435,7 +435,7 @@ Transform:
   m_GameObject: {fileID: 3424965493076106280}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -40}
+  m_LocalPosition: {x: 0, y: 0, z: -58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.StopPoint
   <Track>k__BackingField: {fileID: 236855960673513878}
-  <Distance>k__BackingField: 20.000011
+  <Distance>k__BackingField: 1.9999192
   <Reverse>k__BackingField: 1
 --- !u!114 &2998031251143868649
 MonoBehaviour:
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.TrackOccupationChanger
   <Track>k__BackingField: {fileID: 236855960673513878}
-  <Distance>k__BackingField: 20.000011
+  <Distance>k__BackingField: 1.9999192
   <Reverse>k__BackingField: 1
   free: 1
 --- !u!1 &3455730191917186874
@@ -498,7 +498,7 @@ Transform:
   m_GameObject: {fileID: 3455730191917186874}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -40}
+  m_LocalPosition: {x: 0, y: 0, z: -59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.TrackOccupationChanger
   <Track>k__BackingField: {fileID: 7134946662426143074}
-  <Distance>k__BackingField: 20.000032
+  <Distance>k__BackingField: 1.0000311
   <Reverse>k__BackingField: 0
   free: 0
 --- !u!1 &3680058715046623131
@@ -547,7 +547,7 @@ Transform:
   m_GameObject: {fileID: 3680058715046623131}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 39.9}
+  m_LocalPosition: {x: 0, y: 0, z: 58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.StopPoint
   <Track>k__BackingField: {fileID: 7134946662426143074}
-  <Distance>k__BackingField: 99.8999
+  <Distance>k__BackingField: 118.00006
   <Reverse>k__BackingField: 0
 --- !u!114 &3863790210244274697
 MonoBehaviour:
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.TrackOccupationChanger
   <Track>k__BackingField: {fileID: 7134946662426143074}
-  <Distance>k__BackingField: 99.8999
+  <Distance>k__BackingField: 118.00006
   <Reverse>k__BackingField: 0
   free: 1
 --- !u!1 &3756262774233493997
@@ -1158,7 +1158,7 @@ Transform:
   m_GameObject: {fileID: 7840879076765994595}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 39.9}
+  m_LocalPosition: {x: 0, y: 0, z: 59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.TrackOccupationChanger
   <Track>k__BackingField: {fileID: 236855960673513878}
-  <Distance>k__BackingField: 99.90008
+  <Distance>k__BackingField: 118.999954
   <Reverse>k__BackingField: 1
   free: 0
 --- !u!1 &8069789557675999252
