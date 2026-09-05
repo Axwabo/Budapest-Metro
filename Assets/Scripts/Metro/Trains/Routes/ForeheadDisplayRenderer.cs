@@ -14,7 +14,7 @@ namespace Metro.Trains.Routes
 
         public override void OnJourneyChanged()
         {
-            Text = IsInService ? $"{Route.Relation} {Route.Destination.Forehead()}" : "";
+            Text = IsInService ? $"{Route.Relation} {Route.Destination.Forehead(Route.Relation)}" : "";
             Blink(4);
         }
 

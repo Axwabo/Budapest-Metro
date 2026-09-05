@@ -64,7 +64,7 @@ namespace Metro.Stations
 
         private void Start()
         {
-            var destinationName = StationIdCache.TryGet(descriptor.Destination, out var id) && !string.IsNullOrEmpty(id.StationTime)
+            var destinationName = StationIdCache.TryGet(descriptor.Destination, descriptor.Relation.Line, out var id) && !string.IsNullOrEmpty(id.StationTime)
                 ? id.StationTime
                 : descriptor.Destination;
             _viewModel.Destination = _viewModel.Double ? destinationName : $"{destinationName} felé";

@@ -13,6 +13,16 @@ namespace Metro.Trains.Routes
         private const float PixelsPerSecond = 400;
         private const string NoScroll = "no-scrolling";
 
+        private static float TotalWidth(VisualElement element)
+        {
+            var textWidth = element is Label label
+                ? label.MeasureTextSize(label.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
+                : element.resolvedStyle.width;
+            return textWidth + element.resolvedStyle.paddingLeft + element.resolvedStyle.paddingRight;
+        }
+
+        private static (bool Icon, string List) DisplayList(string text) => (!string.IsNullOrEmpty(text), text);
+
         private readonly VisualElement _root;
 
         private float _size;
@@ -57,11 +67,11 @@ namespace Metro.Trains.Routes
 
         public bool TransitionCompleted => _translate >= _size;
 
-        public void Display(string name)
+        public void Display(string name, string relation)
         {
             _size = 0;
             ResetPositionInternal();
-            if (!StationIdCache.TryGet(name, out var id))
+            if (!StationIdCache.TryGet(name, relation, out var id))
             {
                 (Metro, MetroList) = DisplayList("");
                 Railways = false;
@@ -92,16 +102,6 @@ namespace Metro.Trains.Routes
             var noScroll = _size <= 0;
             _root.EnableInClassList(NoScroll, noScroll);
         }
-
-        private static float TotalWidth(VisualElement element)
-        {
-            var textWidth = element is Label label
-                ? label.MeasureTextSize(label.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
-                : element.resolvedStyle.width;
-            return textWidth + element.resolvedStyle.paddingLeft + element.resolvedStyle.paddingRight;
-        }
-
-        private static (bool Icon, string List) DisplayList(string text) => (!string.IsNullOrEmpty(text), text);
 
         public void ResetPosition()
         {

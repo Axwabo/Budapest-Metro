@@ -117,7 +117,7 @@ namespace Metro.Trains.Routes
             if (Stop is {Name: var stopName})
             {
                 StopName = stopName;
-                _transfersDisplay.Display(stopName);
+                _transfersDisplay.Display(stopName, Route?.Relation);
             }
 
             if (State == DriverState.Stopped)
@@ -128,7 +128,7 @@ namespace Metro.Trains.Routes
 
         public override void OnJourneyChanged()
         {
-            Destination = Route?.Destination.Onboard() ?? "";
+            Destination = Route?.Destination.Onboard(Route.Relation) ?? "";
             Relation = Route?.Relation ?? "";
         }
 
