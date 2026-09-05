@@ -5681,6 +5681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M3 Assembly
       objectReference: {fileID: 0}
+    - target: {fileID: 3307945922313011513, guid: 9fb2be80aacc083caa86cddea939e25a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4120462647284980301, guid: 9fb2be80aacc083caa86cddea939e25a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5724,11 +5728,15 @@ PrefabInstance:
     - target: {fileID: 4516728846466402756, guid: 9fb2be80aacc083caa86cddea939e25a, type: 3}
       propertyPath: startingTrack
       value: 
-      objectReference: {fileID: 1255576668563350736}
+      objectReference: {fileID: 8617583811644793076}
     - target: {fileID: 6491694559044885725, guid: 9fb2be80aacc083caa86cddea939e25a, type: 3}
       propertyPath: initialRoute
       value: 
-      objectReference: {fileID: 11400000, guid: 33e11463a9b863f3dacbb43beb306b68, type: 2}
+      objectReference: {fileID: 11400000, guid: dfc5a927cf7c5d92fb130c6e4d4aade1, type: 2}
+    - target: {fileID: 6491694559044885725, guid: 9fb2be80aacc083caa86cddea939e25a, type: 3}
+      propertyPath: <InitialStopIndex>k__BackingField
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11887,15 +11895,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7708.97
+      value: 5973.852
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 125.14
+      value: 113.4501
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1917.28
+      value: -1692.3617
       objectReference: {fileID: 0}
     - target: {fileID: 7404459173295802429, guid: 64a43c0d79cc6100e81fc0f099de8759, type: 3}
       propertyPath: m_LocalRotation.w
