@@ -33,6 +33,7 @@ Label {
     flex-grow: 1;
     flex-direction: row;
     align-items: center;
+    padding-left: 10px;
 }
 
 .destination {
@@ -50,7 +51,7 @@ Label {
 
 .list {
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
 }
 
 .list.border {
