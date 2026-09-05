@@ -3725,6 +3725,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 955301422}
     m_Modifications:
+    - target: {fileID: 236855960673513878, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 260218380}
     - target: {fileID: 2849505662900594121, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
       propertyPath: <Distance>k__BackingField
       value: 99.900055
@@ -3741,10 +3745,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Semmelweis Klinik\xE1k"
       objectReference: {fileID: 0}
-    - target: {fileID: 5660691568852395953, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
-      propertyPath: m_Name
-      value: "Semmelweis Klinik\xE1k"
-      objectReference: {fileID: 0}
     - target: {fileID: 5967301620372093873, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
       propertyPath: <ID>k__BackingField
       value: 
@@ -3753,10 +3753,10 @@ PrefabInstance:
       propertyPath: <Distance>k__BackingField
       value: 20.000095
       objectReference: {fileID: 0}
-    - target: {fileID: 5660691568852395953, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
-      propertyPath: m_Name
-      value: "Semmelweis Klinik\xE1k"
-      objectReference: {fileID: 0}
+    - target: {fileID: 7134946662426143074, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 733384008}
     - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2094.4
@@ -5114,7 +5114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 548959462}
+  <Next>k__BackingField: {fileID: 8617583811198258999}
   spline: {fileID: 939680292}
 --- !u!114 &939680292
 MonoBehaviour:
@@ -5540,6 +5540,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 955301422}
     m_Modifications:
+    - target: {fileID: 236855960673513878, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 264067116}
     - target: {fileID: 2849505662900594121, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
       propertyPath: <Distance>k__BackingField
       value: 99.90002
@@ -5560,14 +5564,14 @@ PrefabInstance:
       propertyPath: <ID>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 31eb28a87cacba4269d8f5b4de41708b, type: 2}
-    - target: {fileID: 5660691568852395953, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
-      propertyPath: m_Name
-      value: Corvin-negyed
-      objectReference: {fileID: 0}
     - target: {fileID: 6356008758228490585, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
       propertyPath: <Distance>k__BackingField
       value: 19.999964
       objectReference: {fileID: 0}
+    - target: {fileID: 7134946662426143074, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+      propertyPath: <Next>k__BackingField
+      value: 
+      objectReference: {fileID: 1656419673}
     - target: {fileID: 7694545946799055276, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1535.4
@@ -5820,10 +5824,6 @@ PrefabInstance:
       propertyPath: <ID>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 7f594cfda5a8a60baa922bd396b6cf5e, type: 2}
-    - target: {fileID: 5660691568852395953, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
-      propertyPath: m_Name
-      value: "K\xE1lvin t\xE9r"
-      objectReference: {fileID: 0}
     - target: {fileID: 6356008758228490585, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
       propertyPath: <Distance>k__BackingField
       value: 20.000013
@@ -9029,7 +9029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 0}
+  <Next>k__BackingField: {fileID: 548959462}
   spline: {fileID: 1562052893}
 --- !u!114 &1562052893
 MonoBehaviour:
@@ -10312,7 +10312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7511f58ffd534cc49bfd0f3d4dbb5d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.SplineTrack
-  <Next>k__BackingField: {fileID: 8617583811644793076}
+  <Next>k__BackingField: {fileID: 1370371961902139664}
   spline: {fileID: 1680754201}
 --- !u!114 &1680754201
 MonoBehaviour:
@@ -14353,6 +14353,17 @@ MonoBehaviour:
   <Next>k__BackingField: {fileID: 485748133}
   <Reverse>k__BackingField: 1
   <Light>k__BackingField: {fileID: 0}
+--- !u!114 &8617583811198258999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 236855960673513878, guid: 2551ba5dd86ab4fb887055e5141736a6, type: 3}
+  m_PrefabInstance: {fileID: 6784267480163682737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c618489acc4e453f8cbddcdeabb4c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.StraightTrack
 --- !u!114 &8617583811644793076
 MonoBehaviour:
   m_ObjectHideFlags: 0
