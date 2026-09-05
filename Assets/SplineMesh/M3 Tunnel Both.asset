@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c6c64bca6ed416b94bc870c73151dbc, type: 3}
-  m_Name: Tunnel
+  m_Name: M3 Tunnel Both
   m_EditorClassIdentifier: Assembly-CSharp::SplineMesh.MeshPreset
-  mesh: {fileID: 2534964839176971238, guid: 11e0c95c093c235d882a6a37e0751d65, type: 3}
+  mesh: {fileID: 2534964839176971238, guid: 064c3bd475252d6b69b61b04c0f1cdd9, type: 3}
   material: {fileID: 2100000, guid: b221d063fe1aa1c549cefda3032c8963, type: 2}
   physicMaterial: {fileID: 0}
   translation: {x: 0, y: -0.159, z: 0}
-  rotation: {x: 0, y: 90, z: 90}
-  scale: {x: 20, y: 1, z: 1}
+  rotation: {x: 0, y: -90, z: 90}
+  scale: {x: 20, y: 1, z: 0.8}
   generateCollider: 0
   updateInPlayMode: 1
   curveSpace: 0
