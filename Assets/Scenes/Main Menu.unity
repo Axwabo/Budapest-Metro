@@ -269,6 +269,8 @@ GameObject:
   - component: {fileID: 1260206756}
   - component: {fileID: 1260206760}
   - component: {fileID: 1260206759}
+  - component: {fileID: 1260206762}
+  - component: {fileID: 1260206761}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -354,6 +356,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab298b6e7c78487aaafb67bf93b8f55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Metro.Menu.StartingTimePicker
+--- !u!114 &1260206761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260206755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf9505e3a7a48138abdbd89d0dc9279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Menu.StartingRelationPicker
+  relation: {fileID: 11400000, guid: 25d58d3380b5908f083ad1bbebfad3f1, type: 2}
+  id: m3
+  picker: {fileID: 1260206756}
+  switcher: {fileID: 1260206759}
+  isDefault: 1
+  sceneName: SampleScene
+  other: {fileID: 1260206762}
+--- !u!114 &1260206762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260206755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf9505e3a7a48138abdbd89d0dc9279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Menu.StartingRelationPicker
+  relation: {fileID: 11400000, guid: d8aa80ac00b48d65e8c280963a51c793, type: 2}
+  id: m3
+  picker: {fileID: 1260206756}
+  switcher: {fileID: 1260206759}
+  isDefault: 0
+  sceneName: M3
+  other: {fileID: 1260206761}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

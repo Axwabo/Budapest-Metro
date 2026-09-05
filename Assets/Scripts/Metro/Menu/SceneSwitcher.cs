@@ -13,7 +13,7 @@ namespace Metro.Menu
 
         [SerializeField]
         [HideInInspector]
-        private string sceneName;
+        public string sceneName;
 
         [SerializeField]
         private string buttonName;

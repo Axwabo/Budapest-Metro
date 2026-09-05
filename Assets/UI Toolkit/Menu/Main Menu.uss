@@ -49,6 +49,18 @@ SliderInt:focus .unity-slider-int__label {
     -unity-font-style: bold;
 }
 
+.M3 {
+    color: var(--m3);
+}
+
 .M4 {
     color: var(--m4);
+}
+
+.relation {
+    padding: 5px;
+}
+
+.relation.selected {
+    background-color: #484;
 }

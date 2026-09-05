@@ -11,11 +11,26 @@ namespace Metro.Menu
         [SerializeField]
         private Relation relation;
 
+        private VisualElement _root;
+
         public static string Name { get; private set; }
 
         protected override void Init(VisualElement root)
         {
-            var dropdown = root.Q<DropdownField>("Station");
+            _root = root;
+            UpdateList();
+        }
+
+        public void UseRelation(Relation newRelation)
+        {
+            relation = newRelation;
+            UpdateList();
+        }
+
+        private void UpdateList()
+        {
+            var dropdown = _root.Q<DropdownField>("Station");
+            dropdown.choices.Clear();
             foreach (var id in relation.Forwards)
             {
                 var station = id.name;

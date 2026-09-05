@@ -3,8 +3,12 @@
     <ui:VisualElement name="Container" class="grow">
         <ui:Label text="Budapest Metro" class="title" />
         <ui:VisualElement class="row">
-            <ui:Label text="🚇" />
-            <ui:Label text="M4" class="M4" />
+            <ui:VisualElement class="row relation">
+                <ui:Button name="m3" class="M3" text="🚇 M3" />
+            </ui:VisualElement>
+            <ui:VisualElement class="row relation">
+                <ui:Button name="m4" class="M4" text="🚇 M4" />
+            </ui:VisualElement>
         </ui:VisualElement>
         <ui:DropdownField name="Station" label="Select a station:" />
         <ui:VisualElement>
