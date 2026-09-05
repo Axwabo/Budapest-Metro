@@ -564,6 +564,8 @@ MonoBehaviour:
     isLeft: 1
   - switch: {fileID: 869358963}
     isLeft: 1
+  - switch: {fileID: 1777330220}
+    isLeft: 1
 --- !u!1 &21666961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4144,6 +4146,8 @@ MonoBehaviour:
     isLeft: 0
   - switch: {fileID: 261234132}
     isLeft: 1
+  - switch: {fileID: 1777330220}
+    isLeft: 0
 --- !u!1 &327601159
 GameObject:
   m_ObjectHideFlags: 0
