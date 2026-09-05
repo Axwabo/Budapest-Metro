@@ -8,10 +8,6 @@ Label {
     translate: 0 -2px;
 }
 
-.board {
-    width: 22%;
-}
-
 .bg-accent {
     background-color: var(--accent);
 }
