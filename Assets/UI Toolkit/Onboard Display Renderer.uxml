@@ -6,7 +6,7 @@
                 <ui:Label text="⇧" name="Label" style="rotate: 90deg; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 0;" />
                 <ui:Label text="Keleti pályaudvar" name="Destination">
                     <Bindings>
-                        <ui:DataBinding property="text" data-source-path="Description" binding-mode="ToTarget" />
+                        <ui:DataBinding property="text" data-source-path="Destination" binding-mode="ToTarget" />
                     </Bindings>
                 </ui:Label>
             </ui:VisualElement>
