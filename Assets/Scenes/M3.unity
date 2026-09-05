@@ -467,6 +467,54 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &17391074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17391075}
+  - component: {fileID: 17391076}
+  m_Layer: 0
+  m_Name: House Passed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17391075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17391074}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.53799045, z: -0, w: 0.842951}
+  m_LocalPosition: {x: 7669.8, y: 122.14, z: -1886.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1998540013}
+  m_LocalEulerAnglesHint: {x: 0, y: -65.094, z: 0}
+--- !u!114 &17391076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17391074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6be05915821494391ff2997baf72dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
+  <Track>k__BackingField: {fileID: 98138127}
+  <Distance>k__BackingField: 98.5591
+  <Reverse>k__BackingField: 0
+  <Area>k__BackingField: {fileID: 753757833}
 --- !u!1 &18913458
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +937,55 @@ MonoBehaviour:
   CurveChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &66320087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 66320088}
+  - component: {fileID: 66320089}
+  m_Layer: 0
+  m_Name: Turnout
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &66320088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66320087}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.83444357, z: -0, w: 0.5510934}
+  m_LocalPosition: {x: 7691.41, y: 122.14, z: -1901.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1998540013}
+  m_LocalEulerAnglesHint: {x: 0, y: 113.116, z: 0}
+--- !u!114 &66320089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66320087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191b90dffd4d4064a856a4e173bf7da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.TurnoutChanger
+  <Track>k__BackingField: {fileID: 1079697458}
+  <Distance>k__BackingField: 72.595184
+  <Reverse>k__BackingField: 1
+  switch: {fileID: 250114249}
+  isLeft: 0
 --- !u!1 &66404804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,6 +1522,8 @@ Transform:
   - {fileID: 1549666659}
   - {fileID: 1677395903}
   - {fileID: 145709341}
+  - {fileID: 918104473}
+  - {fileID: 1045824223}
   m_Father: {fileID: 702130648}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &95829379
@@ -3124,7 +3223,7 @@ GameObject:
   - component: {fileID: 250114250}
   - component: {fileID: 250114249}
   m_Layer: 0
-  m_Name: Branching Switch
+  m_Name: House - Service
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8075,9 +8174,9 @@ MonoBehaviour:
   - {fileID: 1555029335}
   <Reverse>k__BackingField: 1
   <Route>k__BackingField: {fileID: 11400000, guid: 33e11463a9b863f3dacbb43beb306b68, type: 2}
-  <TrafficSwitches>k__BackingField: {fileID: 0}
-  <ServiceTarget>k__BackingField: {fileID: 0}
-  <ServiceSwitches>k__BackingField: {fileID: 0}
+  <TrafficSwitches>k__BackingField: {fileID: 1045824224}
+  <ServiceTarget>k__BackingField: {fileID: 327601161}
+  <ServiceSwitches>k__BackingField: {fileID: 918104472}
 --- !u!1001 &756129594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9667,6 +9766,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1733128708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &918104471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 918104473}
+  - component: {fileID: 918104472}
+  m_Layer: 0
+  m_Name: To House
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &918104472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918104471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a4f242b9df4b8792dd81fe6717aea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.SwitchGroup
+  switches:
+  - switch: {fileID: 363345436}
+    isLeft: 0
+  - switch: {fileID: 250114249}
+    isLeft: 0
+--- !u!4 &918104473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918104471}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 94328869}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &933953531
 GameObject:
   m_ObjectHideFlags: 0
@@ -10417,6 +10565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 993617529}
   - component: {fileID: 993617530}
+  - component: {fileID: 993617531}
   m_Layer: 0
   m_Name: Passed
   m_TagString: Untagged
@@ -10455,6 +10604,22 @@ MonoBehaviour:
   <Distance>k__BackingField: 110.07474
   <Reverse>k__BackingField: 1
   <Area>k__BackingField: {fileID: 753757833}
+--- !u!114 &993617531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993617528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6be05915821494391ff2997baf72dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
+  <Track>k__BackingField: {fileID: 1555029333}
+  <Distance>k__BackingField: 110.07474
+  <Reverse>k__BackingField: 1
+  <Area>k__BackingField: {fileID: 462134676}
 --- !u!1 &1003057663
 GameObject:
   m_ObjectHideFlags: 0
@@ -11110,6 +11275,53 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5884616970279613288, guid: ebe0fa4ab93cfc763aecbc6c7893418f, type: 3}
   m_PrefabInstance: {fileID: 4027083405425877640}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1045824222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1045824223}
+  - component: {fileID: 1045824224}
+  m_Layer: 0
+  m_Name: To Traffic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1045824223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045824222}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 94328869}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1045824224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045824222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a4f242b9df4b8792dd81fe6717aea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Sidings.SwitchGroup
+  switches:
+  - switch: {fileID: 363345436}
+    isLeft: 1
 --- !u!1001 &1057046813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19607,6 +19819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1732884661}
   - component: {fileID: 1732884662}
+  - component: {fileID: 1732884663}
   m_Layer: 0
   m_Name: Passed
   m_TagString: Untagged
@@ -19645,6 +19858,22 @@ MonoBehaviour:
   <Distance>k__BackingField: 96.29015
   <Reverse>k__BackingField: 0
   <Area>k__BackingField: {fileID: 753757833}
+--- !u!114 &1732884663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732884660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6be05915821494391ff2997baf72dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
+  <Track>k__BackingField: {fileID: 1105237212}
+  <Distance>k__BackingField: 96.29015
+  <Reverse>k__BackingField: 0
+  <Area>k__BackingField: {fileID: 462134676}
 --- !u!1 &1733128707
 GameObject:
   m_ObjectHideFlags: 0
@@ -21951,6 +22180,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963028112}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1995474073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1995474074}
+  - component: {fileID: 1995474075}
+  m_Layer: 0
+  m_Name: House Passed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1995474074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995474073}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5771023008657471273}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1995474075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995474073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6be05915821494391ff2997baf72dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Metro.Rail.Controls.PassedOutMarker
+  <Track>k__BackingField: {fileID: 1255576668563350736}
+  <Distance>k__BackingField: 74.00007
+  <Reverse>k__BackingField: 0
+  <Area>k__BackingField: {fileID: 753757833}
 --- !u!23 &1998420220 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2484356878191788636, guid: e2b35990d629243b899f4b5f2089becf, type: 3}
@@ -21986,7 +22263,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 327601160}
+  - {fileID: 17391075}
   - {fileID: 2074090972}
+  - {fileID: 66320088}
   m_Father: {fileID: 702130648}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2007261121
@@ -23917,6 +24196,7 @@ Transform:
   - {fileID: 1534486663}
   - {fileID: 756129595}
   - {fileID: 76584562}
+  - {fileID: 1995474074}
   m_Father: {fileID: 7126513809584423468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5807311330527839795
