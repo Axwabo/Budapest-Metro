@@ -45,6 +45,7 @@ jobs:
         with:
           version-file: ProjectSettings/ProjectVersion.txt
           modules: ${{ matrix.modules }}
+          cache-installation: true
 
       - uses: buildalon/activate-unity-license@v2.2.2
         with:
@@ -67,7 +68,7 @@ jobs:
       - name: Clean Directory
         working-directory: ${{ env.OUT }}
         shell: bash
-        run: rm -r *DoNotShip* || true
+        run: rm -rf *DoNotShip* || true
           
       - uses: actions/upload-artifact@v7.0.1
         with:
