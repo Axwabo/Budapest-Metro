@@ -45,7 +45,6 @@ jobs:
         with:
           version-file: ProjectSettings/ProjectVersion.txt
           modules: ${{ matrix.modules }}
-          cache-installation: true
 
       - uses: buildalon/activate-unity-license@v2.2.2
         with:
