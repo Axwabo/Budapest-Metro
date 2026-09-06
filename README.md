@@ -32,7 +32,7 @@ Alternatively, you can get it for Linux or slopdows:
     - `Budapest-Metro.x86_64` on Linux
     - `Budapest-Metro.exe` on windows
 
-Select a line, a station and a station to start at, then click Play.
+Select a line, a station and the time to start at, then click Play.
 Use WASD to move around.
 Tab to open the in-game menu.
 
@@ -60,6 +60,13 @@ I stitched screenshots together because the rendering tool is too low-resolution
 I plan on reaching out to BKK (Budapest Transportation Center) for permission to use the on-board announcements
 and to hopefully gather more information to match real-world infrastructure.
 
+A top-down map will definitely be implemented soon with real-time vehicle tracking.
+
+I really need to optimize the game...
+
+Eventually I might build a control UI which lets the player dispatch and recall trains,
+deal with emergency situations, etc.
+
 # Technical Info
 
 ## SplineMesh
@@ -78,8 +85,9 @@ turnout mechanisms.
 Non-destructive track splitting and an editor menu item make it easier to connect "two tracks."
 The TrackSplitter component creates persistent "sub-segments" based on the given track.
 
-Since the project is spline-based, there's no "go that way" like in the real world, therefore we have to
-account for branching (forwards) and joining (backwards) turnouts. The menu item detects this automatically.
+Since the project is spline-based (which are directional), there's no "go that way" like in the real world.
+We have to account for branching (forwards) and joining (backwards) turnouts.
+The menu item detects this automatically.
 
 The editor has switch groups which, when selected, show handles that let you drag the turnout
 towards the branch to switch to. I'll improve it later as the snapping is a tiny bit clunky.
