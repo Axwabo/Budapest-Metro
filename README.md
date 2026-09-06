@@ -8,18 +8,23 @@ Due to a lack of precise data:
 - tracks don't fully resemble their real-world curvatures and elevation
 - the timetable is only precise to the minute, causing some punctuality errors
 
-At the moment, only the M4 line has been built (including the carriage house).
-It's objectively the best metro in the world, so I had to build it first :3
+At the moment, only M4 and M3 lines have been built (including carriage houses).
+M4 is objectively the best metro in the world, so I had to build it first :3
 
 Trains get dispatched and recalled automatically.
 
 > [!NOTE]
-> You can select when and where to start the game.
-> However, due to a bug, the player always starts the game at Kelenföld vasútállomás on Linux (at least).
+> There aren't enough vehicles for M3 to provide full service based on the timetable.
+> M3 vehicles are recolored M4 vehicles for now.
+
+> [!NOTE]
+> Transferring between lines (via escalators) is not implemented yet.
 
 ## How to Play
 
-Currently, the web build doesn't work.
+You can [play the game in your browser](https://axwabo.github.io/Budapest-Metro) if you have a decent enough GPU!
+
+Alternatively, you can get it for Linux or slopdows:
 
 1. Download the zip file for your platform from the [releases page](https://github.com/Axwabo/Budapest-Metro/releases)
 2. Extract the archive to a folder
@@ -27,8 +32,13 @@ Currently, the web build doesn't work.
     - `Budapest-Metro.x86_64` on Linux
     - `Budapest-Metro.exe` on windows
 
-> [!TIP]
-> Press `[TAB]` to open the in-game menu.
+Select a line, a station and a station to start at, then click Play.
+Use WASD to move around.
+Tab to open the in-game menu.
+
+> [!NOTE]
+> Due to a seemingly Linux-only bug, the player might only start at
+> Kőbánya-Kispest (M3) or Kelenföld vasútállomás (M4).
 
 # Assets
 
@@ -71,14 +81,14 @@ The TrackSplitter component creates persistent "sub-segments" based on the given
 Since the project is spline-based, there's no "go that way" like in the real world, therefore we have to
 account for branching (forwards) and joining (backwards) turnouts. The menu item detects this automatically.
 
-The editor has switch groups, which, when selected, show handles that let you drag the turnout
+The editor has switch groups which, when selected, show handles that let you drag the turnout
 towards the branch to switch to. I'll improve it later as the snapping is a tiny bit clunky.
 
 In SpaceTransit, I have to manually set which tube should be connected to which,
 which can be confusing as the direction matters.
 Plus, after cloning remappers, it's easy to forget to assign a tube.
 
-In my previous metro project, I created a complicated system for wheels to detect
+In my previous metro project, I had created a complicated system for wheels to detect
 that they've reached a different spline.
 
 ## UI Rendering
@@ -93,12 +103,12 @@ The framework definitely has room for improvement, just to name a few issues:
 - full document reload even when only the stylesheet changes
 
 Rendering each display (forehead/on-board) separately caused significant performance regressions,
-so the displays are rendered onto a RenderTexture once, which can be placed on quads in the world.
+so the displays are rendered onto a RenderTexture once per group, which can be placed on quads in the world.
 This also lets me customize the materials, allowing for shaders (e.g. slight emission).
 
 ## Tiling Shader
 
-Creating the station overhead signs took a lot of time, because the default tiling property didn't work at first.
+Creating the station overhead signs took a lot of time because the default tiling property didn't work at first.
 
 Turns out, I had to set the texture's TilingMode to Wrap, and after using the Tiling & Offset node
 in the ShaderGraph, it magically worked.
