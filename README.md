@@ -37,6 +37,10 @@ Use WASD to move around.
 Tab to open the in-game menu.
 
 > [!NOTE]
+> Textures (i.e. vehicles' displays, signs) might not render on some GPUs in the web version.
+> In this case, try the standalone version.
+
+> [!NOTE]
 > Due to a seemingly Linux-only bug, the player might only start at
 > Kőbánya-Kispest (M3) or Kelenföld vasútállomás (M4).
 
