@@ -3,6 +3,21 @@
 This is my 2nd attempt of replicating the subway network of Budapest within Unity.
 The previous project isn't public.
 
+<img width="2256" height="1504" alt="M4" src="https://github.com/user-attachments/assets/8f05a137-00da-4147-adbe-ea2f177c8fd7" />
+
+<details>
+<summary>Demo videos</summary>
+
+M4:
+
+https://github.com/user-attachments/assets/7f257a34-07cc-40bd-b0da-0c557fdee020
+
+M3:
+
+https://github.com/user-attachments/assets/0364eef7-2464-400a-9a2c-3742d692281f
+
+</details>
+
 Due to a lack of precise data:
 
 - tracks don't fully resemble their real-world curvatures and elevation
@@ -29,8 +44,8 @@ Alternatively, you can get it for Linux or slopdows:
 1. Download the zip file for your platform from the [releases page](https://github.com/Axwabo/Budapest-Metro/releases)
 2. Extract the archive to a folder
 3. Run the executable
-    - `Budapest-Metro.x86_64` on Linux
-    - `Budapest-Metro.exe` on windows
+   - `Budapest-Metro.x86_64` on Linux
+   - `Budapest-Metro.exe` on windows
 
 Select a line, a station and the time to start at, then click Play.
 Use WASD to move around.
