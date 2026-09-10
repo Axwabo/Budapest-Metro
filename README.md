@@ -8,11 +8,7 @@ The previous project isn't public.
 <details>
 <summary>Demo videos</summary>
 
-M4:
-
 https://github.com/user-attachments/assets/7f257a34-07cc-40bd-b0da-0c557fdee020
-
-M3:
 
 https://github.com/user-attachments/assets/0364eef7-2464-400a-9a2c-3742d692281f
 
