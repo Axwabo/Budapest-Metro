@@ -33,9 +33,7 @@ Trains get dispatched and recalled automatically.
 
 ## How to Play
 
-You can [play the game in your browser](https://axwabo.github.io/Budapest-Metro) if you have a decent enough GPU!
-
-Alternatively, you can get it for Linux or slopdows:
+Get it for Linux or slopdows:
 
 1. Download the zip file for your platform from the [releases page](https://github.com/Axwabo/Budapest-Metro/releases)
 2. Extract the archive to a folder
