@@ -31,7 +31,7 @@ Trains get dispatched and recalled automatically.
 > [!NOTE]
 > Transferring between lines (via escalators) is not implemented yet.
 
-## How to Play
+# How to Play
 
 Get it for Linux or slopdows:
 
@@ -42,12 +42,8 @@ Get it for Linux or slopdows:
    - `Budapest-Metro.exe` on windows
 
 Select a line, a station and the time to start at, then click Play.
-Use WASD to move around.
-Tab to open the in-game menu.
-
-> [!NOTE]
-> Textures (i.e. vehicles' displays, signs) might not render on some GPUs in the web version.
-> In this case, try the standalone version.
+Use `WASD` to move around.
+`Tab` to open the in-game menu.
 
 > [!NOTE]
 > Due to a seemingly Linux-only bug, the player might only start at
@@ -67,6 +63,23 @@ There's quite a bit of public information about metro line M4 on its [official w
 
 The railway map was created with [overpass turbo](https://overpass-turbo.eu/) -
 I stitched screenshots together because the rendering tool is too low-resolution and doesn't show overlays.
+
+## Onboard Displays
+
+While traveling between stations, the following information is displayed (in order, repeats):
+
+1. Next stop
+2. "végállomás" (only when approaching the terminus) 
+3. Available transfers in the real world
+   - Emojis separate the types of transfers
+   - Type superset in order: `Metros` `Railways` `Regional Buses` `Trams` `Trolleybuses` `Local buses`
+   - Only the available subset of the transfer types is displayed
+   - Some buses have a letter suffix, e.g. `E` for express
+4. Route and time
+
+I would really like to get the LED matrix "font" in use IRL :33
+
+For now, M3 uses the same displays as M4, since I didn't yet have the time to make a completely new UI. 
 
 # Future Plans
 
