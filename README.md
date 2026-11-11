@@ -74,6 +74,7 @@ While traveling between stations, the following information is displayed (in ord
    - Emojis separate the types of transfers
    - Type superset in order: `Metros` `Railways` `Regional Buses` `Trams` `Trolleybuses` `Local buses`
    - Only the available subset of the transfer types is displayed
+   - Railways and regional buses are bools, routes aren't listed after them
    - Some buses have a letter suffix, e.g. `E` for express
 4. Route and time
 
